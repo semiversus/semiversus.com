@@ -1,0 +1,28 @@
+\documentclass[border=5px]{standalone}
+\usepackage{circuitikz, components}
+\usetikzlibrary{positioning,shapes}
+\begin{document}
+\begin{tikzpicture}
+\node (SignalValue) [signal,signal to=east, draw]{value};
+\node (Adder) [circle,draw,radius=0.3, right=1.5 of SignalValue, anchor=west]{+};
+\node (MuxLoad) [mux2,right=of Adder.east, anchor=in 0]{};
+\node (MuxClear) [mux2,right=1.5cm of MuxLoad.out, anchor=in 0]{};
+\node (Register) [dff, right=of MuxClear.out, anchor=d]{};
+\node (Zero)[left=0.2cm of MuxClear.in 1,anchor=east]{0x00};
+\node (SignalOut) [signal,signal to=east,draw,right=1.5 of Register.q]{result};
+
+\draw [->,very thick] (SignalValue.east) -- ++(0.5,0) node[strike out,label=8,draw]{} -- (Adder);
+\draw [very thick](SignalValue.east) -| node[circ]{} ++(1,0) |- (MuxLoad.in 1);
+\draw [very thick](Adder.east) -- (MuxLoad.in 0);
+\draw [very thick](MuxLoad.out) -- (MuxClear.in 0);
+\draw [very thick](Zero) -- (MuxClear.in 1);
+\draw [very thick](MuxClear.out) -- (Register.d);
+\draw [->,very thick] (Register.q) -| node[circ]{} ++(0.5,1.5) -| (Adder.north);
+\draw [very thick](Register.q) -- ++(1,0) node[strike out,label=8,draw]{} -- ++(0.5,0)(SignalOut);
+
+\draw (Register.clock) -- ++(-0.2,0) -- ++(0,-1.5) node[signal,signal to=east,draw,rotate=90,anchor=east](SignalClock){clock};
+\draw (MuxClear.sel) -- (MuxClear.sel |- SignalClock.east) node[signal,signal to=east,draw,rotate=90,anchor=east]{clear};
+\draw (MuxLoad.sel) -- (MuxLoad.sel |- SignalClock.east) node[signal,signal to=east,draw,rotate=90,anchor=east]{load};
+% \draw [rounded corners=0.1cm, very thick, color=red] ([yshift=0.1cm]Adder.east) -- ([yshift=0.1cm]MuxLoad.in 0) -- ++(0.3,0) |- ([yshift=0.1cm]MuxClear.in 0) -- ++(0.3,0) |- ([yshift=0.1cm]Register.d);
+\end{tikzpicture}
+\end{document}

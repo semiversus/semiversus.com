@@ -1,0 +1,24 @@
+c:
+  do{ }while(0); Macro
+  !!
+  status&0x10==0 -> status&(0x10==0)
+
+python:
+  for else
+
+Labor:
+* gemossen
+* Achsbeschriftung
+
+float mult messen
+
+unix:
+  comm
+  timeout
+
+  cat /dev/zero>zero; sync; rm zero; sync
+  VBoxManage modifyhd .vdi compact
+
+Unwissen ist heilbar, bei Dummheit schaut es leider anders aus...
+
+Backrohr, Zeit seit letzdem Tür öffnen

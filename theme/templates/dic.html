@@ -1,0 +1,17 @@
+{% extends "page.html" %}
+{% block page_header %}
+{% if TARGET=='public' %}
+<div class="panel panel-info"><div class="panel-heading">Webseite zum Download</div>
+<div class="panel-body">Die Webseite lässt sich als <a href="../../semiversus.zip">ZIP-Datei</a> herunterladen (Version vom {{ SVN_DATE }} - Rev. {{ SVN_REVISION }})</div></div>
+{% endif %}
+{% endblock %}
+{% block page_footer %}
+{% if TARGET=='public' %}
+<h1>Infos für Klassen (Zugangsbeschränkt)</h1>
+<ul>
+<li><a href="../dic/klassen/klasse_4ahel.html">4AHEL</a></li>
+<li><a href="../dic/klassen/klasse_5ahel.html">5AHEL</a></li>
+</ul>
+{% endif %}
+{% endblock %}
+

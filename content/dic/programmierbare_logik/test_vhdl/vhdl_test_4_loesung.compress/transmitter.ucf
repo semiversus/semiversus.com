@@ -1,0 +1,13 @@
+NET "clk" LOC="B8";
+
+NET "button_send_i" LOC="G12";
+NET "switches_data_i(0)" LOC="P11";
+NET "switches_data_i(1)" LOC="L3";
+NET "switches_data_i(2)" LOC="K3";
+NET "switches_data_i(3)" LOC="B4";
+NET "switches_data_i(4)" LOC="G3";
+NET "switches_data_i(5)" LOC="F3";
+NET "switches_data_i(6)" LOC="E2";
+NET "switches_data_i(7)" LOC="N3";
+NET "led_tx_o" LOC="M5";
+NET "led_busy_o" LOC="M11";

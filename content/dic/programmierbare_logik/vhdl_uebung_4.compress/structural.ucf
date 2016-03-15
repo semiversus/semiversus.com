@@ -1,0 +1,16 @@
+NET "clk" LOC="B8";
+
+NET "button_i" LOC="G12";
+
+NET "an_o(3)" LOC = "K14"; # driver for left most display
+NET "an_o(2)" LOC = "M13";
+NET "an_o(1)" LOC = "J12";
+NET "an_o(0)" LOC = "F12"; # driver for right most display
+
+NET "segments_o(6)" LOC = "L14"; # Segment A
+NET "segments_o(5)" LOC = "H12"; # Segment B
+NET "segments_o(4)" LOC = "N14"; # Segment C
+NET "segments_o(3)" LOC = "N11"; # Segment D
+NET "segments_o(2)" LOC = "P12"; # Segment E
+NET "segments_o(1)" LOC = "L13"; # Segment F
+NET "segments_o(0)" LOC = "M12"; # Segment G

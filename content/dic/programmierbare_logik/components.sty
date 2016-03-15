@@ -1,0 +1,688 @@
+%components: speaker, sfuse, isourcbr, dip8, dip14, dip16
+%macros: \whereami, \TikzBipolePath
+
+\newlength{\ResUp} \newlength{\ResDown}
+\newlength{\ResLeft} \newlength{\ResRight}
+\newlength{\ResLen} \newlength{\ResRadius}
+\newlength{\whereamix} \newlength{\whereamiy}
+
+\makeatletter
+\newcommand{\whereami}[2]{	% #1 = anchor name, #2 = color
+ \draw[color=#2] (#1) node{
+  \setlength{\whereamix}{0.0352\pgf@x}
+  \setlength{\whereamiy}{0.0352\pgf@y}
+  (\strip@pt\whereamix, \strip@pt\whereamiy)
+ };
+}
+\def\TikzBipolePath#1#2{\pgf@circ@bipole@path{#1}{#2}}
+\def\CircDirection{\pgf@circ@direction}
+
+\pgf@circ@Rlen = \pgfkeysvalueof{/tikz/circuitikz/bipoles/length}
+\setlength{\ResLen}{\pgf@circ@Rlen}
+\makeatother
+
+% *************************** speaker **********************************
+
+\ctikzset{bipoles/speaker/height/.initial=.30}
+\ctikzset{bipoles/speaker/width/.initial=.80}
+
+\pgfcircdeclarebipole{}
+ {\ctikzvalof{bipoles/speaker/height}}
+ {speaker}
+ {\ctikzvalof{bipoles/speaker/height}}
+ {\ctikzvalof{bipoles/speaker/width}}
+ {
+	\pgfsetlinewidth{\pgfkeysvalueof{/tikz/circuitikz/bipoles/thickness}\pgfstartlinewidth}
+	\pgfextractx{\ResRight}{\northeast}
+	\pgfextractx{\ResLeft}{\southwest}
+	\pgfextracty{\ResDown}{\southwest}
+  \pgfpathrectanglecorners{\southwest}{\northeast}
+  \pgfmoveto{\pgfpoint{0.5\ResRight}{\ResDown}}
+  \pgflineto{\pgfpoint{1.25\ResRight}{2.5\ResDown}}
+  \pgflineto{\pgfpoint{1.25\ResLeft}{2.5\ResDown}}
+  \pgflineto{\pgfpoint{0.5\ResLeft}{\ResDown}}
+  \pgfusepath{draw}	%draw speaker
+ }
+
+\def\speakerpath#1{\TikzBipolePath{speaker}{#1}}
+\tikzset{speaker/.style = {\circuitikzbasekey, /tikz/to path=\speakerpath, l=#1}}
+
+
+% ****************************** sfuse **********************************
+
+
+\ctikzset{bipoles/sfuse/width/.initial=.5}
+\ctikzset{bipoles/sfuse/height/.initial=.3}	%label offset only
+
+\pgfcircdeclarebipole{}
+ {\ctikzvalof{bipoles/sfuse/height}}
+ {sfuse}
+ {\ctikzvalof{bipoles/sfuse/height}}
+ {\ctikzvalof{bipoles/sfuse/width}}
+ {
+	\pgfsetlinewidth{\pgfkeysvalueof{/tikz/circuitikz/bipoles/thickness}\pgfstartlinewidth}
+	\pgfextractx{\ResRight}{\northeast}
+	\pgfextractx{\ResLeft}{\southwest}
+
+	\pgfpathmoveto{\pgfpoint{\ResLeft}{0cm}}
+	\pgfpatharc{180}{0}{0.5\ResRight}
+	\pgfpatharc{0}{180}{0.5\ResLeft}
+  \pgfusepath{draw}	%draw sfuse
+ }
+
+\def\sfusepath#1{\TikzBipolePath{sfuse}{#1}}
+\tikzset{sfuse/.style = {\circuitikzbasekey, /tikz/to path=\sfusepath, l=#1}}
+
+% ****************************** isourcebr **********************************
+
+\ctikzset{bipoles/isourcebr/height/.initial=.4}
+\ctikzset{bipoles/isourcebr/width/.initial=.6}
+
+\pgfcircdeclarebipole{}
+ {\ctikzvalof{bipoles/isourcebr/height}}
+ {isourcebr}
+ {\ctikzvalof{bipoles/isourcebr/height}}
+ {\ctikzvalof{bipoles/isourcebr/width}}
+ {
+	\pgfsetlinewidth{\ctikzvalof{bipoles/thickness}\pgfstartlinewidth}
+	\pgfextractx{\ResRight}{\northeast}
+	\pgfextracty{\ResUp}{\northeast}
+	\pgfextractx{\ResLeft}{\southwest}
+
+  \pgfmoveto{\pgfpoint{\ResLeft}{0cm}}
+	\pgfpathellipse{\pgfpoint{0.333\ResLeft}{0cm}}{\pgfpoint{0.667\ResRight}{0cm}}{\pgfpoint{0cm}{\ResUp}}
+  \pgfmoveto{\pgfpoint{\ResRight}{0cm}}
+	\pgfpathellipse{\pgfpoint{0.333\ResRight}{0cm}}{\pgfpoint{0.667\ResRight}{0cm}}{\pgfpoint{0cm}{\ResUp}}
+  \pgfusepath{draw}	%draw isourcebr
+ 	\pgfscope
+	\pgfsetarrowsend{latex'}
+	\pgfpathmoveto{\pgfpoint{.5\ResLeft}{1.333\ResUp}}
+	\pgfpathlineto{\pgfpoint{.8\ResRight}{1.333\ResUp}}
+	\pgfusepath{draw}	%draw arrow
+	\endpgfscope
+ }
+
+\def\isourcebrpath#1{\TikzBipolePath{isourcebr}{#1}}
+
+\tikzset{isourcebr/.style = {\circuitikzbasekey, /tikz/to path=\isourcebrpath,
+\circuitikzbasekey/bipole/is current=true, l=#1}}
+
+\tikzset{british current source/.style = {\circuitikzbasekey, /tikz/to path=\isourcebrpath, 
+\circuitikzbasekey/bipole/is current=true, i=#1}}
+
+
+% ****************************** motor **********************************
+
+\ctikzset{bipoles/motor/height/.initial=.8}
+\ctikzset{bipoles/motor/width/.initial=.8}
+
+% create motor shape
+
+\pgfcircdeclarebipole{}
+ {\ctikzvalof{bipoles/motor/height}}
+ {motor}
+ {\ctikzvalof{bipoles/motor/height}}
+ {\ctikzvalof{bipoles/motor/width}}
+ {
+	\pgfsetlinewidth{\ctikzvalof{bipoles/thickness}\pgfstartlinewidth}
+	\pgfextractx{\ResRight}{\northeast}
+	\pgfextracty{\ResUp}{\northeast}
+	\pgfextractx{\ResLeft}{\southwest}
+	\pgfextracty{\ResDown}{\southwest}
+
+  \pgfpathmoveto{\pgfpoint{0.775\ResLeft}{0.2\ResDown}}
+	\pgfpathlineto{\pgfpoint{\ResLeft}{0.2\ResDown}}
+  \pgfpathlineto{\pgfpoint{\ResLeft}{0.2\ResUp}}
+  \pgfpathlineto{\pgfpoint{0.775\ResLeft}{0.2\ResUp}}
+ 	\pgfpathellipse{\pgfpointorigin}{\pgfpoint{0.8\ResRight}{0cm}}{\pgfpoint{0cm}{0.8\ResUp}}
+  \pgfpathmoveto{\pgfpoint{0.775\ResRight}{0.2\ResDown}}
+	\pgfpathlineto{\pgfpoint{\ResRight}{0.2\ResDown}}
+  \pgfpathlineto{\pgfpoint{\ResRight}{0.2\ResUp}}
+  \pgfpathlineto{\pgfpoint{0.775\ResRight}{0.2\ResUp}}
+  \pgfusepath{draw}	%draw motor
+%	\pgftext[rotate=-\CircDirection]{\textsf{M}}
+ }
+
+% create motor to-path style
+
+\def\motorpath#1{\TikzBipolePath{motor}{#1}}
+\tikzset{motor/.style = {\circuitikzbasekey, /tikz/to path=\motorpath, l=#1}}
+
+% ************************* voltage source **************************
+% American style replacement: plus and minus signs remain vertical
+% Does not use /tikz/circuitikz/bipoles/vsourceam/margin
+
+\ctikzset{bipoles/vsourceam/plus/.initial=$+$}
+\ctikzset{bipoles/vsourceam/minus/.initial=$-$}
+
+\pgfcircdeclarebipole{}
+  {\ctikzvalof{bipoles/vsourceam/height}}
+	{vsourceAM}
+	{\ctikzvalof{bipoles/vsourceam/height}}
+	{\ctikzvalof{bipoles/vsourceam/width}}{
+
+	\pgfsetlinewidth{\pgfkeysvalueof{/tikz/circuitikz/bipoles/thickness}\pgfstartlinewidth}
+	\pgfextractx{\ResRight}{\northeast}
+	\pgfextractx{\ResLeft}{\southwest}
+	\pgfextracty{\ResUp}{\northeast}
+	
+	\pgfpathellipse{\pgfpointorigin}{\pgfpoint{0}{\ResUp}}{\pgfpoint{\ResLeft}{0}}
+		\pgfusepath{draw}
+	\pgfscope
+		\pgftransformxshift{.5\ResLeft}
+		\pgftext[rotate=-\CircDirection]{\ctikzvalof{bipoles/vsourceam/minus}}
+		\pgfusepath{draw}
+	\endpgfscope
+	\pgfscope
+		\pgftransformxshift{.5\ResRight}
+		\pgftext[rotate=-\CircDirection]{\ctikzvalof{bipoles/vsourceam/plus}}
+		\pgfusepath{draw}
+	\endpgfscope
+}
+
+% ************************ h-gate ***************************
+
+\ctikzset{bipoles/hgate/width/.initial=.65}
+\ctikzset{bipoles/hgate/height/.initial=.65}
+\ctikzset{bipoles/hgate/symbol/.initial=\textit{\Large H}}
+
+\pgfcircdeclarebipole{}
+  {\ctikzvalof{bipoles/hgate/height}}
+  {hgate}
+  {\ctikzvalof{bipoles/hgate/height}}
+  {\ctikzvalof{bipoles/hgate/width}}
+  {
+	  \pgfsetlinewidth{\pgfkeysvalueof{/tikz/circuitikz/bipoles/thickness}\pgfstartlinewidth}
+	  \pgfpathrectanglecorners{\southwest}{\northeast}
+	  \pgfusepath{draw}
+    \pgftext[rotate=-\CircDirection]{\ctikzvalof{bipoles/hgate/symbol}}
+  }
+
+\def\hgatepath#1{\TikzBipolePath{hgate}{#1}}
+\tikzset{hgate/.style = {\circuitikzbasekey, /tikz/to path=\hgatepath, l_=#1}}
+
+% u-gate
+
+\ctikzset{bipoles/ugate/width/.initial=.65}
+\ctikzset{bipoles/ugate/height/.initial=.65}
+\ctikzset{bipoles/ugate/symbol/.initial=\textit{\Large U}}
+
+\pgfcircdeclarebipole
+  {
+  \anchor{control}{
+    \pgfextracty{\ResUp}{\northeast}
+    \pgfpoint{0cm}{\ResUp}
+  }}
+  {\ctikzvalof{bipoles/ugate/height}}
+  {ugate}
+  {\ctikzvalof{bipoles/ugate/height}}
+  {\ctikzvalof{bipoles/ugate/width}}
+  {
+	  \pgfsetlinewidth{\pgfkeysvalueof{/tikz/circuitikz/bipoles/thickness}\pgfstartlinewidth}
+	  \pgfpathrectanglecorners{\southwest}{\northeast}
+	  \pgfusepath{draw}
+    \pgftext[rotate=-\CircDirection]{\ctikzvalof{bipoles/ugate/symbol}}
+  }
+
+\def\ugatepath#1{\TikzBipolePath{ugate}{#1}}
+\tikzset{ugate/.style = {\circuitikzbasekey, /tikz/to path=\ugatepath, l_=#1}}
+
+% ****************************** cnot gate ************************************
+
+\ctikzset{bipoles/cnot/width/.initial=.4}
+\ctikzset{bipoles/cnot/height/.initial=.4}
+
+\pgfcircdeclarebipole
+  {
+    \anchor{control}{
+    \pgfextracty{\ResUp}{\northeast}
+    \pgfpoint{0cm}{\ResUp}
+  }}
+  {\ctikzvalof{bipoles/cnot/height}}
+  {cnot}
+  {\ctikzvalof{bipoles/cnot/height}}
+  {\ctikzvalof{bipoles/cnot/width}}
+  {
+	  \pgfsetlinewidth{\pgfkeysvalueof{/tikz/circuitikz/bipoles/thickness}\pgfstartlinewidth}
+    \pgfextractx{\ResRight}{\northeast}
+    \pgfextracty{\ResUp}{\northeast}
+	  \pgfpathellipse{\pgfpointorigin}{\pgfpoint{\ResRight}{0cm}}{\pgfpoint{0cm}{\ResUp}}
+    \pgfpathmoveto{\pgfpoint{0cm}{\ResUp}}
+    \pgfpathlineto{\pgfpoint{0cm}{-\ResUp}}
+    \pgfpathmoveto{\pgfpoint{\ResRight}{0cm}}
+    \pgfpathlineto{\pgfpoint{-\ResRight}{0cm}}
+	  \pgfusepath{draw}
+  }
+
+\def\cnotpath#1{\TikzBipolePath{cnot}{#1}}
+\tikzset{cnot/.style = {\circuitikzbasekey, /tikz/to path=\cnotpath, l_=#1}}
+
+% ******************************* swap gate (half) ************************************
+% User must connect centers of bipole to complete swap gate
+
+\ctikzset{bipoles/swap/width/.initial=.4}
+\ctikzset{bipoles/swap/height/.initial=.4}
+
+\pgfcircdeclarebipole
+  {\anchor{control}{\pgfpointorigin}}% equivalent to center
+  {\ctikzvalof{bipoles/swap/height}}
+  {swap}
+  {\ctikzvalof{bipoles/swap/height}}
+  {\ctikzvalof{bipoles/swap/width}}
+  {
+	  \pgfsetlinewidth{\pgfkeysvalueof{/tikz/circuitikz/bipoles/thickness}\pgfstartlinewidth}
+    \pgfextractx{\ResRight}{\northeast}
+    \pgfextracty{\ResUp}{\northeast}
+    \pgfpathmoveto{\pgfpoint{.707\ResRight}{.707\ResUp}}
+    \pgfpathlineto{\pgfpoint{-.707\ResRight}{-.707\ResUp}}
+    \pgfpathmoveto{\pgfpoint{.707\ResRight}{-.707\ResUp}}
+    \pgfpathlineto{\pgfpoint{-.707\ResRight}{.707\ResUp}}
+    \pgfusepath{draw}
+    \pgfsetlinewidth{\pgfstartlinewidth}
+    \pgfpathmoveto{\pgfpoint{-\ResRight}{0cm}}
+    \pgfpathlineto{\pgfpoint{\ResRight}{0cm}}
+    \pgfusepath{draw}
+  }
+
+\def\swappath#1{\TikzBipolePath{swap}{#1}}
+\tikzset{swap/.style = {\circuitikzbasekey, /tikz/to path=\swappath, l_=#1}}
+
+
+% ************************** multipoles *****************************
+
+\ctikzset{multipoles/.is family}
+\ctikzset{multipoles/pin spacing/.initial = 5mm} % default value
+\ctikzset{multipoles/gate spacing/.initial = 1cm} % default value
+
+\pgfkeys{/tikz/pin spacing/.initial = 0mm}
+\pgfkeys{/tikz/pin spacing/.default = 0mm}
+
+\newlength{\IClen}	% scale factor
+\newcommand{\pinsize}{\ifdim\IClen<3.5mm \tiny \else \scriptsize \fi}
+
+\pgfkeys{/tikz/gate spacing/.initial = 0cm}
+\pgfkeys{/tikz/gate spacing/.default = 0cm}
+
+\newlength{\GateSpacing}
+
+\newcommand{\Compass}% define anchors for compass points
+{\anchor{north east}{\northeast}
+\anchor{south west}{\southwest}
+\anchor{north}{\pgfextracty{\ResUp}{\northeast}\pgfpoint{0cm}{\ResUp}}
+\anchor{north west}{\pgfextracty{\ResUp}{\northeast}\pgfextractx{\ResLeft}{\southwest}\pgfpoint{\ResLeft}{\ResUp}}
+\anchor{west}{\pgfextractx{\ResLeft}{\southwest}\pgfpoint{\ResLeft}{0cm}}
+\anchor{south}{\pgfextracty{\ResDown}{\southwest}\pgfpoint{0cm}{\ResDown}}
+\anchor{south east}{\pgfextracty{\ResDown}{\southwest}\pgfextractx{\ResRight}{\northeast}\pgfpoint{\ResRight}{\ResDown}}
+\anchor{east}{\pgfextractx{\ResRight}{\northeast}\pgfpoint{\ResRight}{0cm}}}
+
+% ***************************** u2gate *********************************
+% anchors in1, in2, out1 and out2
+
+\pgfdeclareshape{u2gate}{
+\anchor{center}{\pgfpointorigin}	% within the node, (0,0) is the center
+ 
+\anchor{text}	% this is used to center the text in the node
+	{\pgfpoint{-.5\wd\pgfnodeparttextbox}{-.5\ht\pgfnodeparttextbox}}
+
+\savedmacro{\resize}{	% called automatically
+ \setlength{\GateSpacing}{\pgfkeysvalueof{/tikz/gate spacing}}	% from node[]
+ \ifdim\GateSpacing=0mm \setlength{\GateSpacing}%  
+  {\ctikzvalof{multipoles/gate spacing}} \fi	% from \ctikzset{}
+ \setlength{\ResUp}{\ctikzvalof{bipoles/ugate/height}\ResLen}
+ \addtolength{\ResUp}{\GateSpacing}
+ \setlength{\ResUp}{0.5\ResUp}
+ \setlength{\ResDown}{-\ResUp}
+ \setlength{\ResRight}{\ctikzvalof{bipoles/ugate/width}\ResLen}
+ \setlength{\ResRight}{0.5\ResRight}
+ \setlength{\ResLeft}{-\ResRight}
+}% while these can be used for savedanchors, they will be fogotten by anchors
+
+\savedanchor{\northeast}{\pgfpoint{\ResRight}{\ResUp}}
+\savedanchor{\southwest}{\pgfpoint{\ResLeft}{\ResDown}}
+
+\savedanchor\InOne{\pgfpoint{\ResLeft}{0.5\GateSpacing}}
+\savedanchor\OutOne{\pgfpoint{\ResRight}{0.5\GateSpacing}}
+\savedanchor\InTwo{\pgfpoint{\ResLeft}{-0.5\GateSpacing}}
+\savedanchor\OutTwo{\pgfpoint{\ResRight}{-0.5\GateSpacing}}
+
+\Compass% standard anchors
+
+\anchor{control}{\pgfextracty{\ResUp}{\northeast}\pgfpoint{0cm}{\ResUp}}
+\anchor{in1}{\InOne}
+\anchor{out1}{\OutOne}
+\anchor{in2}{\InTwo}
+\anchor{out2}{\OutTwo}
+
+\foregroundpath{% draw border and symbol
+ \pgfsetlinewidth{\pgfkeysvalueof{/tikz/circuitikz/bipoles/thickness}\pgflinewidth}
+ \pgfpathrectanglecorners{\southwest}{\northeast}
+ \pgfusepath{draw}
+ \pgftext{\ctikzvalof{bipoles/ugate/symbol}}
+}}
+
+% ***************************** u3gate *********************************
+% anchors in1 - in3, and  out1 - out3
+
+\pgfdeclareshape{u3gate}{
+\anchor{center}{\pgfpointorigin}	% within the node, (0,0) is the center
+ 
+\anchor{text}	% this is used to center the text in the node
+	{\pgfpoint{-.5\wd\pgfnodeparttextbox}{-.5\ht\pgfnodeparttextbox}}
+
+\savedmacro{\resize}{	% called automatically
+ \setlength{\GateSpacing}{\pgfkeysvalueof{/tikz/gate spacing}}	% from node[]
+ \ifdim\GateSpacing=0mm \setlength{\GateSpacing}%  
+  {\ctikzvalof{multipoles/gate spacing}} \fi	% from \ctikzset{}
+ \setlength{\ResUp}{\ctikzvalof{bipoles/ugate/height}\ResLen}
+ \addtolength{\ResUp}{2\GateSpacing}
+ \setlength{\ResUp}{0.5\ResUp}
+ \setlength{\ResDown}{-\ResUp}
+ \setlength{\ResRight}{\ctikzvalof{bipoles/ugate/width}\ResLen}
+ \setlength{\ResRight}{0.5\ResRight}
+ \setlength{\ResLeft}{-\ResRight}
+}% these can be used for savedanchors only
+
+\savedanchor{\northeast}{\pgfpoint{\ResRight}{\ResUp}}
+\savedanchor{\southwest}{\pgfpoint{\ResLeft}{\ResDown}}
+
+\savedanchor\InOne{\pgfpoint{\ResLeft}{\GateSpacing}}
+\savedanchor\OutOne{\pgfpoint{\ResRight}{\GateSpacing}}
+\savedanchor\InTwo{\pgfpoint{\ResLeft}{0cm}}
+\savedanchor\OutTwo{\pgfpoint{\ResRight}{0cm}}
+\savedanchor\InThree{\pgfpoint{\ResLeft}{-\GateSpacing}}
+\savedanchor\OutThree{\pgfpoint{\ResRight}{-\GateSpacing}}
+
+\Compass% standard anchors
+
+\anchor{control}{\pgfextracty{\ResUp}{\northeast}\pgfpoint{0cm}{\ResUp}}
+\anchor{in1}{\InOne}
+\anchor{out1}{\OutOne}
+\anchor{in2}{\InTwo}
+\anchor{out2}{\OutTwo}
+\anchor{in3}{\InThree}
+\anchor{out3}{\OutThree}
+
+\foregroundpath{% draw border and symbol
+ \pgfsetlinewidth{\pgfkeysvalueof{/tikz/circuitikz/bipoles/thickness}\pgflinewidth}
+ \pgfpathrectanglecorners{\southwest}{\northeast}
+ \pgfusepath{draw}
+ \pgftext{\ctikzvalof{bipoles/ugate/symbol}}
+}}
+
+% ***************************** dip 8 *********************************
+% anchors pin1 - pin8
+
+\pgfdeclareshape{dip8}{
+\anchor{center}{\pgfpointorigin}	% within the node, (0,0) is the center
+ 
+\anchor{text}	% this is used to center the text in the node
+	{\pgfpoint{-.5\wd\pgfnodeparttextbox}{-.5\ht\pgfnodeparttextbox}}
+
+\savedmacro{\resize}{	% called automatically
+ \setlength{\IClen}{\pgfkeysvalueof{/tikz/pin spacing}}	% from node[]
+ \ifdim\IClen=0mm \setlength{\IClen}
+  {\pgfkeysvalueof{/tikz/circuitikz/multipoles/pin spacing}} \fi	% from \ctikzset{}
+}
+\savedanchor\icpina{\pgfpoint{-1.5\IClen}{-1.25\IClen}}	% pin 1
+\anchor{p1}{\icpina}
+\savedanchor\icpinb{\pgfpoint{-.5\IClen}{-1.25\IClen}}	% pin 2
+\anchor{p2}{\icpinb}
+\savedanchor\icpinc{\pgfpoint{.5\IClen}{-1.25\IClen}}	% pin 3
+\anchor{p3}{\icpinc}
+\savedanchor\icpind{\pgfpoint{1.5\IClen}{-1.25\IClen}}	% pin 4
+\anchor{p4}{\icpind}
+\savedanchor\icpine{\pgfpoint{1.5\IClen}{1.25\IClen}}	% pin 5
+\anchor{p5}{\icpine}
+\savedanchor\icpinf{\pgfpoint{.5\IClen}{1.25\IClen}}	% pin 6
+\anchor{p6}{\icpinf}
+\savedanchor\icping{\pgfpoint{-.5\IClen}{1.25\IClen}}	% pin 7
+\anchor{p7}{\icping}
+\savedanchor\icpinh{\pgfpoint{-1.5\IClen}{1.25\IClen}}	% pin 8
+\anchor{p8}{\icpinh}
+
+\savedanchor{\northeast}{\pgfpoint{2\IClen}{1.25\IClen}}
+\savedanchor{\southwest}{\pgfpoint{-2\IClen}{-1.25\IClen}}
+\Compass% standard anchors
+
+\foregroundpath{ % border and pin numbers are drawn here
+ \pgfsetlinewidth{.1\IClen} % line thickness 
+ \pgfpathrectanglecorners{\southwest}{\northeast}
+ \pgfusepath{draw}	%draw rectangle
+ \pgfsetlinewidth{.06\IClen} % line thickness 
+ \pgfpathmoveto{\pgfpoint{-2\IClen}{-.6\IClen}}
+ \pgfpatharc{-90}{90}{.6\IClen}
+ \pgfusepath{draw}	%draw semicircle
+ \pgftext[bottom,at={\pgfpoint{-1.5\IClen}{-1.1\IClen}}]{\pinsize 1}
+ \pgftext[bottom,at={\pgfpoint{-.5\IClen}{-1.1\IClen}}]{\pinsize 2}
+ \pgftext[bottom,at={\pgfpoint{.5\IClen}{-1.1\IClen}}]{\pinsize 3}
+ \pgftext[bottom,at={\pgfpoint{1.5\IClen}{-1.1\IClen}}]{\pinsize 4}
+ \pgftext[top,at={\pgfpoint{1.5\IClen}{1.1\IClen}}]{\pinsize 5}
+ \pgftext[top,at={\pgfpoint{.5\IClen}{1.1\IClen}}]{\pinsize 6}
+ \pgftext[top,at={\pgfpoint{-.5\IClen}{1.1\IClen}}]{\pinsize 7}
+ \pgftext[top,at={\pgfpoint{-1.5\IClen}{1.1\IClen}}]{\pinsize 8}
+}}
+
+% ***************************** dip 14 *********************************
+
+\pgfdeclareshape{dip14}{
+\anchor{center}{\pgfpointorigin}	% within the node, (0,0) is the center
+ 
+\anchor{text}	% this is used to center the text in the node
+	{\pgfpoint{-.5\wd\pgfnodeparttextbox}{-.5\ht\pgfnodeparttextbox}}
+
+\savedmacro{\resize}{	% called automatically
+ \setlength{\IClen}{\pgfkeysvalueof{/tikz/pin spacing}}	% from node[]
+ \ifdim\IClen=0mm \setlength{\IClen}
+  {\pgfkeysvalueof{/tikz/circuitikz/multipoles/pin spacing}} \fi	% from \ctikzset{}
+}
+\savedanchor\icpina{\pgfpoint{-3\IClen}{-1.25\IClen}}	% pin 1
+\anchor{p1}{\icpina}
+\savedanchor\icpinb{\pgfpoint{-2\IClen}{-1.25\IClen}}	% pin 2
+\anchor{p2}{\icpinb}
+\savedanchor\icpinc{\pgfpoint{-\IClen}{-1.25\IClen}}	% pin 3
+\anchor{p3}{\icpinc}
+\savedanchor\icpind{\pgfpoint{0cm}{-1.25\IClen}}	% pin 4
+\anchor{p4}{\icpind}
+\savedanchor\icpine{\pgfpoint{\IClen}{-1.25\IClen}}	% pin 5
+\anchor{p5}{\icpine}
+\savedanchor\icpinf{\pgfpoint{2\IClen}{-1.25\IClen}}	% pin 6
+\anchor{p6}{\icpinf}
+\savedanchor\icping{\pgfpoint{3\IClen}{-1.25\IClen}}	% pin 7
+\anchor{p7}{\icping}
+\savedanchor\icpinh{\pgfpoint{3\IClen}{1.25\IClen}}	% pin 8
+\anchor{p8}{\icpinh}
+\savedanchor\icpini{\pgfpoint{2\IClen}{1.25\IClen}}	% pin 9
+\anchor{p9}{\icpini}
+\savedanchor\icpinj{\pgfpoint{\IClen}{1.25\IClen}}	% pin 10
+\anchor{p10}{\icpinj}
+\savedanchor\icpink{\pgfpoint{0cm}{1.25\IClen}}	% pin 11
+\anchor{p11}{\icpink}
+\savedanchor\icpinl{\pgfpoint{-\IClen}{1.25\IClen}}	% pin 12
+\anchor{p12}{\icpinl}
+\savedanchor\icpinm{\pgfpoint{-2\IClen}{1.25\IClen}}	% pin 13
+\anchor{p13}{\icpinm}
+\savedanchor\icpinn{\pgfpoint{-3\IClen}{1.25\IClen}}	% pin 14
+\anchor{p14}{\icpinn}
+
+\savedanchor{\northeast}{\pgfpoint{3.5\IClen}{1.25\IClen}}
+\savedanchor{\southwest}{\pgfpoint{-3.5\IClen}{-1.25\IClen}}
+\Compass% standard anchors
+
+\foregroundpath{ % border and pin numbers are drawn here
+ \pgfsetlinewidth{.1\IClen} % line thickness 
+ \pgfpathrectanglecorners{\southwest}{\northeast}
+ \pgfusepath{draw}	%draw rectangle
+ \pgfsetlinewidth{.06\IClen} % line thickness 
+ \pgfpathmoveto{\pgfpoint{-3.5\IClen}{-.6\IClen}}
+ \pgfpatharc{-90}{90}{.6\IClen}
+ \pgfusepath{draw}	%draw semicircle
+ \pgftext[bottom,at={\pgfpoint{-3\IClen}{-1.1\IClen}}]{\pinsize 1}
+ \pgftext[bottom,at={\pgfpoint{-2\IClen}{-1.1\IClen}}]{\pinsize 2}
+ \pgftext[bottom,at={\pgfpoint{-\IClen}{-1.1\IClen}}]{\pinsize 3}
+ \pgftext[bottom,at={\pgfpoint{0cm}{-1.1\IClen}}]{\pinsize 4}
+ \pgftext[bottom,at={\pgfpoint{\IClen}{-1.1\IClen}}]{\pinsize 5}
+ \pgftext[bottom,at={\pgfpoint{2\IClen}{-1.1\IClen}}]{\pinsize 6}
+ \pgftext[bottom,at={\pgfpoint{3\IClen}{-1.1\IClen}}]{\pinsize 7}
+ \pgftext[top,at={\pgfpoint{3\IClen}{1.1\IClen}}]{\pinsize 8}
+ \pgftext[top,at={\pgfpoint{2\IClen}{1.1\IClen}}]{\pinsize 9}
+ \pgftext[top,at={\pgfpoint{\IClen}{1.1\IClen}}]{\pinsize 10}
+ \pgftext[top,at={\pgfpoint{0cm}{1.1\IClen}}]{\pinsize 11}
+ \pgftext[top,at={\pgfpoint{-\IClen}{1.1\IClen}}]{\pinsize 12}
+ \pgftext[top,at={\pgfpoint{-2\IClen}{1.1\IClen}}]{\pinsize 13}
+ \pgftext[top,at={\pgfpoint{-3\IClen}{1.1\IClen}}]{\pinsize 14}
+}}
+
+% ***************************** dip 16 *********************************
+
+\pgfdeclareshape{dip16}{
+\anchor{center}{\pgfpointorigin}	% within the node, (0,0) is the center
+ 
+\anchor{text}	% this is used to center the text in the node
+	{\pgfpoint{-.5\wd\pgfnodeparttextbox}{-.5\ht\pgfnodeparttextbox}}
+
+\savedmacro{\resize}{	% called automatically
+ \setlength{\IClen}{\pgfkeysvalueof{/tikz/pin spacing}}	% from node[]
+ \ifdim\IClen=0mm \setlength{\IClen}
+  {\pgfkeysvalueof{/tikz/circuitikz/multipoles/pin spacing}} \fi	% from \ctikzset{}
+}
+\savedanchor\icpina{\pgfpoint{-3.5\IClen}{-1.25\IClen}}	% pin 1
+\anchor{p1}{\icpina}
+\savedanchor\icpinb{\pgfpoint{-2.5\IClen}{-1.25\IClen}}	% pin 2
+\anchor{p2}{\icpinb}
+\savedanchor\icpinc{\pgfpoint{-1.5\IClen}{-1.25\IClen}}	% pin 3
+\anchor{p3}{\icpinc}
+\savedanchor\icpind{\pgfpoint{-.5\IClen}{-1.25\IClen}}	% pin 4
+\anchor{p4}{\icpind}
+\savedanchor\icpine{\pgfpoint{.5\IClen}{-1.25\IClen}}	% pin 5
+\anchor{p5}{\icpine}
+\savedanchor\icpinf{\pgfpoint{1.5\IClen}{-1.25\IClen}}	% pin 6
+\anchor{p6}{\icpinf}
+\savedanchor\icping{\pgfpoint{2.5\IClen}{-1.25\IClen}}	% pin 7
+\anchor{p7}{\icping}
+\savedanchor\icpinh{\pgfpoint{3.5\IClen}{-1.25\IClen}}	% pin 8
+\anchor{p8}{\icpinh}
+\savedanchor\icpini{\pgfpoint{3.5\IClen}{1.25\IClen}}	% pin 9
+\anchor{p9}{\icpini}
+\savedanchor\icpinj{\pgfpoint{2.5\IClen}{1.25\IClen}}	% pin 10
+\anchor{p10}{\icpinj}
+\savedanchor\icpink{\pgfpoint{1.5\IClen}{1.25\IClen}}	% pin 11
+\anchor{p11}{\icpink}
+\savedanchor\icpinl{\pgfpoint{.5\IClen}{1.25\IClen}}	% pin 12
+\anchor{p12}{\icpinl}
+\savedanchor\icpinm{\pgfpoint{-.5\IClen}{1.25\IClen}}	% pin 13
+\anchor{p13}{\icpinm}
+\savedanchor\icpinn{\pgfpoint{-1.5\IClen}{1.25\IClen}}	% pin 14
+\anchor{p14}{\icpinn}
+\savedanchor\icpino{\pgfpoint{-2.5\IClen}{1.25\IClen}}	% pin 15
+\anchor{p15}{\icpino}
+\savedanchor\icpinp{\pgfpoint{-3.5\IClen}{1.25\IClen}}	% pin 16
+\anchor{p16}{\icpinp}
+
+\savedanchor{\northeast}{\pgfpoint{4\IClen}{1.25\IClen}}
+\savedanchor{\southwest}{\pgfpoint{-4\IClen}{-1.25\IClen}}
+\Compass% standard anchors
+
+\foregroundpath{ % border and pin numbers are drawn here
+ \pgfsetlinewidth{.1\IClen} % line thickness 
+ \pgfpathrectanglecorners{\southwest}{\northeast}
+ \pgfusepath{draw}	%draw rectangle
+ \pgfsetlinewidth{.06\IClen} % line thickness 
+ \pgfpathmoveto{\pgfpoint{-4\IClen}{-.6\IClen}}
+ \pgfpatharc{-90}{90}{.6\IClen}
+ \pgfusepath{draw}	%draw semicircle
+ \pgftext[bottom,at={\pgfpoint{-3.5\IClen}{-1.1\IClen}}]{\pinsize 1}
+ \pgftext[bottom,at={\pgfpoint{-2.5\IClen}{-1.1\IClen}}]{\pinsize 2}
+ \pgftext[bottom,at={\pgfpoint{-1.5\IClen}{-1.1\IClen}}]{\pinsize 3}
+ \pgftext[bottom,at={\pgfpoint{-.5\IClen}{-1.1\IClen}}]{\pinsize 4}
+ \pgftext[bottom,at={\pgfpoint{.5\IClen}{-1.1\IClen}}]{\pinsize 5}
+ \pgftext[bottom,at={\pgfpoint{1.5\IClen}{-1.1\IClen}}]{\pinsize 6}
+ \pgftext[bottom,at={\pgfpoint{2.5\IClen}{-1.1\IClen}}]{\pinsize 7}
+ \pgftext[bottom,at={\pgfpoint{3.5\IClen}{-1.1\IClen}}]{\pinsize 8}
+ \pgftext[top,at={\pgfpoint{3.5\IClen}{1.1\IClen}}]{\pinsize 9}
+ \pgftext[top,at={\pgfpoint{2.5\IClen}{1.1\IClen}}]{\pinsize 10}
+ \pgftext[top,at={\pgfpoint{1.5\IClen}{1.1\IClen}}]{\pinsize 11}
+ \pgftext[top,at={\pgfpoint{.5\IClen}{1.1\IClen}}]{\pinsize 12}
+ \pgftext[top,at={\pgfpoint{-.5\IClen}{1.1\IClen}}]{\pinsize 13}
+ \pgftext[top,at={\pgfpoint{-1.5\IClen}{1.1\IClen}}]{\pinsize 14}
+ \pgftext[top,at={\pgfpoint{-2.5\IClen}{1.1\IClen}}]{\pinsize 15}
+ \pgftext[top,at={\pgfpoint{-3.5\IClen}{1.1\IClen}}]{\pinsize 16}
+}}
+
+% ***************************** mux2 *********************************
+% anchors in1, in2, sel and  out
+
+\pgfdeclareshape{mux2}{
+\anchor{center}{\pgfpointorigin}	% within the node, (0,0) is the center
+ 
+\anchor{text}	% this is used to center the text in the node
+	{\pgfpoint{-.5\wd\pgfnodeparttextbox}{-.5\ht\pgfnodeparttextbox}}
+
+\savedmacro{\resize}{	% called automatically
+ \setlength{\IClen}{\pgfkeysvalueof{/tikz/pin spacing}}	% from node[]
+ \ifdim\IClen=0mm \setlength{\IClen}
+  {\pgfkeysvalueof{/tikz/circuitikz/multipoles/pin spacing}} \fi	% from \ctikzset{}
+}
+\savedanchor\ina{\pgfpoint{-0.5\IClen}{0.5\IClen}}
+\anchor{in 0}{\ina}
+\savedanchor\inb{\pgfpoint{-0.5\IClen}{-0.5\IClen}}
+\anchor{in 1}{\inb}
+\savedanchor\out{\pgfpoint{0.5\IClen}{0}}
+\anchor{out}{\out}
+\savedanchor\sel{\pgfpoint{0}{-1.25\IClen}}	
+\anchor{sel}{\sel}
+
+\savedanchor{\northeast}{\pgfpoint{0.5\IClen}{1.5\IClen}}
+\savedanchor{\southwest}{\pgfpoint{-0.5\IClen}{-1.5\IClen}}
+\Compass% standard anchors
+
+\foregroundpath{% draw border and symbol
+  \pgfsetlinewidth{\pgfkeysvalueof{/tikz/circuitikz/bipoles/thickness}\pgflinewidth}
+  \pgfmoveto{\pgfpoint{-0.5\IClen}{-1.5\IClen}}
+  \pgflineto{\pgfpoint{-0.5\IClen}{1.5\IClen}}
+  \pgflineto{\pgfpoint{0.5\IClen}{1\IClen}}
+  \pgflineto{\pgfpoint{0.5\IClen}{-1\IClen}}
+  \pgflineto{\pgfpoint{-0.5\IClen}{-1.5\IClen}}
+  \pgfusepath{draw}
+  \pgftext[left,at={\pgfpoint{-0.4\IClen}{0.5\IClen}}]{\small 0}
+  \pgftext[left,at={\pgfpoint{-0.4\IClen}{-0.5\IClen}}]{\small 1}
+}}
+
+% ***************************** dff *********************************
+% anchors d, in2, sel and  out
+
+\pgfdeclareshape{dff}{
+\anchor{center}{\pgfpointorigin}	% within the node, (0,0) is the center
+ 
+\anchor{text}	% this is used to center the text in the node
+	{\pgfpoint{-.5\wd\pgfnodeparttextbox}{-.5\ht\pgfnodeparttextbox}}
+
+\savedmacro{\resize}{	% called automatically
+ \setlength{\IClen}{\pgfkeysvalueof{/tikz/pin spacing}}	% from node[]
+ \ifdim\IClen=0mm \setlength{\IClen}
+  {\pgfkeysvalueof{/tikz/circuitikz/multipoles/pin spacing}} \fi	% from \ctikzset{}
+}
+\savedanchor\ind{\pgfpoint{-\IClen}{0.5\IClen}}
+\anchor{d}{\ind}
+\savedanchor\inclk{\pgfpoint{-\IClen}{-0.5\IClen}}
+\anchor{clock}{\inclk}
+\savedanchor\outq{\pgfpoint{\IClen}{0.5\IClen}}
+\anchor{q}{\outq}
+
+\savedanchor{\northeast}{\pgfpoint{\IClen}{\IClen}}
+\savedanchor{\southwest}{\pgfpoint{-\IClen}{-\IClen}}
+\Compass% standard anchors
+
+\foregroundpath{% draw border and symbol
+  \pgfsetlinewidth{\pgfkeysvalueof{/tikz/circuitikz/bipoles/thickness}\pgflinewidth}
+  \pgfmoveto{\pgfpoint{-\IClen}{-\IClen}}
+  \pgflineto{\pgfpoint{-\IClen}{\IClen}}
+  \pgflineto{\pgfpoint{\IClen}{\IClen}}
+  \pgflineto{\pgfpoint{\IClen}{-\IClen}}
+  \pgflineto{\pgfpoint{-\IClen}{-\IClen}}
+  \pgfmoveto{\pgfpoint{-\IClen}{-0.7\IClen}}
+  \pgflineto{\pgfpoint{-0.8\IClen}{-0.5\IClen}}
+  \pgflineto{\pgfpoint{-\IClen}{-0.3\IClen}}
+  \pgfusepath{draw}
+  \pgftext[left,at={\pgfpoint{-0.9\IClen}{0.5\IClen}}]{\small D}
+  \pgftext[right,at={\pgfpoint{0.9\IClen}{0.5\IClen}}]{\small Q}
+}}

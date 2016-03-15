@@ -1,0 +1,17 @@
+NET "switches_i(3)" LOC = "B4";
+NET "switches_i(2)" LOC = "K3";
+NET "switches_i(1)" LOC = "L3";
+NET "switches_i(0)" LOC = "P11";
+
+NET "an_o(3)" LOC = "K14"; # driver for left most display
+NET "an_o(2)" LOC = "M13";
+NET "an_o(1)" LOC = "J12";
+NET "an_o(0)" LOC = "F12"; # driver for right most display
+
+NET "segments_o(6)" LOC = "L14"; # segment A
+NET "segments_o(5)" LOC = "H12"; # segment B
+NET "segments_o(4)" LOC = "N14"; # segment C
+NET "segments_o(3)" LOC = "N11"; # segment D
+NET "segments_o(2)" LOC = "P12"; # segment E
+NET "segments_o(1)" LOC = "L13"; # segment F
+NET "segments_o(0)" LOC = "M12"; # segment G

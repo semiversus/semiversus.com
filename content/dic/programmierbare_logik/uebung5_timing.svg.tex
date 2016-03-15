@@ -1,0 +1,19 @@
+\documentclass[border=5px]{standalone}
+\usepackage{tikz-timing}
+\usetikzlibrary{backgrounds}
+\usetikztiminglibrary[rising arrows, arrow pos=0.5]{clockarrows}
+\begin{document}
+\begin{tikztimingtable}[scale=2, timing/wscale=3, timing/name/.style={font=\sffamily\large}, timing/d/text/.style={font=\sffamily\large},]
+clk & 11{cc}c \\
+button\_i & 2L6H3Ll \\
+detect\_o & l2L1H8L \\
+button\_reg1 & l2L6H3L \\
+button\_reg2 & l3L6H2L \\
+\extracode
+\begin{pgfonlayer}{background}
+\foreach \x in {1.5,4.5,7.5,10.5,13.5,16.5,19.5,22.5,25.5,28.5,31.5}
+  \draw[gray, semitransparent] (\x,1) -- (\x,-8);
+\end{pgfonlayer}
+\end{tikztimingtable}
+\end{document}
+

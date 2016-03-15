@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta name="description" content="Blog und Unterrichtsmaterial zu Digitale Systeme und Computersysteme">
+  <meta name="author" content="Günther Jena">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% if TARGET=='public' %}
+  <link rel="icon" href="{{ SITEURL }}/favicon.ico">
+{% endif %}
+  <title>Semiversus</title> 
+  <link href="{{ SITEURL }}/theme/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{{ SITEURL }}/theme/css/semiversus.css" rel="stylesheet">
+  <link href="{{ SITEURL }}/theme/css/pygments.css" rel="stylesheet">
+  <script src="{{ SITEURL }}/theme/js/jquery.min.js"></script>
+  <script src="{{ SITEURL }}/theme/js/bootstrap.min.js"></script>
+  {% block header %}{% endblock %}
+  <!--[if lt IE 9]>
+    <script src="{{ SITEURL }}/theme/js/html5shiv.js"></script>
+    <script src="{{ SITEURL }}/theme/js/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body data-spy="scroll" data-target="#sidebar" data-offset=30>
+  <div id="wrap">
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+        <a href="{{ SITEURL }}/dic/uebersicht.html" class="navbar-brand">SEMIVERSUS</a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="{{ SITEURL }}/archives.html">Blog</a></li>
+          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Unterricht<b class="carret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="{{ SITEURL }}/dic/uebersicht.html"><em>Übersicht</em></a></li>
+              <li><a href="{{ SITEURL }}/dic/grundlagen_der_digitaltechnik/uebersicht.html">Grundlagen der Digitaltechnik</a></li>
+              <li><a href="{{ SITEURL }}/dic/programmierbare_logik/uebersicht.html">Programmierbare Logik</a></li>
+              <li><a href="{{ SITEURL }}/dic/mikrocontroller/uebersicht.html">Mikrocontroller</a></li>
+              <li><a href="{{ SITEURL }}/dic/hardwarenahe_programmierung/uebersicht.html">Hardwarenahe Programmierung</a></li>
+              <li><a href="{{ SITEURL }}/dic/halbleiterelemente/uebersicht.html">Halbleiterelemente</a></li>
+              <li><a href="{{ SITEURL }}/dic/bussysteme/uebersicht.html">Bussysteme</a></li>
+              <li><a href="{{ SITEURL }}/dic/rechnerarchitektur/uebersicht.html">Rechnerarchitektur</a></li>
+              <li><a href="{{ SITEURL }}/dic/digitale_signalverarbeitung/uebersicht.html">Digitale Signalverarbeitung</a></li>
+              <li><a href="{{ SITEURL }}/dic/komplexe_digitale_systeme/uebersicht.html">Komplexe digitale Systeme</a></li>
+            </ul>
+          <li><a href="{{ SITEURL }}/projekte/projekte.html">Projekte</a></li>
+          <li><a href="{{ SITEURL }}/pages/about.html">Über mich</a></li>
+        </ul>
+        {% if main_lang %}
+        <ul class="nav navbar-nav navbar-right">
+          <li><p class="navbar-btn"><a class ="btn btn-primary btn-sm"{% if (page and not page.in_default_lang) or (article and not article.in_default_lang) %} data-toggle="tooltip" data-placement="bottom" title="The current page is not available in english."{% endif %} role="button" href="{{ SITEURL }}/{{ relpath_to_site(DEFAULT_LANG, 'en') }}/{{ output_file }}">English</a></p></li>
+        </ul>
+        {% endif %}
+    </div>
+  </nav>
+  <div class="container">
+  {% block content %}{% endblock %}
+  </div>
+  </div>
+  <footer class="footer hidden-print"><div class="container"><p class="text-muted credit"><a href="http://creativecommons.org/licenses/by-sa/3.0/de/">CC-BY-SA</a> | Günther Jena 2011 - {{ YEAR }} | Letztes Update am {{ GIT_DATE }} (Rev. <a href="https://github.com/semiversus/semiversus.github.io-source/commit/{{ GIT_REVISION }}">{{ GIT_REVISION }}</a>)</p></div></footer>
+</body>
+</html>

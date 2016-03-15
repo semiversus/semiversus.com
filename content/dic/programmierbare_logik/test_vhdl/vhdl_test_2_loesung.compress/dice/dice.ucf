@@ -1,0 +1,10 @@
+NET "clk" LOC="B8";
+
+NET "button_enable_i" LOC="G12";
+NET "leds_o(0)" LOC="M5";
+NET "leds_o(1)" LOC="M11";
+NET "leds_o(2)" LOC="P7";
+NET "leds_o(3)" LOC="P6";
+NET "leds_o(4)" LOC="N5";
+NET "leds_o(5)" LOC="N4";
+NET "leds_o(6)" LOC="P4";

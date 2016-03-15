@@ -1,0 +1,27 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+\usepackage{verbatim}
+
+\begin{document}
+
+
+\tikzstyle{block} = [draw, fill=blue!20, rectangle, 
+    minimum height=3em, minimum width=6em]
+\tikzstyle{sum} = [draw, fill=blue!20, circle, node distance=1cm]
+\tikzstyle{input} = [coordinate]
+\tikzstyle{output} = [coordinate]
+\tikzstyle{pinstyle} = [pin edge={to-,thin,black}]
+
+% The block diagram code is probably more verbose than necessary
+\begin{tikzpicture}[auto, node distance=4cm,>=latex']
+    % We start by placing the blocks
+    \node [input, name=input] {};
+    \node [block, right of=input] (system) {System};
+    \node [output, right of=system] (output) {};
+
+    \draw [draw,->] (input) -- node {Eingang} (system);
+    \draw [->] (system) -- node {Ausgang} (output);
+\end{tikzpicture}
+
+\end{document}

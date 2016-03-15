@@ -1,0 +1,7 @@
+NET "clk" LOC="B8";
+
+NET "leds_o(0)" LOC="M5";
+NET "leds_o(1)" LOC="M11";
+NET "leds_o(2)" LOC="P7";
+
+NET "mode_i" LOC="P11";

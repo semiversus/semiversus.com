@@ -1,0 +1,19 @@
+\documentclass[border=5px]{standalone}
+\usepackage{tikz-timing}
+\usetikzlibrary{backgrounds}
+\usetikztiminglibrary[rising arrows, arrow pos=0.5]{clockarrows}
+\begin{document}
+\begin{tikztimingtable}[scale=2, timing/wscale=3, timing/name/.style={font=\sffamily\large}, timing/d/text/.style={font=\sffamily\large},]
+clk & 11{cc}c \\
+value & 3D{5}6D{1}2.5D{2} \\
+load & 2L1H8Ll\\
+clear & LH4L2H3Ll\\
+result & 1.5D{U}1D{0}D{5}D{6}D{7}D{8}2D{0}D{1}D{3}D{5}\\
+\extracode
+\begin{pgfonlayer}{background}
+\foreach \x in {1.5,4.5,7.5,10.5,13.5,16.5,19.5,22.5,25.5,28.5,31.5}
+  \draw[gray, semitransparent] (\x,1) -- (\x,-8);
+\end{pgfonlayer}
+\end{tikztimingtable}
+\end{document}
+

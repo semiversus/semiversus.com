@@ -1,0 +1,17 @@
+\documentclass{standalone}
+\usepackage{tikz-timing}
+\usetikzlibrary{positioning}
+\usetikzlibrary{backgrounds}
+
+\begin{document}
+\begin{tikztimingtable}[timing/slope=0, scale=3]
+& s2{N[rectangle]{0}S}N[rectangle]{1}SN[rectangle]{0}S2{N[rectangle]{1}S}3{N[rectangle]{0}S}3{N[rectangle]{1}S} \\
+& 2L1H1L2H3L3H \\
+\extracode
+\begin{pgfonlayer}{background}
+\draw(0,-2)node[anchor=east]{Pegel 1};
+\draw(0,-1)node[anchor=east]{Pegel 2};
+\draw[gray, semitransparent] (-0.1, -1.5) -- (12, -1.5);
+\end{pgfonlayer}
+\end{tikztimingtable}
+\end{document}

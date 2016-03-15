@@ -1,0 +1,19 @@
+\documentclass{standalone}
+\usepackage{tikz-timing}
+\usetikzlibrary{positioning}
+\usetikzlibrary{backgrounds}
+
+\begin{document}
+\begin{tikztimingtable}[timing/slope=0, scale=3]
+& s2{N[rectangle]{0}S}N[rectangle]{1}SN[rectangle]{0}S2{N[rectangle]{1}S}3{N[rectangle]{0}S}3{N[rectangle]{1}S} \\
+Daten & 2L1H1L2H3L3H \\
+Takt & 12{cc} \\
+Manchester & lhlhhllhhlhllhlhlhhlhlhl \\
+differentieller Manchester & lhhlhllhlhlhhllhhlhlhlhl \\
+\extracode
+\begin{pgfonlayer}{background}
+\foreach \x in {0,1,2,3,4,5,6,7,8,9,10,11,12}
+  \draw[gray, semitransparent] (\x,1) -- (\x,-8);
+\end{pgfonlayer}
+\end{tikztimingtable}
+\end{document}
