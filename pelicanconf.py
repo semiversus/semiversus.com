@@ -2,11 +2,16 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 from datetime import datetime
-import xml.etree.ElementTree as ET
 import subprocess
 
 SITEURL = '.'
 RELATIVE_URLS = True
+
+CACHE_CONTENT=True
+LOAD_CONTENT_CACHE=True
+GZIP_CACHE=False
+CONTENT_CACHING_LAYER='reader'
+WITH_FUTURE_DATES=False
 
 TIMEZONE='Europe/Vienna'
 YEAR = datetime.now().year
