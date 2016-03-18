@@ -26,8 +26,8 @@ TRANSLATION_FEED_ATOM = None
 DIRECT_TEMPLATES=['index', 'archives']
 ARCHIVES_SAVE_AS=''
 TAGS_SAVE_AS=''
-CATEGORIES_SAVE_AS=''
 CATEGORY_SAVE_AS=''
+CATEGORIES_SAVE_AS=''
 AUTHORS_SAVE_AS=''
 AUTHOR_SAVE_AS=''
 
@@ -51,10 +51,10 @@ PAGE_LANG_URL='{dirname}/{basename}.html'
 PAGE_LANG_SAVE_AS='{dirname}/{basename}.html'
 
 ARTICLE_PATHS=['blog']
-ARTICLE_URL='{dirname}/{basename}.html'
-ARTICLE_SAVE_AS='{dirname}/{basename}.html'
-ARTICLE_LANG_URL='{dirname}/{basename}.html'
-ARTICLE_LANG_SAVE_AS='{dirname}/{basename}.html'
+ARTICLE_URL='blog/{basename}.html'
+ARTICLE_SAVE_AS='blog/{basename}.html'
+ARTICLE_LANG_URL='blog/{basename}.html'
+ARTICLE_LANG_SAVE_AS='blog/{basename}.html'
 
 #try:
 GIT_DATE=datetime.strftime(datetime.strptime(subprocess.check_output('git show -s --format=%cd --date=short', shell=True).strip(),'%Y-%m-%d'), DEFAULT_DATE_FORMAT)
@@ -66,7 +66,7 @@ GIT_REVISION=subprocess.check_output('git show -s --format=%h', shell=True).stri
 
 PLUGIN_PATHS=['plugins']
 MD_EXTENSIONS=['codehilite(linenums=False)', 'plugins.mdx_tt', 'plugins.mdx_admonition', 'extra']
-PLUGINS=['convert_static', 'slides', 'pageish', 'toc']
+PLUGINS=['convert_static', 'slides', 'pageish', 'toc', 'latex']
 
 CONVERT_PATHS = ['dic', 'blog', 'projekte', 'klassen', 'pages']
 CONVERT_FILENAMES=[('.svg', '.png'), ('.svg.tex', '.png'), ('.compress', '.zip')]

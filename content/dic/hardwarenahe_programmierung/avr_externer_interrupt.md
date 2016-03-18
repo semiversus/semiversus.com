@@ -9,7 +9,7 @@ parent: uebersicht.md
     Die Informationen dieser Seite entstammen dem originalen [Datenblatt]({filename}atmel_atmega16.pdf)
     (Rev. 2466T–AVR–07/10) des ATMega16 von Atmel.
 
-    * *Seite [68-70]({filename}atmel_atmega16.pdf#page=68)*: Externe Interrupts
+    * *Seite [68-70]({filename}atmel_atmega16.pdf)*: Externe Interrupts
 
 # Allgemeines
 

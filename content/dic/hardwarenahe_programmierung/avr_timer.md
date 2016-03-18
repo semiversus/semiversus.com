@@ -10,17 +10,17 @@ parent: uebersicht.md
     (Rev. 2466T–AVR–07/10) des ATMega16 von Atmel.
 
     * *Seite 71-86*: Timer0 (8 Bit)
-        * *[Seite 71]({filename}atmel_atmega16.pdf#page=71)*: Übersicht und Blockschaltbild
-        * *[Seite 76-80]({filename}atmel_atmega16.pdf#page=76)*: Betriebsmodi
-        * *[Seite 83-86]({filename}atmel_atmega16.pdf#page=83)*: Registerbeschreibung
+        * *Seite 71*: Übersicht und Blockschaltbild
+        * *Seite 76-80*: Betriebsmodi
+        * *Seite 83-86*: Registerbeschreibung
     * *Seite 89-116*: Timer1 (16 Bit)
-        * *[Seite 89]({filename}atmel_atmega16.pdf#page=76)*: Übersicht und Blockschaltbild
-        * *[Seite 101-107]({filename}atmel_atmega16.pdf#page=101)*: Betriebsmodi
-        * *[Seite 110-116]({filename}atmel_atmega16.pdf#page=110)*: Registerbeschreibung
+        * *Seite 89*: Übersicht und Blockschaltbild
+        * *Seite 101-107*: Betriebsmodi
+        * *Seite 110-116*: Registerbeschreibung
     * *Seite 117-134*: Timer2 (8 Bit)
-        * *[Seite 117]({filename}atmel_atmega16.pdf#page=117)*: Übersicht und Blockschaltbild
-        * *[Seite 122-125]({filename}atmel_atmega16.pdf#page=122)*: Betriebsmodi
-        * *[Seite 128-130]({filename}atmel_atmega16.pdf#page=128)*: Registerbeschreibung
+        * *Seite 117*: Übersicht und Blockschaltbild
+        * *Seite 122-125*: Betriebsmodi
+        * *Seite 128-130*: Registerbeschreibung
 
 # Allgemeines
 Ein *Timer* ist ein spezieller Zähler, der Ereignisse zählt. Diese Ereignisse können sich auch vom Prozessortakt ableiten

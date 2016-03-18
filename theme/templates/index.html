@@ -1,8 +1,15 @@
-<html>
-<head>
-<meta http-equiv="Refresh" content="0; url=./dic/uebersicht.html" />
-</head>
-<body>
-<p>Please follow <a href="./dic/uebersicht.html">this link</a>.</p>
-</body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+  {% for article in (articles_page.object_list if articles_page else articles) %}
+    <article>
+      <div class="page-header"><h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
+      {% include 'metadata.html' %}
+      </div>
+      <div class="summary">{{ article.summary }}
+          <a class="btn btn-default btn-xs" href="{{ SITEURL }}/{{ article.url }}">Weiterlesen...</a>
+      </div>
+    </article>
+  {% endfor %}
+
+  {% include 'pagination.html' %}
+{% endblock content %}

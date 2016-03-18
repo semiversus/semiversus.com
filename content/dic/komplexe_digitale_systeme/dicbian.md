@@ -5,7 +5,7 @@ next: tutorial1.md
 # Allgemeines
 
 Die Übungen werden mittels [VirtualBox](https://www.virtualbox.org/wiki/Downloads) und 
-[DICbian](http://www.semiversus.com/DICbian.ova) durchgeführt. Steht ein Linux bereits zur Verfügung kann dies selbstverständlich
+[DICbian](http://media.semiversus.com/DICbian.ova) durchgeführt. Steht ein Linux bereits zur Verfügung kann dies selbstverständlich
 auch genutzt werden.
 
 # Installation von Virtualbox
@@ -14,7 +14,7 @@ auch genutzt werden.
   herunterladen und installieren. Für andere Betriebssysteme unter [Downloadseite](https://www.virtualbox.org/wiki/Downloads)
   das entsprechende Installationspaket auswählen.
 
-* Das Virtualbox Image von [DICbian](http://www.semiversus.com/DICbian.ova) herunterladen
+* Das Virtualbox Image von [DICbian](http://media.semiversus.com/DICbian.ova) herunterladen
 
 * Durch Öffnen der Datei DICbian.ova wird das Image importiert. Im Dialog "Appliance importieren" auf "Importieren" klicken.
 

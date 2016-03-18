@@ -1,15 +1,14 @@
 {% extends "base.html" %}
 {% block title %}Semiversus | {{ article.title }}{% endblock %}
-{% block header %}
-{% if article.latex %}{{ article.latex }}{% endif %}
+{% block header %}{% if article.latex %}{{ article.latex }}{% endif %}{% endblock %}
+
+{% block head %}
+  <div class="visible-print-block">Semiversus | {{ article.title }}</div>
 {% endblock %}
+
 {% block content %}
-  <div class="row">
-    <div class="col-md-9" role="main">
-      <div class="visible-print-block">Semiversus | {{ article.title }} | URL: http://www.semiversus.com/{{ article.url }}</div>
-      <header><h1>{{ article.title }}</h1></header>
-      <small><span class="tags">{% for tag in article.tags %}<a href="/tag/{{ tag }}/">{{ tag }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</span></small>
-      {{ article.content }}
-    </div>
+  <div class="page-header"><h2>{{ article.title }}</h2>
+  {% include 'metadata.html' %}
   </div>
+  {{ article.content }}
 {% endblock %}

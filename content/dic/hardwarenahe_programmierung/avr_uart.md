@@ -9,9 +9,9 @@ parent: uebersicht.md
     Die Informationen dieser Seite entstammen dem originalen [Datenblatt]({filename}atmel_atmega16.pdf)
     (Rev. 2466T–AVR–07/10) des ATMega16 von Atmel.
 
-    * *Seite [144-145]({filename}atmel_atmega16.pdf#page=144)*: Blockschaltbild und allgemeine Information
-    * *Seite [163-167]({filename}atmel_atmega16.pdf#page=163)*: Registerbeschreibung
-    * *Seite [167-171]({filename}atmel_atmega16.pdf#page=167)*: UART Baudrateregister und Beispiele für Baudrates
+    * *Seite 144-145*: Blockschaltbild und allgemeine Information
+    * *Seite 163-167*: Registerbeschreibung
+    * *Seite 167-171*: UART Baudrateregister und Beispiele für Baudrates
 
 # Allgemeines
 Um eine serielle Schnittstelle (siehe [RS232]({filename}rs232.md)) zu realisieren stellt der Atmel AVR eine *USART*

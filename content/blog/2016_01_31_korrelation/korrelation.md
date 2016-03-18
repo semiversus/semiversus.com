@@ -1,8 +1,6 @@
 title: Interessante Korrelation, oder anders: Abgeschrieben?
 date: 31.1.2016
-xtags: Schule, BASH, Tools
-
-# Das Problem
+tags: Schule, BASH, Tools
 
 Jede Lehrperson hat ihre eigene Meinung zum Abschreiben. Für mich ist es etwas, das mit Gerechtigkeit
 bei der Beurteilung zu tun hat. Schließlich soll ja die Leistung betreffend der Aufgabenstellung beurteilt

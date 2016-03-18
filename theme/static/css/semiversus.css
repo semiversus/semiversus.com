@@ -35,8 +35,12 @@
   }
 }
 
+.label {
+  vertical-align: text-top;
+}
+
 #sidebar {
-  margin-top: 50px;
+  margin-top: 20px;
   position: fixed;
   min-width: 200px;
 }
@@ -72,10 +76,6 @@
   padding:0 0 60px;
 }
 
-
-.page-header {
-  margin: 0px;
-}
 
 .breadcrumb {
   margin: 5px 0;
@@ -124,7 +124,7 @@ h3 {
 
 .container{
   width:auto;
-  max-width:1400px;
+  max-width:1100px;
   padding:0 15px;
 }
 
