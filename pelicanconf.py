@@ -61,7 +61,7 @@ ARTICLE_LANG_URL='blog/{basename}.html'
 ARTICLE_LANG_SAVE_AS='blog/{basename}.html'
 
 #try:
-GIT_DATE=datetime.strftime(datetime.strptime(subprocess.check_output('git show -s --format=%cd --date=short', shell=True).strip(),'%Y-%m-%d'), DEFAULT_DATE_FORMAT)
+GIT_DATE=datetime.strftime(datetime.strptime(subprocess.check_output('git show -s --format=%cd --date=short', shell=True).decode('utf-8').strip(),'%Y-%m-%d'), DEFAULT_DATE_FORMAT)
 GIT_REVISION=subprocess.check_output('git show -s --format=%h', shell=True).strip()
 #except:
 #  GIT_DATE='unbekannt'
