@@ -8,6 +8,6 @@
 
 {% block content %}
   <h1>{{ article.title }}</h1>
-  <p>{% include 'metadata.html' %}<a href="{{ SITEURL }}/{{ article.url.replace('html','md') }}"  class="glyphicon glyphicon-file >text-right"></a></p>
+  <p>{% include 'metadata.html' %}<a href="{{ SITEURL }}/{{ article.url.replace('html','md') }}"  class="btn btn-default btn-xs pull-right hidden-print" data-toggle="tooltip" data-placement="bottom" title="Quelltext zu dieser Seite"><span class="glyphicon glyphicon-file"></span></a></p>
   {{ article.content }}
 {% endblock %}
