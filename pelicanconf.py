@@ -31,14 +31,18 @@ CATEGORIES_SAVE_AS=''
 AUTHORS_SAVE_AS=''
 AUTHOR_SAVE_AS=''
 
+OUTPUT_SOURCES=True
+OUTPUT_SOURCES_EXTENSION='.md'
+
 THEME='theme'
 THEME_STATIC_PATHS=['static']
 
-STATIC_PATHS = ['extra/robots.txt', 'extra/favicon.ico', 'extra/foto.jpg']
+STATIC_PATHS = ['extra/robots.txt', 'extra/favicon.ico', 'extra/foto.jpg', 'extra/CNAME']
 EXTRA_PATH_METADATA = {
   'extra/robots.txt':{'path':'robots.txt'},
   'extra/favicon.ico':{'path':'favicon.ico'},
   'extra/foto.jpg':{'path':'foto.jpg'},
+  'extra/CNAME':{'path':'CNAME'},
 }
 
 PATH_METADATA= '(?P<dirname>.*)/(?P<basename>.*)\..*'
