@@ -2,6 +2,10 @@ build:
 	@echo "Building website"
 	@pelican content
 
+debug:
+	@echo "Building website (with -D flag)"
+	@pelican content -D
+
 view: build
 	@python -m webbrowser -t file://`pwd`/output/index.html
 
