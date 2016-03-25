@@ -1,4 +1,5 @@
 title: Über mich
+slug: about
 lang: de
 save_as: about.html
 url: about.html

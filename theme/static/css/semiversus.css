@@ -77,12 +77,16 @@
 }
 
 
-.breadcrumb {
+.breadcrumb .pager {
   margin: 5px 0;
 }
 
 .pager {
   margin: 5px 0;
+}
+
+.btn {
+  margin-left: 10px;
 }
 
 .navbar {
@@ -122,7 +126,7 @@ h3 {
   max-width:768px;
 }
 
-.container{
+.container {
   width:auto;
   max-width:1100px;
   padding:0 15px;

@@ -51,14 +51,18 @@ FILENAME_METADATA='(?P<basename>.*)'
 PAGE_PATHS=['dic', 'klassen', 'projekte', 'pages']
 PAGE_URL='{dirname}/{basename}.html'
 PAGE_SAVE_AS='{dirname}/{basename}.html'
-PAGE_LANG_URL='{dirname}/{basename}.html'
-PAGE_LANG_SAVE_AS='{dirname}/{basename}.html'
 
 ARTICLE_PATHS=['blog']
 ARTICLE_URL='blog/{basename}.html'
 ARTICLE_SAVE_AS='blog/{basename}.html'
-ARTICLE_LANG_URL='blog/{basename}.html'
-ARTICLE_LANG_SAVE_AS='blog/{basename}.html'
+
+DEFAULT_LANG='de'
+#PAGE_LANG_URL='{dirname}/{basename}.html'
+#PAGE_LANG_SAVE_AS='{dirname}/{basename}.html'
+#ARTICLE_LANG_URL='blog/{basename}.html'
+#ARTICLE_LANG_SAVE_AS='blog/{basename}-{lang}.html'
+#STATIC_LANG_SAVE_AS=''
+#STATIC_LANG_URL=''
 
 #try:
 GIT_DATE=datetime.strftime(datetime.strptime(subprocess.check_output('git show -s --format=%cd --date=short', shell=True).decode('utf-8').strip(),'%Y-%m-%d'), DEFAULT_DATE_FORMAT)

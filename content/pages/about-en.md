@@ -1,4 +1,5 @@
 title: About me
+slug: about
 lang: en
 save_as: about-en.html
 url: about-en.html
