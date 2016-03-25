@@ -66,7 +66,7 @@ DEFAULT_LANG='de'
 
 #try:
 GIT_DATE=datetime.strftime(datetime.strptime(subprocess.check_output('git show -s --format=%cd --date=short', shell=True).decode('utf-8').strip(),'%Y-%m-%d'), DEFAULT_DATE_FORMAT)
-GIT_REVISION=subprocess.check_output('git show -s --format=%h', shell=True).strip()
+GIT_REVISION=subprocess.check_output('git show -s --format=%h', shell=True).decode('utf-8').strip()
 #except:
 #  GIT_DATE='unbekannt'
 #  GIT_REVISION='neu'
