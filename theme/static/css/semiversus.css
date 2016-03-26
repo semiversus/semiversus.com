@@ -175,12 +175,14 @@ h3 {
 }
 
 a.download:after {
+  font-family: FontAwesome;
   content: '\f019';
   font-size: 80%;
   margin-left: 0.3em;
 }
 
 a.external:after {
+  font-family: FontAwesome;
   content: '\f08e';
   font-size: 70%;
   margin-left: 0.3em;
