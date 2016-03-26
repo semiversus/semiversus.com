@@ -77,12 +77,10 @@ MD_EXTENSIONS=['codehilite(linenums=False)', 'plugins.mdx_tt', 'plugins.mdx_admo
 PLUGINS=['convert_static', 'slides', 'pageish', 'toc', 'latex']
 
 CONVERT_PATHS = ['dic', 'blog', 'projekte', 'klassen', 'pages']
-CONVERT_FILENAMES=[('.svg', '.png'), ('.svg.tex', '.png'), ('.compress', '.zip')]
+CONVERT_FILENAMES=[('.svg', '.png'), ('.svg.tex', '.svg'), ('.compress', '.zip')]
 CONVERT_RULES=[
   ('.compress', 'cd {dst_path} && cp {src} {basename} -r && zip -r {basename}.zip {basename}/* && rm {basename} -r'),
-  ('.svg', 'convert {src} {dst_path}{basename}.png'),
-  ('.svg.tex', 'cd {dst_path} && cp {src} {basename}.tex && pdflatex -interaction=nonstopmode -halt-on-error {basename}.tex && pdf2svg {basename}.pdf {basename}.svg; convert {basename}.svg {basename}.png; rm {basename}.log {basename}.aux {basename}.dvi {basename}.nav {basename}.out {basename}.snm {basename}.pdf {basename}.toc {basename}.vrb {basename}.svg {basename}.tex -rf'),
-  ('.svgs.tex', 'cd {dst_path} && cp {src} {basename}.tex && pdflatex -interaction=nonstopmode -halt-on-error {basename}.tex && pdf2svg {basename}.pdf {basename}_%d.svg all; mogrify -format png *.svg; rm {basename}.log {basename}.aux {basename}.dvi {basename}.nav {basename}.out {basename}.snm {basename}.pdf {basename}.toc {basename}.vrb *.svg {basename}.tex -rf'),
+  ('.svg.tex', 'cd {dst_path} && cp {src} {basename}.tex && pdflatex -interaction=nonstopmode -halt-on-error {basename}.tex && pdf2svg {basename}.pdf {basename}.svg; rm {basename}.log {basename}.aux {basename}.dvi {basename}.nav {basename}.out {basename}.snm {basename}.pdf {basename}.toc {basename}.vrb {basename}.tex -rf'),
   ('.sty', ''),
   ('', 'cp {src} {dst_path}{basename}'),
 ]
