@@ -98,6 +98,23 @@
   font-weight: bold;
 }
 
+.navbar-inverse .navbar-nav > li > a.social:hover,
+.navbar-invers .navbar-nav >  a:hover {
+  color: #9d9d9d;
+}
+
+.fa-github:hover  {
+  color: #4183c4;
+}
+
+.fa-stack-overflow:hover {
+  color: #f69c55;
+}
+
+.fa {
+  transition: all 0.3s ease 0s;
+}
+
 h1 {
   font-size: 200%;
   border-bottom: 1px solid #aaa;

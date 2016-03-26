@@ -1,3 +1,3 @@
-<span class="glyphicon glyphicon-calendar"></span> {{ article.date.strftime("%d.%m.%Y") }}
+<span class="fa fa-calendar"></span> {{ article.date.strftime("%d.%m.%Y") }}
 {% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}" class="hidden-print"><span class="label label-primary">{{ tag }}</span></a> {% endfor %}
 
