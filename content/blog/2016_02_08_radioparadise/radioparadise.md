@@ -2,7 +2,7 @@ title: Webstream Radio Paradise
 date: 2016-02-08
 tags: Webstream
 
-Die meisten Webradios scheitern an einem der folgenden Punkte:
+Die meisten Webradios scheitern an mindestem einen der folgenden Punkte:
 
 * Kostenlos
 * Gute Qualität
@@ -10,4 +10,4 @@ Die meisten Webradios scheitern an einem der folgenden Punkte:
 * ... und gute Musik
 
 Ein Webradio das ich sehr empfehlen kann ist [Radio Paradise](https:www.radioparadise.com). Finanziert wird Radio Paradise
-durch *Spenden* der Hörer.
+mittels Unterstützung durch die Hörer.

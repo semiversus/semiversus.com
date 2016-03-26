@@ -10,6 +10,7 @@
           <a class="btn btn-default btn-xs" href="{{ SITEURL }}/{{ article.url }}">Weiterlesen...</a>
       </div>
     </article>
+  {% if not loop.last %}<hr />{% endif %}
   {% endfor %}
 
   {% include 'pagination.html' %}

@@ -9,6 +9,7 @@
           {% if article.summary != article.content %}<a class="btn btn-default btn-xs" href="{{ SITEURL }}/{{ article.url }}">Weiterlesen...</a>{% endif %}
       </div>
     </article>
+  {% if not loop.last %}<hr />{% endif %}
   {% endfor %}
 
   {% include 'pagination.html' %}

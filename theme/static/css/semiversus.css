@@ -98,6 +98,14 @@
   font-weight: bold;
 }
 
+.navbar-nav a {
+  transition: all 0.3s ease 0s;
+}
+
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+  background-color: #ddd;
+}
+
 .navbar-inverse .navbar-nav > li > a.social:hover,
 .navbar-invers .navbar-nav >  a:hover {
   color: #9d9d9d;
@@ -164,6 +172,16 @@ h3 {
 
 .panel-body p {
   margin: 0px;
+}
+
+a.download:before {
+  content: '\f019';
+  margin-right: 0.2em;
+}
+
+a.external:before {
+  content: '\f08e';
+  margin-right: 0.2em;
 }
 
 figure {
