@@ -3,7 +3,7 @@ parent: uebersicht.md
 
 # Allgemeines
 
-* Download des [Megacard Templates]({filename}embedded_template_hal.compress)
+* Download des [Megacard Templates]({filename}embedded_template_hal.compress){: class="download" }
 * Derzeit werden folgende Komponenten unterstützt:
     * Ansteuerung der LEDs
     * Auswertung der Tastendrücken *S0* bis *S3*

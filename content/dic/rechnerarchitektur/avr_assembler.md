@@ -7,8 +7,8 @@ parent: uebersicht.md
 # Allgemeines
 Der Befehlssatz des Atmel AVR ist ein typischer *RISC*-Befehlssatz. Bei der Entwicklung der AVR Reihe stand vor allem eine möglichst effiziente Nutzung durch C-Compiler im Vordergrund.
 
-* [Komplette Übersicht](http://www.atmel.com/images/Atmel-0856-AVR-Instruction-Set-Manual.pdf) über den Befehlssatz von Atmel
-* [Auszug]({filename}avr_assembler_befehle.pdf) der wichtigsten Befehle
+* [Komplette Übersicht](http://www.atmel.com/images/Atmel-0856-AVR-Instruction-Set-Manual.pdf){: class="external" } über den Befehlssatz von Atmel
+* [Auszug]({filename}avr_assembler_befehle.pdf){: class="download" } der wichtigsten Befehle
 
 # Registersatz
 Die AVR Serie besitzt 32 allgemein verwendbare Register(`R0` bis `R31`). Die Register `R0` bis `R15` sind nicht verfügbar für Befehle mit unmittelbaren Konstanten (z.B. `ldi`-load immediate).

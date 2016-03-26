@@ -9,4 +9,4 @@ toc: False
 * [Faltung]({filename}faltung.md)
 
 # Tests
-* [Test 1]({filename}test_digitale_signalverarbeitung_1.pdf), keine Musterlösung
+* [Test 1]({filename}test_digitale_signalverarbeitung_1.pdf){: class="download" }, keine Musterlösung

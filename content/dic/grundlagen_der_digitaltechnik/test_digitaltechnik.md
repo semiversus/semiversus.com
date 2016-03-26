@@ -17,9 +17,9 @@ title: Test - Allgemeine Digitaltechnik
 !!! panel-info "Hinweis"
     Bei früheren Tests war Datenintegrität (Prüfsummen und Paritäten) enthalten.
 
-* [Test 1]({filename}test_digitaltechnik_1.pdf), [Musterlösung]({filename}test_digitaltechnik_1_loesung.pdf)
-* [Test 2]({filename}test_digitaltechnik_2.pdf), [Musterlösung]({filename}test_digitaltechnik_2_loesung.pdf)
-* [Test 3]({filename}test_digitaltechnik_3.pdf), [Musterlösung]({filename}test_digitaltechnik_3_loesung.pdf)
+* [Test 1]({filename}test_digitaltechnik_1.pdf), [Musterlösung]({filename}test_digitaltechnik_1_loesung.pdf){: class="download" }
+* [Test 2]({filename}test_digitaltechnik_2.pdf), [Musterlösung]({filename}test_digitaltechnik_2_loesung.pdf){: class="download" }
+* [Test 3]({filename}test_digitaltechnik_3.pdf), [Musterlösung]({filename}test_digitaltechnik_3_loesung.pdf){: class="download" }
 
 # Testablauf
 * schriftlich, 30 Minuten

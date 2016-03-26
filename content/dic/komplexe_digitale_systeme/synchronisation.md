@@ -35,4 +35,4 @@ Es müssen vier Kriterien erfüllt werden, damit es in einem System zu einem Dea
 3. Der Zugriff auf die Betriebsmittel ist exklusiv (Mutual Exclusion).
 4. Mindestens zwei Prozesse besitzen bezüglich der Betriebsmittel eine zirkuläre Abhängigkeit (Circular Wait).
 
-Bekannt und beschrieben wird dieses Problem auch als [Philosophenproblem](https://de.wikipedia.org/wiki/Philosophenproblem).
+Bekannt und beschrieben wird dieses Problem auch als [Philosophenproblem](https://de.wikipedia.org/wiki/Philosophenproblem){: class="external" }.

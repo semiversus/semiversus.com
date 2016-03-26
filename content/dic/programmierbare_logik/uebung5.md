@@ -5,7 +5,7 @@ parent: uebersicht.md
 # Übungsaufgabe
 
 !!! panel-info "In dieser Übung wird das BASYS2 Board verwendet"
-    Für weitere Fragen zum Board bitte das [Manual]({filename}basys2_manual.pdf) konsultieren.
+    Für weitere Fragen zum Board bitte das [Manual]({filename}basys2_manual.pdf){: class="download" } konsultieren.
 
 * Entwurf einer universeller Zählerkomponente
 * Erkennung eines Tastendrucks
@@ -25,7 +25,7 @@ Zehntelsekunden):
 
 # Vorbereitung
 
-* [Projektordner]({filename}vhdl_uebung_5.compress) herunterladen und entpacken
+* [Projektordner]({filename}vhdl_uebung_5.compress){: class="download" } herunterladen und entpacken
 * Projekt `stopwatch.xise` öffnen
 
 # Entwicklung einer universellen Zählerkomponente

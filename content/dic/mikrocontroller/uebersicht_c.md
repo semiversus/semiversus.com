@@ -2,15 +2,15 @@ title: Einführung C Programmierung
 parent: uebersicht.md
 
 # Übersicht
-Einen guten Übersicht über C Programmierung bietet das Open Book [C von A bis Z](http://openbook.rheinwerk-verlag.de/c_von_a_bis_z/) aus dem Verlag Galileo Computing und das Wikibook [C-Programmierung](https://de.wikibooks.org/wiki/C-Programmierung).
+Einen guten Übersicht über C Programmierung bietet das Open Book [C von A bis Z](http://openbook.rheinwerk-verlag.de/c_von_a_bis_z/) aus dem Verlag Galileo Computing und das Wikibook [C-Programmierung](https://de.wikibooks.org/wiki/C-Programmierung){: class="external" }.
 
 Um die allgemeinen Beispiele leicht testen zu können, stehen Online Compiler zur Verfügung:
 
-* [Sourcelair](https://www.sourcelair.com/home)
-* [Codepad](http://codepad.org)
-* [IDEOne](http://www.ideone.com)
+* [Sourcelair](https://www.sourcelair.com/home){: class="external" }
+* [Codepad](http://codepad.org){: class="external" }
+* [IDEOne](http://www.ideone.com){: class="external" }
 
-Die Übungen mit der Megacard werden mittels AVR Studio 5 durchgeführt. Das Installationspaket kann über die [Atmel](http://www.atmel.com/Images/as5installer-full-5.0.1223.exe)-Homepage heruntergeladen werden.
+Die Übungen mit der Megacard werden mittels AVR Studio 5 durchgeführt. Das Installationspaket kann über die [Atmel](http://www.atmel.com/Images/as5installer-full-5.0.1223.exe){: class="external" }-Homepage heruntergeladen werden.
 
 # "Hello World" Beispiel
 

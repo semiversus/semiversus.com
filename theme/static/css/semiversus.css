@@ -174,14 +174,16 @@ h3 {
   margin: 0px;
 }
 
-a.download:before {
+a.download:after {
   content: '\f019';
-  margin-right: 0.2em;
+  font-size: 80%;
+  margin-left: 0.3em;
 }
 
-a.external:before {
+a.external:after {
   content: '\f08e';
-  margin-right: 0.2em;
+  font-size: 70%;
+  margin-left: 0.3em;
 }
 
 figure {

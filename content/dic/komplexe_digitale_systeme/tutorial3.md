@@ -3,15 +3,15 @@ parent: uebersicht.md
 next: tutorial4.md
 
 !!! panel-info "Unterlagen der Tuxcadamy"
-    Dieses Tutorial baut auf den Unterlagen der [Tuxcadamy](https://www.tuxcademy.org/) auf. Auch Aufgabenstellungen
-    sind teilweise dort übernommen worden. Die Unterlagen stehen unter der [CC-BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/)
+    Dieses Tutorial baut auf den Unterlagen der [Tuxcadamy](https://www.tuxcademy.org/){: class="external" } auf. Auch Aufgabenstellungen
+    sind teilweise dort übernommen worden. Die Unterlagen stehen unter der [CC-BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/){: class="external" }
     Lizenz und somit auch dieses Tutorial.
 
-    Eine Kopie der Unterlagen kann man [hier]({filename}grd1-de-manual.pdf) herunterladen.
+    Eine Kopie der Unterlagen kann man [hier]({filename}grd1-de-manual.pdf){: class="download" } herunterladen.
 
 # Vorbereitung
 
-Für die folgende Übung benötigen wir die Datei [frosch.txt]({filename}frosch.txt) auf der virtuellen Maschine.
+Für die folgende Übung benötigen wir die Datei [frosch.txt]({filename}frosch.txt){: class="download" } auf der virtuellen Maschine.
 
 Dazu gibt es zwei Möglichkeiten: Download mittels `wget` oder Einrichten eines gemeinsamen Ordners. Es wird also nur
 ein Weg der zwei genannten benötigt.

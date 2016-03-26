@@ -5,7 +5,7 @@ parent: uebersicht.md
 Speicher haben die Aufgabe Information zu speichern. Bei digitalen Speichern ist diese Information ein diskreter Zustand, in den meisten Fällen die Speicherung einer logisch 0 oder 1. Von Informationsverlust spricht man, wenn eine gepeicherte Information nicht mehr richtig wieder gelesen werden kann, bzw. der Zustand einer Speicherzelle sich ungewollt verändert hat.
 
 ## Historische Speicher
-Zu den ersten digitalen und von einer Maschine verarbeitbaren Speicher zählt die [Lochkarte](https://de.wikipedia.org/wiki/Lochkarte), die 1890 zur Volkszählung in der USA von Herman Hollerith eingeführt wurde und bis in die 1970er verwendet wurde.
+Zu den ersten digitalen und von einer Maschine verarbeitbaren Speicher zählt die [Lochkarte](https://de.wikipedia.org/wiki/Lochkarte){: class="external" }, die 1890 zur Volkszählung in der USA von Herman Hollerith eingeführt wurde und bis in die 1970er verwendet wurde.
 
 <figure><img src="{filename}lochkarte.jpg"><figcaption>Lochkarte(Bild: <a href="https://commons.wikimedia.org/wiki/File:Lochkarte-white_hg.jpg">Hannes Grobe/AWI</a> CC BY 3.0)</figcaption></figure>
 

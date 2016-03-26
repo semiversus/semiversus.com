@@ -10,7 +10,7 @@ um den Code einzutippen ( *S0* entspricht Ziffer '1', *S1* entspricht '2', usw.)
 
 # Vorbereitung 
 
-* [Projektordner]({filename}embedded_uebung_safe.compress) herunterladen und entpacken
+* [Projektordner]({filename}embedded_uebung_safe.compress){: class="download" } herunterladen und entpacken
 * Projekt `safe.avrgccproj` öffnen
 
 # Spezifikation
@@ -126,5 +126,5 @@ Wenn eine Taste gedrückt wurde oder der Timer abgelaufen ist wird das Display m
 # Musterlösung
 Ein Implementierung dieser Übung befindet sich hier zum Download:
 
-* [Musterlösung]({filename}embedded_uebung_safe_loesung.compress)
+* [Musterlösung]({filename}embedded_uebung_safe_loesung.compress){: class="download" }
 

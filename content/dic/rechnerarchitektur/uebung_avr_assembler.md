@@ -3,7 +3,7 @@ parent: uebersicht.md
 
 # Allgemeines
 Die Übungen sollten gut kommentiert werden. Ein Programm kann hinsichtlich Programmgröße oder Ausführungsgeschwindigkeit
-optimiert werden. Als Hilfe eignet sich die [Kurzübersicht]({filename}avr_assembler_befehle.pdf) der AVR Assembler Befehle.
+optimiert werden. Als Hilfe eignet sich die [Kurzübersicht]({filename}avr_assembler_befehle.pdf){: class="download" } der AVR Assembler Befehle.
 
 # Daten vertauschen
 Daten liegen im SRAM ab Adresse 0x60 bis zur Adresse 0x15F. Ziel des Assembler Programmes ist es, diesen Datenbereich zu
@@ -139,4 +139,4 @@ Wie groß ist das Programm und wie viel Taktzyklen benötigt es? Wie schaut der 
 Beschreibe in einem Satz die Funktion. Welchen Wert hat nach der Ausführung das Register R16, R17 und X?
 
 ## Hinweis
-Das Programm nutzt die [ASCII Darstellung](https://de.wikipedia.org/wiki/Ascii#ASCII-Tabelle) von Zeichen.  
+Das Programm nutzt die [ASCII Darstellung](https://de.wikipedia.org/wiki/Ascii#ASCII-Tabelle){: class="external" } von Zeichen.  

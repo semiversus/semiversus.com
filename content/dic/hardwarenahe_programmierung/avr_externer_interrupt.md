@@ -6,10 +6,10 @@ parent: uebersicht.md
     aber die Informationen mit dem entsprechenden Datenblatt zu vergleichen!
 
 !!! panel-info "Informationen im Datenblatt"
-    Die Informationen dieser Seite entstammen dem originalen [Datenblatt]({filename}atmel_atmega16.pdf)
+    Die Informationen dieser Seite entstammen dem originalen [Datenblatt]({filename}atmel_atmega16.pdf){: class="download" }
     (Rev. 2466T–AVR–07/10) des ATMega16 von Atmel.
 
-    * *Seite [68-70]({filename}atmel_atmega16.pdf)*: Externe Interrupts
+    * *Seite [68-70]({filename}atmel_atmega16.pdf){: class="download" }*: Externe Interrupts
 
 # Allgemeines
 

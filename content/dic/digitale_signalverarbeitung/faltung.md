@@ -29,4 +29,4 @@ Das zweite Beispiel zeigt ein System mit Tiefpasseigenschaft. Die Impulsantwort 
 
 ## Berechnung nach Wozny
 Eine einfache Art zur Durchführung der diskreten Faltung ist die Berechnung nach Wozny. Im folgenden Youtube Video findet
-sich eine [Anleitung](https://youtu.be/kVSUnbgul7g?t=24m4s).
+sich eine [Anleitung](https://youtu.be/kVSUnbgul7g?t=24m4s){: class="external" }.

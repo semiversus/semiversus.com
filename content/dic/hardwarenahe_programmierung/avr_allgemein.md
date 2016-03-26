@@ -2,7 +2,7 @@ title: Allgemeines zur Atmel AVR Architektur
 parent: uebersicht.md
 
 # Allgemeines
-Datenblatt Atmel ATMega16 ([Download über Atmel.com](http://www.atmel.com/Images/doc2466.pdf))
+Datenblatt Atmel ATMega16 ([Download über Atmel.com](http://www.atmel.com/Images/doc2466.pdf)){: class="external" }
 
 Sämtliche Seitenangaben beziehen sich auf dieses Datenblatt (Rev. 2466T–AVR–07/10).
 

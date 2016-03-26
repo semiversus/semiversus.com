@@ -12,7 +12,7 @@ Für die Implementierung wird folgende herangehensweise empfohlen:
 
 * Zeiche den Zustandsdiagramm händisch auf
 * Gib den Zustände Namen, die man als C Code Enumerationen verwenden kann (z.B. `STATE_WRONG_INPUT`)
-* Nimm das Beispiel des [Weckers]({filename}/dic/mikrocontroller/embedded_watch.zip) als Vorlage
+* Nimm das Beispiel des [Weckers]({filename}/dic/mikrocontroller/embedded_watch.zip){: class="download" } als Vorlage
 * Konzentriere dich anfangs auf die reine Eingabe und Überprüfung des Codes. Erweitere dann die Implementierung um die Zustände "Neuer Code 1" bis "Neuer Code 4".
 
 # Funktionsweise

@@ -5,14 +5,14 @@ parent: uebersicht.md
 # Übungsaufgabe
 
 !!! panel-info "In dieser Übung wird das BASYS2 Board verwendet"
-    Für weitere Fragen zum Board bitte das [Manual]({filename}basys2_manual.pdf) konsultieren.
+    Für weitere Fragen zum Board bitte das [Manual]({filename}basys2_manual.pdf){: class="download" } konsultieren.
 
 In dieser Übung wollen wir den Zustand einer LED mittels Tastendruck wechseln. Beim Start ist die LED aus, nach einem
 Tastendruck soll die LED ein sein, nach einem weiteren Tastendruck soll die LED wieder aus sein.
 
 # Vorbereitung 
 
-* [Projektordner]({filename}vhdl_uebung_3.compress) herunterladen und entpacken
+* [Projektordner]({filename}vhdl_uebung_3.compress){: class="download" } herunterladen und entpacken
 * Projekt `toggle.xise` öffnen
 
 # Aufgabe 1 - Erste Implementierung

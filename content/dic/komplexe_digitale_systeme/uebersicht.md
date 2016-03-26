@@ -5,9 +5,9 @@ toc: False
 # Inhalt
 ## Linux Tutorial
 * [Installation von Virtualbox mit DICbian]({filename}dicbian.md)
-* [Unterlagen der Tuxcadamy]({filename}grd1-de-manual.pdf) (stehen unter der [CC-BY-SA](http://creativecommons.org/licenses/by-sa/4.0/)
+* [Unterlagen der Tuxcadamy]({filename}grd1-de-manual.pdf){: class="download" } (stehen unter der [CC-BY-SA](http://creativecommons.org/licenses/by-sa/4.0/){: class="external" }
   Lizenz).
-* Weitere Infos zur [Tuxcadamy](https://www.tuxcademy.org/)
+* Weitere Infos zur [Tuxcadamy](https://www.tuxcademy.org/){: class="external" }
 * [Tutorial 1]({filename}tutorial1.md) - Übersicht über *Linux*
 * [Tutorial 2]({filename}tutorial2.md) - Einstieg in die *Shell*
 * [Tutorial 3]({filename}tutorial3.md) - Reguläre Ausdrücke

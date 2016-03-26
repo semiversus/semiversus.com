@@ -48,7 +48,7 @@ Die Wirkungsweise eines pnp-Transistors ist dazu analog, jedoch sind die Vorzeic
 
 Das einfachste Modell besteht aus der Basis-Emitter-Diode und der durch den Basisstrom %%I_{B}%% gesteuerten Stromquelle (genauer gesagt einer Stromsenke, da keine Energieerzeugung erfolgt) hin zum Kollektor %%I_{C}%%. Der Transistor verstärkt den Basisstrom um den Faktor %%B%%. Voraussetzungen für die Gültigkeit des Modells sind: Die Basis-Emitter-Diode muss in Durchlassrichtung gepolt sein und die Basis-Kollektor-Diode in Sperrrichtung.
 
-Dieses vereinfachte Modell leitet sich aus dem [Ebers-Moll-Modell](https://de.wikipedia.org/wiki/Ebers-Moll-Modell) ab und vereinfacht dieses durch Vernachlässigung von Sperrströmen und dynamischen Effekten. Die grundlegensde Eigenschaft der Verstärkung ergibt sich in diesem Modell durch %%I_{C}=I_{B}*B_{N}%%, wobei %%B_{N}%% die Verstärkung im Normalbetrieb ist.
+Dieses vereinfachte Modell leitet sich aus dem [Ebers-Moll-Modell](https://de.wikipedia.org/wiki/Ebers-Moll-Modell){: class="external" } ab und vereinfacht dieses durch Vernachlässigung von Sperrströmen und dynamischen Effekten. Die grundlegensde Eigenschaft der Verstärkung ergibt sich in diesem Modell durch %%I_{C}=I_{B}*B_{N}%%, wobei %%B_{N}%% die Verstärkung im Normalbetrieb ist.
 
 Eine Anwendung des vereinfachten Ersatzschaltbildes ist zum Beispiel der Betrieb des Transistors als Schalter (wobei hier nicht das dynamische Verhalten beschrieben werden kann).
 

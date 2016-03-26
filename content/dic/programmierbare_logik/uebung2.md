@@ -5,14 +5,14 @@ parent: uebersicht.md
 # Übungsaufgabe
 
 !!! panel-info "In dieser Übung wird das BASYS2 Board verwendet"
-    Für weitere Fragen zum Board bitte das [Manual]({filename}basys2_manual.pdf) konsultieren.
+    Für weitere Fragen zum Board bitte das [Manual]({filename}basys2_manual.pdf){: class="download" } konsultieren.
 
 In dieser Übung wollen wir eine LED blinken lassen. Dazu nutzen wir den 50Mhz Takt, den das BASYS2 Board liefert.
 
 
 # Vorbereitung 
 
-* [Projektordner]({filename}vhdl_uebung_2.compress) herunterladen und entpacken
+* [Projektordner]({filename}vhdl_uebung_2.compress){: class="download" } herunterladen und entpacken
 * Projekt `blink.xise` öffnen
 
 # Top Level `blink.vhd`

@@ -72,4 +72,4 @@ Die Funktion soll wie folgt sein:
 
 ## Test des Designs
 
-* [Online VHDL Modell mit Testbench](http://www.edaplayground.com/x/EcA)
+* [Online VHDL Modell mit Testbench](http://www.edaplayground.com/x/EcA){: class="external" }

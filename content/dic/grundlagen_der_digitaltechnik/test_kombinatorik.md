@@ -19,9 +19,9 @@ title: Test - Kombinatorik und Sequentielle Logik
 * [Sequentielle Logik]({filename}sequentielle_logik.md)
 
 # Frühere Tests
-* [Test 1]({filename}test_kombinatorik_1.pdf), [Musterlösung]({filename}test_kombinatorik_1_loesung.pdf)
-* [Test 2]({filename}test_kombinatorik_2.pdf), [Musterlösung]({filename}test_kombinatorik_2_loesung.pdf)
-* [Test 3]({filename}test_kombinatorik_3.pdf), [Musterlösung]({filename}test_kombinatorik_3_loesung.pdf)
+* [Test 1]({filename}test_kombinatorik_1.pdf), [Musterlösung]({filename}test_kombinatorik_1_loesung.pdf){: class="download" }
+* [Test 2]({filename}test_kombinatorik_2.pdf), [Musterlösung]({filename}test_kombinatorik_2_loesung.pdf){: class="download" }
+* [Test 3]({filename}test_kombinatorik_3.pdf), [Musterlösung]({filename}test_kombinatorik_3_loesung.pdf){: class="download" }
 
 # Testablauf
 * schriftlich, 15 Minuten

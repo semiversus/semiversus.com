@@ -11,15 +11,15 @@ title: Test - Rechnerarchitektur
 ## Praxis Assemblerprogrammierung
 * Analysieren bestehender Programme (Funktion, Ausführungszeit, Programmgröße)
 * Schreiben von Assemblerroutinen
-* Erlaubte Unterlage: [Zusammenfassung AVR Befehlssatz]({filename}../rechnerarchitektur/avr_assembler_befehle.pdf) (wird zum Test ausgeteilt)
+* Erlaubte Unterlage: [Zusammenfassung AVR Befehlssatz]({filename}../rechnerarchitektur/avr_assembler_befehle.pdf){: class="download" } (wird zum Test ausgeteilt)
 
 ## Praxis Rechnerarchitektur
 * Logisim Prozessor
 
 # Frühere Tests
-* [Test 1]({filename}test_rechnerarchitektur_1.pdf), [Musterlösung]({filename}test_rechnerarchitektur_1_loesung.pdf)
-* [Test 2]({filename}test_rechnerarchitektur_2.pdf), [Musterlösung]({filename}test_rechnerarchitektur_2_loesung.pdf)
-* [Test 3]({filename}test_rechnerarchitektur_3.pdf), keine Musterlösung
+* [Test 1]({filename}test_rechnerarchitektur_1.pdf), [Musterlösung]({filename}test_rechnerarchitektur_1_loesung.pdf){: class="download" }
+* [Test 2]({filename}test_rechnerarchitektur_2.pdf), [Musterlösung]({filename}test_rechnerarchitektur_2_loesung.pdf){: class="download" }
+* [Test 3]({filename}test_rechnerarchitektur_3.pdf){: class="download" }, keine Musterlösung
 
 # Testablauf
 * schriftlich, 30 Minuten

@@ -2,7 +2,7 @@ title: VHDL Test (4)
 parent: uebersicht.md
 
 # Allgemeines
-* [Projektordner]({filename}vhdl_test_4.compress) herunterladen und entpacken
+* [Projektordner]({filename}vhdl_test_4.compress){: class="download" } herunterladen und entpacken
 * Insgesamt gibt es <span class="badge">20 Punkte</span>
 * Die einzelnen Punkte bauen meist nicht aufeinander auf. Statt langer Fehlersuche lieber auf das nächste Beispiel wechseln.
 

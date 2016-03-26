@@ -3,15 +3,15 @@ parent: uebersicht.md
 next: tutorial3.md
 
 !!! panel-info "Unterlagen der Tuxcadamy"
-    Dieses Tutorial baut auf den Unterlagen der [Tuxcadamy](https://www.tuxcademy.org/) auf. Auch Aufgabenstellungen
-    sind teilweise dort übernommen worden. Die Unterlagen stehen unter der [CC-BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/)
+    Dieses Tutorial baut auf den Unterlagen der [Tuxcadamy](https://www.tuxcademy.org/){: class="external" } auf. Auch Aufgabenstellungen
+    sind teilweise dort übernommen worden. Die Unterlagen stehen unter der [CC-BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/){: class="external" }
     Lizenz und somit auch dieses Tutorial.
 
-    Eine Kopie der Unterlagen kann man [hier]({filename}grd1-de-manual.pdf) herunterladen.
+    Eine Kopie der Unterlagen kann man [hier]({filename}grd1-de-manual.pdf){: class="download" } herunterladen.
 
 # Allgemeines
 
-!!! panel-info Definition durch Wikipedia - [Shell](https://de.wikipedia.org/wiki/Shell_(Betriebssystem))
+!!! panel-info Definition durch Wikipedia - [Shell](https://de.wikipedia.org/wiki/Shell_(Betriebssystem)){: class="external" }
   In der Informatik bezeichnet man als **Shell** die Software, die den Benutzer mit dem Computer verbindet. Die Shell 
   ermöglicht zum Beispiel, Kerneldienste zu nutzen und sich über Systemkomponenten zu informieren oder sie zu bedienen.
   Der Begriff „Shell“ (englisch für „Hülle“ oder „Außenhaut“) stammt von Muschelschalen und beschreibt eine Oberfläche
@@ -35,7 +35,7 @@ beantworte die jeweiligen Übungen.
 
 ## Editor
 Ein einfacher Editor für Linux ist `nano`. Dieser ist auf den meisten Linux Systemen installiert und lässt sich leicht
-über die Kombinationen mit <kbd>STRG</kbd> bedienen. Weiter Infos über `nano` gibt es [hier](https://wiki.ubuntuusers.de/Nano/).
+über die Kombinationen mit <kbd>STRG</kbd> bedienen. Weiter Infos über `nano` gibt es [hier](https://wiki.ubuntuusers.de/Nano/){: class="external" }.
 
 Die wichtigsten Tastenkombinationen für `nano`:
 

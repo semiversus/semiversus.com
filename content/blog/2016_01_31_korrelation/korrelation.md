@@ -77,7 +77,7 @@ Die Ausführung führt dann zu folgendem Ergebnis (ein Ausschnitt):
 
 Es fällt der zweite Eintrag auf: 97% Übereinstimmung. Da muss sehr viel Zufall im Spiel sein, oder auch nicht.
 
-Ein direkter Vergleich mittels [Meld](http://meldmerge.org/) zeigt:
+Ein direkter Vergleich mittels [Meld](http://meldmerge.org/){: class="external" } zeigt:
 
 ![Vergleich von arbeit14.c und arbeit20.c]({filename}meld.png)
 
