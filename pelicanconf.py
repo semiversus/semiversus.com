@@ -77,7 +77,7 @@ MD_EXTENSIONS=['codehilite(linenums=False)', 'plugins.mdx_tt', 'plugins.mdx_admo
 PLUGINS=['convert_static', 'slides', 'pageish', 'toc', 'latex']
 
 CONVERT_PATHS = ['dic', 'blog', 'projekte', 'klassen', 'pages']
-CONVERT_FILENAMES=[('.svg', '.png'), ('.svg.tex', '.svg'), ('.compress', '.zip')]
+CONVERT_FILENAMES=[('.svg.tex', '.svg'), ('.compress', '.zip')]
 CONVERT_RULES=[
   ('.compress', 'cd {dst_path} && cp {src} {basename} -r && zip -r {basename}.zip {basename}/* && rm {basename} -r'),
   ('.svg.tex', 'cd {dst_path} && cp {src} {basename}.tex && pdflatex -interaction=nonstopmode -halt-on-error {basename}.tex && pdf2svg {basename}.pdf {basename}.svg; rm {basename}.log {basename}.aux {basename}.dvi {basename}.nav {basename}.out {basename}.snm {basename}.pdf {basename}.toc {basename}.vrb {basename}.tex -rf'),
