@@ -102,6 +102,10 @@
   transition: all 0.3s ease 0s;
 }
 
+.navbar-nav a:hover {
+  transform: scale(1.1);
+}
+
 .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
   background-color: #ddd;
 }

@@ -5,7 +5,7 @@ from datetime import datetime
 import subprocess
 
 SITENAME = 'Semiversus Blog' # for ATOM Feed
-SITEURL = 'http://www.semiversus.com'
+SITEURL = 'http://ghp.semiversus.com'
 RELATIVE_URLS = False
 
 CACHE_CONTENT=True

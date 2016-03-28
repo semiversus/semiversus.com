@@ -1,5 +1,5 @@
 local:
-	@pelican content -s pelicanconf_local.py
+	@PYTHONPATH='.' pelican content -s pelicanconf_local.py
 
 public: 
 	@echo "Building website"
@@ -13,8 +13,8 @@ view: local
 	@python -m webbrowser -t file://`pwd`/output/index.html
 
 upload: public
-	cd output; git add --all; git commit -m "automated push"; git push https://semiversus@github.com/semiversus/semiversus.github.io-source.git 
-	#ssh guenther@semiversus.com './update_semiversus.sh'
+	rm output/* -rf; make public; cd output; git add --all; git commit -m "automated push"; git push git@github.com:semiversus/semiversus.github.io.git
+	ssh guenther@semiversus.com './update_semiversus.sh'
 
 clean:
 	rm cache -rf
