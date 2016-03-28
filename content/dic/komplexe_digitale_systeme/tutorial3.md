@@ -17,7 +17,7 @@ Dazu gibt es zwei Möglichkeiten: Download mittels `wget` oder Einrichten eines 
 ein Weg der zwei genannten benötigt.
 
 ## Download mittels `wget`
-`wget` ist ein Kommandozeilentool um Dateien mittels <tt>http://</tt> Protokoll herunterzuladen. `wget` hat einen riesigen
+`wget` ist ein Kommandozeilentool um Dateien mittels <samp>http://</samp> Protokoll herunterzuladen. `wget` hat einen riesigen
 Funktionsumfang, wir benötigen aber nur das notwendigste:
 
     #!bash
@@ -29,7 +29,7 @@ Wenn eine Internetverbindung besteht sollte die Datei heruntergeladen werden und
 
 ## Einrichten eines gemeinsamen Ordners
 
-Im VirtualBox Manager wird <tt>DICbian</tt> ausgewählt und in der Toolbar auf <tt>Ändern</tt> geklickt. Unter dem Punkt
+Im VirtualBox Manager wird <samp>DICbian</samp> ausgewählt und in der Toolbar auf <samp>Ändern</samp> geklickt. Unter dem Punkt
 *Gemeinsame Ordner* wird ein entsprechender Eintrag hinzugefügt. 
 
 ![Gemeinsamer Ordner]({filename}tutorial_shared_folder.png)

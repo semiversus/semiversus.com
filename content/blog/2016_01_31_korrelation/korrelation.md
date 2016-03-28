@@ -1,4 +1,4 @@
-title: Interessante Korrelation entdecken mittels <tt>wdiff</tt>
+title: Interessante Korrelation entdecken mittels <samp>wdiff</samp>
 date: 2016-01-31 
 tags: Tools
 
@@ -6,7 +6,7 @@ Abschreiben als solches zu erkennen ist keine einfache Sache, da der Aufwand mas
 Arbeiten steigt. Bei 5 Arbeiten sind insgesamt 10 Vergleiche zu machen: Die erste Aufgabe wird mit den vier anderen
 verglichen, dann die zweite Arbeit mit den drei verbleibenden, usw.
 
-Mit <tt>wdiff</tt> habe ich ein Tool gefunden, um einfache Textvergleiche machen zu können.
+Mit <samp>wdiff</samp> habe ich ein Tool gefunden, um einfache Textvergleiche machen zu können.
 
 Die Anzahl der Vergleiche ergibt sich dabei mittels den Binomialkoeffizienten zu:
 
@@ -40,10 +40,10 @@ Bei dem Vergleich sollten Zeilenumbrüche, Leerzeichen, usw. keine Rolle spielen
     arbeit1.c: 126 Wörter  48 38% gleich  13 10% gelöscht  65 52% verändert
     arbeit2.c: 140 Wörter  48 34% gleich  7 5% eingefügt  85 61% verändert
 
-Der Vergleich von <tt>arbeit1.c</tt> mit <tt>arbeit2.c</tt> liefert ein anderes Ergebnis als der umgekehrte Vergleich und
+Der Vergleich von <samp>arbeit1.c</samp> mit <samp>arbeit2.c</samp> liefert ein anderes Ergebnis als der umgekehrte Vergleich und
 hängt vorallem mit der unterschiedlichen Anzahl an Gesamtworten zusammen.
 
-Zum Vergleich von 25 Arbeiten müssen nun 300 dieser Aufrufe gemacht werden. Dazu dient folgendes <tt>bash</tt>-Skript:
+Zum Vergleich von 25 Arbeiten müssen nun 300 dieser Aufrufe gemacht werden. Dazu dient folgendes <samp>bash</samp>-Skript:
 
     #!bash
     files=`ls *.c`
@@ -60,7 +60,7 @@ Zum Vergleich von 25 Arbeiten müssen nun 300 dieser Aufrufe gemacht werden. Daz
       done
     done
 
-Das Skript nutzt zwei Schleifen, um jede Datei mit jeder zu vergleichen. Bei der Ausgabe von <tt>wdiff</tt> werden
+Das Skript nutzt zwei Schleifen, um jede Datei mit jeder zu vergleichen. Bei der Ausgabe von <samp>wdiff</samp> werden
 nicht benötigte Teile weggeschnitten.
 
 # Auswertung
@@ -85,10 +85,10 @@ Die Liste nach Korrelation sortiert zeigt folgendes Ergebnis:
 
 ![Auswertung]({filename}auswertung.png)
 
-Es zeigen sich zwei "*Cluster*": <tt>arbeit14.c</tt> und <tt>arbeit20.c</tt> unterscheiden sich durch genau drei "Wörter",
-<tt>arbeit6.c</tt>, <tt>arbeit15.c</tt> und <tt>arbeit17.c</tt> unterscheiden sich auch nur durch ein paar "Wörter".
+Es zeigen sich zwei "*Cluster*": <samp>arbeit14.c</samp> und <samp>arbeit20.c</samp> unterscheiden sich durch genau drei "Wörter",
+<samp>arbeit6.c</samp>, <samp>arbeit15.c</samp> und <samp>arbeit17.c</samp> unterscheiden sich auch nur durch ein paar "Wörter".
 
 # Zusammenfassung
-<tt>wdiff</tt> ist ein mächtiges Tool für Textvergleiche. Man sollte wahrscheinlich nicht zu pedantisch werden, um als Lehrer
+<samp>wdiff</samp> ist ein mächtiges Tool für Textvergleiche. Man sollte wahrscheinlich nicht zu pedantisch werden, um als Lehrer
 Kopien zu entdecken. Ich wünsche und fordere eine Zusammenarbeit und Wissensaustausch bei Schülern - eine reine Kopie kann ich
 aber nicht unterstützen.

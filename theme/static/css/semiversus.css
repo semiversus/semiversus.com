@@ -119,6 +119,10 @@
   color: #f69c55;
 }
 
+.fa-rss:hover {
+  color: #f26522;
+}
+
 .fa {
   transition: all 0.3s ease 0s;
 }

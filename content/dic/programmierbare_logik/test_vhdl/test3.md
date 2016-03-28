@@ -8,7 +8,7 @@ parent: uebersicht.md
 
 # Einschaltverzögerung
 ## Vorbereitung
-* Projekt <tt>led_toggle/led_toggle.xise</tt> öffnen
+* Projekt <samp>led_toggle/led_toggle.xise</samp> öffnen
 
 ## Aufgabenstellung
 Zwei LEDs sollen mittels zwei Taster angesteuert werden. 
@@ -21,7 +21,7 @@ Zwei LEDs sollen mittels zwei Taster angesteuert werden.
 
 Zur Realisierung wird eine Zustandsmaschine genutzt.
 
-* Bearbeite die Datei <tt>led_toggle_fsm.vhd</tt>
+* Bearbeite die Datei <samp>led_toggle_fsm.vhd</samp>
 * Definiere die drei Zuständen `OFF`, `LED1` und `LED2`
 * Der Startzustand ist `OFF`
 * Der Eingang `toggle_i` wechselt von `OFF` nach `LED1` bzw. wechselt von `LED1` nach `LED2` und umgekehrt
@@ -31,22 +31,22 @@ Zur Realisierung wird eine Zustandsmaschine genutzt.
 * Der Ausgang `led2_o` ist auf `'1'`, wenn die Zustandmaschine im Zustand `LED2` ist
 
 !!! panel-info "Testbench"
-    Teste die Implementierung mittels der Testbench <tt>led_toggle_fsm_tb.vhd</tt>. Mittels <kbd>F6</kbd> lässt sich
+    Teste die Implementierung mittels der Testbench <samp>led_toggle_fsm_tb.vhd</samp>. Mittels <kbd>F6</kbd> lässt sich
     der gesamte Bereich zoomen.
 
 ## Implementierung des Top Levels
 <span class="badge">5 Punkte</span>
 
-Zur Verfügung stehen die Komponenten <tt>button_dectect</tt> und <tt>led_toggle_fsm</tt>. Diese
-Komponenten werden genutzt, um im Top Level <tt>led_toggle.vhd</tt> die gewünschte Funktionalität zu realisieren.
+Zur Verfügung stehen die Komponenten <samp>button_dectect</samp> und <samp>led_toggle_fsm</samp>. Diese
+Komponenten werden genutzt, um im Top Level <samp>led_toggle.vhd</samp> die gewünschte Funktionalität zu realisieren.
 
-* Die Instanz der Komponente <tt>button_detect</tt> mit dem Namen `toggle_detect_component` ist bereits erstellt
+* Die Instanz der Komponente <samp>button_detect</samp> mit dem Namen `toggle_detect_component` ist bereits erstellt
     * `button_i` ist mit dem Eingang `button_toggle_i` verbunden
     * `detect_o` ist mit dem (bereits definiertem) Signal `toggle_detect` verbunden
-* Erstelle eine Instanz der Komponente <tt>button_detect</tt> mit dem Namen `off_detect_component` analog zu `toggle_detect_component`
+* Erstelle eine Instanz der Komponente <samp>button_detect</samp> mit dem Namen `off_detect_component` analog zu `toggle_detect_component`
     * `button_i` ist mit dem Eingang `button_off_i` verbunden
     * `detect_o` ist mit dem (bereits definiertem) Signal `off_detect` verbunden
-* Erstelle eine Instanz der Komponente <tt>led_toggle_fsm</tt> mit dem Namen `led_toggle_fsm_component`
+* Erstelle eine Instanz der Komponente <samp>led_toggle_fsm</samp> mit dem Namen `led_toggle_fsm_component`
     * `toggle_i` ist mit dem Signal `toggle_detect` verbunden
     * `off_i` ist mit dem Signal `off_detect` verbunden
     * `led1_o` ist mit dem Ausgang `led1_o` verbunden
@@ -54,17 +54,17 @@ Komponenten werden genutzt, um im Top Level <tt>led_toggle.vhd</tt> die gewünsc
 * Jede Komponente hat einen Takteingang `clk`, welcher mit dem globalen `clk` verbunden wird
 
 !!! panel-info "Testbench"
-    Teste die Implementierung mittels der Testbench <tt>led_toggle_tb.vhd</tt>.
+    Teste die Implementierung mittels der Testbench <samp>led_toggle_tb.vhd</samp>.
 
 ## Erweiterung der *Constraints* Datei
 <span class="badge">2 Punkte</span>
 
-In der Datei <tt>led_toggle.ucf</tt> ist nur das Signal `clk` definiert. Erweitere die Datei um folgende Zuordnungen
+In der Datei <samp>led_toggle.ucf</samp> ist nur das Signal `clk` definiert. Erweitere die Datei um folgende Zuordnungen
 
-* `button_toggle_i` wird durch den Taster <tt>BTN0</tt> angesteuert
-* `button_off_i` wird durch den Taster <tt>BTN1</tt> angesteuert
-* `led1_o` ist die LED <tt>LD0</tt>
-* `led2_o` ist die LED <tt>LD1</tt>
+* `button_toggle_i` wird durch den Taster <samp>BTN0</samp> angesteuert
+* `button_off_i` wird durch den Taster <samp>BTN1</samp> angesteuert
+* `led1_o` ist die LED <samp>LD0</samp>
+* `led2_o` ist die LED <samp>LD1</samp>
 
 <figure><img src="{filename}../basys2_pinout.svg"><figcaption>Pinout des BASYS2 Boards(Bild: <a href="http://www.digilentinc.com/Products/Detail.cfm?NavPath=2,400,790&Prod=BASYS2">Digilent Inc. BASYS2 Manual</a>)</figcaption></figure>
 
@@ -75,7 +75,7 @@ Synthetisiere das Projekt und teste das Ergebnis am Board
 
 # Ampel mit Überwachung
 ## Vorbereitung
-* Projekt <tt>lights/lights.xise</tt> öffnen
+* Projekt <samp>lights/lights.xise</samp> öffnen
 
 ## Aufgabenstellung
 Es soll eine Ampel mit zwei Modis realisiert werden: 
@@ -104,16 +104,16 @@ den Eingang `monitor_i` und den Ausgang `result_o`.
 * Liegt eine ungültige Kombination an (z.B. `"101"`) soll stattdessen die Kombination für Rot ausgegeben werden (`"100"`)
 * Gültige Kombinationen sind alle Ausgaben der Zustände `GREEN`, `ORANGE`, `RED`, `RED_ORANGE` und `OFF`
 
-Die Komponente ist in vier Ausführungen (*Architectures*) bereits in der Datei <tt>supervisor.vhd</tt> beschrieben. Die
+Die Komponente ist in vier Ausführungen (*Architectures*) bereits in der Datei <samp>supervisor.vhd</samp> beschrieben. Die
 *Architectures* lauten `behave1`, `behave2`, `behave3` und `behave4`.
 
-Erstelle in der Datei <tt>supervisor_tb.vhd</tt> eine Testbench, die herausfindet, welche der vier Ausführungen
+Erstelle in der Datei <samp>supervisor_tb.vhd</samp> eine Testbench, die herausfindet, welche der vier Ausführungen
 funktioniert (es ist genau eine).
 
 ## Komponente `lights_fsm`
 <span class="badge">5 Punkte</span>
 
-Erstelle die Komponente `lights_fsm` durch Bearbeitung der Datei <tt>lights_fsm.vhd</tt>.
+Erstelle die Komponente `lights_fsm` durch Bearbeitung der Datei <samp>lights_fsm.vhd</samp>.
 
 * Die Ampel wechselt nur den Zustand, wenn `next_i` gleich `'1'` ist
 * Ist der Eingang `mode_i` gleich `'0'` soll die Ampel zwischen den Zuständen `ORANGE` und `OFF` wechseln
@@ -123,15 +123,15 @@ Erstelle die Komponente `lights_fsm` durch Bearbeitung der Datei <tt>lights_fsm.
 * Der Startzustand ist `ORANGE`
 
 !!! panel-info "Testbench"
-    Teste die Implementierung mittels der Testbench <tt>lights_fsm_tb.vhd</tt>.
+    Teste die Implementierung mittels der Testbench <samp>lights_fsm_tb.vhd</samp>.
 
 ## Implementierung des Top Levels
 <span class="badge">5 Punkte</span>
 
-Zur Verfügung stehen die Komponenten <tt>counter</tt>, <tt>light_fsm</tt> und <tt>supervisor</tt>. Diese
-Komponenten werden genutzt, um im Top Level <tt>lights.vhd</tt> die gewünschte Funktionalität zu realisieren.
+Zur Verfügung stehen die Komponenten <samp>counter</samp>, <samp>light_fsm</samp> und <samp>supervisor</samp>. Diese
+Komponenten werden genutzt, um im Top Level <samp>lights.vhd</samp> die gewünschte Funktionalität zu realisieren.
 
-Mit dem <tt>counter</tt> soll ein 700 Millisekunden Takt generiert werden. Wieviel Takte des 50 Mhz Taktes sind dazu
+Mit dem <samp>counter</samp> soll ein 700 Millisekunden Takt generiert werden. Wieviel Takte des 50 Mhz Taktes sind dazu
 notwendig und wieviel Bits werden benötigt, um diesen Wert darstellen zu können? Trage diese Werte in der Default-Einstellung
 von `COUNTER_WIDTH` und `COUNTER_MAXIMUM` ein:
 
@@ -155,7 +155,7 @@ Erstelle das Top Level anhand des folgenden Blockschaltbildes:
 Gegebenenfalls müssen noch Signale definiert werden.
 
 !!! panel-info "Testbench"
-    Teste die Implementierung mittels der Testbench <tt>lights_tb.vhd</tt>.
+    Teste die Implementierung mittels der Testbench <samp>lights_tb.vhd</samp>.
 
 ## Test am Board
 <span class="badge">1 Punkt</span>

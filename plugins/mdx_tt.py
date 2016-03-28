@@ -3,7 +3,7 @@ from markdown import util
 import markdown
 
 class BacktickPattern(Pattern):
-    """ Return a `<code>` element containing the matching text. """
+    """ Return a `<var>` element containing the matching text. """
     def __init__ (self, pattern):
         Pattern.__init__(self, pattern)
         self.tag = "code"
@@ -20,4 +20,3 @@ class TTExtension (markdown.Extension):
 
 def makeExtension(config=[]):
     return TTExtension(config)
-

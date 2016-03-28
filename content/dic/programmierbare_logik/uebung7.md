@@ -23,7 +23,7 @@ Die Komponente `shifter` soll folgender Spezifikation entsprechen
 * Der Eingang `reset_i` führt einen asynchronen Reset aus und dies hat die höchste Priorität
 
 ## Schreiben der Testbench
-Erweitere die Datei <tt>shifter_tb.vhd</tt>.
+Erweitere die Datei <samp>shifter_tb.vhd</samp>.
 
 * Mittels `assert` können Bedingungen geprüft werden.
 * Mittels `wait for` kann für eine bestimmte Zeit gewartet werden.

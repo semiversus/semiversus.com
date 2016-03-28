@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 from datetime import datetime
 import subprocess
 
+SITENAME = 'Semiversus Blog' # for ATOM Feed
 SITEURL = '.'
 RELATIVE_URLS = True
 
@@ -17,7 +18,7 @@ TIMEZONE='Europe/Vienna'
 YEAR = datetime.now().year
 DEFAULT_DATE_FORMAT='%-d.%-m.%Y'
 
-FEED_ALL_ATOM = None
+FEED_ALL_ATOM='semiversus.atom.xml'
 CATEGORY_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
