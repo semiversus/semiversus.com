@@ -131,6 +131,10 @@
   transition: all 0.3s ease 0s;
 }
 
+hr {
+  clear: both;
+}
+
 h1 {
   font-size: 200%;
   border-bottom: 1px solid #aaa;
