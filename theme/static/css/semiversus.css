@@ -135,6 +135,14 @@ hr {
   clear: both;
 }
 
+.featured-img {
+  float: left!important;
+  max-width: 250px;
+  padding-right: 8px;
+  padding-bottom: 10px;
+}
+
+
 h1 {
   font-size: 200%;
   border-bottom: 1px solid #aaa;
