@@ -4,12 +4,12 @@ tags: Programmieren, C
 
 In C gibt es vier bitweise Operatoren (Details dazu im [Skriptum]({filename}/dic/mikrocontroller/bitmanipulation.md)):
 
-* *UND* Verknüpfung - `&`
-* *ODER* Verknüpfung - `|`
-* *Exklusiv ODER* Verküpfung - `^`
+* *UND* Operator - `&`
+* *ODER* Operator - `|`
+* *Exklusiv ODER* Operator - `^`
 * *INVERTIERUNG* - `~`
 
-Neben den bitweisen Operatoren gibt es noch die logische, die den bitweisen entsprechen:
+Neben den bitweisen Operatoren gibt es noch die logischen Verknüpfungen, die den bitweisen entsprechen:
 
 * *UND* Verknüpfung - `&&`
 * *ODER* Verknüpfung - `||`
