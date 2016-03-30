@@ -4,6 +4,6 @@ tags: Verschiedenes
 
 ![Kommentar]({filename}pinwall.jpg)
 
-Dieser Ausschnitt hängt seit einer Ewigkeit auf meiner Pinnwand, weil es einen seltsamen Reiz hat, diesen Kommentar
+Dieser Ausschnitt hängt seit einer Ewigkeit auf meiner Pinnwand. Es hat einen seltsamen Reiz diesen Kommentar
 zu lesen. Ich habe den Namen der schreibenden Person unkenntlich gemacht, das originale Kommentar ist aber nach wie vor
 online abzurufen.
