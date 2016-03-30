@@ -2,7 +2,7 @@ title: Jubiläumsplan
 date: 2016-02-11
 tags: Tools, Verschiedenes
 
-Wieso Jubiläen immer nur nach ganzen Jahren feiern? Wieso nicht bei einer Millon Sekunden Lebenszeit? Oder bei Tausend Wochen?
+Wieso Jubiläen immer nur nach ganzen Jahren feiern? Wieso nicht bei einer Million Sekunden Lebenszeit? Oder bei Tausend Wochen?
 
 Dieses [Spreadsheet]({filename}anniversary.ods){: class="download" } (LibreOffice Calc Sheet) macht es möglich. Einfach das Datum und die
 Uhrzeit bei "Geburt" eintragen, Namen anpassen und ausdrucken.
