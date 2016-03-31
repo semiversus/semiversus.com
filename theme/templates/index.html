@@ -1,5 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
+  {% if articles_previous_page==None %}
+  <h1>Übersicht</h1>
+  <p>Hier findet sich mein privater Blog und <a href="./dic/uebersicht.html">Unterrichtsmaterial</a> für das Fach <em>Digitale Systeme und Computersysteme</em> an der <a href="http://www.htl-rankweil.at" class="external">HTL Rankweil</a>.</p>
+  <p>Alle Inhalte (sofern nicht anders gekennzeichnet) befinden sich unter der <a href="http://creativecommons.org/licenses/by-sa/3.0/de/" class="external">CC BY-SA 3.0 DE</a> Lizenz.</p>
+  <p>Aktuell finden sich folgende Stichwörter:</p>
+{% for tag,articles in tags %}<a href="{{ SITEURL }}/{{ tag.url }}" class="hidden-print"><span class="label label-primary">{{ tag }}</span></a> {% endfor %}
+
+
+  <hr />
+  {% endif %}
+
   {% for article in (articles_page.object_list if articles_page else articles) %}
     <article>
       <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>

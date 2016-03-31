@@ -265,3 +265,7 @@ blockquote p {
 .latex-inline {
   vertical-align: middle;
 }
+
+article {
+  margin-bottom: 10px;
+}
