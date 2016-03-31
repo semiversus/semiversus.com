@@ -10,4 +10,4 @@ Mein Name ist Günther Jena und komme aus Kappl in Österreich. Ich wohne und ar
 
 Ich beschäftige mich mit Softwareentwicklung und Elektronik. Auf dieser Seite möchte ich in Zukunft ein paar meiner Projekte vorstellen und den Blog als einen öffentlichen Notizzettel nutzen.
 
-Bei Fragen zur Homepage bin ich unter VORNAME@NACHNAME.at erreichbar.
+Bei Fragen zur Homepage bin ich unter [guenther@jena.at](mailto:guenther@jena.at) erreichbar.

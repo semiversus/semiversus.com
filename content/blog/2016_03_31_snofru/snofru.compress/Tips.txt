@@ -1,0 +1,79 @@
+		    Der Tempel des Snofru
+		    =====================
+		   für Win95 und folgende
+			
+			 (Shareware)
+
+Geschrieben von 	Jehle Günther
+	       	        Turneshaus 382
+		 	  6555 Kappl
+		 	  Österreich
+
+		       Fax.: 05445/6522
+
+Dieser Text enthält:
+	1. Allgemeine Hinweise
+	2. Anleitung zum Programm
+	3. Tips & Tricks
+
+1. Allgemeine Hinweise
+======================
+
+Das Programm "Der Tempel des Snofru" wird nach dem Shareware-Prinzip 
+vertrieben. Das Programm steht dem Anwender für 21-Tage frei zur Verfügung.
+Wird nach dieser Nutzungsdauer das Programm weiter benutzt, muß es registriert
+werden. Gefällt ihnen das Programm, schicken sie bitte per Post 50 Schilling
+(8 Mark) an die obenabgedruckte Adresse. Sie bekommen von mir dann eine Diskette
+mit der Vollversion zugeschickt. In der Vollversion zusätzlich enthalten ist
+ein Editor, mit dem sie bequem eigene Welten erschaffen können. Die Shareware-
+Hinweise sind dort natürlich nicht enthalten. Der Programmierer freut sich über
+Lob und Kritik.
+
+2. Anleitung zum Programm
+=========================
+2.1. Allgemein
+--------------
+
+Das Programm wird über die Pfeiltasten gespielt.
+Rechts sehen sie drei Anzeigen:
+	
+	Punkt		...verrät ihnen den aktuellen Punktestand
+				alle 100 Punkte erhalten sie ein Extra-Leben
+	Leben		...die aktuelle Anzahl der Zusatzleben. Sie starten
+				mit 5 Leben.
+	Level		...das aktuelle Level. Insgesamt gibt es 50.
+
+2.2. Das Menü
+-------------
+
+Im Menü "Spiel" finden sie die Punkte:
+	
+	Neu   	         ...startet ein neues Spiel.
+	Level neuladen   ...startet das aktuelle Level neu.
+	Editor
+	   Spiel laden   ...ladet ein von ihnen gemachtes Spiel.
+	   Spiel erzeugen...erzeugt oder erweitert eines ihrer Spiele.
+	Ende		 ...Beendet das Spiel.
+
+Im Menü "Info" finden sie die Punkter:
+	
+	Hilfe		...Dort finden sie eine kleine Hilfe zum Spiel
+	Über...		...Dort erfahren sie Information über das Spiel
+
+3. Tips & Tricks
+================	
+	
+	* Schauen sie sich ein Level am Anfang genau an!
+	
+	* Die Wächter sind zu dieser Zeit recht dumm:
+		Immer wenn sie Anstossen gehen sie -von den Wächtern aus gesehen-
+		nach rechts weiter.
+	
+	* Manchmal ist es hilfreich, die Pfeiltasten gedrückt zuhalten.
+		So wird Rudi schnell. Sollte das nicht der Fall sein, so können
+		sie im Systemmenü von Windows die Tastenwiederholrate erhöhen.
+
+Dieser Text ist hiermit zu Ende
+
+			Mit freundliche Grüssen
+				der Programmierer 

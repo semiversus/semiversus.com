@@ -10,4 +10,4 @@ My name is Günther Jena and I'm from Kappl in Austria. I'm living and working i
 
 My interests are software development and electronics. With this website I want to share my projects and use the blog as public notepad.
 
-If you have any questions, please do not hesitate to contact me via FIRST_NAME@SURNAME.at .
+If you have any questions, please do not hesitate to contact me via [guenther@jena.at](mailto:guenther@jena.at) .
