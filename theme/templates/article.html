@@ -10,6 +10,5 @@
   <h2>{{ article.title }}</h2>
   <p>{% include 'metadata.html' %}<a href="{{ SITEURL }}/{{ article.url.replace('html','md') }}"  class="btn btn-default btn-xs pull-right hidden-print" data-toggle="tooltip" data-placement="bottom" title="Quelltext zu dieser Seite"><span class="fa fa-file-text-o fa-lg"></span></a></p>
   {{ article.content }}
-  <script data-isso="https://comments.semiversus.com" src="{{ SITEURL }}/theme/js/embed.min.js"></script>
-  <section id="isso-thread" data-title="{{ article.slug }}"></section>
+  {% include 'comments.html' %}
 {% endblock %}
