@@ -1,3 +1,3 @@
-<span class="fa fa-calendar"></span> {{ article.date.strftime("%d.%m.%Y") }} | <a href="{{ article.url }}#isso-thread}}">Kommentare</a> |
+<span class="fa fa-calendar"></span> {{ article.date.strftime("%d.%m.%Y") }} | <a href="{{ SITEURL }}/{{ article.url }}#isso-thread}}">Kommentare</a> |
 {% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}" class="hidden-print"><span class="label label-primary">{{ tag }}</span></a> {% endfor %}
 
