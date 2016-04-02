@@ -1,3 +1,5 @@
-<span class="fa fa-calendar"></span> {{ article.date.strftime("%d.%m.%Y") }} | <a href="{{ SITEURL }}/{{ article.url }}#isso-thread">Kommentare</a> |
+<span class="fa fa-calendar"></span> {{ article.date.strftime("%d.%m.%Y") }} | <a href="{{ SITEURL }}/{{ article.url }}#isso-thread">Kommentare</a> | {% if article.tags|length==1 %}Tag{% else %}Tags{% endif %}:
 {% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}" class="hidden-print"><span class="label label-primary">{{ tag }}</span></a> {% endfor %}
-
+<a href="http://twitter.com/home?status={{ SITEURL|urlencode }}%2F{{ article.url|urlencode }}" title="Teilen auf Twitter" target="_blank" class="btn btn-twitter btn-xs pull-right"><span class="fa fa-twitter"></span> Twitter</a>
+<a href="https://plus.google.com/share?url={{ SITEURL|urlencode }}%2F{{ article.url|urlencode }}" title="Teilen auf Google+" target="_blank" class="btn btn-googleplus btn-xs pull-right"><span class="fa fa-google-plus"></span> Google+</a>
+<a href="https://www.facebook.com/sharer/sharer.php?u={{ SITEURL|urlencode }}%2F{{ article.url|urlencode }}" title="Teilen auf Facebook" target="_blank" class="btn btn-facebook btn-xs pull-right"><span class="fa fa-facebook"></span> Facebook</a>
