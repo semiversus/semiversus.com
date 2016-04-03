@@ -8,7 +8,7 @@
 
 {% block content %}
   <h2>{{ article.title }}<a href="{{ SITEURL }}/{{ article.url.replace('html','md') }}"  class="btn btn-default btn-xs pull-right hidden-print" data-toggle="tooltip" data-placement="bottom" title="Quelltext zu dieser Seite"><span class="fa fa-file-text-o fa-lg"></span></a></h2>
-  <p>{% include 'metadata.html' %}</p>
+  {% include 'metadata.html' %}
   {{ article.content }}
   {% include 'comments.html' %}
 {% endblock %}

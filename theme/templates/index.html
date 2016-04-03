@@ -12,7 +12,7 @@
   {% for article in (articles_page.object_list if articles_page else articles) %}
     <article>
       <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
-      <p>{% include 'metadata.html' %}</p>
+      {% include 'metadata.html' %}
       <div class="summary">
         {% if article.featured_image %}
           <a href="{{ SITEURL }}/{{ article.url }}"><img src="{{article.featured_image}}" class="featured-img"></a>
