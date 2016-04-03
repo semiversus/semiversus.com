@@ -1,6 +1,9 @@
 {% extends "base.html" %}
-{% block title %}Semiversus | {{ page.title }}{% endblock %}
-{% block header %}{% if page.latex %}{{ page.latex }}{% endif %}{% endblock %}
+{% block title %}{{ page.title }}{% endblock %}
+{% block header %}
+  {% if page.latex %}{{ page.latex }}{% endif %}
+  {% for translation in page.translations %}<link rel="alternate" hreflang="{{ translation.lang }}" href="{{ SITEURL }}/{{translation.url }}" />{% endfor %}
+{% endblock %}
 
 {% block head %}
     <div class="visible-print-block">Semiversus | {{ page.title }}</div>
