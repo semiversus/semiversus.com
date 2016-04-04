@@ -4,7 +4,7 @@ tags: Empfehlung, Webstream
 
 ![Bodensee{@class=pull-left style=padding-right:8px;}]({filename}bodensee.jpg)
 
-Die Länge der Außengrenzen von Österreich, Deutschland und der Schweiz sind in einem wesentlichen Teil der Länge nicht
+Die Längen der Außengrenzen von Österreich, Deutschland und der Schweiz sind in einem wesentlichen Teil nicht
 festgelegt. Dieser wesentliche Teil betrifft die Grenzen rund um bzw. durch den Bodensee. Es ist die einzige Gegend in
 Europa in der zwischen den Nachbarstaaten keine Grenzen definiert sind.
 
