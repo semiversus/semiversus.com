@@ -5,7 +5,7 @@ save_as: about-en.html
 url: about-en.html
 toc: false
 
-![Foto Günther Jena{@class="pull-left img-thumbnail" style=margin-right:10px; }]({filename}/extra/foto.jpg)
+![Foto Günther Jena (Jehle){@class="pull-left img-thumbnail" title="Foto von Günther Jena (Jehle)" style=margin-right:10px; }]({filename}guenther_jena_jehle.jpg)
 
 My name is Günther Jena and I'm from Kappl in Austria. I'm living and working in Rankweil. Before my wedding my name was Günther Jehle and Jena is the concatenation of my former name "*Jehle*" and the former name of my wife "*Nagel*".
 

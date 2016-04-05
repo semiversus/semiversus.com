@@ -2,7 +2,9 @@ title: Scheduling
 parent: uebersicht.md
 
 # Allgemeines
-Unter Scheduling (englisch für „Zeitplanerstellung“), versteht man das Erstellen eines Ablaufplanes (schedule), der Prozessen zeitlich begrenzt Ressourcen zuteilt. Dem Scheduler stehen als Entscheidungsbasis die anstehenden Aufgaben zur Verfügung.
+Unter Scheduling (englisch für „Zeitplanerstellung“), versteht man das Erstellen eines Ablaufplanes (schedule), der
+Prozessen zeitlich begrenzt Ressourcen zuteilt. Dem Scheduler stehen als Entscheidungsbasis die anstehenden Aufgaben zur
+Verfügung.
 
 # Kriterien
 Ein gutes Scheduling-Verfahren zeichnet sich dadurch aus, dass es die folgenden Kriterien optimiert:
@@ -15,7 +17,7 @@ Ein gutes Scheduling-Verfahren zeichnet sich dadurch aus, dass es die folgenden 
 * **Einfach und schnell**: Für Implementierungen kann es sinnvoll sein, möglichst wenig Ressourcen im Scheduler selbst zu verbrauchen.
 
 # Präemptiv und Nicht-Präemptiv 
-Beim nicht-präemptiven Verfahren übergibt ein Prozess die benötigten Ressourcen selbstständig, wenn diese nicht mehr benötigt werden. Dies gilt insbesondere für die Prozessorzeit. Wird einem Prozess also Prozessorzeit zugeteilt wird der Prozess solange bearbeitet, bis dieser selbst die Kontrolle an das Betriebssystem zurückgibt. Dieses Verfahren wird auch kooperatives Verfahren genannt. Wenn ein Prozess durch einen Fehler die Kontrolle nicht zurückgibt bleibt das ganze System "hängen". Dieses Verfahren kann aber große Vorteile bei Echtzeitbetriebssystemen haben, da die Ressourcen sehr gut genutzt werden können.
+Beim nicht-präemptiven Verfahren übergibt ein Prozess die benötigten Ressourcen selbstständig, wenn diese nicht mehr benötigt werden. Dies gilt insbesondere für die Prozessorzeit. Wenn einem Prozess also Prozessorzeit zugeteilt wird kann dieser Prozess frei entscheiden, wann er die Kontrolle an das Betriebssystem zurück gibt. Dieses Verfahren wird auch kooperatives Verfahren genannt. Wenn ein Prozess durch einen Fehler die Kontrolle nicht zurück gibt bleibt das ganze System *hängen*. Dieses Verfahren kann aber große Vorteile bei Echtzeitbetriebssystemen haben, da es möglich ist, die Ressourcen sehr gut zu nutzen.
 
 Das präemtive (engl. preemptive) Verfahren hat die Möglichkeit, dem Prozess die Zuteilung des Prozessors zu entziehen. Dieses Verfahren wird meist mit festen Zeitschlitzen implementiert, nach deren Ende jeweils ein Prozesswechsel vollzogen wird.
 

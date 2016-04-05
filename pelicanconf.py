@@ -43,11 +43,10 @@ OUTPUT_SOURCES_EXTENSION='.md'
 THEME='theme'
 THEME_STATIC_PATHS=['static']
 
-STATIC_PATHS = ['extra/robots.txt', 'extra/favicon.ico', 'extra/foto.jpg', 'extra/CNAME']
+STATIC_PATHS = ['extra/robots.txt', 'extra/favicon.ico', 'extra/CNAME']
 EXTRA_PATH_METADATA = {
   'extra/robots.txt':{'path':'robots.txt'},
   'extra/favicon.ico':{'path':'favicon.ico'},
-  'extra/foto.jpg':{'path':'foto.jpg'},
   'extra/CNAME':{'path':'CNAME'},
 }
 

@@ -22,14 +22,25 @@ Ein Prozess beschreibt ein für sich lauffähiges Programm (bei Desktopsystemen)
 
 Der Prozesskontext beinhaltet meist auch, welchem Prozess dieser Prozess zugeordnet ist (sprich, welcher Prozess diesen Prozess gestartet hat). Durch diese Abhängigkeiten ergibt sich eine Prozesshierarchie.
 
-## Prozessmodell
+## Prozesszustände
 Da ein Prozessor immer nur einen Prozess pro Zeiteinheit bearbeiten kann, werden verschiedene Prozesszustände verwendet, um die Bearbeitung zu ermöglichen:
 
-* *BEREIT*: Der Prozess besitzt alle Ressourcen und wartet auf die Zuteilung von Prozessorzeit.
-* *LAUFEND*: Der Prozess wird aktuell durch den Prozessor bearbeitet.
-* *WARTEND*: Der Prozess wartet auf die Zuteilung einer Ressource.
+![Prozesszustände]({filename}prozess_zustand.svg)
 
-Meistens werden auch die Zustände *ERZEUGT* und *BEENDET* beschrieben, die ein Prozess bei der Erzeugung beziehungsweise beim Beenden einnimmt.
+* *Erzeugt* - Wurde vom Betriebssystem erzeugt, aber steht noch nicht zur Ausführung bereit
+* *Bereit* - Besitzt alle Ressourcen und wartet auf die Zuteilung von Prozessorzeit
+* *Laufend* - Wird aktuell durch den Prozessor bearbeitet
+* *Blockiert* - Wartet auf die Zuteilung einer Ressource
+* *Beendet* - Wurde beendet und Ressourcen können freigegeben werden
+
+Die Transitionen *A* bis *F* werden wie folgt durchlaufen:
+
+* *A* - Nachdem alle Ressourcen des Prozesses geladen wurden wird der Prozess in den Zustand *Bereit* versetzt
+* *B* - Der Scheduler wählt den Prozess aus und dadurch wechselt er in den Zustand *Laufend*
+* *C* - Je nach Scheduling Strategie ist entweder die vorgesehene Zeitscheibe ausgelaufen oder der Prozess hat von sich aus die Kontrolle zurückgegeben
+* *D* - Der Prozess will auf eine Ressource zugreifen die entweder gerade nicht verfügbar oder vorbereitet werden muss
+* *E* - Die Ressource steht nun   zur Verfügung, dadurch wird der Prozess in den Zustand *Bereit* versetzt
+* *F* - Der Prozess beendet sich
 
 ## Nebenläufigkeit
 *Nebenläufigkeit* (engl. concurrency) liegt vor, wenn mehrere Ereignisse in keiner kausalen Beziehung zueinander stehen, sich also nicht beeinflussen. Bei einem Betriebssystem will man diese Nebenläufigkeit für die Abarbeitung der Prozesse erreichen. Aus der Sicht eines Prozesses sollte es im Idealfall keinen Rolle spielen, ob es der einzige Prozess im System ist oder ob am System mehrere Prozesse laufen.

@@ -72,6 +72,9 @@
   padding:0 0 60px;
 }
 
+.breadcrumb {
+  margin: 10px 0px;
+}
 
 .breadcrumb .pager {
   margin: 5px 0;
