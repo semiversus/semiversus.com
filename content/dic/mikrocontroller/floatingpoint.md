@@ -32,7 +32,7 @@ In der *IEEE 754* wird die Anzahl und Position der Bits für Mantisse und Expone
 ## Umrechnung
 Zur Berechnung des Wertes aus einer *IEEE 754* Darstellung wird folgende Methode verwendet.
 
-Beispiel: `0 10000011 00100110011001100110011` (aus [Wikipedia](https://de.wikipedia.org/wiki/IEEE_754)){: class="external" }.
+Beispiel: `0 10000011 00100110011001100110011` (aus [Wikipedia](https://de.wikipedia.org/wiki/IEEE_754){: class="external" }).
 
 Der Exponent als Dezimalzahl ist hier `10000011`->131. Der Exponent wird als Zahl +127 gespeichert, um negative Zahlen darstellen zu können (sogenanntes *Biasing*). Der Exponent ist also 131-127=4.
 
