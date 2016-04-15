@@ -16,6 +16,7 @@ toc: False
 * [Datenspeicher Übersicht]({filename}datenspeicher.md) 
 * [Statische Datenspeicher]({filename}statische_datenspeicher.md)
 * [Dynamische Datenspeicher]({filename}dynamische_datenspeicher.md)
+* Übung ["Expertenrunde Speicher"]({filename}halbleiterspeicher.compress)
 
 # Tests
 * [Schriftliche Tests]({filename}test_transistor.md)
