@@ -29,7 +29,7 @@ Hierbei werden alle Prozesse in der Reihenfolge ihres Eingangs bearbeitet. Eine 
 
 Beispiel mit kooperativem Scheduling
 
-&nbsp | Startzeit | Dauer
+&nbsp; | Startzeit | Dauer
 :-:|:-:|:-:
 Job A | 0 | 4
 Job B | 1 | 3

@@ -22,6 +22,12 @@ parent: uebersicht.md
         * *Seite 122-125*: Betriebsmodi
         * *Seite 128-130*: Registerbeschreibung
 
+!!! panel-info "Anwendungen"
+    Je nach Anwendung liefert die folgende Übersicht eine Hilfestellung beim Einstellen der Register:
+
+    * **Timer0**: [PWM]({filename}timer0_pwm.svg), [Periodische Events]({filename}timer0_ctc.svg), [Zählen]({filename}timer0_count.jpg)
+    * **Timer1**: [PWM]({filename}timer1_pwm.jpg), [Periodische Events]({filename}timer1_ctc.jpg), [Zählen]({filename}timer1_count.jpg), [Zeiten messen]({filename}timer1_measure.jpg)
+
 # Allgemeines
 Ein *Timer* ist ein spezieller Zähler, der Ereignisse zählt. Diese Ereignisse können sich auch vom Prozessortakt ableiten
 und von daher kommt die Bezeichnung *Timer*. Prinzipiell ist ein Timer für folgende Aufgaben geeignet:
