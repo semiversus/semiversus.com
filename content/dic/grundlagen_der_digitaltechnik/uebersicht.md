@@ -13,11 +13,6 @@ toc: False
 * [Automatentheorie]({filename}automatentheorie.md) (mit Übungen)
 * [Timing in der Digitaltechnik]({filename}timing.md)
 * [Synchrones Design]({filename}synchrones_design.md)
-## Zahlendarstellung
-* Duales Zahlensytem
-* BCD- und Graycode
-* ASCII Darstellung
-* [Fest- und Fließkommazahlen]({filename}../mikrocontroller/floatingpoint.md)
 
 # Tests
 * [Kombinatorik und sequentielle Logik]({filename}test_kombinatorik.md)

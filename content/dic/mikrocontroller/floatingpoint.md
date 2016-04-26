@@ -1,4 +1,4 @@
-title: Fließkommazahlen
+title: Fest- und Gleitkommazahlen
 parent: uebersicht.md
 
 # Allgemeines
@@ -19,7 +19,7 @@ Die oben dargestellte Zahl hat den Wert (**0** * 4) + (**1** * 2) + (**1** * 1) 
 Bei der Addition und Subtraktion können die Zahlen als reine Integer betrachtet werden. Bei Multiplikation und Division muss eine Anpassung der Kommastelle durchgeführt werden.
 
 ## Gleitkomma Zahlen
-Bei der Gleitkommazahl wird die Darstellung mittels *Mantisse*(`M`) und *Exponent*(`E`) genutzt. Das Vorzeichen wird durch die Variable `S` beschrieben. Bei `S`=0 ist die Zahl Positiv, bei `S`=1 negativ.
+Bei der Gleitkommazahl (auch *Fließkommazahl* genannt) wird die Darstellung mittels *Mantisse*(`M`) und *Exponent*(`E`) genutzt. Das Vorzeichen wird durch die Variable `S` beschrieben. Bei `S`=0 ist die Zahl Positiv, bei `S`=1 negativ.
 
 %%x=-1^{S} \cdot M \cdot B^{E}%%
 

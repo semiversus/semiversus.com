@@ -75,7 +75,10 @@ GIT_REVISION=subprocess.check_output('git show -s --format=%h', shell=True).deco
 PLUGIN_PATHS=['plugins']
 MD_EXTENSIONS=['codehilite(linenums=False)', 'plugins.mdx_tt', 'plugins.mdx_admonition', 'extra']
 PLUGINS=['convert_static', 'slides', 'pageish', 'toc', 'latex', 'representative_image']
-JINJA_FILTERS={'urlencode':urllib.parse.quote_plus}
+if hasattr(urllib, 'quote_plus'):
+  JINJA_FILTERS={'urlencode':urllib.quote_plus} # python2
+else:
+  JINJA_FILTERS={'urlencode':urllib.parse.quote_plus} #python3
 
 CONVERT_PATHS = ['dic', 'blog', 'projekte', 'klassen', 'pages']
 CONVERT_FILENAMES=[('.svg.tex', '.svg'), ('.compress', '.zip')]
