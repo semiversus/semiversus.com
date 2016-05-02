@@ -14,7 +14,7 @@ parent: uebersicht.md
     * *Seite 167-171*: UART Baudrateregister und Beispiele für Baudrates
 
 # Allgemeines
-Um eine serielle Schnittstelle (siehe [RS232]({filename}rs232.md)) zu realisieren stellt der Atmel AVR eine *USART*
+Um eine serielle Schnittstelle (siehe [RS232]({filename}../bussysteme/rs232.md)) zu realisieren stellt der Atmel AVR eine *USART*
 (engl. für *Universal Synchronous and Asynchrouns Serial Receiver and Transmitter*) zur Verfügung.
 
 Zur Arbeit mit dem *USART* werden fünf Register genutzt:

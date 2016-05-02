@@ -14,7 +14,7 @@ parent: uebersicht.md
 Um Daten zu Übertragen wird oft die serielle Schnittstelle verwendet. In diesem Beispiel soll ein Transmitter entsprechend
 RS232 realisiert werden.
 
-<figure><img src="{filename}../../hardwarenahe_programmierung/rs232_timing.png"><figcaption>RS232 Timingdiagramm (Bild: <a href="https://commons.wikimedia.org/wiki/File:RS-232_timing.png">Gerald.deppe</a> Public Domain)</figcaption></figure>
+<figure><img src="{filename}../../bussysteme/rs232_timing.png"><figcaption>RS232 Timingdiagramm (Bild: <a href="https://commons.wikimedia.org/wiki/File:RS-232_timing.png">Gerald.deppe</a> Public Domain)</figcaption></figure>
 
 Zum Testen soll mittels der acht Umschaltern (<samp>SW0</samp> bis <samp>SW7</samp>) ein 8 Bit Datenwort definiert werden und
 durch Drücken des Tasters <samp>BTN0</samp> wird dieses dann *versendet*. Zum Versenden wird der Pegel der Sendeleitung

@@ -6,7 +6,7 @@ toc: False
 # Inhalt
 ## Einführung C
 * [Einführung C]({filename}uebersicht_c.md)
-* [Aufbau von Floatingpoint Zahlen]({filename}floatingpoint.md)
+* [Aufbau von Fest- und Gleitkommazahlen]({filename}floatingpoint.md)
 * [Bitmanipulation]({filename}bitmanipulation.md) (mit Übungen)
 
 ## C Programmierung für Embedded Systems
