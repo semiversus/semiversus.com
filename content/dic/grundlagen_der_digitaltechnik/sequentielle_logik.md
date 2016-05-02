@@ -80,7 +80,7 @@ Um dies zu erreichen werden zwei Latches miteinander kombiniert:
 
 Ist der Eingang `C` gleich 1, so ist das Master Latch *transparent* und das Slave Latch im *Halte* Zustand. Ist der Eingang `C` gleich 0, hält das Master Latch seinen Zustand und das Slave Latch ist transparent. Wenn `C` also von 0 auf 1 wechselt, wird der Zustand am Eingang `D` gespeichert und am Ausgang ausgegeben. Man spricht in diesem Fall von einem Flip-Flop, das auf die positive Flanke des Signals `C` reagiert. Die Flankentriggerung wird im DIN Symbol mittels einem Dreieck am Eingang symbolisiert.
 
-Als Beispiel für ein Datenblatt dient uns ein 74HC74. Dieser Baustein enthält zwei flankengetriggerte D-Flip-Flops mit asynchronem Reset und Set Eingang ([Datenblatt](http://www.nxp.com/documents/data_sheet/74HC_HCT74.pdf)){: class="external" }.
+Als Beispiel für ein Datenblatt dient uns ein 74HC74. Dieser Baustein enthält zwei flankengetriggerte D-Flip-Flops mit asynchronem Reset und Set Eingang ([Datenblatt](http://www.nxp.com/documents/data_sheet/74HC_HCT74.pdf){: class="external" }).
 
 ## RS Flip-Flops
 Durch Kombination von zwei Latches in dieser Master-Slave Anordnung lässt sich auch ein RS Flip-Flop konstruieren.
