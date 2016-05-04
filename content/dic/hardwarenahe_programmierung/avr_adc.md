@@ -92,9 +92,9 @@ Wählt den Teiler für die Wandlung des ADCs. Der ADC arbeitet mit einer Frequen
         DDRC  = 0xFF;   // Port C.0-7 = Ausgang
         PORTC = 0x00;   // LEDs loeschen
         
+        ADCSRA = (1<<ADEN) | (1<<ADPS2) | (1<<ADPS1); // ADC enable, Teiler auf 64
+        ADMUX = 0x05;                                 // Eingang 5 festlegen
         while (1) {
-            ADCSRA = (1<<ADEN) | (1<<ADPS2) | (1<<ADPS1); // ADC enable, Teiler auf 64
-            ADMUX = 0x05;                                 // Eingang 5 festlegen
             ADCSRA |= (1<<ADSC);                          // ADC Wandlung starten
             while(!(ADCSRA & (1<<ADIF)));                 // Auf Abschluss der Konvertierung warten (ADIF-bit)
             PORTC = ADC>>2;                               // Ausgabe der oberen 8 Bit auf PORTC

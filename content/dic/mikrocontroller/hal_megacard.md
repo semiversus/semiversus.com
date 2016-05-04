@@ -137,7 +137,7 @@ eingefügt: `%04d`.
 
     #!c
     hal_lcd_printf(0, 0, "Test"); // gibt "Test" aus
-    hal_lcd_printf(0, 0, "%d", -117); // gibt "117" aus
+    hal_lcd_printf(0, 0, "%d", -117); // gibt "-117" aus
     hal_lcd_printf(0, 0, "%3dX%3d", 2, 17); // gibt "  2X 17" aus
 
 Die Ausgabe von Floatzahlen wird nicht direkt unterstützt, es kann aber emuliert werden:
