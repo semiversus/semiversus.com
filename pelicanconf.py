@@ -40,7 +40,7 @@ DEFAULT_PAGINATION=25
 OUTPUT_SOURCES=True
 OUTPUT_SOURCES_EXTENSION='.md'
 
-THEME='theme'
+THEME='theme/semiversus'
 THEME_STATIC_PATHS=['static']
 
 STATIC_PATHS = ['extra/robots.txt', 'extra/favicon.ico', 'extra/CNAME']
@@ -53,7 +53,7 @@ EXTRA_PATH_METADATA = {
 PATH_METADATA= '(?P<dirname>.*)/(?P<basename>.*)\..*'
 FILENAME_METADATA='(?P<basename>.*)'
 
-PAGE_PATHS=['dic', 'klassen', 'projekte', 'pages']
+PAGE_PATHS=['dic', 'projekte', 'pages']
 PAGE_URL='{dirname}/{basename}.html'
 PAGE_SAVE_AS='{dirname}/{basename}.html'
 
@@ -80,7 +80,7 @@ if hasattr(urllib, 'quote_plus'):
 else:
   JINJA_FILTERS={'urlencode':urllib.parse.quote_plus} #python3
 
-CONVERT_PATHS = ['dic', 'blog', 'projekte', 'klassen', 'pages']
+CONVERT_PATHS = ['dic', 'blog', 'projekte', 'pages']
 CONVERT_FILENAMES=[('.svg.tex', '.svg'), ('.compress', '.zip')]
 CONVERT_RULES=[
   ('.compress', 'cd {dst_path} && cp {src} {basename} -r && zip -r {basename}.zip {basename}/* && rm {basename} -r'),

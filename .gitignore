@@ -1,4 +1,7 @@
 cache/
+latex.cache
+dic_script/
+output_local/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

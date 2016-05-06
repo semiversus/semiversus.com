@@ -1,9 +1,13 @@
 local:
-	@PYTHONPATH='.' pelican content -s pelicanconf_local.py
+	@PYTHONPATH='.' pelican content -s pelicanconf_local.py --cache-path=cache/local/ -o output_local
 
 public: 
 	@echo "Building website"
 	@pelican content
+
+dic:
+	@echo "Building dic script"
+	@PYTHONPATH='.' pelican content -s pelicanconf_dic.py --cache-path=cache/dic/ -o dic_script
 
 debug:
 	@echo "Building website (with -D flag)"
@@ -18,6 +22,6 @@ upload: public
 	ssh guenther@semiversus.com './update_semiversus.sh'
 
 clean:
-	rm cache -rf
+	rm cache dic_script output_local __pycache__ *.pyc -rf
 
 .PHONY: public local view upload clean
