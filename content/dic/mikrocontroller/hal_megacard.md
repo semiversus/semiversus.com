@@ -4,14 +4,19 @@ parent: uebersicht.md
 # Allgemeines
 
 * Download des [Megacard Templates]({filename}embedded_template_hal.compress){: class="download" }
-* Derzeit werden folgende Komponenten unterstützt:
-    * Ansteuerung der LEDs
-    * Auswertung der Tastendrücken *S0* bis *S3*
-    * Ausgabe von Tönen über den Lautsprecher
-    * Timerabstraktion
-    * LC Display ansteuerung
 
-Die  verwendung der Hardwareabstraktion (kurz *HAL* für engl. *Hardware Abstraction Layer*) wird im folgenden erläutert.
+Die Verwendung der Hardwareabstraktion (kurz *HAL* für engl. *Hardware Abstraction Layer*) wird im folgenden erläutert.
+
+Folgende Hardwareeinheiten werden von der HAL angesteuert:
+
+* LEDs (Port C)
+* Taster S0-S3 (Port A0..3)
+* Lautsprecher (Port A4)
+* Timer0 für 800 Mikrosekunden Basis
+* Timer1 für Soundausgabe
+* LCD (Port A und Port B)
+
+Die globale Interruptfreigabe wird durch bei der Initialisierung gesetzt (mittels `sei()`).
 
 # Ansteuerung der LEDs
 

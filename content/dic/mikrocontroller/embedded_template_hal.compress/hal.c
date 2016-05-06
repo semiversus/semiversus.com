@@ -33,7 +33,7 @@ void hal_init(void) {
 	TCCR0=0x0B; // CTC mode, prescaler 64 (start the timer)
 	OCR0=149; // setting periode time to 800us
 
-	TIMSK=0x02; // disable output compare A interrupt, enable timer 0 overflow interrupt
+	TIMSK|=0x02; // disable output compare A interrupt, enable timer 0 overflow interrupt
 
 	sei();
 }
