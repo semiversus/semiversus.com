@@ -1,5 +1,6 @@
 title: Günther Jena
 slug: about
+summary: Mein Name ist Günther Jena und ich hieß früher Günther Jehle. Ich wohne in Rankweil und arbeite als Elektronik/Softwareentwickler und als Lehrer.
 lang: de
 save_as: about.html
 url: about.html

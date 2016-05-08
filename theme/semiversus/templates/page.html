@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block title %}{{ page.title }}{% endblock %}
+{% block description %}{{ page.summary|striptags }}{% endblock %}
 {% block header %}
   {% if page.latex %}{{ page.latex }}{% endif %}
   {% for translation in page.translations %}<link rel="alternate" hreflang="{{ translation.lang }}" href="{{ SITEURL }}/{{translation.url }}" />{% endfor %}

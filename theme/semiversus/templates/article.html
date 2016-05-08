@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% block description %}{{ article.summary|striptags }}{% endblock %}
 {% block title %}{{ article.title }}{% endblock %}
 {% block header %}{% if article.latex %}{{ article.latex }}{% endif %}{% endblock %}
 
