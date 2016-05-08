@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="adc_admux.svg">
+   sodipodi:docname="avr_adc_admux.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -26,7 +26,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="279.83577"
+     inkscape:cx="280.84592"
      inkscape:cy="162.30333"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -55,7 +55,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -978,6 +978,6 @@
          sodipodi:role="line"
          id="tspan4228-7"
          x="180"
-         y="897.98718">1</tspan></text>
+         y="897.98718">0</tspan></text>
   </g>
 </svg>

@@ -82,24 +82,52 @@ Wählt den Teiler für die Wandlung des ADCs. Der ADC arbeitet mit einer Frequen
 %%f_{ADC}=\frac{f_{CLK}}{Teiler}%%
 
 # Beispiele
+Im folgenden Beispiel wird an Kanal 5 (Port A5) die Spannung gemessen. Als Referenz dient die Spannung am Pin AREF. Vom
+10 Bit Ergebnis werden die oberen 8 Bit auf dem Port C ausgegeben.
+
 ## Ohne Interrupt
 
     #!c
     #include <avr/io.h>
-    #include <stdint.h>
 
     int main (void) {
-        DDRC  = 0xFF;   // Port C.0-7 = Ausgang
-        PORTC = 0x00;   // LEDs loeschen
-        
-        ADCSRA = (1<<ADEN) | (1<<ADPS2) | (1<<ADPS1); // ADC enable, Teiler auf 64
-        ADMUX = 0x05;                                 // Eingang 5 festlegen
-        while (1) {
-            ADCSRA |= (1<<ADSC);                          // ADC Wandlung starten
-            while(!(ADCSRA & (1<<ADIF)));                 // Auf Abschluss der Konvertierung warten (ADIF-bit)
-            PORTC = ADC>>2;                               // Ausgabe der oberen 8 Bit auf PORTC
-       }
-       return 0;
+      DDRC  = 0xFF;   // Port C.0-7 = Ausgang
+      PORTC = 0x00;   // LEDs loeschen
+
+      ADMUX = 0x05;                                 // Eingang 5 festlegen
+      ADCSRA = (1<<ADEN) | (1<<ADPS2) | (1<<ADPS1); // ADC enable, Teiler auf 64
+      while (1) {
+        ADCSRA |= (1<<ADSC);          // ADC Wandlung starten
+        while(!(ADCSRA & (1<<ADIF))); // Auf Abschluss der Konvertierung warten (ADIF-bit)
+        PORTC = ADC>>2;               // Ausgabe der oberen 8 Bit auf PORTC
+      }
+      return 0;
     }
 
 ## Mit Interrupt
+Bei jedem Aufruf der Interruptservice Routine `ADC_vect` wird das Ergebnis der AD Wandlung ausgewertet (mittels `ADC`) und
+eine neue Wandlung gestartet.
+
+    #!c
+    #include <avr/io.h>
+    #include <avr/interrupt.h>
+
+    ISR(ADC_vect) {
+      PORTC = ADC>>2;           // Ausgabe der oberen 8 Bit auf PORTC
+      ADCSRA |= (1<<ADSC);      // ADC Wandlung starten
+    }
+
+    int main (void) {
+      DDRC  = 0xFF;   // Port C.0-7 = Ausgang
+      PORTC = 0x00;   // LEDs loeschen
+
+      ADMUX = 0x05;   // Eingang 5 festlegen
+      ADCSRA = (1<<ADEN) | (1<<ADSC) | (1<<ADIE) | (1<<ADPS2) | (1<<ADPS1); // ADC enable, 
+                                        //Wandlung starten, Interrupt enable, Teiler auf 64
+      sei();
+
+      while (1) {
+        // main loop
+      }
+      return 0;
+    }
