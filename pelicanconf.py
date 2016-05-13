@@ -18,6 +18,7 @@ WITH_FUTURE_DATES=False
 TIMEZONE='Europe/Vienna'
 YEAR = datetime.now().year
 DEFAULT_DATE_FORMAT='%-d.%-m.%Y'
+DEFAULT_DATE='fs'
 
 FEED_ALL_ATOM='semiversus.atom.xml'
 CATEGORY_FEED_ATOM = None
@@ -74,7 +75,7 @@ GIT_REVISION=subprocess.check_output('git show -s --format=%h', shell=True).deco
 
 PLUGIN_PATHS=['plugins']
 MD_EXTENSIONS=['codehilite(linenums=False)', 'plugins.mdx_tt', 'plugins.mdx_admonition', 'extra']
-PLUGINS=['convert_static', 'slides', 'pageish', 'toc', 'latex', 'representative_image']
+PLUGINS=['convert_static', 'slides', 'pageish', 'toc', 'latex', 'representative_image', 'extended_sitemap']
 if hasattr(urllib, 'quote_plus'):
   JINJA_FILTERS={'urlencode':urllib.quote_plus} # python2
 else:
@@ -88,3 +89,18 @@ CONVERT_RULES=[
   ('.sty', ''),
   ('', 'cp {src} {dst_path}{basename}'),
 ]
+
+EXTENDED_SITEMAP_PLUGIN = {
+    'priorities': {
+        'index': 1.0,
+        'articles': 0.8,
+        'pages': 0.5,
+        'others': 0.4
+    },
+    'changefrequencies': {
+        'index': 'daily',
+        'articles': 'weekly',
+        'pages': 'monthly',
+        'others': 'monthly',
+    }
+}
