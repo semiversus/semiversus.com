@@ -46,12 +46,12 @@ OUTPUT_SOURCES_EXTENSION='.md'
 THEME='theme/semiversus'
 THEME_STATIC_PATHS=['static']
 
-STATIC_PATHS = ['extra/robots.txt', 'extra/favicon.ico', 'extra/CNAME', 'extra/404.html']
+STATIC_PATHS = ['extra/robots.txt', 'extra/favicon.ico', 'extra/CNAME', 'extra/error.html']
 EXTRA_PATH_METADATA = {
   'extra/robots.txt':{'path':'robots.txt'},
   'extra/favicon.ico':{'path':'favicon.ico'},
   'extra/CNAME':{'path':'CNAME'},
-  'extra/404.html':{'path':'404.html'},
+  'extra/error.html':{'path':'error.html'},
 }
 
 PATH_METADATA= '(?P<dirname>.*)/(?P<basename>.*)\..*'
