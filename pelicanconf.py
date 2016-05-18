@@ -51,7 +51,7 @@ EXTRA_PATH_METADATA = {
   'extra/robots.txt':{'path':'robots.txt'},
   'extra/favicon.ico':{'path':'favicon.ico'},
   'extra/CNAME':{'path':'CNAME'},
-  'extra/404':{'path':'404.html'},
+  'extra/404.html':{'path':'404.html'},
 }
 
 PATH_METADATA= '(?P<dirname>.*)/(?P<basename>.*)\..*'
