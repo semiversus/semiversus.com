@@ -76,7 +76,7 @@ Beispiel:
 ### Einrichten eines Interrupts
 Damit ein Interrupt zur Ausführung kommt, werden folgende Punkte benötigt:
 
-* Implementierung der *Interrupts Service Routine*
+* Implementierung der *Interrupt Service Routine*
 * Konfiguration der entsprechenden Register, um einen Interrupt für die entsprechende Komponente zu ermöglichen
 * Aufruf von `sei()` im Hauptprogramm, um die *globale Interruptfreigabe* zu aktivieren
 * Die Komponente kommt in einen Zustand, der den Interrupt auslöst (meist über ein *Interrupt Flag*)
