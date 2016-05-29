@@ -81,6 +81,19 @@ Wählt den Teiler für die Wandlung des ADCs. Der ADC arbeitet mit einer Frequen
 
 %%f_{ADC}=\frac{f_{CLK}}{Teiler}%%
 
+# Umrechnung
+
+Bei der Umrechnung einer Spannung am Eingang des ADC hin zum Wert als Zahl wird die Eingangsspannung im Verhältnis zur
+Referenzspannung betrachtet und entsprechend der Auflösung (in Bits} des ADC umgewandelt:
+
+%%Wert_{ADC}=\frac{U_{Eingang}}{U_{Referenz}} \cdot 2^{Bits}%%
+
+Der Umgekehrte Fall ist dann die Umrechnung von einem Wert in die anliegende Spannung:
+
+%%U_{Eingang}=\frac{Wert_{ADC}}{2^{Bits}} \cdot U_{Referenz}%%
+
+Beim ATMega16 ist die Auflösung 10 Bit, d.h. es können %%2^{10}=1024%% *verschiedene Spannungen unterschieden* werden.
+
 # Beispiele
 Im folgenden Beispiel wird an Kanal 5 (Port A5) die Spannung gemessen. Als Referenz dient die Spannung am Pin AREF. Vom
 10 Bit Ergebnis werden die oberen 8 Bit auf dem Port C ausgegeben.

@@ -10,6 +10,7 @@ toc: False
 
 ## Bussysteme
 * [RS232]({filename}rs232.md)
+* [CAN]({filename}can.md)
 
 ## Datenintegrität
 * [Datenintegrität und Prüfsummen]({filename}datenintegritaet.md)

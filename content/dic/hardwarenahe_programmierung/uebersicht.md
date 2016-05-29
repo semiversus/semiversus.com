@@ -4,6 +4,9 @@ parent: ../uebersicht.md
 toc: False
 
 # Inhalt
+## Allgemeines
+* [Tastenentprellung]({filename}tastenentprellung.md)
+
 ## AVR
 * [Allgemeines zu Atmel AVR]({filename}avr_allgemein.md)
 * [IO mittels Portpins]({filename}avr_port_io.md)

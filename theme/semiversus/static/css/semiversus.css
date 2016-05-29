@@ -101,10 +101,6 @@
   transition: all 0.3s ease 0s;
 }
 
-.navbar-nav a:hover {
-  transform: scale(1.1);
-}
-
 .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
   background-color: #ddd;
 }
@@ -279,7 +275,14 @@ th {
   vertical-align: bottom;
 }
 
-table, td, th {
+.container td, th {
+  margin: 0;
+  padding: 4px;
+  border-width: 1px 1px 0 0;
+  min-width: 50px;
+}
+
+.container table, td, th {
   border-color: gray;
   border-style: solid;
   margin: 0 0 10px 0;
@@ -287,18 +290,11 @@ table, td, th {
   font-weight: normal;
 }
 
-table {
+.container table {
   border-width: 0 0 1px 1px;
   border-spacing: 0;
   border-collapse: collapse;
   max-width:100%;
-}
-
-td, th {
-  margin: 0;
-  padding: 4px;
-  border-width: 1px 1px 0 0;
-  min-width: 50px;
 }
 
 blockquote p {
