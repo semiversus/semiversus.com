@@ -75,6 +75,7 @@
 #tipue_search_input {
   padding: 3px;
   width: 100px;
+  height: inherit;
 }
 
 .breadcrumb {
@@ -102,8 +103,10 @@
   font-weight: bold;
 }
 
-.navbar-nav a {
+.nav>li>a {
   transition: all 0.3s ease 0s;
+  padding: 0px 10px;
+  line-height: 50px;
 }
 
 .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
@@ -113,6 +116,12 @@
 .navbar-inverse .navbar-nav > li > a.social:hover,
 .navbar-invers .navbar-nav >  a:hover {
   color: #9d9d9d;
+}
+
+.navbar-form {
+  line-height: 50px;
+  padding: 0px;
+  margin: 0px;
 }
 
 .fa-github:hover  {
@@ -129,7 +138,9 @@
 
 .fa {
   transition: all 0.3s ease 0s;
+  vertical-align: middle;
 }
+
 .btn-twitter {
   background: #00acee;
   border-radius: 0;
