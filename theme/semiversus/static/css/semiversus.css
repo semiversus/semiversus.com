@@ -103,7 +103,7 @@
   font-weight: bold;
 }
 
-.nav>li>a {
+.navbar-nav>li>a {
   transition: all 0.3s ease 0s;
   padding: 0px 10px;
   line-height: 50px;
@@ -319,4 +319,8 @@ blockquote p {
 
 article {
   margin-bottom: 10px;
+}
+
+pre {
+  padding: 5px;
 }
