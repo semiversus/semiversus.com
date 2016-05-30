@@ -8,10 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="{{ SITEURL }}/favicon.ico">
   <title>{% block title %}Semiversus{% endblock %}</title>
-  <link href="{{ SITEURL }}/theme/css/bootstrap.min.css" rel="stylesheet">
-  <link href="{{ SITEURL }}/theme/css/font-awesome.min.css" rel="stylesheet">
-  <link href="{{ SITEURL }}/theme/css/semiversus.css" rel="stylesheet">
-  <link href="{{ SITEURL }}/theme/css/pygments.css" rel="stylesheet">
+  <link href="{{ SITEURL }}/theme/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="{{ SITEURL }}/theme/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="{{ SITEURL }}/theme/css/semiversus.css" rel="stylesheet" type="text/css">
+  <link href="{{ SITEURL }}/theme/css/pygments.css" rel="stylesheet" type="text/css">
+  <link href="{{ SITEURL }}/theme/css/tipuesearch.css" rel="stylesheet" type="text/css" media="screen">
   <script src="{{ SITEURL }}/theme/js/jquery.min.js"></script>
   <script src="{{ SITEURL }}/theme/js/bootstrap.min.js"></script>
   <script data-isso="https://comments.semiversus.com" data-isso-vote="false" data-isso-lang="de" data-isso-reveal-on-click="true" src="{{ SITEURL }}/theme/js/embed.min.js"></script>
@@ -48,6 +49,7 @@
             <li><a href="{{ SITEURL }}/projekte/projekte.html">Projekte</a></li>
             <li><a href="{{ SITEURL }}/about.html">Über mich</a></li>
           </ul>
+          <form class="navbar-form navbar-right" role="search" action="{{ SITEURL }}/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="form-control" placeholder="Suche" name="q" id="tipue_search_input"></form>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="https://github.com/semiversus" class="social" data-toggle="tooltip" data-placement="bottom" title="Github.com/Semiversus"><span class="fa fa-github fa-2x"></span><span class="hidden-sm hidden-md hidden-lg">&nbsp;Github</span></a></li>
             <li><a href="http://stackoverflow.com/users/166605" class="social" data-toggle="tooltip" data-placement="bottom" title="Stackoverflow.com/Semiversus"><span class="fa fa-stack-overflow fa-2x"></span>&nbsp;<span class="hidden-sm hidden-md hidden-lg">Stack Overflow</span></a></li>
