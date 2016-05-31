@@ -1,6 +1,7 @@
 title: Der Tempel des Snofru
 date: 2016-03-31
 tags: Programmieren
+image: snofru_tb.gif
 
 Das Spiel (hier zum [Download]({filename}snofru.compress){: class="download" }) habe ich im Alter von 14 geschrieben und
 ist eine Sokoban-Variante (siehe [Wikipedia](https://de.wikipedia.org/wiki/Sokoban){: class="external" }). Ich dachte

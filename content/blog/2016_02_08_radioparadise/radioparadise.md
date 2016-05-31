@@ -1,6 +1,7 @@
 title: Webstream Radio Paradise
 date: 2016-02-08
 tags: Webstream, Empfehlung
+image: logo.svg
 
 ![Logo Radio Paradise{@class=pull-left style=padding-right:8px;}]({filename}logo.svg)
 

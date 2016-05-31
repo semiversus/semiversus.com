@@ -1,6 +1,7 @@
 title: Interessante Korrelation entdecken mittels <samp>wdiff</samp>
 date: 2016-01-31 
 tags: Tools
+image: meld_tb.png
 
 Abschreiben als solches zu erkennen ist keine einfache Sache, da der Aufwand massiv mit der Anzahl der zu vergleichenden
 Arbeiten steigt. Bei 5 Arbeiten sind insgesamt 10 Vergleiche zu machen: Die erste Aufgabe wird mit den vier anderen

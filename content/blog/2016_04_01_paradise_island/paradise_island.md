@@ -1,6 +1,7 @@
 title: Wem gehört Paradise Island?
 date: 2016-04-01
 tags: Empfehlung, Webstream
+image: bodensee_tb.jpg
 
 ![Bodensee{@class=pull-left style=padding-right:8px;}]({filename}bodensee.jpg)
 

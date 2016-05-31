@@ -33,4 +33,4 @@ der Platzsuche folgen werden die verfügbare Sitzplätze optimal ausgenutzt.
 
                 return
                      
-            raise EnvironmentError("No seat left in this ro in this room") 
+            raise EnvironmentError("No seat left in this room") 

@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block title %}Semiversus | {{ tag }}{% endblock %}
 {% block content %}
+  <script data-isso="https://comments.semiversus.com" data-isso-lang="de" src="{{ SITEURL }}/theme/js/count.min.js"></script>
   <h1>Tag: {{ tag }}</h1>
   {% for article in (articles_page.object_list if articles_page else articles) %}
     <article>

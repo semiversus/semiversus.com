@@ -1,14 +1,16 @@
 from pelican import signals
 from pelican.contents import Article, Draft, Page
 from pelican.generators import ArticlesGenerator
+from pelican.utils import path_to_url
 from bs4 import BeautifulSoup
+import os
 
 
-def images_extraction(instance):
+def images_extraction(instance, siteurl):
     representativeImage = None
     if type(instance) in (Article, Draft, Page):
         if 'image' in instance.metadata:
-            representativeImage = instance.metadata['image']
+            representativeImage = instance.get_relative_source_path(os.path.join(instance.relative_dir, instance.metadata['image']))
 
         # Process Summary:
         # If summary contains images, extract one to be the representativeImage and remove images from summary
@@ -40,7 +42,7 @@ def run_plugin(generators):
     for generator in generators:
         if isinstance(generator, ArticlesGenerator):
             for article in generator.articles:
-                images_extraction(article)
+                images_extraction(article, siteurl=generator.settings['SITEURL'])
 
 
 def register():

@@ -8,13 +8,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="{{ SITEURL }}/favicon.ico">
   <title>{% block title %}Semiversus{% endblock %}</title>
-  <link href="{{ SITEURL }}/theme/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-  <link href="{{ SITEURL }}/theme/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link href="{{ SITEURL }}/theme/css/semiversus.css" rel="stylesheet" type="text/css">
-  <link href="{{ SITEURL }}/theme/css/pygments.css" rel="stylesheet" type="text/css">
-  <link href="{{ SITEURL }}/theme/css/tipuesearch.css" rel="stylesheet" type="text/css" media="screen">
-  <script src="{{ SITEURL }}/theme/js/jquery.min.js"></script>
-  <script src="{{ SITEURL }}/theme/js/bootstrap.min.js"></script>
+{% assets filters="cssmin", output="css/semiversus.min.css", "css/bootstrap.min.css", "css/font-awesome.min.css", "css/semiversus.css", "css/pygments.css", "css/tipuesearch.css" %}
+  <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
+{% endassets %}
+{% assets filters="jsmin", output="js/semiversus.min.js", "js/jquery.min.js", "js/bootstrap.min.js" %}
+  <script src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
+{% endassets %}
   <meta name="google-site-verification" content="O-3LVEziPiVrCYqFCwbLmB3s7lNG__cPMLLAr_RUxbA" />
   {% block header %}{% endblock %}
 </head>

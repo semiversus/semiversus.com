@@ -44,6 +44,7 @@ OUTPUT_SOURCES=True
 OUTPUT_SOURCES_EXTENSION='.md'
 
 THEME='theme/semiversus'
+ASSET_SOURCE_PATHS=['.']
 THEME_STATIC_PATHS=['static']
 
 STATIC_PATHS = ['extra/robots.txt', 'extra/favicon.ico', 'extra/CNAME', 'extra/error.html']
@@ -78,7 +79,7 @@ GIT_REVISION=subprocess.check_output('git show -s --format=%h', shell=True).deco
 
 PLUGIN_PATHS=['plugins']
 MD_EXTENSIONS=['codehilite(linenums=False)', 'plugins.mdx_tt', 'plugins.mdx_admonition', 'plugins.mdx_attr_list', 'tables']
-PLUGINS=['convert_static', 'slides', 'pageish', 'toc', 'latex', 'representative_image', 'extended_sitemap', 'tipue_search']
+PLUGINS=['convert_static', 'slides', 'pageish', 'toc', 'latex', 'representative_image', 'extended_sitemap', 'tipue_search', 'assets']
 if hasattr(urllib, 'quote_plus'):
   JINJA_FILTERS={'urlencode':urllib.quote_plus} # python2
 else:

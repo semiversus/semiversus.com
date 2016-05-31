@@ -12,7 +12,7 @@ CONVERT_PATHS = ['dic']
 FEED_ALL_ATOM=False
 
 MD_EXTENSIONS=['codehilite(linenums=False)', 'plugins.mdx_tt', 'plugins.mdx_admonition', 'plugins.mdx_latex', 'plugins.mdx_attr_list', 'tables']
-PLUGINS=['convert_static', 'slides', 'pageish', 'toc', 'representative_image']
+PLUGINS=['convert_static', 'slides', 'pageish', 'toc', 'representative_image', 'assets']
 
 CONVERT_FILENAMES=[('.svg.tex', '.png'), ('.svg', '.png'), ('.compress', '.zip')]
 CONVERT_RULES=[
