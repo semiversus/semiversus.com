@@ -13,19 +13,19 @@ Der Bipolartransistor besteht aus drei abwechselnden Schichten aus p- und n-doti
 
 Die beiden pn-Übergänge lassen sich auch als Dioden darstellen, wobei sich aus diesem Dioden Modell nicht die Funktionsweise ableiten lässt. Im folgenden Bild sieht man die Schaltsymbole und den Aufbau symbolisiert durch zwei Dioden.
 
-![Schaltbilder](https://upload.wikimedia.org/wikipedia/commons/f/f5/Transistor-diode-npn-pnp.svg)
+<figure><img src="{filename}transistor_diode_npn_pnp.svg"><figcaption>Schaltbilder (Bild: <a href="https://commons.wikimedia.org/wiki/File:Transistor-diode-npn-pnp.svg">Biezl</a> Gemeinfrei)</figcaption></figure>
 
 ## Aufbau
 Aufgrund von Optimierungen sind Bipolartransistoren heutzutage aus mehr als drei Schichten aufgebaut, die zusätzlichen Schichten sind nicht in Form von weiteren p-n-Übergängen zusammengesetzt, sondern die drei Hauptschichten sind in Zonen unterschiedlicher Dotierungsdichte gegliedert. Die Kollektorzone besteht hierbei immer aus mindestens zwei unterschiedlich stark dotierten Zonen. Die Bezeichnungen npn und pnp beziehen sich nur auf den aktiven inneren Bereich, jedoch nicht den tatsächlichen Aufbau.
 
-![Schematischer Aufbau eines NPN Transistors](https://upload.wikimedia.org/wikipedia/commons/6/6b/NPN_BJT_%28Planar%29_Cross-section.svg)
+<figure><img src="{filename}transistor_npn_schema.svg"><figcaption>Schematischer Aufbau eines NPN Transistors (Bild: <a href="https://commons.wikimedia.org/wiki/File:NPN_BJT_(Planar)_Cross-section.svg">Inductiveload</a> Gemeinfrei)</figcaption></figure>
 
 Paare von npn- und pnp-Transistoren nennt man komplementär, wenn deren elektrische Daten bis auf das Vorzeichen ähnlich sind. Solche auf gute Übereinstimmung der Parameter selektierte „Transistorpärchen“ (entscheidend sind Stromverstärkung sowie Basis-Emitterspannung) werden z. B. in sogenannten Gegentaktschaltungen wie Verstärker-Endstufen eingesetzt, um Verzerrungen niedrig zu halten.
 
 Sind große Ströme gefordert, können mehrere Transistoren parallelgeschaltet werden. Die Übereinstimmung deren Parameter ist hier ebenfalls wichtig, dennoch muss durch Emitterwiderstände dafür gesorgt werden, dass sich die Ströme gleichmäßig auf alle parallelen Transistoren aufteilen.
 
 ## Funktionsweise
-![NPN Halbleitermodell](https://upload.wikimedia.org/wikipedia/commons/f/f8/NPN_BJT_Basic_Operation_%28Active%29_DE.svg)
+<figure><img src="{filename}transistor_npn_basic_operation.svg"><figcaption>NPN Halbleitermodell (Bild: <a href="https://commons.wikimedia.org/wiki/File:NPN_BJT_Basic_Operation_(Active)_DE.svg">Inductiveload</a> Gemeinfrei)</figcaption></figure>
 
 Beim Bipolartransistor im analogen / linearen Betrieb wird durch einen elektrischen Strom %%I_{B}%% zwischen Basis und Emitter ein stärkerer Strom %%I_{C}%% zwischen Kollektor und Emitter gesteuert. Das Verhältnis der beiden Ströme, das im Bereich von etwa 4 bis 1000 liegt, ist vom Transistortyp und vom Absolutbetrag des Kollektorstromes abhängig und wird als statischer Stromverstärkungsfaktor %%B%% bezeichnet.
 
@@ -39,21 +39,21 @@ Durch Schließen des Basis-Emitter-Stromkreises (Spannung %%U_{BE}>U_{D}%% (%%U_
 
 Die Anzahl der in das Basisgebiet injizierten Elektronen bzw. der in den Emitter injizierten Defektelektronen ändert sich mit der Flussspannung UBE der Basis-Emitter-Diode. Obwohl nur eine verhältnismäßig kleine Anzahl an Elektronen in der Basis rekombinieren, ist dieser Teil für die Funktion des Bipolartransistors wesentlich. Eine große Anzahl von Elektronen erhöht die Wahrscheinlichkeit, dass ein Elektron auf ein Loch trifft und rekombiniert. Die rekombinierenden Defektelektronen werden über den Basiskontakt in Form eines Teils des Basisstroms nachgeliefert. Durch Ändern des Basisstromes %%I_{B}%% kann demzufolge der Kollektoremitterstrom %%I_{C}%% gesteuert werden. Es wird durch den kleinen Basisstrom, verursacht durch die Defektelektronen, ein viel größerer Kollektorstrom (Elektronenstrom) gesteuert.
 
-![Spannungen und Ströme am NPN Transistor](https://upload.wikimedia.org/wikipedia/commons/8/87/Bipolartransistor_%28elektrische_Spannungen%29.svg)
+<figure><img src="{filename}transistor_npn_spannungen.svg"><figcaption>Spannungen und Ströme am NPN Transistor (Bild: <a href="https://commons.wikimedia.org/wiki/File:Bipolartransistor_(elektrische_Spannungen).svg">Cepheiden</a> GNU FDL 1.0)</figcaption></figure>
 
 Die Wirkungsweise eines pnp-Transistors ist dazu analog, jedoch sind die Vorzeichen umzudrehen, um der entgegengesetzten Dotierung der beiden Sperrschichten Rechnung zu tragen.
 
 # Vereinfachtes Ersatzschaltbild
-![Vereinfachtes Ersatzschaltbild](https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Simplified_Transportmodel_of_Bipolartransistor.svg/500px-Simplified_Transportmodel_of_Bipolartransistor.svg.png)
+<figure><img src="{filename}transistor_npn_esb.svg"><figcaption>Vereinfachtes Ersatzschaltbild (Bild: <a href="https://commons.wikimedia.org/wiki/File:Simplified_Transportmodel_of_Bipolartransistor.svg">Biezl</a> Gemeinfrei)</figcaption></figure>
 
 Das einfachste Modell besteht aus der Basis-Emitter-Diode und der durch den Basisstrom %%I_{B}%% gesteuerten Stromquelle (genauer gesagt einer Stromsenke, da keine Energieerzeugung erfolgt) hin zum Kollektor %%I_{C}%%. Der Transistor verstärkt den Basisstrom um den Faktor %%B%%. Voraussetzungen für die Gültigkeit des Modells sind: Die Basis-Emitter-Diode muss in Durchlassrichtung gepolt sein und die Basis-Kollektor-Diode in Sperrrichtung.
 
-Dieses vereinfachte Modell leitet sich aus dem [Ebers-Moll-Modell](https://de.wikipedia.org/wiki/Ebers-Moll-Modell){: class="external" } ab und vereinfacht dieses durch Vernachlässigung von Sperrströmen und dynamischen Effekten. Die grundlegensde Eigenschaft der Verstärkung ergibt sich in diesem Modell durch %%I_{C}=I_{B}*B_{N}%%, wobei %%B_{N}%% die Verstärkung im Normalbetrieb ist.
+Dieses vereinfachte Modell leitet sich aus dem [Ebers-Moll-Modell](https://de.wikipedia.org/wiki/Ebers-Moll-Modell){: class="external" } ab und vereinfacht dieses durch Vernachlässigung von Sperrströmen und dynamischen Effekten. Die grundlegensde Eigenschaft der Verstärkung ergibt sich in diesem Modell durch %%I_{C}=I_{B} \cdot B_{N}%%, wobei %%B_{N}%% die Verstärkung im Normalbetrieb ist.
 
 Eine Anwendung des vereinfachten Ersatzschaltbildes ist zum Beispiel der Betrieb des Transistors als Schalter (wobei hier nicht das dynamische Verhalten beschrieben werden kann).
 
 # Statisches Kleinsignal Ersatzschaltbild
-![KSESB](https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/BJT_Kleinsignalmodell.svg/350px-BJT_Kleinsignalmodell.svg.png)
+<figure><img src="{filename}transistor_npn_ksesb.svg"><figcaption>Kleinsignal Ersatzschaltbild (Bild: <a href="https://commons.wikimedia.org/wiki/File:BJT_Kleinsignalmodell.svg">Biezl</a> Gemeinfrei)</figcaption></figure>
 
 Das statische Kleinsignalmodell beschreibt das Kleinsignalverhalten bei niedrigen Frequenzen und wird deshalb auch als Gleichstrom-Kleinsignalersatzschaltbild (oder kurz *GS-KSESB*) bezeichnet.
 
@@ -72,7 +72,7 @@ Um die differentiellen Werte %%r_{BE}%%, %%r_{CE}%% und %%\beta%% zu erhalten be
 # Kennlinienfeld
 Kennlinienfelder dienen der grafischen Darstellung zweier oder mehrerer voneinander abhängiger physikalischen Größen. Sie dienen zur Charakterisierung und Veranschaulichung der elektrischen Eigenschaften/Verhalten des Bauelements. Für die Beschreibung eines Bipolartransistors (als elektrischen Schalter oder in Verstärkerschaltungen) reichen vier grundlegende Kennlinien aus: das Eingangs-, das Ausgangs-, das Stromsteuer- und das Spannungsrückwirkungskennlinienfeld. Werden die Kennlinien gemeinsam dargestellt spricht man auch von Vierquadrantenkennlinienfeld.
 
-![Kennlinienfeld](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Kombiniertes_Kennlinienfeld_Transistor_2.svg/500px-Kombiniertes_Kennlinienfeld_Transistor_2.svg.png)
+<figure><img src="{filename}transistor_npn_kennlinienfeld.svg"><figcaption>Kennlinienfeld (Bild: <a href="https://commons.wikimedia.org/wiki/File:Kombiniertes_Kennlinienfeld_Transistor_2.svg">Biezl</a> Gemeinfrei)</figcaption></figure>
 
 Beim **Eingangskennlinienfeld** wird der Basisstrom %%I_{B}%% gegen die Basisspannung %%U_{BE}%% aufgetragen. Da es sich hierbei nur um den Basis-Emitter-pn-Übergang handelt, entspricht die Kennlinie der einer pn-Diode.
 

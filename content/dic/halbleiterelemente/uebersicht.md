@@ -6,7 +6,8 @@ toc: False
 # Inhalt
 ## Bipolarer Transistor
 * [Grundlagen des bipolaren Transistor]({filename}bipolarer_transistor.md)
-* Bipolarer Transistor als Schalter
+* [Bipolarer Transistor als Schalter]({filename}bipolarer_transistor_schalter.md)
+
 ## Unipolarer Transistor
 * Grundlagen des unipolaren Transistors
 * Unipolarer Transistor als Schalter

@@ -10,10 +10,43 @@ Der Befehlssatz des Atmel AVR ist ein typischer *RISC*-Befehlssatz. Bei der Entw
 * [Komplette Übersicht](http://www.atmel.com/images/Atmel-0856-AVR-Instruction-Set-Manual.pdf){: class="external" } über den Befehlssatz von Atmel
 * [Auszug]({filename}avr_assembler_befehle.pdf){: class="download" } der wichtigsten Befehle
 
-# Registersatz
-Die AVR Serie besitzt 32 allgemein verwendbare Register(`R0` bis `R31`). Die Register `R0` bis `R15` sind nicht verfügbar für Befehle mit unmittelbaren Konstanten (z.B. `ldi`-load immediate).
+## Blockschaltbild
+<figure><img src="{filename}avr_blockschaltbild.svg"><figcaption>Blockschaltbild des AVR (Quelle: <a href="http://www.atmel.com/images/doc2466.pdf">Datenblatt ATMega16</a> &copy; Atmel Corporation)</figcaption></figure>
 
-Die Register `R27:R26` bilden gemeinsam das 16 Bit X-Register, wobei `R27` das höherwertige Byte darstellt und `R26` das niederwertige. Neben dem X-Register gibt es analog das Y und Z Register:
+Im Blockschaltbild des Atmel AVR ATMega16 erkennt man am oberen und unteren Ende die vier IO-Ports.
+
+Rund um den Prozessorkern (*AVR CPU*) befindet sich folgende Peripheriebausteine:
+
+* ADC, mit Multiplexer auf die Pins von Port A 
+* I²C Schnittstelle (TWI - Two Wire Interface) auf Port C
+* Timer/Counter
+* Watchdogtimer mit dem internen Oszillator
+* *MCU Ctrl. & Timing* - zuständig für den Prozessortakt und Reset
+* Interrupt Einheit
+* EEPROM
+* USART auf Port D
+* SPI auf Port B
+* Komperator
+
+Diese Peripheriebausteine sind über einen Adress/Datenbus mit dem Prozessorkern verbunden.
+
+Der Prozessorkern besteht aus dem Flash Speicher für das eigentliche Programm und dem SRAM für die Laufzeitvariablen.
+Der Programmzeiger (*Program Counter*) zeigt auf den aktuellen Befehl der vom *Instruction Register* zwischengespeichert
+wird und durch den *Instruction Decoder* dekodiert wird.
+
+Der *Stack Pointer* dient zum Ablegen von Werten und Rücksprungadressen im SRAM. Für Berechnungen mit der
+*ALU* werden die Register R0 bis R31 genutzt. 3 16Bit Indexregister (X, Y und Z) dienen der indirekten Adressierung
+des SRAMs. Das Statusregister ist unter anderem für die Flags der ALU zuständig (*Carry*, *Overflow*, usw.).
+
+Im Prozessorkern sieht man auch die Harvardarchitektur, da der SRAM Speicher und der Flash Speicher durch getrennte
+Adress/Datenbusse angesteuert werden.
+
+# Registersatz
+Die AVR Serie besitzt 32 allgemein verwendbare Register(`R0` bis `R31`). Die Register `R0` bis `R15` sind nicht verfügbar
+für Befehle mit unmittelbaren Konstanten (z.B. `ldi`-load immediate).
+
+Die Register `R27:R26` bilden gemeinsam das 16 Bit X-Register, wobei `R27` das höherwertige Byte darstellt und `R26` das
+niederwertige. Neben dem X-Register gibt es analog das Y und Z Register:
 
 * `R27:R26`: X-Register
 * `R29:R28`: Y-Register
@@ -22,9 +55,13 @@ Die Register `R27:R26` bilden gemeinsam das 16 Bit X-Register, wobei `R27` das h
 Diese Register können für die indirekte Adressierung genutzt werden.
 
 # Stack Pointer
-Der Stack Pointer ist eine 16 Bit Adresse und zeigt auf die aktuelle Position im Stack. Auf dem Stack werden die Rücksprungadressen bei einem `call`-Befehl und bei einem Interruptaufruf gespeichert. Zusätzlich kann der Stack genutzt werden, um Register zu sichern oder Zwischenergebnisse zu speichern.
+Der Stack Pointer ist eine 16 Bit Adresse und zeigt auf die aktuelle Position im Stack. Auf dem Stack werden die
+Rücksprungadressen bei einem `call`-Befehl und bei einem Interruptaufruf gespeichert. Zusätzlich kann der Stack genutzt
+werden, um Register zu sichern oder Zwischenergebnisse zu speichern.
 
-Der Stackpointer muss vor dem ersten Zugriff initialisiert werden. Dazu wird er an das Ende des Datenspeichers gesetzt. Der AVR Assembler unterstützt das Symbol `RAMEND`, das die letzte Adresse des Datenspeichers darstellt. Die Makros `HIGH` und `LOW` liefern die oberen bzw. unteren 8 Bit eines 16 Bit Wertes.
+Der Stackpointer muss vor dem ersten Zugriff initialisiert werden. Dazu wird er an das Ende des Datenspeichers gesetzt.
+Der AVR Assembler unterstützt das Symbol `RAMEND`, das die letzte Adresse des Datenspeichers darstellt. Die Makros `HIGH`
+und `LOW` liefern die oberen bzw. unteren 8 Bit eines 16 Bit Wertes.
 
     ldi R16, HIGH(RAMEND)
     out SPH, R16
