@@ -1,7 +1,7 @@
 title: Bipolarer Transistor als Schalter
 parent: uebersicht.md
 
-# Algemeines
+# Allgemeines
 Eine typische Anwendung für Transistoren ist das Schalten von Lastströmen. Der einfachste Fall ist eine Last, die keinen
 Bezug zum Massepontential braucht. Dies nennt man *Low-Side* schalten.
 
