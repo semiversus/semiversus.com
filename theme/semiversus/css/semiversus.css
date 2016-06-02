@@ -232,6 +232,10 @@ h3 {
   margin:10px 0;
 }
 
+.credit {
+  line-height: 40px;
+}
+
 .panel-heading {
   padding:5px;
   border-bottom: 0px;
