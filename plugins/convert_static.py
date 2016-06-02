@@ -68,7 +68,7 @@ class ConvertStaticGenerator(Generator):
               os.remove(temp_path+"/tmp.zip")
             else:
               src_ext, rule=[(src_ext, rule) for( src_ext, rule) in self.rules if str(source_path).endswith(src_ext)][0]
-              call(rule.format(src=source_path, basename=os.path.basename(source_path).replace(src_ext,''), dst_path=temp_path+'/'), shell=True)
+              call(rule.format(src=source_path, src_path=os.path.dirname(source_path), basename=os.path.basename(source_path).replace(src_ext,''), dst_path=temp_path+'/'), shell=True)
               zf = ZipFile(temp_path+"/tmp.zip", "w")
               for dirname, subdirs, files in os.walk(temp_path):
                 #zf.write(dirname)

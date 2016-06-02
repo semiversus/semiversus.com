@@ -11,14 +11,13 @@ toc: False
     * [Operatoren]({filename}operatoren.md)
     * [Nebenläufigkeit]({filename}nebenlaeufigkeit.md)
     * [`process` Statment]({filename}process.md)
-
 * VHDL Beschreibung für Grundkomponenten
     * [Register]({filename}register.md)
     * [Synchronisierung asynchroner Signale]({filename}synchronisierung.md)
     * [Synchrone Flankerkennung]({filename}flankenerkennung.md)
     * [Zähler]({filename}zaehler.md)
     * [Zustandsmaschine]({filename}zustandsmaschine.md)
-* [Struktureller VHDL Entwurf]({filename}vhdl_strukturell.md)
+* [Modellierungsarten]({filename}modellierungsarten.md)
 
 # Übungen
 * [Übung 1]({filename}uebung1.md) - Kombinatorische Umsetzung eines BCD auf 7 Segment Dekoders
