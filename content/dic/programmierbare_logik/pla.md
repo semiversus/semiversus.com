@@ -42,7 +42,7 @@ An | A2 | A1 | A0 | Dm | D3 | D2 | D1 | D0
 Ein ROM Baustein entspricht der vorgestellten kombinatorischen Grundstruktur, wobei der Teil im UND-Array fest verdrahtet ist und nur der Teil des ODER-Arrays vom Benutzer programmierbar ist. Ein Speicher mit `n` Adressbits und `m` Datenbits kann eine Kombinatorik mit `n` Eingängen und `m` Ausgängen realisieren.
 
 ## PLA
-Bei einem PLA (Programmbable Logic Array) sind sowohl UND- als auch das ODER-Array vom Anwender programmierbar. 
+Bei einem PLA (Programmable Logic Array) sind sowohl UND- als auch das ODER-Array vom Anwender programmierbar. 
 
 ## PAL
 PALs (Programmable Array Logic) werden heute nicht mehr eingesetzt. Sie sind aber die Vorstufe zu vielen Entwicklungen, die heute noch in Verwendung sind. Bei PALs ist das UND-Array frei programmierbar, das ODER-Array ist festverdrahtet. PAL Bausteine sind nur einmal programmierbar.
