@@ -57,6 +57,6 @@ einfach um einen Faktor höher angenommen als er idealerweise sein müsste.
 
 Für die Berechnung wird zuerst der Basisstrom ausgerechnet, um dann den Widerstand %%R_B%% ermitteln zu können:
 
- %%I_B=\frac{I_C}{B} \cdot ü%% mit %%ü=2 \ldots 5%%
+ %%I_B=\frac{I_C}{B} \cdot \textrm{\"u}%% mit %%\textrm{\"u}=2 \ldots 5%%
 
  %%R_B=\frac{U_E-U_{BE}}{I_B}%%

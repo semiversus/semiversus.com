@@ -131,7 +131,7 @@ Periodenintervall darstellt.
 
 ## Kausale Signale
 Ein Signal nennt man *kausal*, wenn alle Werte des Signals auf der negativen Zeitachse Null sind. Beispiele dafür sind
-der Einheitsimpuls oder der Einhaltsspung. Sind die Werte des Signals auf der negativen Zeitachse ungleich Null spricht
+der Einheitsimpuls oder der Einheitssprung. Sind die Werte des Signals auf der negativen Zeitachse ungleich Null spricht
 man auch von einem *antikausalen* Signal.
 
 # Elementarsignale
@@ -151,7 +151,7 @@ Es gilt:
 
 %%x[n]\cdot\delta[n-k]=\begin{cases} x[n] & \text{für } n = k \\\\ 0 & \text{für } n \neq k \end{cases}%%
 
-## Einheitsprung
+## Einheitssprung
 Der Einheitssprung %%u[n]%% ist definiert durch:
 
 %%u[n]=\begin{cases}1 & \text{für } n \geq 0 \\\\ 0 & \text{für } n < 0 \end{cases}%%

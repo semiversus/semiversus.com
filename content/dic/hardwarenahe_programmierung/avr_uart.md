@@ -114,7 +114,7 @@ Dieses Flag muss auf `1` sein, um den Sender der UART einzuschalten.
 # Baudrate Generierung
 Zur Generierung der Baudrate gilt folgende Formel:
 
-%%f_{Baudrate}=\frac{f_{CLK}}{8\cdot(UBRR+1)} \Leftrightarrow UBRR=\frac{f_{CLK}}{16\cdot f_{Baudrate}}-1%%
+%%f_{Baudrate}=\frac{f_{CLK}}{16\cdot(UBRR+1)} \Leftrightarrow UBRR=\frac{f_{CLK}}{16\cdot f_{Baudrate}}-1%%
 
 Diese Formel gilt wenn das `U2X` in `UCSRA` gleich `0` ist. Für `U2X` gleich `1` gilt folgende Formel: 
 
