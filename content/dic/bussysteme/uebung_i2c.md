@@ -8,7 +8,7 @@ Die 7-Bit Adresse des Bausteins wird für diese Übung mit <samp>001 1101</samp>
 
 ## Register
 Der Baustein verfügt intern über mehrere Register. Jeder Register ist ein Byte groß.
-<figure><img src="{filename}adxl345_registers.svg"><figcaption>Registerübersicht (Bild: <a href="">Datenblatt ADXL345</a> &copy;Analog Devices)</figcaption></figure>
+<figure><img src="{filename}adxl345_registers.svg"><figcaption>Registerübersicht (Bild: <a href="http://www.analog.com/media/en/technical-documentation/data-sheets/ADXL345.pdf">Datenblatt ADXL345</a> &copy;Analog Devices)</figcaption></figure>
 
 In der folgenden Abbildung sieht man insgesamt vier Übertragungsarten:
 
@@ -17,7 +17,7 @@ In der folgenden Abbildung sieht man insgesamt vier Übertragungsarten:
 * Lesen eines Bytes aus einem Register
 * Lesen mehrere Bytes aus mehreren Registern
 
-<figure><img src="{filename}adxl345_overview.svg"><figcaption>Lesen und Schreiben einzelner sowie mehrer Bytes (Bild: <a href="">Datenblatt ADXL345</a> &copy;Analog Devices)</figcaption></figure>
+<figure><img src="{filename}adxl345_overview.svg"><figcaption>Lesen und Schreiben einzelner sowie mehrer Bytes (Bild: <a href="http://www.analog.com/media/en/technical-documentation/data-sheets/ADXL345.pdf">Datenblatt ADXL345</a> &copy;Analog Devices)</figcaption></figure>
 Hinweise zum Bild:
 
 1. Dieses *START* ist entweder ein *repeated START* oder ein *STOP* mit anschließendem *START*
