@@ -3,15 +3,18 @@ title: Test - Bussysteme
 # Inhalt
 * Kanalkodierung
 * Buskonzepte
-* CAN Arbitrierung
 * Fehlersicherung
 ** Parität
 ** Hamming-Abstand und -Code
-** CRC
+* CAN Bus
+* I²C Bus
 
 # Frühere Tests
-* [Test 1]({filename}test_bussysteme_1.pdf), [Musterlösung]({filename}test_bussysteme_1_loesung.pdf){: class="download" }
-* [Test 2]({filename}test_bussysteme_2.pdf), [Musterlösung]({filename}test_bussysteme_2_loesung.pdf){: class="download" }
+Bei folgenden Tests werden teilweise Inhalte geprüft, die für den Test nicht relevant sind (USB, CANOpen)
+
+* [Test 1]({filename}test_bussysteme_1.pdf){: class="download" }, [Musterlösung]({filename}test_bussysteme_1_loesung.pdf){: class="download" }
+* [Test 2]({filename}test_bussysteme_2.pdf){: class="download" }, [Musterlösung]({filename}test_bussysteme_2_loesung.pdf){: class="download" }
+* [Test 3]({filename}test_bussysteme_3.pdf){: class="download" }, ohne Musterlösung
 
 # Testablauf
 * schriftlich, 30 Minuten

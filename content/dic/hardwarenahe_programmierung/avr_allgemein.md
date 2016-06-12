@@ -64,7 +64,7 @@ Zusätzlich zu den Taktquellen sind noch Startzeiten für die einzelnen Taktquel
 # Sleep Modes (*Seite 32-36*)
 Der Stromverbrauch jeder Komponente eines Mikrocontrollers besteht aus einem statischen Grundverbrauch (Leckströme, usw.) und einem dynamischen Verbrauch, der durch die Umschaltvorgänge, die vom Taktsignal ausgelöst werden, bestimmt wird. Der dynamische Verbrauch macht den größten Teil aus. Dadurch ist bei niedriger Taktfrequenz auch der Stromverbrauch niedriger. Wird für einen bestimmten Zeitraum der Prozessorkern nicht benötigt, kann dieser durch Abschalten des Prozessortaktes in einen sogenannten Schlafmodus gebracht werden und der Stromverbrauch reduziert sich.
 
-Es stehen verschiedene Stromsparmode zur Verfügung:
+Es stehen verschiedene Stromsparmodi zur Verfügung:
 
 * **Idle**: Prozessor hält, bis ein Interrupt auftritt
 * **ADC Noise Reduction**: Solange eine Analogwandlung läuft und kein Interrupt eintritt, wird der Takt des Prozessors und der IO Komponenten gestoppt. Dies verbessert die Messungen, indem Störungen minimiert werden.
