@@ -23,6 +23,11 @@ Hinweise zum Bild:
 1. Dieses *START* ist entweder ein *repeated START* oder ein *STOP* mit anschließendem *START*
 2. Der graue schattierte Bereich markiert die Phasen, in denen die entsprechende Komponente den Buszustand beobachtet
 
+## Beispiel
+
+Beschreiben des Registers OFSX (0x1E) mit dem Wert 0x02:
+![Schreibe 0x02 auf das Register 0x1E]({filename}i2c_write_offsetx.png)
+
 ## Aufgabenstellung
 Skizziere folgende Übertragungen am I&sup2;C Bus:
 

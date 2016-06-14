@@ -4,10 +4,10 @@ title: Test - Bussysteme
 * Kanalkodierung
 * Buskonzepte
 * Fehlersicherung
-** Parität
-** Hamming-Abstand und -Code
+    * Parität
+    * Hamming-Abstand und -Code
 * CAN Bus
-* I²C Bus
+* I²C Bus (Beispiel bei ADXL345 hinzugefügt)
 
 # Frühere Tests
 Bei folgenden Tests werden teilweise Inhalte geprüft, die für den Test nicht relevant sind (USB, CANOpen)
