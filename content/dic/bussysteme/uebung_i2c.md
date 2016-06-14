@@ -25,8 +25,13 @@ Hinweise zum Bild:
 
 ## Beispiel
 
-Beschreiben des Registers OFSX (0x1E) mit dem Wert 0x02:
-![Schreibe 0x02 auf das Register 0x1E]({filename}i2c_write_offsetx.png)
+Beschreiben des Registers <samp>OFSX</samp> (0x1E) mit dem Wert 0x02:
+
+![Schreibe 0x02 auf das Register 0x1E]({filename}i2c_write_0x1E_0x02.svg)
+
+Lesen der Register <samp>THRES_ACT</samp> und <samp>THRES_INACT</samp> (0x24 und 0x25)
+
+![Lesen der Register 0x24 und 0x25]({filename}i2c_read_0x24.svg)
 
 ## Aufgabenstellung
 Skizziere folgende Übertragungen am I&sup2;C Bus:
