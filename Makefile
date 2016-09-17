@@ -14,7 +14,7 @@ debug:
 	@pelican content -D
 
 view: local
-	@python -m webbrowser -t file://`pwd`/output_local/index.html
+	@python2 -m webbrowser -t file://`pwd`/output_local/index.html
 
 upload:
 	git push

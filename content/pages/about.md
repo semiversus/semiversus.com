@@ -10,7 +10,7 @@ toc: false
 
 Mein Name ist Günther Jena und komme aus Kappl in Österreich. Ich wohne und arbeite in Rankweil. Vor meiner Hochzeit hieß ich noch Günther Jehle und Jena ist nun die Zusammensetzung aus meinem bisherigen Nachnamen "Jehle" und dem bisherigen Nachnamen meiner Frau "Nagel".
 
-Ich beschäftige mich mit Softwareentwicklung und Elektronik, arbeite als Entwickler bei [Spectra Physics](http://www.spectra-physics.com/company/rankweil-en){: class="external" } und als Lehrer in der [HTL Rankweil](www.htl-rankweil.at){: class="external" }.
+Ich beschäftige mich mit Softwareentwicklung und Elektronik, arbeite als Entwickler bei [Spectra Physics](http://www.spectra-physics.com/company/rankweil-en){: class="external" } und als Lehrer an der [HTL Rankweil](http://www.htl-rankweil.at){: class="external" }.
 
 Auf dieser Seite möchte ich in Zukunft ein paar meiner Projekte vorstellen und den Blog als einen öffentlichen Notizzettel nutzen.
 
