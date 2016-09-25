@@ -15,5 +15,5 @@ toc: False
 # Zugang für Schüler
 Für Schüler gibt es einen Bereich mit Beurteilungen. Benutzername ist `dic`, Passwort wird im Unterricht bekanntgegeben.
 
-* [5AHEL](https://klassen.semiversus.com/klasse_5ahel.html)
+* [5AHEL DIC](https://klassen.semiversus.com/klasse_5ahel.html)
 * [5AHEL und 5BHEL Robotik](https://klassen.semiversus.com/klasse_5abhel.html)
