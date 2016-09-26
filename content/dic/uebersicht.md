@@ -1,7 +1,7 @@
-title: Digitale Systeme und Computersysteme
+title: Unterrichtsmaterial
 toc: False
 
-# Inhalt
+# Digitale Systeme und Computersysteme
 * [Grundlagen der Digitaltechnik]({filename}grundlagen_der_digitaltechnik/uebersicht.md)
 * [Programmierbare Logik]({filename}programmierbare_logik/uebersicht.md)
 * [Mikrocontroller]({filename}mikrocontroller/uebersicht.md)
@@ -11,6 +11,9 @@ toc: False
 * [Rechnerarchitektur]({filename}rechnerarchitektur/uebersicht.md)
 * [Digitale Signalverarbeitung]({filename}digitale_signalverarbeitung/uebersicht.md)
 * [Komplexe digitale Systeme]({filename}komplexe_digitale_systeme/uebersicht.md)
+
+# Robotik und Embedded Systems
+* [RaspberryPi]({filename}robotik/raspberry.md)
 
 # Zugang für Schüler
 Für Schüler gibt es einen Bereich mit Beurteilungen. Benutzername ist `dic`, Passwort wird im Unterricht bekanntgegeben.
