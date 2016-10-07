@@ -124,6 +124,10 @@
   margin: 0px;
 }
 
+.fa-linkedin:hover  {
+  color: #0d7db8;
+}
+
 .fa-github:hover  {
   color: #4183c4;
 }

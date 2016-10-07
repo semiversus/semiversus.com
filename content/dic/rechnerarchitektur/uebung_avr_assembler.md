@@ -3,7 +3,8 @@ parent: uebersicht.md
 
 # Allgemeines
 Die Übungen sollten gut kommentiert werden. Ein Programm kann hinsichtlich Programmgröße oder Ausführungsgeschwindigkeit
-optimiert werden. Als Hilfe eignet sich die [Kurzübersicht]({filename}avr_assembler_befehle.pdf){: class="download" } der AVR Assembler Befehle.
+optimiert werden. Als Hilfe eignet sich die [Kurzübersicht]({filename}avr_assembler_befehle.pdf){: class="download" }
+der AVR Assembler Befehle.
 
 # Daten vertauschen
 Daten liegen im SRAM ab Adresse 0x60 bis zur Adresse 0x15F. Ziel des Assembler Programmes ist es, diesen Datenbereich zu
@@ -17,8 +18,8 @@ Daten liegen im SRAM ab Adresse 0x60 bis zur Adresse 0x15F. Ziel des Assembler P
 * Wie groß ist das Programm und wie viel Taktzyklen werden für die Ausführung benötigt?
 
 # Multiplikation aller Elemente eines Arrays
-Im SRAM liegen ab Adresse 0x60 insgesamt 32 16-Bit Werte. Diese sollen alle mit 5 mulitpliziert werden und an der
-ursprünglichen Stelle im SRAM wieder abgelegt werden.
+Im SRAM liegen ab Adresse 0x60 insgesamt 32 16-Bit Werte (auf 0x60 liegt das höherwertigere Byte). Diese sollen alle mit
+5 mulitpliziert werden und an der ursprünglichen Stelle im SRAM wieder abgelegt werden.
 
 ## Hinweise
 * Nutze das Y oder Z Register zur indirekten Adressierung (Anwendung von ldd)
@@ -35,6 +36,7 @@ aktiv (bzw. sollen den Alarm auslösen), wenn sie auf Massepotential sind (Low-a
 ## Hinweise
 * Nutze eine Main-Loop um die Eingänge dauernd zu überprüfen
 * Weise die Funktion im Simulator und auf der Megacard nach
+* Wenn ein Sensor ausgelöst hat und später ein zweiter auslöst soll auch dieser angezeigt werden.
 * Erweiterung 1: Der Alarm soll nur zurückgesetzt werden können, wenn kein Alarmsensor mehr aktiv ist
 * Erweiterung 2: An Port C (Bit 3) wird ein Relais angesteuert (High-aktiv), um einen Alarmsirene anzusteuern. Wird einmal Alarm ausgelöst, soll dieses Relais anziehen. Beim Deaktivieren des Alarms soll es wieder abfallen.
 
@@ -57,7 +59,7 @@ Erstelle eine Subroutine, die rekursiv die n-te Fibonacci Zahl berechnet. Dabei 
     loop:
       out PORTB, R16
       inc R16
-      mv R17, R16
+      mov R17, R16
       andi R17, 0x0F
       cpi R17, 0x0A
       brlo loop
