@@ -7,7 +7,7 @@ Am 26. November 2016 ist es wieder soweit: **Linuxtag** in Vorarlberg!
 
 Ich werde dort zwei Vorträge halten:
 
-* Ligthning Talk über *Nesolution* - Computeralgorithmen spielen Nintendo
+* Lightning Talk über *Nesolution* - Computeralgorithmen spielen Nintendo
 * Vortrag über [statische Webseitenerstellung](https://www.linuxday.at/webseiten-erstellen-mit-pelican){: class="external" }
 
 Folgende Infos stammen von der Infoseite unter [https://www.linuxday.at](https://www.linuxday.at/){: class="external" }:
