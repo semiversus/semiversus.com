@@ -26,7 +26,7 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 TRANSLATION_FEED_ATOM = None
 
-DIRECT_TEMPLATES=['index', 'search']
+DIRECT_TEMPLATES=['index', 'search', 'error']
 ARCHIVES_SAVE_AS=''
 TAGS_SAVE_AS=''
 TAG_SAVE_AS='tag_{slug}.html'
@@ -47,7 +47,7 @@ THEME='theme/semiversus'
 ASSET_SOURCE_PATHS=['.']
 THEME_STATIC_PATHS=['static']
 
-STATIC_PATHS = ['extra/robots.txt', 'extra/favicon.ico', 'extra/CNAME', 'extra/error.html']
+STATIC_PATHS = ['extra/robots.txt', 'extra/favicon.ico', 'extra/CNAME']
 EXTRA_PATH_METADATA = {
   'extra/robots.txt':{'path':'robots.txt'},
   'extra/favicon.ico':{'path':'favicon.ico'},
