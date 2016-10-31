@@ -15,7 +15,12 @@ My interests are software development and electronics. With this website I want 
 
 <div class="clearfix"></div>
 ## Contact
+<p>
 E-Mail: <a href="mailto:guenther@jena.at">guenther@jena.at&nbsp;<span class="fa fa-envelope-o"></a><br />
 GnuPG Key: <a href="{filename}jena.asc" class="download"><samp>ADD6 34D7 ADE7 72D2 B2D1  A3D0 03B8 2F59 6F67 72C2</samp></a><br />
+</p>
+<p>
+LinkedIn: <a href="https://www.linkedin.com/in/guenther-jena" class="external">Günther Jena</a><br />
 Github: <a href="https://github.com/semiversus" class="external">Semiversus</a><br />
-Stack-Overflow: <a href="http://stackoverflow.com/users/166605" class="external">Günther Jena</a>
+Stack-Overflow: <a href="https://stackoverflow.com/users/166605" class="external">Günther Jena</a>
+</p>
