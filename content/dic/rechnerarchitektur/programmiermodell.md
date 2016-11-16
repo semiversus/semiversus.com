@@ -108,7 +108,7 @@ Beispiel (picoJava-II Architektur)
 
 Typische Stack Maschinen haben Befehle wie `push` und `pop` um Daten auf den Stack zu legen oder vom Stack zu entfernen. Rechenoperationen wie `add`, `mult`, `sub`, usw. holen zwei Werte vom Stack, führen mit diesen die Rechenoperation aus und legen das Ergebnis wieder am Stack ab.
 
-Die Rechenoperation 4+5*(3+6) kann dabei mittels
+Die Rechenoperation 4+5*(3+6) kann dabei folgenderweise realisiert werden:
 
     push 4
     push 5
