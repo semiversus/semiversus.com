@@ -16,3 +16,5 @@ und bei einer Milliarde Sekunden ist man fast 32 Jahre alt.
 
 Das Spreadsheet enthält die Jubiläen für Sekunden, Minuten, Stunden, Tage und Wochen. Es startet bei einer Million Sekunden
 und endet beim letzten relevanten Jubiläum vor Erreichung der hundert Jahre - 5.000 Wochen (95.6 Jahre).
+
+![Screenshot]({filename}anniversary_a4.png)
