@@ -46,7 +46,7 @@ das wert- und zeitdiskret ist.
 Während sich zeitkontinuierliche Signale nur als Funktion darstellen lassen kann man bei zeitdiskreten Signalen auch eine
 Folge angeben. Im obigen Beispiel wäre dies:
 
-%%x[n]=(\ldots,\ 0,\ 3,\ 3,\ 2,\ 0,\ {-1},\ \underline{0},\ 2,\ 4,\ 3,\ 1,\ 5,\ 6,\ \ldots)%%
+%%x[n]=(\ldots,\ 0,\ 3,\ 3,\ 2,\ 0,\ {-1},\ \underline{0},\ 2,\ 4,\ 3,\ 1,\ 0,\ 0,\ \ldots)%%
 
 Um die Position des Index 0 zu markieren wird der entsprechende Wert unterstrichen. Die Folge wird aber auch oft wie folgt
 angeschrieben:
