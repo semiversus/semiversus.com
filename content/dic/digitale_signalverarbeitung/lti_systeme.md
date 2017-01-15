@@ -63,7 +63,7 @@ der Ausgang zum Zeitpunkt %%y[n]%% von %%y[n-1]%% abhängig ist.
 %%y[n]=\sum\limits_{k=0}^\infty h[k] \cdot x[n-k]%%
 
 ## Speicher
-Der Ausgang eines speicherlosen Systems ist nur vom aktuellen Eingangswert abhängig. Um eine abhängigkeit von
+Der Ausgang eines speicherlosen Systems ist nur vom aktuellen Eingangswert abhängig. Um eine Abhängigkeit von
 vorangegangenen Eingangswerten zu ermöglichen benötigt das System einen Speicher, um diese Werte entsprechend
 vorzuhalten.
 
@@ -71,7 +71,7 @@ Ein speicherloses LTI System kann den Eingangswert nur multiplizieren:
 
 %%y[n]=a x[n]%%
 
-Wenn das System einen Speicher besitzt, können auch %%N%% *frühere* Einangswerte berücksichtigt werden:
+Wenn das System einen Speicher besitzt, können auch %%N%% *frühere* Eingangswerte berücksichtigt werden:
 
 %%y[n]=a_0 x[n] + a_1 x[n-1] + a_2 x[n-2] + \ldots = \sum\limits_{k=0}^N a_k x[n-k]%%
 
@@ -97,7 +97,7 @@ Ein System gilt als stabil, wenn das Ausgangssignal bei beschränktem Eingangssi
 Zur Definition von Stabilität gibt es verschiedene Methoden, wobei in der Systemtheorie die sogenannte *BIBO*-Stabilität
 üblich ist. BIBO steht für engl. *bounded input, bounded output* (beschränkter Eingang, beschränkter Ausgang)
 
-In einem LTI System lässt sich die BIBO Stabilität über die Impulasantwort ausdrücken, wenn diese absolut integrierbar
+In einem LTI System lässt sich die BIBO Stabilität über die Impulsantwort ausdrücken, wenn diese absolut integrierbar
 ist:
 
 %%\sum\limits_{n=0}^\infty \left|h[n]\right|\ < \infty%%
@@ -108,5 +108,5 @@ kein Koeffizient unendlich ist). Bei einem IIR System ist es möglich nicht BIBO
 So ist die ein IIR System mit der Impulsantwort %%h[n]=u[n]%% (Einheitssprung) nicht BIBO stabil, da die Summe der Werte des
 Ausgangssignals von 0 bis Unendlich gleich Unendlich ist.
 
-Als Gegenbeispiel ist eine System mit der Impulsantwort %%h[n]=e^{-n}%% (für n größer gleich 0) BIBO stabil, obwohl
+Als Gegenbeispiel ist ein System mit der Impulsantwort %%h[n]=e^{-n}%% (für n größer gleich 0) BIBO stabil, obwohl
 die Impulsantwort unendlich lang ist, sie sich aber 0 immer weiter annähert und daher die Summe kleiner Unendlich ist.

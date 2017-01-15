@@ -51,7 +51,7 @@ Folge angeben. Im obigen Beispiel wäre dies:
 Um die Position des Index 0 zu markieren wird der entsprechende Wert unterstrichen. Die Folge wird aber auch oft wie folgt
 angeschrieben:
 
-%%x[n]=0\quad 3\quad 3\quad 2\quad 0\quad {-1}\quad \underline{0}\quad 2\quad 4\quad 3\quad 1\quad 5\quad 6%%
+%%x[n]=0\quad 3\quad 3\quad 2\quad 0\quad {-1}\quad \underline{0}\quad 2\quad 4\quad 3\quad 1\quad 0\quad 0%%
 
 In weiterer Folge werden ausschließlich zeitdiskrete Signale behandelt.
 

@@ -4,7 +4,7 @@ parent: uebersicht.md
 # Allgemeines
 
 Um die Antwort eines LTI Systems auf eine beliebige Eingangsfolge zu bekommen nutzt man die Eigenschaften der Linearität
-und der Zeitin varianz. Da sich jedes Eingangssignal %%x[t]%% als Linearkombination von Einheitspulsen darstellen lässt,
+und der Zeitinvarianz. Da sich jedes Eingangssignal %%x[t]%% als Linearkombination von Einheitspulsen darstellen lässt,
 kann für das Ausgangssignal eine Linearkombination der entsprechenden Impulsantworten verwendet werden.
 
 # Berechnung
