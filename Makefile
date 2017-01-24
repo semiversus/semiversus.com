@@ -1,8 +1,9 @@
 local:
+	@echo "Building local website"
 	@PYTHONPATH='.' pelican content -s pelicanconf_local.py --cache-path=cache/local/ -o output_local
 
 public: 
-	@echo "Building website"
+	@echo "Building public website"
 	@pelican content
 
 dic:

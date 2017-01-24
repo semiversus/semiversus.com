@@ -202,7 +202,7 @@ hr {
 }
 
 
-h1 {
+h2 {
   font-size: 200%;
   border-bottom: 1px solid #aaa;
 }
@@ -211,12 +211,12 @@ header h1 {
   border-bottom: none;
 }
 
-h2 {
+h3 {
   font-size: 128%;
   font-weight: bold;
 }
 
-h3 {
+h4 {
   font-size: 100%;
   text-decoration: underline;
 }
