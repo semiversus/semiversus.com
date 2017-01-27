@@ -21,7 +21,7 @@ Im einfachsten Fall wird den logischen Zustände 0 und 1 ein Logikpegel auf der 
 Bei der RS232 Schnittstelle steht (nicht wie im obigen Beispiel) eine negative Spannung für logisch 1 und eine positive Spannung für logisch 0.
 
 ### Bitstuffing
-Ein Nachteil bei der NRZ Kodierung sind die fehlenden Flanken bei der Übertragung von vielen gleichen Symbolen (viele logische 0 oder 1). Um für solche Fälle zusätzliche Taktflanken zu erzeugen, kann durch *Bittstuffing* (oder deutsch Bitstopfen) ein zusätzliches invertiertes Bit eingefügt werden. Mit *Bitweite* beschreibt man dabei die Anzahl der Bits mit gleichem Pegel die zum Einfügen eines *Stopfbits* führt. Der Empfänger muss nach dem gleichen Prinzip dieses Stopfbit wieder entfernen.
+Ein Nachteil bei der NRZ Kodierung sind die fehlenden Flanken bei der Übertragung von vielen gleichen Symbolen (viele logische 0 oder 1). Um für solche Fälle zusätzliche Taktflanken zu erzeugen, kann durch *Bitstuffing* (oder deutsch Bitstopfen) ein zusätzliches invertiertes Bit eingefügt werden. Mit *Bitweite* beschreibt man dabei die Anzahl der Bits mit gleichem Pegel die zum Einfügen eines *Stopfbits* führt. Der Empfänger muss nach dem gleichen Prinzip dieses Stopfbit wieder entfernen.
 
 <figure><img src="{filename}bitstuffing.svg"><figcaption>Bitstopfen mit Weite 5 (Bild: <a href="https://commons.wikimedia.org/wiki/File:Bitstuffing.svg">Mik81</a> Public Domain)</figcaption></figure>
 
