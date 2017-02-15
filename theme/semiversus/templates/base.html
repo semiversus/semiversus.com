@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+  <title>{% block title %}Semiversus{% endblock %}</title>
+  <link rel="icon" href="{{ SITEURL }}/favicon.ico">
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="description" content="{% block description %}Blog von Günther Jena (vormals Jehle){% endblock %}">
   <meta name="author" content="Günther Jena">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="{{ SITEURL }}/favicon.ico">
-  <title>{% block title %}Semiversus{% endblock %}</title>
-{% assets filters="cssmin", output="css/semiversus.min.css", "css/bootstrap.min.css", "css/font-awesome.min.css", "css/semiversus.css", "css/pygments.css", "css/tipuesearch.css" %}
+  <meta name="google-site-verification" content="O-3LVEziPiVrCYqFCwbLmB3s7lNG__cPMLLAr_RUxbA" />
+  <meta name="msvalidate.01" content="70DFF0E672B42811AA384CC455C9406C" />
+{% assets filters="cssmin", output="css/semiversus.min.css", "css/bootstrap.min.css", "css/semiversus.css", "css/pygments.css", "css/tipuesearch.css" %}
   <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
 {% endassets %}
 {% assets filters="jsmin", output="js/semiversus.min.js", "js/jquery.min.js", "js/bootstrap.min.js" %}
   <script src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
 {% endassets %}
-  <meta name="google-site-verification" content="O-3LVEziPiVrCYqFCwbLmB3s7lNG__cPMLLAr_RUxbA" />
-  <meta name="msvalidate.01" content="70DFF0E672B42811AA384CC455C9406C" />
   {% block header %}{% endblock %}
 </head>
 <body data-spy="scroll" data-target="#sidebar" data-offset=30>
@@ -36,11 +36,12 @@
             <li><a href="{{ SITEURL }}/about.html">Über mich</a></li>
           </ul>
           <form class="navbar-form navbar-right" role="search" action="{{ SITEURL }}/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="form-control" placeholder="Suche" name="q" id="tipue_search_input"></form>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="https://www.linkedin.com/in/guenther-jena" class="social" data-toggle="tooltip" data-placement="bottom" title="LinkedIn.com/Günther-Jena"><span class="fa fa-linkedin fa-2x"></span><span class="hidden-sm hidden-md hidden-lg">&nbsp;Linkedin</span></a></li>
-            <li><a href="https://github.com/semiversus" class="social" data-toggle="tooltip" data-placement="bottom" title="Github.com/Semiversus"><span class="fa fa-github fa-2x"></span><span class="hidden-sm hidden-md hidden-lg">&nbsp;Github</span></a></li>
-            <li><a href="http://stackoverflow.com/users/166605" class="social" data-toggle="tooltip" data-placement="bottom" title="Stackoverflow.com/Semiversus"><span class="fa fa-stack-overflow fa-2x"></span>&nbsp;<span class="hidden-sm hidden-md hidden-lg">Stack Overflow</span></a></li>
-            <li><a href="{{ SITEURL }}/semiversus.atom.xml" class="social" data-toggle="tooltip" data-placement="bottom" title="RSS Feed"><span class="fa fa-rss fa-2x"></span>&nbsp;<span class="hidden-sm hidden-md hidden-lg">RSS Feed</span></a></li>
+          <ul class="nav navbar-nav navbar-right socialicons">
+            <li><a href="https://www.linkedin.com/in/guenther-jena" data-toggle="tooltip" data-placement="bottom" title="LinkedIn.com/Günther-Jena"><span class="linkedin icon hidden-xs"></span><span class="hidden-sm hidden-md hidden-lg">Linkedin</span></a></li>
+            <li><a href="https://www.xing.com/profile/Guenther_Jena2" data-toggle="tooltip" data-placement="bottom" title="Xing.com/Günther-Jena"><span class="xing icon hidden-xs"></span><span class="hidden-sm hidden-md hidden-lg">Xing</span></a></li>
+            <li><a href="http://stackoverflow.com/users/166605" data-toggle="tooltip" data-placement="bottom" title="Stackoverflow.com/Semiversus"><span class="stackoverflow icon hidden-xs"></span><span class="hidden-sm hidden-md hidden-lg">Stack Overflow</span></a></li>
+            <li><a href="https://github.com/semiversus" data-toggle="tooltip" data-placement="bottom" title="Github.com/Semiversus"><span class="github icon hidden-xs"></span><span class="hidden-sm hidden-md hidden-lg">Github</span></a></li>
+            <li><a href="{{ SITEURL }}/semiversus.atom.xml" class="rss" data-toggle="tooltip" data-placement="bottom" title="RSS Feed"><span class="rss icon hidden-xs"></span><span class="hidden-sm hidden-md hidden-lg">RSS Feed</span></a></li>
           </ul>
         </div>
       </div>
@@ -59,5 +60,6 @@
     </div>
   </div>
   <footer class="footer hidden-print"><div class="container"><p class="text-muted credit">Günther Jena 2011 - {{ YEAR }} | Letztes Update am {{ GIT_DATE }} (Rev. <a href="https://github.com/semiversus/semiversus.github.io-source/commit/{{ GIT_REVISION }}">{{ GIT_REVISION }}</a>) <a href="https://plus.google.com/111972313670421914746/about" rel="author" class="hidden">Google+</a><a href="http://creativecommons.org/licenses/by-sa/3.0/de/" class="pull-right"><img src="{{ SITEURL }}/theme/img/cc_by_sa.svg" /></a></p></div></footer>
+{% block javascript %}{% endblock %}
 </body>
 </html>

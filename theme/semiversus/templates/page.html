@@ -2,9 +2,9 @@
 {% block title %}{{ page.title }}{% endblock %}
 {% block description %}{{ page.summary|striptags }}{% endblock %}
 {% block header %}
-  {% if page.latex %}{{ page.latex }}{% endif %}
   {% for translation in page.translations %}<link rel="alternate" hreflang="{{ translation.lang }}" href="{{ SITEURL }}/{{translation.url }}" />{% endfor %}
 {% endblock %}
+{% block javascript %}{% if page.latex %}{{ page.latex }}{% endif %}{% endblock %}
 
 {% block head %}
     <div class="visible-print-block">Semiversus | {{ page.title }}</div>
@@ -16,7 +16,7 @@
 {% endblock %}
 
 {% block content %}
-  <header><h1>{{ page.title }}<div class="pull-right hidden-print">{% for translation in page.translations %}<a href="{{ SITEURL }}/{{ translation.url }}" class="btn btn-primary btn-xs">{{ translation.lang.replace('en', 'English').replace('de', 'Deutsch') }}</a>{% endfor %}<a href="{{ SITEURL }}/{{ page.url.replace('html','md') }}"  class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="bottom" title="Quelltext zu dieser Seite"><span class="fa fa-file-text-o fa-lg"></span></a></div></h1></header>
+  <header><h1>{{ page.title }}<div class="pull-right hidden-print">{% for translation in page.translations %}<a href="{{ SITEURL }}/{{ translation.url }}" class="btn btn-primary btn-xs">{{ translation.lang.replace('en', 'English').replace('de', 'Deutsch') }}</a>{% endfor %}<a href="{{ SITEURL }}/{{ page.url.replace('html','md') }}"  class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="bottom" title="Quelltext zu dieser Seite">Quelltext</a></div></h1></header>
   {{ page.content }}
 {% endblock %}
 
