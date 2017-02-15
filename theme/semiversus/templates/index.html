@@ -16,7 +16,7 @@
       {% include 'metadata.html' %}
       <div class="summary">
         {% if article.featured_image %}
-          <a href="{{ SITEURL }}/{{ article.url }}"><img src="{{article.featured_image}}" class="featured-img"></a>
+          <a href="{{ SITEURL }}/{{ article.url }}"><img src="{{article.featured_image}}" class="featured-img" alt="{{ article.title }}"></a>
         {% endif %}
         {% if article._summary %}
           {{ article._summary }}
