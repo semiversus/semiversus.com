@@ -15,7 +15,6 @@ toc: False
 
 ## Datenintegrität
 * [Datenintegrität und Prüfsummen]({filename}datenintegritaet.md)
-* Hamming-Abstand (mit [Folien]({filename}slide_hamming.mds))
 
 # Tests
 * [Schriftliche Tests]({filename}test_bussysteme.md)
