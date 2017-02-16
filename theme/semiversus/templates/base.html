@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
 {% endassets %}
 {% assets filters="jsmin", output="js/semiversus.min.js", "js/jquery.min.js", "js/bootstrap.min.js", "js/tipuesearch.min.js", "js/tipuesearch_set.js" %}
-  <script src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
+  <script async src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
 {% endassets %}
   {% block header %}{% endblock %}
 </head>
