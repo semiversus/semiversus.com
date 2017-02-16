@@ -26,7 +26,7 @@ clean:
 	rm cache dic_script output_local __pycache__ *.pyc -rf
 
 optimize:
-	find content -name \*.png|xargs optipng -o7
-	find content -name \*.jpg|xargs jpegoptim -s
+	find content -name \*.png|xargs optipng -o2
+	find content -name \*.jpg|xargs jpegoptim -s -m90
 
 .PHONY: public local view upload clean
