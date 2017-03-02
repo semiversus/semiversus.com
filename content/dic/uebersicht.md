@@ -14,6 +14,7 @@ toc: False
 
 # Robotik und Embedded Systems
 * [RaspberryPi]({filename}robotik/raspberry.md)
+* [Suchalgorithmen]({filename}robotik/suche.md)
 
 # Korrekturen
 Es haben sich mit der Zeit sicher einige Fehler hier eingeschlichen. Egal, ob sachliche Unkorrektheit bzw. Tipp- und
@@ -25,7 +26,7 @@ Bisher habe ich von folgenden Personen Korrekturhinweise bekommen:
 * Florian Burtscher (@[Github](https://github.com/burtscherflorian-scritex), @[Stackoverflow](https://stackoverflow.com/users/7292877/burtscher-florian),
  [Homepage](http://www.scritex.com/)) - Korrekturen im Bereich Digitale Signalverarbeitung
 * Herbert Hart - Korrekturen im Bereich Digitale Signalverarbeitung
-* Claus-Peter Bergmeier (<a href="mailto:cpu@bigcpb.de">Email</a>) - Hinweise zu defektem Downloadlink des Logisim Prozessors. Er arbeitet selbst auch an einem eignen Logisim Prozessor!
+* Claus-Peter Bergmeier (<a href="mailto:cpu@bigcpb.de">Email</a>) - Hinweise zu defektem Downloadlink des Logisim Prozessors. Er arbeitet selbst auch an einem eigenen Logisim Prozessor!
 
 Weitere Personen haben mir Korrekturen zugeschickt, bleiben aber lieber ohne Hinweis. Vielen Dank für eure Mitarbeit!
 
@@ -36,7 +37,7 @@ Eine kleine Übersicht über Seiten, die mir zur Recherche dienten (neben den ü
 * [mosfetkiller.de](http://mosfetkiller.de/)
 * [nmp24.de](http://nmp24.de/)
 * [mikrocontroller.net](http://www.mikrocontroller.net/)
-* [stiny-leonhard.de/](http://www.stiny-leonhard.de/) 
+* [stiny-leonhard.de](http://www.stiny-leonhard.de/) 
 
 # Zugang für Schüler
 Für Schüler gibt es einen Bereich mit Beurteilungen. Benutzername ist `dic`, Passwort wird im Unterricht bekanntgegeben.
