@@ -20,3 +20,6 @@ toc: False
 * [Übersicht]({filename}echtzeitbetriebssysteme.md)
 * [Scheduling]({filename}scheduling.md)
 * [Prozesssynchronisation]({filename}synchronisation.md)
+
+### Tests
+* [Test 1]({filename}test_rtos_1.pdf), ohne Musterlösung
