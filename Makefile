@@ -29,4 +29,11 @@ optimize:
 	find content -name \*.png|xargs optipng -o2
 	find content -name \*.jpg|xargs jpegoptim -s -m90
 
+build-docker:
+	docker build -t guenther.jena/pelican .
+
+run-docker:
+	docker run -t -v `pwd`:/site guenther.jena/pelican
+	
+
 .PHONY: public local view upload clean
