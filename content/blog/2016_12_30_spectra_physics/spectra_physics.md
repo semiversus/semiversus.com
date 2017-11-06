@@ -1,14 +1,14 @@
-title: Elektronik- und Softwareentwicklung bei Spectra Physics
+title: Elektronik- und Softwareentwicklung bei Spectra-Physics
 date: 2016-12-30
 tags: Verschiedenes
 image: spectra_tb.png
 
-Spectra Physics Standort Rankweil/Vorarlberg (Österreich) hat derzeit eine Stelle für Elektronik/Softwareentwicklung offen (hier die [Stellenanzeige](http://www.spectra-physics.com/company/rankweil-de/karriere/rankweil-karriere-elektronik-entwicklungsingenieur)). Da die Stellenanzeigen meist sehr allgemein gehalten sind, möchte ich die Aufgabengebiete unserer Abteilung beschreiben.
+Spectra-Physics Standort Rankweil/Vorarlberg (Österreich) hat immer wieder Stellen für Elektronik/Softwareentwicklung offen (hier die offenen [Stellen](http://www.spectra-physics.com/company/rankweil-de/karriere/)). Da die Stellenanzeigen meist sehr allgemein gehalten sind, möchte ich die Aufgabengebiete unserer Abteilung beschreiben.
 
 ## Unser Team
 Unser Team besteht aus Fachleuten mit Spezialisierung in einem oder mehreren Fachbereichen. Im folgenden werden die einzelnen Fachbereiche beschrieben. Selten wird jemand in allen Fachbereichen Erfahrung gesammelt haben. Die unscharfe Abgrenzung der Fachbereiche mag für manche ungewohnt wirken - ich finde, es ist unsere größte Stärke. Die meisten in unserem Team haben dadurch viel Wissen in Fachbereichen aufgebaut, die ihnen anfangs unvertraut waren.
 
-Ich bin seit acht Jahren bei Spectra Physics und bin hauptsächlich mit Firmware bzw. Softwareerstellung für Embedded Systems beschäftigt. Die Aufgabengebiete sind meist sehr fließend zwischen Firmware/Softwareentwicklung, reiner Elektronikentwicklung (Schaltplan/Layout), Entwicklung von Designs für programmierbare Logiken, Inbetriebnahme von Prototypen und Serienüberführung.
+Ich bin seit neun Jahren bei Spectra-Physics und bin hauptsächlich mit Firmware bzw. Softwareerstellung für Embedded Systems beschäftigt. Die Aufgabengebiete sind meist sehr fließend zwischen Firmware/Softwareentwicklung, reiner Elektronikentwicklung (Schaltplan/Layout), Entwicklung von Designs für programmierbare Logiken, Inbetriebnahme von Prototypen und Serienüberführung.
 
 ## Elektronik in einem Laser
 Einfachste Lasersysteme bestehen aus einem Mikrocontroller (typischerweise Atmel AVR) und kommunizieren mittels RS485 und einem proprietären Protokoll mit dem PC. Das proprietäre Protokoll ist seit mehreren Jahren im Einsatz, und es sind viele Tools rund um das Protokoll entstanden, die das Entwicklerleben vereinfachen. Komplexe Lasersysteme bestehen aus einem Linux System auf ARM Basis und mehreren (bis zu 20) Mikrocontroller für die einzelnen Komponenten. Dazu kommt meist ein FPGA für die Steuerung und Kontrolle schneller Signale.
