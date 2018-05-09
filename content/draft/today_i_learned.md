@@ -1,1 +1,2 @@
-unary plus in python
+- unary plus in python
+- no dead keys on keyboard (e.g. double press for ^)
