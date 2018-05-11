@@ -1,2 +1,4 @@
 - unary plus in python
 - no dead keys on keyboard (e.g. double press for ^)
+- middle click for copy/paste
+- ctrl-l for addressbar
