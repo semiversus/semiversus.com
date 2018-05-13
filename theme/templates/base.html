@@ -9,12 +9,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="O-3LVEziPiVrCYqFCwbLmB3s7lNG__cPMLLAr_RUxbA" />
   <meta name="msvalidate.01" content="70DFF0E672B42811AA384CC455C9406C" />
-{% assets filters="cssmin", output="css/semiversus.min.css", "css/bootstrap.css", "css/semiversus.css", "css/pygments.css", "css/tipuesearch.css" %}
-  <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
-{% endassets %}
-{% assets filters="jsmin", output="js/semiversus.min.js", "js/jquery.min.js", "js/bootstrap.min.js", "js/tipuesearch.min.js", "js/tipuesearch_set.js" %}
-  <script async src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
-{% endassets %}
+  <link href="{{ SITEURL }}/theme/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="{{ SITEURL }}/theme/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="{{ SITEURL }}/theme/css/semiversus.css" rel="stylesheet" type="text/css">
+  <link href="{{ SITEURL }}/theme/css/pygments.css" rel="stylesheet" type="text/css">
+  <link href="{{ SITEURL }}/theme/css/tipuesearch.css" rel="stylesheet" type="text/css" media="screen">
+  <script src="{{ SITEURL }}/theme/js/jquery.min.js"></script>
+<script src="{{ SITEURL }}/theme/js/bootstrap.min.js"></script>
   {% block header %}{% endblock %}
 </head>
 <body data-spy="scroll" data-target="#sidebar" data-offset=30>

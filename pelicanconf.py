@@ -6,8 +6,8 @@ import subprocess
 import urllib
 
 SITENAME = 'Semiversus Blog' # for ATOM Feed
-SITEURL = 'https://www.semiversus.com'
-RELATIVE_URLS = False
+SITEURL = '.'
+RELATIVE_URLS = True
 
 CACHE_CONTENT=True
 LOAD_CONTENT_CACHE=True
@@ -43,17 +43,11 @@ DEFAULT_PAGINATION=25
 OUTPUT_SOURCES=True
 OUTPUT_SOURCES_EXTENSION='.md'
 
-THEME='theme/semiversus'
-ASSET_SOURCE_PATHS=['.']
+THEME='theme'
 THEME_STATIC_PATHS=['static']
 
-STATIC_PATHS = ['extra/robots.txt', 'extra/favicon.ico', 'extra/CNAME']
-EXTRA_PATH_METADATA = {
-  'extra/robots.txt':{'path':'robots.txt'},
-  'extra/favicon.ico':{'path':'favicon.ico'},
-  'extra/CNAME':{'path':'CNAME'},
-  'extra/error.html':{'path':'error.html'},
-}
+STATIC_PATHS = []
+EXTRA_PATH_METADATA = {}
 
 PATH_METADATA= '(?P<dirname>.*)/(?P<basename>.*)\..*'
 FILENAME_METADATA='(?P<basename>.*)'
@@ -78,12 +72,12 @@ GIT_REVISION=subprocess.check_output('git show -s --format=%h', shell=True).deco
 
 
 PLUGIN_PATHS=['plugins']
-MD_EXTENSIONS=['codehilite(linenums=False)', 'plugins.mdx_tt', 'plugins.mdx_admonition', 'plugins.mdx_attr_list', 'plugins.mdx_downheader(levels=1)', 'tables']
-PLUGINS=['convert_static', 'slides', 'pageish', 'toc', 'latex', 'representative_image', 'extended_sitemap', 'tipue_search', 'assets', 'minify']
-if hasattr(urllib, 'quote_plus'):
-  JINJA_FILTERS={'urlencode':urllib.quote_plus} # python2
-else:
-  JINJA_FILTERS={'urlencode':urllib.parse.quote_plus} #python3
+#MD_EXTENSIONS=['codehilite(linenums=False)', 'plugins.mdx_tt', 'plugins.mdx_admonition', 'plugins.mdx_attr_list', 'plugins.mdx_downheader(levels=1)', 'tables']
+PLUGINS=['convert_static', 'pageish', 'toc', 'latex', 'representative_image', 'extended_sitemap', 'tipue_search']
+#if hasattr(urllib, 'quote_plus'):
+#  JINJA_FILTERS={'urlencode':urllib.quote_plus} # python2
+#else:
+#  JINJA_FILTERS={'urlencode':urllib.parse.quote_plus} #python3
 
 CONVERT_PATHS = ['dic', 'blog', 'projekte', 'pages']
 CONVERT_FILENAMES=[('.svg.tex', '.svg'), ('.compress', '.zip')]
