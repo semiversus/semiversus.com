@@ -2,3 +2,4 @@
 - no dead keys on keyboard (e.g. double press for ^)
 - middle click for copy/paste
 - ctrl-l for addressbar
+- sudo usermod -a -G dialout guenther
