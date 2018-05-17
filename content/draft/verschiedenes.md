@@ -1,3 +1,4 @@
 * Stereo Signal -> Mono (unmöglich bei 180° Phasenverschiebung)
 * Wie wachsen Hirschhörner?
 * Wieso "rattert" ein Hubschrauber?
+* Kaffemaschine wie Github tracken und auf Kaffeverbrauch pro Person schließen (durch Zeiterfassung)
