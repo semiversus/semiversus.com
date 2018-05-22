@@ -14,8 +14,8 @@
     <div class="card border-dark mb-3">
       <h4 class="card-header">{{ article.title }}</h4>
       <div class="card-body">
-        {% if article.featured_image %}
-          <a href="{{ SITEURL }}/{{ article.url }}"><img src="{{article.featured_image}}" class="featured-img" alt="{{ article.title }}"></a>
+        {% if article.image %}
+          <a href="{{ SITEURL }}/{{ article.url }}"><img src="{{ article.dirname }}/{{ article.image }}" class="img-responsive float-left mr-4" alt="{{ article.title }}"></a>
         {% endif %}
         {% if article._summary %}
           {{ article._summary }}
@@ -23,7 +23,7 @@
           {{ article.summary }}
         {% endif %}
         {% if article.summary != article.content %}
-          <a class="btn btn-primary" href="{{ SITEURL }}/{{ article.url }}">Weiterlesen...</a>
+          <p><a class="btn btn-primary float-right" href="{{ SITEURL }}/{{ article.url }}">Weiterlesen...</a></p>
         {% endif %}
       </div>
       <div class="card-footer text-muted">{% include 'metadata.html' %}</div>
