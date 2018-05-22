@@ -1,50 +1,48 @@
 <!DOCTYPE html>
-<html lang="de">
+<html>
 <head>
   <meta charset="utf-8">
   <title>{% block title %}Semiversus{% endblock %}</title>
-  <meta name="description" content="{% block description %}Blog von Günther Jena (vormals Jehle){% endblock %}">
+  <meta name="description" content="{% block description %}Blog from Günther Jena{% endblock %}">
   <meta name="author" content="Günther Jena">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="O-3LVEziPiVrCYqFCwbLmB3s7lNG__cPMLLAr_RUxbA" />
   <meta name="msvalidate.01" content="70DFF0E672B42811AA384CC455C9406C" />
   <link rel="icon" href="{{ SITEURL }}/favicon.ico">
   <link href="{{ SITEURL }}/theme/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-  <link href="{{ SITEURL }}/theme/css/semiversus.css" rel="stylesheet" type="text/css">
   <link href="{{ SITEURL }}/theme/css/pygments.css" rel="stylesheet" type="text/css">
-  <link href="{{ SITEURL }}/theme/css/tipuesearch.css" rel="stylesheet" type="text/css" media="screen">
-  <script src="{{ SITEURL }}/theme/js/jquery.min.js"></script>
   {% block header %}{% endblock %}
 </head>
 <body data-spy="scroll" data-target="#sidebar" data-offset=30>
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a href="{{ SITEURL }}/index.html" class="navbar-brand">SEMIVERSUS</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+  <nav class="navbar navbar-expand-lg navbar-dark flex-column bg-dark ">
+    <div class="container">
+      <a href="{{ SITEURL }}/index.html" class="navbar-brand">SEMIVERSUS</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="navbar-collapse collapse">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item"><a class="nav-link" href="{{ SITEURL }}/index.html">Blog</a></li>
-        <li class="nav-item"><a class="nav-link" href="{{ SITEURL }}/dic/uebersicht.html">Unterricht</a></li>
-        <li class="nav-item"><a class="nav-link" href="{{ SITEURL }}/projekte/projekte.html">Projekte</a></li>
-        <li class="nav-item"><a class="nav-link" href="{{ SITEURL }}/about.html">Über mich</a></li>
-      </ul>
-      <form class="from-inline" role="search" action="{{ SITEURL }}/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="form-control" placeholder="Suche" name="q" id="tipue_search_input"></form>
+      </button>
+      <div class="navbar-collapse collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a class="nav-link" href="{{ SITEURL }}/index.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ SITEURL }}/dic/uebersicht.html">Unterricht</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ SITEURL }}/projekte/projekte.html">Projekte</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ SITEURL }}/about.html">Über mich</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
-  <div class="container">
+  <main class="container" role="main">
     {% block head %}{% endblock %}
     <div class="row">
-      <div class="col-md-8" role="main">
+      <div class="col-md-8">
       {% block content %}{% endblock %}
       </div>
-      <div class="col-md-4" role="complementary">
+      <aside class="col-md-4" role="complementary">
       {% block sidebar %}{% endblock %}
-      </div>
+      </aside>
     </div>
     {% block foot %}{% endblock %}
-  </div>
-  <footer class="footer hidden-print"><div class="container"><p class="text-muted credit">Günther Jena 2011 - {{ YEAR }} | Letztes Update am {{ GIT_DATE }} (Rev. <a href="https://github.com/semiversus/semiversus.github.io-source/commit/{{ GIT_REVISION }}">{{ GIT_REVISION }}</a>) <a href="https://plus.google.com/111972313670421914746/about" rel="author" class="hidden">Google+</a><a href="https://creativecommons.org/licenses/by-sa/3.0/de/" class="pull-right"><img src="{{ SITEURL }}/theme/img/cc_by_sa.svg" alt="Licence CC-BY-SA"/></a></p></div></footer>
+  </main>
+  <script src="{{ SITEURL }}/theme/js/jquery.min.js"></script>
   <script src="{{ SITEURL }}/theme/js/bootstrap.min.js"></script>
   {% block javascript %}{% endblock %}
 </body>
