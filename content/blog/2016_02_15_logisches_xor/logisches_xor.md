@@ -14,6 +14,7 @@ Neben den bitweisen Operatoren gibt es noch die logischen Verknüpfungen, die de
 * *UND* Verknüpfung - `&&`
 * *ODER* Verknüpfung - `||`
 * *INVERTIERUNG* - `!`
+
 <!-- PELICAN_BEGIN_SUMMARY -->
 In C fehlt offensichtlich die Exklusive *ODER* Verknüpfung - wieso gibt es kein `^^`?
 
@@ -24,6 +25,7 @@ von Ben Pfaff. Und hier eine kurze Zusammenfassung:
 * Die Kurzschlussauswertung wird nicht ermöglicht - Ist bei einer *UND* Verknüpfung der erste Term falsch muss der zweite nicht
 mehr überprüft werden. Das gleiche gilt bei *ODER* mit dem ersten Term wahr. Bei *Exklusiv ODER* geht dies nicht.
 <!-- PELICAN_END_SUMMARY -->
+
 ## Und wenn ich es doch mal benötige?
 Eine logische *Exklusiv ODER* Verknüpfung lässt sich wie folgt realisieren:
 

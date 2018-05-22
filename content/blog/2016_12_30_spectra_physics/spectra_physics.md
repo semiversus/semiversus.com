@@ -5,6 +5,7 @@ image: spectra_tb.png
 
 Spectra-Physics Standort Rankweil/Vorarlberg (Österreich) hat immer wieder Stellen für Elektronik/Softwareentwicklung offen (hier die offenen [Stellen](http://www.spectra-physics.com/company/rankweil-de/karriere/)). Da die Stellenanzeigen meist sehr allgemein gehalten sind, möchte ich die Aufgabengebiete unserer Abteilung beschreiben.
 <!-- PELICAN_END_SUMMARY -->
+
 ## Unser Team
 Unser Team besteht aus Fachleuten mit Spezialisierung in einem oder mehreren Fachbereichen. Im folgenden werden die einzelnen Fachbereiche beschrieben. Selten wird jemand in allen Fachbereichen Erfahrung gesammelt haben. Die unscharfe Abgrenzung der Fachbereiche mag für manche ungewohnt wirken - ich finde, es ist unsere größte Stärke. Die meisten in unserem Team haben dadurch viel Wissen in Fachbereichen aufgebaut, die ihnen anfangs unvertraut waren.
 

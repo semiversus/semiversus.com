@@ -4,6 +4,7 @@ tags: Webstream, Empfehlung
 image: logo.svg
 
 ![Logo Radio Paradise{@class=pull-left style=padding-right:8px;}]({filename}logo.svg)
+
 <!-- PELICAN_BEGIN_SUMMARY -->
 Die meisten Webradios scheitern an mindestens einem der folgenden Punkte: Kostenlos, gute Qualität, keine Werbung, ... 
 oder gute Musik.
