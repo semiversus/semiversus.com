@@ -3,3 +3,4 @@
 - middle click for copy/paste
 - ctrl-l for addressbar
 - sudo usermod -a -G dialout guenther
+- |& in bash
