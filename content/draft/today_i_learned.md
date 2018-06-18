@@ -5,3 +5,4 @@
 - sudo usermod -a -G dialout guenther
 - |& in bash
 - bash history
+- mute after standby
