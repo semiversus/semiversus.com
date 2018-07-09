@@ -6,3 +6,4 @@
 - |& in bash
 - bash history
 - mute after standby
+- fail fast -> opposite is fail slow
