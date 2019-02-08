@@ -8,3 +8,4 @@
 - mute after standby
 - fail fast -> opposite is fail slow
 - `.` is a operator in python so `self . do()` is valid
+- `a ^= b ^= a ^= b;`
