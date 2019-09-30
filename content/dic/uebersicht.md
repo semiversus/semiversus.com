@@ -13,8 +13,10 @@ toc: False
 * [Komplexe digitale Systeme]({filename}komplexe_digitale_systeme/uebersicht.md)
 
 # Robotik und Embedded Systems
+* [Python]({filename}robotik/python/uebersicht.md)
 * [RaspberryPi]({filename}robotik/raspberry.md)
 * [Suchalgorithmen]({filename}robotik/suche.md)
+
 
 # Korrekturen
 Es haben sich mit der Zeit sicher einige Fehler hier eingeschlichen. Egal, ob sachliche Unkorrektheit bzw. Tipp- und
