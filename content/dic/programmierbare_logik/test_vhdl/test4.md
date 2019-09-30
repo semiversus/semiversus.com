@@ -25,20 +25,20 @@ mittels LED angezeigt. Die Baudrate wird auf 1 Baud gestellt.
 ### Zustandsmaschine
 <span class="badge">10 Punkte</span>
 
-* Die erforderliche Zustandsmaschine hat die Zustände `IDLE`, `START`, `DATA` und `STOP`
+* Die erforderliche Zustandsmaschine hat die Zustände <code>IDLE</code>, <code>START</code>, <code>DATA</code> und <code>STOP</code>
 * Eingänge:
     * `send_i` - startet die Übertragung
     * Überlauf den Baudraten Generators - wechselt bei einer laufenden Übertragung zum nächsten Symbol
 * Ausgänge:
     * `tx_o` - das zu sendende Bit (bzw. Symbol)
     * `busy_o` - zeigt eine laufende Übertragung an (`'1'` wenn eine Übertragung läuft)
-* Wenn die Zustandsmaschine im Zustand `IDLE` ist und `send_i` gleich `'1'` ist, dann wird in den Zustand `START` gewechselt.
-* Vom Zustand `START` wird in den Zustand `DATA` gewechselt, sobald der Zähler für die Baudrate übergelaufen ist
-* Im Zustand `DATA` läuft ein Bit Zähler und zählt die Bits von 0 bis 7 (LSB zuerst)
+* Wenn die Zustandsmaschine im Zustand <code>IDLE</code> ist und <code>send_i</code> gleich <code>'1'</code> ist, dann wird in den Zustand <code>START</code> gewechselt.
+* Vom Zustand <code>START</code> wird in den Zustand <code>DATA</code> gewechselt, sobald der Zähler für die Baudrate übergelaufen ist
+* Im Zustand <code>DATA</code> läuft ein Bit Zähler und zählt die Bits von 0 bis 7 (LSB zuerst)
 * Jedes Bit wird für die Dauer ausgegeben, die sich aus der Baudrate ergibt
-* Nach dem 8. Datenbit wird in den Zustand `STOP` gewechselt
-* Vom Zustand `STOP` wird in den Zustand `IDLE` gewechselt, sobald der Zähler für die Baudrate übergelaufen ist
-* Ausgabe von `tx_o`
+* Nach dem 8. Datenbit wird in den Zustand <code>STOP</code> gewechselt
+* Vom Zustand <code>STOP</code> wird in den Zustand <code>IDLE</code> gewechselt, sobald der Zähler für die Baudrate übergelaufen ist
+* Ausgabe von <code>tx_o</code>
     * Ist in `IDLE` und `STOP` auf `'1'`
     * Ist in `START` auf `'0'`
     * Entspricht während `DATA` dem zu übertragenden Datenbit
@@ -52,12 +52,12 @@ Generics <samp>BAUDRATE_WIDTH</samp> und <samp>BAUDRATE_DIVIDER</samp>, die den 
 ### Bit Zähler
 <span class="badge">2 Punkte</span>
 
-Um die einzelnen Datenbits zu zählen (während des Zustands `DATA`) wird eine weitere Zählerinstanz verwendet. Diese
+Um die einzelnen Datenbits zu zählen (während des Zustands <code>DATA</code>) wird eine weitere Zählerinstanz verwendet. Diese
 Zählerinstanz zählt von 0 bis 7.
 
-Der Ausgang `value_o` des Bit Zählers ist vom Typ <samp>std_ulogic_vector</samp>. Dieser muss zuerst in einen <samp>unsigned</samp>
+Der Ausgang <code>value_o</code> des Bit Zählers ist vom Typ <samp>std_ulogic_vector</samp>. Dieser muss zuerst in einen <samp>unsigned</samp>
 und dann mittels <samp>to_integer</samp> in einen Integer gewandelt werden, um mittels Indexzugriff das gewünschte Bit aus
-dem `data_i` Vektor zu holen (z.B. `data_i(0)` holt Bit 0 des Vektors).
+dem <code>data_i</code> Vektor zu holen (z.B. <code>data_i(0)</code> holt Bit 0 des Vektors).
 
 ### Blockschaltbild
 Dieses Blockschaltbild zeigt die einzelnen Komponenten der <samp>uart_tx</samp> Komponente. Die resultierende VHDL
@@ -86,19 +86,19 @@ Erstelle das Top Level anhand des folgenden Blockschaltbildes:
 ## Erweiterung der *Constraints* Datei
 <span class="badge">2 Punkte</span>
 
-In der Datei <samp>transmitter.ucf</samp> ist nur das Signal `clk` definiert. Erweitere die Datei um folgende Zuordnungen
+In der Datei <samp>transmitter.ucf</samp> ist nur das Signal <code>clk</code> definiert. Erweitere die Datei um folgende Zuordnungen
 
-* `button_send_i` liegt an Pin `G12`
-* `switches_data_i(0)` liegt an Pin `P11`
-* `switches_data_i(1)` liegt an Pin `L3`
-* `switches_data_i(2)` liegt an Pin `K3`
-* `switches_data_i(3)` liegt an Pin `B4`
-* `switches_data_i(4)` liegt an Pin `G3`
-* `switches_data_i(5)` liegt an Pin `F3`
-* `switches_data_i(6)` liegt an Pin `E2`
-* `switches_data_i(7)` liegt an Pin `N3`
-* `led_tx_o` liegt an Pin `M5`
-* `led_busy_o` liegt an Pin `M11`
+* <code>button_send_i</code> liegt an Pin <code>G12</code>
+* <code>switches_data_i(0)</code> liegt an Pin <code>P11</code>
+* <code>switches_data_i(1)</code> liegt an Pin <code>L3</code>
+* <code>switches_data_i(2)</code> liegt an Pin <code>K3</code>
+* <code>switches_data_i(3)</code> liegt an Pin <code>B4</code>
+* <code>switches_data_i(4)</code> liegt an Pin <code>G3</code>
+* <code>switches_data_i(5)</code> liegt an Pin <code>F3</code>
+* <code>switches_data_i(6)</code> liegt an Pin <code>E2</code>
+* <code>switches_data_i(7)</code> liegt an Pin <code>N3</code>
+* <code>led_tx_o</code> liegt an Pin <code>M5</code>
+* <code>led_busy_o</code> liegt an Pin <code>M11</code>
 
 <figure><img src="{filename}../basys2_pinout.svg"><figcaption>Pinout des BASYS2 Boards(Bild: <a href="http://www.digilentinc.com/Products/Detail.cfm?NavPath=2,400,790&Prod=BASYS2">Digilent Inc. BASYS2 Manual</a>)</figcaption></figure>
 

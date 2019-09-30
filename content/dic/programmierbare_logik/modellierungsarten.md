@@ -57,16 +57,16 @@ Signale (Busse).
 
 ## Beispiel
 
-Im folgenden Beispiel soll ein Zähler aufgebaut werden mit drei Eingangssignale ``value`` (Bus mit 8 Bit), ``load`` und ``clear``. Wie in allen
-synchronen Designs wird ein gemeinsamer Takt für alle Register genutzt (hier ``clock``). Das Register hat eine Bitbreite
+Im folgenden Beispiel soll ein Zähler aufgebaut werden mit drei Eingangssignale <code></code>value<code></code> (Bus mit 8 Bit), <code></code>load<code></code> und <code></code>clear<code></code>. Wie in allen
+synchronen Designs wird ein gemeinsamer Takt für alle Register genutzt (hier <code></code>clock<code></code>). Das Register hat eine Bitbreite
 von 8.
 
 ### Textuelle Beschreibung
 Die Funktion soll wie folgt sein:
 
-* Wenn ``clear`` gleich ``1`` ist, soll der Zählerstand auf ``0`` gesetzt werden,
-* ansonsten wenn ``load`` gleich ``1`` ist, soll der Zählerstand auf ``value`` gesetzt werden
-* ansonsten soll der Zählerstand um ``value`` erhöht werden.
+* Wenn <code></code>clear<code></code> gleich <code></code>1<code></code> ist, soll der Zählerstand auf <code></code>0<code></code> gesetzt werden,
+* ansonsten wenn <code></code>load<code></code> gleich <code></code>1<code></code> ist, soll der Zählerstand auf <code></code>value<code></code> gesetzt werden
+* ansonsten soll der Zählerstand um <code></code>value<code></code> erhöht werden.
 
 ### Schaltung
 ![Schaltung]({filename}vhdl_example_1.svg.tex)

@@ -41,7 +41,7 @@ Es gibt viele verschiedene Lösungen dies in Software zu realisieren. Hier werde
 Die einfachste Art das Prellen abzufangen ist nach der ersten Detektion einer Flanke einfach eine bestimmte Zeit zu warten.
 Diese Zeit richtet sich nach der Dauer des Prellens der Taste.
 
-Im folgenden Beispiel wird die Funktion `process_key` in der Main Loop aufgerufen. Die Durchlaufszeit einer Iteration der Main Loop sollte dabei kürzer als einige Millisekunden sein, damit auch kurze Tastendrücke detektiert werden können.
+Im folgenden Beispiel wird die Funktion <code>process_key</code> in der Main Loop aufgerufen. Die Durchlaufszeit einer Iteration der Main Loop sollte dabei kürzer als einige Millisekunden sein, damit auch kurze Tastendrücke detektiert werden können.
 
     #!c
     uint8_t process_key(uint8_t key_state) {

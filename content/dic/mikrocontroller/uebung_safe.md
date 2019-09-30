@@ -8,19 +8,19 @@ parent: uebersicht.md
 In diesem Beispiel soll ein Tresor (engl. *Safe*) implementiert werden. Dazu werden die vier Tasten *S0*-*S3* genutzt,
 um den Code einzutippen ( *S0* entspricht Ziffer '1', *S1* entspricht '2', usw.).
 
-# Vorbereitung 
+# Vorbereitung
 
 * [Projektordner]({filename}embedded_uebung_safe.compress){: class="download" } herunterladen und entpacken
-* Projekt `safe.avrgccproj` öffnen
+* Projekt <code>safe.avrgccproj</code> öffnen
 
 # Spezifikation
 
 * Der Code hat vier Stellen (mit den Ziffern 1 bis 4)
 * Nach dem Reset ist der Code "1234"
-* Zustand `CLOSED`:
+* Zustand <code>CLOSED</code>:
     * Nach dem Reset befindet sich die Applikation im Zustand `CLOSED`
     * Das Display zeigt den Text "CLOSED" in der ersten Zeile, die zweite Zeile ist leer
-* Wird einer der Taster *S0* bis *S3* gedrückt wird der entsprechende Tastendruck *gespeichert* und pro Ziffer ein `*` in der zweiten Zeile angezeigt
+* Wird einer der Taster *S0* bis *S3* gedrückt wird der entsprechende Tastendruck *gespeichert* und pro Ziffer ein <code>*</code> in der zweiten Zeile angezeigt
 * Nach dem vierten Tastendruck wird der eingegebene Code ausgewertet
 * Bei falscher Codeeingabe:
     * In der ersten Zeile wird "WRONG" und der zweiten Zeile "CODE" ausgegeben
@@ -97,14 +97,14 @@ Die Überprüfung des Codes wird nun wesentlich einfacher:
     }
 
 ## Ausgaben am LC Display
-Eine LCD Ausgabe entweder je nach Zustand bei jedem `safe_process` gemacht werden oder bei einem Zustandswechsel.
+Eine LCD Ausgabe entweder je nach Zustand bei jedem <code>safe_process</code> gemacht werden oder bei einem Zustandswechsel.
 
-Im folgenden Beispiel sieht man die Ausgabe des Zustands `WRONG_CODE`. Bei jedem `safe_process` wird über
-`hal_lcd_printf` die Ausgabe "WRONG CODE" gemacht. Das Leerzeichen hinter "WRONG" ist beabsichtigt, da zuvor in dieser
+Im folgenden Beispiel sieht man die Ausgabe des Zustands <code>WRONG_CODE</code>. Bei jedem <code>safe_process</code> wird über
+<code>hal_lcd_printf</code> die Ausgabe "WRONG CODE" gemacht. Das Leerzeichen hinter "WRONG" ist beabsichtigt, da zuvor in dieser
 Zeile "CLOSED" steht und dies um einen Buchstaben länger ist als "WRONG". Das Leerzeichen überschreibt somit den letzten
 Buchstaben von "CLOSED".
 
-Wenn eine Taste gedrückt wurde oder der Timer abgelaufen ist wird das Display mittels `hal_lcd_clear` gelöscht.
+Wenn eine Taste gedrückt wurde oder der Timer abgelaufen ist wird das Display mittels <code>hal_lcd_clear</code> gelöscht.
 
     #!c
     void safe_process(void) {

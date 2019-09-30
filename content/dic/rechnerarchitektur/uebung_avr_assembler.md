@@ -23,7 +23,7 @@ Im SRAM liegen ab Adresse 0x60 insgesamt 32 16-Bit Werte (auf 0x60 liegt das hö
 
 ## Hinweise
 * Nutze das Y oder Z Register zur indirekten Adressierung (Anwendung von ldd)
-* Für die Multiplikation `m=n*5` gilt `m=n*4+n`, wobei sich Multiplikationen mit dem Faktor zwei durch linksschieben lösen lassen
+* Für die Multiplikation <code>m=n*5</code> gilt <code>m=n*4+n</code>, wobei sich Multiplikationen mit dem Faktor zwei durch linksschieben lösen lassen
 * Das Schieben und Addieren von 16 Bit Werten wird aufgeteit in zwei 8 Bit Operationen mit Berücksichtigung des Übertrags
 * Wie groß ist das Programm und wie viel Taktzyklen werden für die Ausführung benötigt?
 
@@ -70,7 +70,7 @@ Erstelle eine Subroutine, die rekursiv die n-te Fibonacci Zahl berechnet. Dabei 
     end:
       rjmp end
 
-Was macht das Programm, wieviele Takte benötigt es für die Ausführung (bis zum Label `end`) und wie groß ist das Programm?
+Was macht das Programm, wieviele Takte benötigt es für die Ausführung (bis zum Label <code>end</code>) und wie groß ist das Programm?
 
 ## Hinweise
 * Das Programm nutzt die BCD (Binary Coded Decimals) Darstellung einer Zahl
@@ -141,4 +141,4 @@ Wie groß ist das Programm und wie viel Taktzyklen benötigt es? Wie schaut der 
 Beschreibe in einem Satz die Funktion. Welchen Wert hat nach der Ausführung das Register R16, R17 und X?
 
 ## Hinweis
-Das Programm nutzt die [ASCII Darstellung](https://de.wikipedia.org/wiki/Ascii#ASCII-Tabelle){: class="external" } von Zeichen.  
+Das Programm nutzt die [ASCII Darstellung](https://de.wikipedia.org/wiki/Ascii#ASCII-Tabelle){: class="external" } von Zeichen.

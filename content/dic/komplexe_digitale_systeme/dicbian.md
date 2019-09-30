@@ -4,7 +4,7 @@ next: tutorial1.md
 
 # Allgemeines
 
-Die Übungen werden mittels [VirtualBox](https://www.virtualbox.org/wiki/Downloads){: class="external" } und 
+Die Übungen werden mittels [VirtualBox](https://www.virtualbox.org/wiki/Downloads){: class="external" } und
 [DICbian](http://media.semiversus.com/DICbian.ova){: class="download" } durchgeführt. Steht ein Linux bereits zur Verfügung kann dies selbstverständlich
 auch genutzt werden.
 
@@ -26,4 +26,4 @@ auch genutzt werden.
 
 ![DICbian importieren]({filename}dicbian_login.png)
 
-* Benutzername ist `dic`, Passwort ist `dic` (das root-Passwort ist `htl`)
+* Benutzername ist <code>dic</code>, Passwort ist <code>dic</code> (das root-Passwort ist <code>htl</code>)

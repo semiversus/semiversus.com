@@ -37,10 +37,10 @@ Eine kleine Übersicht über Seiten, die mir zur Recherche dienten (neben den ü
 * [mosfetkiller.de](http://mosfetkiller.de/)
 * [nmp24.de](http://nmp24.de/)
 * [mikrocontroller.net](http://www.mikrocontroller.net/)
-* [stiny-leonhard.de](http://www.stiny-leonhard.de/) 
+* [stiny-leonhard.de](http://www.stiny-leonhard.de/)
 
 # Zugang für Schüler
-Für Schüler gibt es einen Bereich mit Beurteilungen. Benutzername ist `dic`, Passwort wird im Unterricht bekanntgegeben.
+Für Schüler gibt es einen Bereich mit Beurteilungen. Benutzername ist <code>dic</code>, Passwort wird im Unterricht bekanntgegeben.
 
 * [5AHEL DIC](https://klassen.semiversus.com/klasse_5ahel.html)
 * [5AHEL und 5BHEL Robotik](https://klassen.semiversus.com/klasse_5abhel.html)

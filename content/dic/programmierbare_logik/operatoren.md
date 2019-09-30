@@ -6,11 +6,11 @@ parent: uebersicht.md
 ## Logische Operatoren
 Als stehen folgende logische Operatoren zur Verfügung:
 
-* `and`
-* `or`
-* `nand`
-* `nor`
-* `xor`
-* `xnor`
+* <code>and</code>
+* <code>or</code>
+* <code>nand</code>
+* <code>nor</code>
+* <code>xor</code>
+* <code>xnor</code>
 
-Beispiel für `std_ulogic` Typen:
+Beispiel für <code>std_ulogic</code> Typen:

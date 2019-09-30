@@ -4,18 +4,18 @@ tags: Programmieren, C
 
 In C gibt es vier bitweise Operatoren (Details dazu im [Skriptum]({filename}/dic/mikrocontroller/bitmanipulation.md)):
 
-* *UND* Operator - `&`
-* *ODER* Operator - `|`
-* *Exklusiv ODER* Operator - `^`
-* *INVERTIERUNG* - `~`
+* *UND* Operator - <code>&</code>
+* *ODER* Operator - <code>|</code>
+* *Exklusiv ODER* Operator - <code>^</code>
+* *INVERTIERUNG* - <code>~</code>
 
 Neben den bitweisen Operatoren gibt es noch die logischen Verknüpfungen, die den bitweisen entsprechen:
 
-* *UND* Verknüpfung - `&&`
-* *ODER* Verknüpfung - `||`
-* *INVERTIERUNG* - `!`
+* *UND* Verknüpfung - <code>&&</code>
+* *ODER* Verknüpfung - <code>||</code>
+* *INVERTIERUNG* - <code>!</code>
 
-Hier fehlt offensichtlich die Exklusive *ODER* Verknüpfung - wieso gibt es kein `^^`?
+Hier fehlt offensichtlich die Exklusive *ODER* Verknüpfung - wieso gibt es kein <code>^^</code>?
 
 Eine gute Antwort findet sich auf dieser [Seite](http://benpfaff.org/writings/clc/logical-xor.html){: class="external" }
 von Ben Pfaff. Und hier eine kurze Zusammenfassung:
@@ -32,5 +32,5 @@ Eine logische *Exklusiv ODER* Verknüpfung lässt sich wie folgt realisieren:
       ...
     }
 
-Mittels logischer Invertierung `!` wird der entsprechende Term auf 0 (falsch) oder 1 (wahr) gebracht. Wenn diese logischen
+Mittels logischer Invertierung <code>!</code> wird der entsprechende Term auf 0 (falsch) oder 1 (wahr) gebracht. Wenn diese logischen
 Terme unterschiedlich sind ist die Gesamtaussage wahr.

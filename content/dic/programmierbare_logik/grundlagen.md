@@ -14,8 +14,8 @@ der USA weite Verbreitung findet.
 # Aufbau einer VHDL Datei
 Eine Komponente, die mittels VHDL beschrieben wird besteht aus den folgenden beiden Bestandteilen:
 
-* `entity` - Definiert die Schnittstelle der Komponente
-* `architecture` - Beschreibt die Funktion der Komponente
+* <code>entity</code> - Definiert die Schnittstelle der Komponente
+* <code>architecture</code> - Beschreibt die Funktion der Komponente
 
 In einer VHDL Datei können mehrere Komponenten beschrieben werden, es ist allerdings üblich pro Komponente eine Datei zu
 nutzen.
@@ -49,9 +49,9 @@ Ein Beispiel:
           if rising_edge(clk) then
             data_o <= data_i;
           end if;
-        end process;  
+        end process;
     end architecture;
 
-Diese VHDL Datei beschreibt ein D FlipFlop, dessen Eingang `data_i` bei einer steigenden Flanke von `clk` gespeichert wird. Das Signal `data_o` gibt den aktuellen zustand des FlipFlops wieder und ist gleichzeitig der Ausgang. Der Zustand beim *Start*(nach dem Reset) ist nicht definiert.
+Diese VHDL Datei beschreibt ein D FlipFlop, dessen Eingang <code>data_i</code> bei einer steigenden Flanke von <code>clk</code> gespeichert wird. Das Signal <code>data_o</code> gibt den aktuellen zustand des FlipFlops wieder und ist gleichzeitig der Ausgang. Der Zustand beim *Start*(nach dem Reset) ist nicht definiert.
 
 ![D-Flipflop]({filename}dff.svg.tex)

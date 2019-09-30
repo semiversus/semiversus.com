@@ -17,7 +17,7 @@ Im Blockschaltbild des Atmel AVR ATMega16 erkennt man am oberen und unteren Ende
 
 Rund um den Prozessorkern (*AVR CPU*) befindet sich folgende Peripheriebausteine:
 
-* ADC, mit Multiplexer auf die Pins von Port A 
+* ADC, mit Multiplexer auf die Pins von Port A
 * I²C Schnittstelle (TWI - Two Wire Interface) auf Port C
 * Timer/Counter
 * Watchdogtimer mit dem internen Oszillator
@@ -42,26 +42,26 @@ Im Prozessorkern sieht man auch die Harvardarchitektur, da der SRAM Speicher und
 Adress/Datenbusse angesteuert werden.
 
 # Registersatz
-Die AVR Serie besitzt 32 allgemein verwendbare Register(`R0` bis `R31`). Die Register `R0` bis `R15` sind nicht verfügbar
-für Befehle mit unmittelbaren Konstanten (z.B. `ldi`-load immediate).
+Die AVR Serie besitzt 32 allgemein verwendbare Register(<code>R0</code> bis <code>R31</code>). Die Register <code>R0</code> bis <code>R15</code> sind nicht verfügbar
+für Befehle mit unmittelbaren Konstanten (z.B. <code>ldi</code>-load immediate).
 
-Die Register `R27:R26` bilden gemeinsam das 16 Bit X-Register, wobei `R27` das höherwertige Byte darstellt und `R26` das
+Die Register <code>R27:R26</code> bilden gemeinsam das 16 Bit X-Register, wobei <code>R27</code> das höherwertige Byte darstellt und <code>R26</code> das
 niederwertige. Neben dem X-Register gibt es analog das Y und Z Register:
 
-* `R27:R26`: X-Register
-* `R29:R28`: Y-Register
-* `R31:R30`: Z-Register
+* <code>R27:R26</code>: X-Register
+* <code>R29:R28</code>: Y-Register
+* <code>R31:R30</code>: Z-Register
 
 Diese Register können für die indirekte Adressierung genutzt werden.
 
 # Stack Pointer
 Der Stack Pointer ist eine 16 Bit Adresse und zeigt auf die aktuelle Position im Stack. Auf dem Stack werden die
-Rücksprungadressen bei einem `call`-Befehl und bei einem Interruptaufruf gespeichert. Zusätzlich kann der Stack genutzt
+Rücksprungadressen bei einem <code>call</code>-Befehl und bei einem Interruptaufruf gespeichert. Zusätzlich kann der Stack genutzt
 werden, um Register zu sichern oder Zwischenergebnisse zu speichern.
 
 Der Stackpointer muss vor dem ersten Zugriff initialisiert werden. Dazu wird er an das Ende des Datenspeichers gesetzt.
-Der AVR Assembler unterstützt das Symbol `RAMEND`, das die letzte Adresse des Datenspeichers darstellt. Die Makros `HIGH`
-und `LOW` liefern die oberen bzw. unteren 8 Bit eines 16 Bit Wertes.
+Der AVR Assembler unterstützt das Symbol <code>RAMEND</code>, das die letzte Adresse des Datenspeichers darstellt. Die Makros <code>HIGH</code>
+und <code>LOW</code> liefern die oberen bzw. unteren 8 Bit eines 16 Bit Wertes.
 
     ldi R16, HIGH(RAMEND)
     out SPH, R16
@@ -82,30 +82,30 @@ Der Adressraum im Befehlsspeicher wird in folgende Bereiche unterteilt:
 
 Adresse | Beschreibung
 -|-
-`0x00-0x1F` | Register `R0` bis `R31`
-`0x20-0x5F` | I/O Register 0x00 bis 0x3F
-`0x60`-Ende des internen SRAM | als Datenspeicher verwendbar
+<code>0x00-0x1F</code> | Register <code>R0</code> bis <code>R31</code>
+<code>0x20-0x5F</code> | I/O Register 0x00 bis 0x3F
+<code>0x60</code>-Ende des internen SRAM | als Datenspeicher verwendbar
 
 ## EEPROM
 Das EEPROM wird mittels I/O Register angesprochen.
 
 # Befehlsübersicht
 ## Transferbefehle
-### Kopieren von Registern mittels `mov`
+### Kopieren von Registern mittels <code>mov</code>
 Kopiert den Inhalt des Registers Rr in das Register Rd.
 
     mov r0, r16 ; Kopiert den Inhalt von R16 nach R0
 
-Eine spezielle Variante ist `movw` . Hier werden zwei Register gleichzeitig kopiert, wobei als Basisregister nur geradzahlige Register möglich sind.
+Eine spezielle Variante ist <code>movw</code> . Hier werden zwei Register gleichzeitig kopiert, wobei als Basisregister nur geradzahlige Register möglich sind.
 
     movw r17:r16, r1:r0 ; Kopiert Register R1 nach R17 und Register R0 nach R16
 
-### Laden von Registern mittels `ld`
-Beim Laden gibt es mehrere Möglichkeiten der Adressierung der Quelle. Soll ein Konstante geladen werden, wird `ldi` verwendet.
+### Laden von Registern mittels <code>ld</code>
+Beim Laden gibt es mehrere Möglichkeiten der Adressierung der Quelle. Soll ein Konstante geladen werden, wird <code>ldi</code> verwendet.
 
     ldi R16, 0x20 ; Lädt den Wert 0x20 in das Register R16
 
-Soll von einer bestimmten Speicheradresse geladen werden, wird `lds` verwendet.
+Soll von einer bestimmten Speicheradresse geladen werden, wird <code>lds</code> verwendet.
 
     lds R0, 0x60 ; Lädt den Wert an der Adresse 0x60 ins Register R0
 
@@ -120,7 +120,7 @@ Für den Zugriff auf Tabellen oder auf den Stack Frame eignet sich das Laden mit
     ldd r4, Y+20 ; Lädt den Wert an der durch Y+20 dargestellten Adresse
 
 ### Speichern von Werten im SRAM
-Beim Speichern auf eine bestimmte Speicheradresse wird der Befehl `sts` benutzt.
+Beim Speichern auf eine bestimmte Speicheradresse wird der Befehl <code>sts</code> benutzt.
 
     sts 0x60, R0 ; Speichert den Wert des Registers R0 an der Adresse 0x60
 
@@ -131,27 +131,27 @@ Beim Speichern auf eine bestimmte Speicheradresse wird der Befehl `sts` benutzt.
     st -Y, r1; Erniedrigt vor dem Speichern das Y Register um 1
 
 ### Zugriff auf I/O Register
-Der Zugriff auf I/O Register erfolgt mittels `in` und `out`.
+Der Zugriff auf I/O Register erfolgt mittels <code>in</code> und <code>out</code>.
 
     out PORTD, R0 ; Kopiere den Wert von R0 ins IO Register PORTD
     in R29, PINA   ; Kopiere den Wert des IO Registers PINA ins Register R29
 
 ### Arbeiten mit dem Stack
-Der Stackpointer wird in den beiden Register `SPH` und `SPL` gespeichert. Mittels `push` und `pop` können Werte auf den Stack gelegt bzw. wieder vom Stack geholt werden. Der Stack wird außerdem genutzt, um die Rücksprungadresse bei Subroutinen-Aufrüfen mittels `call` bzw. `rcall` zu speichern.
+Der Stackpointer wird in den beiden Register <code>SPH</code> und <code>SPL</code> gespeichert. Mittels <code>push</code> und <code>pop</code> können Werte auf den Stack gelegt bzw. wieder vom Stack geholt werden. Der Stack wird außerdem genutzt, um die Rücksprungadresse bei Subroutinen-Aufrüfen mittels <code>call</code> bzw. <code>rcall</code> zu speichern.
 
 ## Arithmetische Befehle
 Arthmetische Befehle verknüpfen üblicherweise entweder zwei Register miteinander oder ein Register mit einer Konstante.
 
-Als Operationen stehen die Addtion (`add`) und Subtraktion (`sub`) zur Verfügung. Es gibt auch jeweils eine Veriante, in der das Übertragsbit aus einer vorhergehenden Operation verwendet wird (`adc` bzw. `sbc`). Für die Addition der Konstante 1 stehen die Befehle `inc` (Inkrement) bzw. `dec` (Dekrement) zur Verfügung.
+Als Operationen stehen die Addtion (<code>add</code>) und Subtraktion (<code>sub</code>) zur Verfügung. Es gibt auch jeweils eine Veriante, in der das Übertragsbit aus einer vorhergehenden Operation verwendet wird (<code>adc</code> bzw. <code>sbc</code>). Für die Addition der Konstante 1 stehen die Befehle <code>inc</code> (Inkrement) bzw. <code>dec</code> (Dekrement) zur Verfügung.
 
 ## Logische Befehle
-Zu den logischen Befehlen gehört die AND Verknüpfung (`and` bzw. `andi`), die ODER Verknüpfung (`or` bzw. `ori`), die Exclusive-ODER Verknüpfung (`eor`) und die Invertierung aller Bits (`com`).
+Zu den logischen Befehlen gehört die AND Verknüpfung (<code>and</code> bzw. <code>andi</code>), die ODER Verknüpfung (<code>or</code> bzw. <code>ori</code>), die Exclusive-ODER Verknüpfung (<code>eor</code>) und die Invertierung aller Bits (<code>com</code>).
 
 ## Sprünge
 ### Unbedingte Sprünge
-Bei unbedingten Sprüngen ist der Sprung nicht von einer Bedingung abhängig. Es gibt relative Sprünge (`rjmp`) und absolute Sprünge (`jmp`). Die relativen Sprünge können den Befehlszähler um +/-2048 verändern. Dies benötigt zwar eine entsprechende Berücksichtigung vom Assembler bzw. Compiler aus, stellt aber durch die kompaktere Ausführung (ein Befehlswort statt zwei) eine Optimierung dar.
+Bei unbedingten Sprüngen ist der Sprung nicht von einer Bedingung abhängig. Es gibt relative Sprünge (<code>rjmp</code>) und absolute Sprünge (<code>jmp</code>). Die relativen Sprünge können den Befehlszähler um +/-2048 verändern. Dies benötigt zwar eine entsprechende Berücksichtigung vom Assembler bzw. Compiler aus, stellt aber durch die kompaktere Ausführung (ein Befehlswort statt zwei) eine Optimierung dar.
 
 ### Bedingte Sprünge
-Die bedingten Sprünge bedienen sich der Überprüfung von Flags aus dem Statusregister und entscheiden anhand deren Zustandes, ob der Sprung genommen wird oder nicht. Häufig genutzt werden hier `breq` (branch if equal), `brne` (branch if not equal), `brlo` (branch if lower) und `brsh` (branch if same or higher).
+Die bedingten Sprünge bedienen sich der Überprüfung von Flags aus dem Statusregister und entscheiden anhand deren Zustandes, ob der Sprung genommen wird oder nicht. Häufig genutzt werden hier <code>breq</code> (branch if equal), <code>brne</code> (branch if not equal), <code>brlo</code> (branch if lower) und <code>brsh</code> (branch if same or higher).
 
-Die Statusflags müssen durch einen vorhergehenden Befehl entsprechend gesetzt werden. Will man kein Register für einen Vergleich ändern, sondern nur die Statusflags, so eignet sich der `cp` (compare) Befehl. Dieser Vergleicht zwei Register mittels Subtraktion und setzt die Flags entsprechend.
+Die Statusflags müssen durch einen vorhergehenden Befehl entsprechend gesetzt werden. Will man kein Register für einen Vergleich ändern, sondern nur die Statusflags, so eignet sich der <code>cp</code> (compare) Befehl. Dieser Vergleicht zwei Register mittels Subtraktion und setzt die Flags entsprechend.

@@ -19,15 +19,15 @@ Um eine serielle Schnittstelle (siehe [RS232]({filename}../bussysteme/rs232.md))
 
 Zur Arbeit mit dem *USART* werden fünf Register genutzt:
 
-* Drei Konfigurations und Statusregister `UCSRA`, `UCSRB` und `UCSRC` (für *UART Control and Status Register* A, B und C)
-* Das Baudrateregister `UBRR` für die Erzeugung des Übertragungstaktes
-* Das Datenregister `UDR` (engl. für *UART Data Register*) zum Senden und Empfangen der einzelnen Bytes
+* Drei Konfigurations und Statusregister <code>UCSRA</code>, <code>UCSRB</code> und <code>UCSRC</code> (für *UART Control and Status Register* A, B und C)
+* Das Baudrateregister <code>UBRR</code> für die Erzeugung des Übertragungstaktes
+* Das Datenregister <code>UDR</code> (engl. für *UART Data Register*) zum Senden und Empfangen der einzelnen Bytes
 
 Außerdem stehen drei mögliche Interrupts für die UART zur Verfügung:
 
-* *Receive Complete* (`USART_RX_vect`) - signalisiert ein empfangenes Byte empfangen wurde
-* *Transmit Complete* (`USART_TX_vect`) - signalisiert ein vollständig gesendetes Byte (inklusive Stopbit)
-* *UART Data Register Empty* (`USART_UDRE_vect`) - signalisert einenen freien Sendebuffer
+* *Receive Complete* (<code>USART_RX_vect</code>) - signalisiert ein empfangenes Byte empfangen wurde
+* *Transmit Complete* (<code>USART_TX_vect</code>) - signalisiert ein vollständig gesendetes Byte (inklusive Stopbit)
+* *UART Data Register Empty* (<code>USART_UDRE_vect</code>) - signalisert einenen freien Sendebuffer
 
 Die Konfigurations- und Statusregister sowie die Interrupts werden im folgenden näher erläutert.
 
@@ -43,34 +43,34 @@ Read/Write|R|R/W|R|R|R|R|R/W|R/W
 Init|0|0|1|0|0|0|0|0
 
 ### RXC - Receive Complete
-Dieses Flag wird auf `1` gesetzt, wenn ein neues Byte im `UDR` zur Verfügung steht (empfangen wurde). Sobald `UDR`
-gelesen wird, wird das Flag auf `0` gesetzt. Dieses Flag löst den *Receive Complete* Interrupt aus, sofern
+Dieses Flag wird auf <code>1</code> gesetzt, wenn ein neues Byte im <code>UDR</code> zur Verfügung steht (empfangen wurde). Sobald <code>UDR</code>
+gelesen wird, wird das Flag auf <code>0</code> gesetzt. Dieses Flag löst den *Receive Complete* Interrupt aus, sofern
 dieser aktiviert ist.
 
 ### TXC - Transmit Complete
-Das Flag wird auf `1` gesetzt, wenn ein komplettes Frame (inklusive Stopbit) gesendet wurde. Dieses Flag wird gelöscht,
-wenn der *Transmit Complete* Interrupt aufgerufen wird oder kann direkt gelöscht werden, indem das Flag mit einer `1`
+Das Flag wird auf <code>1</code> gesetzt, wenn ein komplettes Frame (inklusive Stopbit) gesendet wurde. Dieses Flag wird gelöscht,
+wenn der *Transmit Complete* Interrupt aufgerufen wird oder kann direkt gelöscht werden, indem das Flag mit einer <code>1</code>
 geschrieben wird. Dieses Flags löste den *Transmit Complete* Interrupt aus, sofern dieser aktiviert ist.
 
 ### UDRE - USART Date Register Empty
-Dieses Flag ist auf `1`, wenn das Senderegister (wieder) leer ist. Dieses Flag löst den *USART Date Register Empty*
-Interrupt aus, sogern dieser aktiviert ist. Das Flag liefert `0`, sobald auf `UDR` geschrieben wird. Nach dem Reset
-ist dieses Flag `1`, um das leere `UDR` zu signalisieren.
+Dieses Flag ist auf <code>1</code>, wenn das Senderegister (wieder) leer ist. Dieses Flag löst den *USART Date Register Empty*
+Interrupt aus, sogern dieser aktiviert ist. Das Flag liefert <code>0</code>, sobald auf <code>UDR</code> geschrieben wird. Nach dem Reset
+ist dieses Flag <code>1</code>, um das leere <code>UDR</code> zu signalisieren.
 
 ### FE - Frame Error
-Wurde beim Empfang das Stopbit falsch empfangen (sollte logisch `1` entsprechen) wird dieses Flag gesetzt. Das Flag wird
-zurückgesetzt sobald `UDR` gelesen wird.
+Wurde beim Empfang das Stopbit falsch empfangen (sollte logisch <code>1</code> entsprechen) wird dieses Flag gesetzt. Das Flag wird
+zurückgesetzt sobald <code>UDR</code> gelesen wird.
 
 ### DOR - Data OverRun
-Ein *Data OverRun* tritt auf, wenn ein Byte empfangen wurde, der Empfangsbuffer aber vollgelaufen ist (`UDR` wurde nicht
-ausgelesen). Sobald dies eintritt, wird das Flag auf `1` gesetzt. Zurückgesetzt wird es mit dem Lesen von `UDR`.
+Ein *Data OverRun* tritt auf, wenn ein Byte empfangen wurde, der Empfangsbuffer aber vollgelaufen ist (<code>UDR</code> wurde nicht
+ausgelesen). Sobald dies eintritt, wird das Flag auf <code>1</code> gesetzt. Zurückgesetzt wird es mit dem Lesen von <code>UDR</code>.
 
 ### PE - Parity Error
 Wenn der Paritätscheck eingeschalten ist und das Paritätsbit der Übertragung nicht mit der Berechnung über die Datenbits
-zusammen stimmt wird dieses Flag auf `1` gesetzt. Zurückgesetzt wird es mit dem Lesen von `UDR`.
+zusammen stimmt wird dieses Flag auf <code>1</code> gesetzt. Zurückgesetzt wird es mit dem Lesen von <code>UDR</code>.
 
 ### U2X - USART Double Speed
-Bestimmt den Teiler für die Baudrategenerierung. `0` für Teiler 16 und `1` für Teiler 8. Näheres dazu unter *Baudrate
+Bestimmt den Teiler für die Baudrategenerierung. <code>0</code> für Teiler 16 und <code>1</code> für Teiler 8. Näheres dazu unter *Baudrate
 Generierung*.
 
 ### MPCM - Multiprocessor Communication Mode
@@ -86,22 +86,22 @@ benutzt. Für weitere Informationen dazu ist im Datenblatt nachzulesen.
 **Init**|0|0|0|0|0|0|0|0
 
 ### RXCIE - Receive Complete Interrupt Enable
-Um den Interruptvektor zu aktivieren, muss dieses Flag auf `1` sein. Der entsprechende Interruptvektor heißt
-`USART_RX_vect`.
+Um den Interruptvektor zu aktivieren, muss dieses Flag auf <code>1</code> sein. Der entsprechende Interruptvektor heißt
+<code>USART_RX_vect</code>.
 
 ### TXCIE - Transmit Complete Interrupt Enable
-Um den Interruptvektor zu aktivieren, muss dieses Flag auf `1` sein. Der entsprechende Interruptvektor heißt
-`USART_TX_vect`.
+Um den Interruptvektor zu aktivieren, muss dieses Flag auf <code>1</code> sein. Der entsprechende Interruptvektor heißt
+<code>USART_TX_vect</code>.
 
 ### UDRIE - UART Data Register Empty Interrupt Enable
-Um den Interruptvektor zu aktivieren, muss dieses Flag auf `1` sein. Der entsprechende Interruptvektor heißt
-`USART_UDRE_vect`.
+Um den Interruptvektor zu aktivieren, muss dieses Flag auf <code>1</code> sein. Der entsprechende Interruptvektor heißt
+<code>USART_UDRE_vect</code>.
 
 ### RXEN - Receive Enable
-Dieses Flag muss auf `1` sein, um den Empfänger der UART einzuschalten.
+Dieses Flag muss auf <code>1</code> sein, um den Empfänger der UART einzuschalten.
 
 ### RXEN - Transmit Enable
-Dieses Flag muss auf `1` sein, um den Sender der UART einzuschalten.
+Dieses Flag muss auf <code>1</code> sein, um den Sender der UART einzuschalten.
 
 ## USARTC
 
@@ -116,6 +116,6 @@ Zur Generierung der Baudrate gilt folgende Formel:
 
 %%f_{Baudrate}=\frac{f_{CLK}}{16\cdot(UBRR+1)} \Leftrightarrow UBRR=\frac{f_{CLK}}{16\cdot f_{Baudrate}}-1%%
 
-Diese Formel gilt wenn das `U2X` in `UCSRA` gleich `0` ist. Für `U2X` gleich `1` gilt folgende Formel: 
+Diese Formel gilt wenn das <code>U2X</code> in <code>UCSRA</code> gleich <code>0</code> ist. Für <code>U2X</code> gleich <code>1</code> gilt folgende Formel:
 
 %%f_{Baudrate}=\frac{f_{CLK}}{8\cdot(UBRR+1)} \Leftrightarrow UBRR=\frac{f_{CLK}}{8\cdot f_{Baudrate}}-1%%

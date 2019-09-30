@@ -8,13 +8,13 @@ parent: uebersicht.md
 Die Automatentheorie beschreibt Modelle, die durch die im Automat vorhanden Zustände, den akzeptierten Eingaben und durch die Ausgaben beschrieben werden können. Wenn ein Automat nur endlich viele Zustände einnehmen kann, spricht man von einem ''endlichen Automaten''. Andere Ausdrücke sind Zustandsmaschine oder der englische Ausdruck ''Finite State Machine''.
 
 ## Mathematische Beschreibung
-### Eingabealphabet `Σ`
-Das Eingabealphabet (oder auch Eingabemenge) beschreibt die Menge aller vorkommenden Eingaben, die durch den Automaten bearbeitet werden können und wird durch das Zeichen `Σ` (großes Sigma) dargestellt.
+### Eingabealphabet <code>Σ</code>
+Das Eingabealphabet (oder auch Eingabemenge) beschreibt die Menge aller vorkommenden Eingaben, die durch den Automaten bearbeitet werden können und wird durch das Zeichen <code>Σ</code> (großes Sigma) dargestellt.
 
 Eine Eingabe kann zum Ändern des Zustands des Automaten und zu einer Ausgabe führen.
 
-### Ausgabealphabet `Γ`
-Analog zum Eingabealphabet beschreibt das Ausgabealphabet `Γ` (großes Gamma) die Menge aller vorkommenden Ausgaben des Automaten.
+### Ausgabealphabet <code>Γ</code>
+Analog zum Eingabealphabet beschreibt das Ausgabealphabet <code>Γ</code> (großes Gamma) die Menge aller vorkommenden Ausgaben des Automaten.
 
 Man kann zwischen vier Typen unterscheiden, zu welchem Zeitpunkt eine Ausgabe gemacht wird:
 
@@ -23,33 +23,33 @@ Man kann zwischen vier Typen unterscheiden, zu welchem Zeitpunkt eine Ausgabe ge
 * **Eingabe bei einem Zustand**: Hier wird je nach Zustand und Eingabe eine entsprechende Ausgabe gemacht.
 * **Zustandsübergang**: Zu jedem Zustandsübergang wird eine entsprechende Ausgabe definiert.
 
-### Zustandsmenge `S`
-Die Zustände, die ein Automat einnehmen kann wird durch die endliche Menge `S` beschrieben.
+### Zustandsmenge <code>S</code>
+Die Zustände, die ein Automat einnehmen kann wird durch die endliche Menge <code>S</code> beschrieben.
 
-### Anfangszustand `s0`
-Der Anfangszustand `s0` ist ein Zustand aus der Zustandsmenge `S` und beschreibt den Zustand, den der Automat nach der Inbetriebnahme einnimmt.
+### Anfangszustand <code>s0</code>
+Der Anfangszustand <code>s0</code> ist ein Zustand aus der Zustandsmenge <code>S</code> und beschreibt den Zustand, den der Automat nach der Inbetriebnahme einnimmt.
 
-### Zustandsübertragungsfunktion `δ`
+### Zustandsübertragungsfunktion <code>δ</code>
 Die Zustandsübertragungsfunktion δ (klein Delta) beschreibt den Wechsel in einen neuen Zustand in Abhängigkeit des aktuellen Zustandes und der Eingabe. Die Zustandsübertragungsfunktion kann gut als Tabelle dargestellt werden:
 
-`δ`|**E0**|**E1**|**E2**
+<code>δ</code>|**E0**|**E1**|**E2**
 :-:!|:-:|:-:|:-:
 **Z0**|Z0|Z1|Z2
 **Z1**|Z2|Z2|Z0
 **Z2**|Z0|Z0|Z0
 
-Bei diesem Beispiel ist `S`={`Z0`, `Z1`, `Z2`} und `Σ`={`E0`, `E1`, `E2`}. In den Zeilen sind alle Zustände, in den Spalten alle Eingänge dargestellt. Nun kann bei einem bestimmten Zustand und einer bestimmten Eingabe abgelesen werden, in welchen Zustand dadurch gewechselt wird. Als Beispiel wird im Zustand `Z0` wird bei der Eingabe `E1` in den Zustand `Z1` gewechselt.
+Bei diesem Beispiel ist <code>S</code>={<code>Z0</code>, <code>Z1</code>, <code>Z2</code>} und <code>Σ</code>={<code>E0</code>, <code>E1</code>, <code>E2</code>}. In den Zeilen sind alle Zustände, in den Spalten alle Eingänge dargestellt. Nun kann bei einem bestimmten Zustand und einer bestimmten Eingabe abgelesen werden, in welchen Zustand dadurch gewechselt wird. Als Beispiel wird im Zustand <code>Z0</code> wird bei der Eingabe <code>E1</code> in den Zustand <code>Z1</code> gewechselt.
 
-### Ausgabefunktion `ω`
-Die Ausgabefunktion `ω` (klein Omega) beschreibt die Ausgabe in Abhängigkeit von Zustand und Eingabe oder auch nur vom Zustand (vergleiche ''Moore''- und ''Mealy''-Automat). Falls die Ausgabefunktion von Zustand und Eingabe abhängig ist, lässt sich die Funktion auch gut als Tabelle darstellen:
+### Ausgabefunktion <code>ω</code>
+Die Ausgabefunktion <code>ω</code> (klein Omega) beschreibt die Ausgabe in Abhängigkeit von Zustand und Eingabe oder auch nur vom Zustand (vergleiche ''Moore''- und ''Mealy''-Automat). Falls die Ausgabefunktion von Zustand und Eingabe abhängig ist, lässt sich die Funktion auch gut als Tabelle darstellen:
 
-`ω`|**E0**|**E1**|**E2**
+<code>ω</code>|**E0**|**E1**|**E2**
 :-:!|:-:|:-:|:-:
 **Z0**|A0|A2|A0
 **Z1**|**A1**|A1|A2
 **Z2**|A2|A1|A1
 
-In diesem Beispiel ist `Γ`={`A0`, `A1`, `A2`}. Hier wird als Beispiel beim Zustand `Z1` und der Eingabe `E0` die Ausgabe `A1` gemacht.
+In diesem Beispiel ist <code>Γ</code>={<code>A0</code>, <code>A1</code>, <code>A2</code>}. Hier wird als Beispiel beim Zustand <code>Z1</code> und der Eingabe <code>E0</code> die Ausgabe <code>A1</code> gemacht.
 
 ## Moore- und Mealy-Automat
 Bei der Ausgabefunktion gibt es zwei verschiedene Definitionen: Einmal hängt die Ausgabe von Zustand und Eingabe ab und das andere mal nur vom Zustand. Ein Automat, dessen Ausgabe von Zustand und Eingabe abhängt wird ''Mealy''-Automat genannt. Im Gegensatz dazu hängt bei einem ''Moore''-Automat die Ausgabe nur vom aktuellen Zustand ab.
@@ -65,33 +65,33 @@ Als Beispiel wird ein Getränkeautomat entworfen, der 50 Cent und 1 Euro Geldst�
 
 Dadurch können wir unsere Ein- und Ausgabemenge definieren:
 
-**Eingabemenge**: `Σ`={"50 Cent", "1 Euro", "Rückgabetaste", "Getränketaste"}
+**Eingabemenge**: <code>Σ</code>={"50 Cent", "1 Euro", "Rückgabetaste", "Getränketaste"}
 
-**Ausgabemenge**: `Γ`={"50 Cent", "1 Euro", "Getränk", "Keine Ausgabe"}}
+**Ausgabemenge**: <code>Γ</code>={"50 Cent", "1 Euro", "Getränk", "Keine Ausgabe"}}
 
 Als Zustände des Automaten definieren wir das aktuelle Guthaben.
 
-**Zustandsmenge**: `S`={"0 Euro", "50 Cent", "1 Euro"}
+**Zustandsmenge**: <code>S</code>={"0 Euro", "50 Cent", "1 Euro"}
 
 Da beim Start des Automaten noch kein Geld eingeworfen wurde, definieren wir "0 Euro" als Startzustand.
 
-**Startzustand**: `s0`="0 Euro"
+**Startzustand**: <code>s0</code>="0 Euro"
 
 Für das Erstellen der Zustandsübertragungsfunktion müssen wir definieren, wie der Automat reagieren soll. Wird mehr als 1 Euro eingeworfen, soll das Geld über einem 1 Euro ausgegeben werden und weiterhin 1 Euro Guthaben behalten werden. Die Taste ''Rückgabe'' soll jederzeit das vorhandene Guthaben ausgeben. Die Taste ''Getränkeausgabe'' soll nur ein Getränk ausgeben, wenn 1 Euro Guthaben vorhanden ist.
 
 **Zustandsübertragungsfunktion**:
 
-`δ` | **50 Cent** | **1 Euro** | **Rückgabetaste** | **Getränketaste**
+<code>δ</code> | **50 Cent** | **1 Euro** | **Rückgabetaste** | **Getränketaste**
 :-:!|:-:|:-:|:-:|:-:
 **0 Euro** | 50 Cent | 1 Euro | 0 Euro | 0 Euro
 **50 Cent** | 1 Euro | 1 Euro | 0 Euro | 50 Cent
 **1 Euro** | 1 Euro | 1 Euro | 0 Euro | 0 Euro
 
-Für die volle Funktionsbeschreibung unseres Getränkeautomaten benötigen wir noch die Ausgabefunktion `ω`.
+Für die volle Funktionsbeschreibung unseres Getränkeautomaten benötigen wir noch die Ausgabefunktion <code>ω</code>.
 
 **Ausgabefunktion**:
 
-`ω` | **50 Cent** | **1 Euro** | **Rückgabetaste** | **Getränketaste**
+<code>ω</code> | **50 Cent** | **1 Euro** | **Rückgabetaste** | **Getränketaste**
 :-:!|:-:|:-:|:-:|:-:
 **0 Euro** | Keine Ausgabe | Keine Ausgabe | Keine Ausgabe | Keine Ausgabe
 **50 Cent** | Keine Ausgabe | 50 Cent | 50 Cent | Keine Ausgabe
@@ -106,12 +106,12 @@ Die Darstellungsform für Mealy- oder Moore-Automat unterscheiden sich:
 
 ![Graphische Darstellung: Mealy- und Moore-Automat]({filename}moore_mealy_graphen.svg)
 
-Zustände werden als Kreise dargestellt. Die Bezeichnung des Zustands befindet sich innerhalb des Kreises. Der Startzustand wird mit einem Pfeil markiert, der keinen Zustand als Ursprung hat (hier `Z0`). Die Übergänge werden mittels Pfeilen dargestellt. Der Beschreibung des Pfeils enthält die Eingabe, die für diesen Zustandswechsel notwendig ist. Beim Mealy-Automat sind die Ausgaben vom Zustand und der Eingabe abhängig, deshalb wird die Ausgabe in der Beschreibung des entsprechenden Pfeils hinzugefügt. Beim Moore-Automat ist die Ausgabe nur vom Zustand abhängig, deshalb wird die Ausgabe innerhalb des Kreises hinzugefügt.
+Zustände werden als Kreise dargestellt. Die Bezeichnung des Zustands befindet sich innerhalb des Kreises. Der Startzustand wird mit einem Pfeil markiert, der keinen Zustand als Ursprung hat (hier <code>Z0</code>). Die Übergänge werden mittels Pfeilen dargestellt. Der Beschreibung des Pfeils enthält die Eingabe, die für diesen Zustandswechsel notwendig ist. Beim Mealy-Automat sind die Ausgaben vom Zustand und der Eingabe abhängig, deshalb wird die Ausgabe in der Beschreibung des entsprechenden Pfeils hinzugefügt. Beim Moore-Automat ist die Ausgabe nur vom Zustand abhängig, deshalb wird die Ausgabe innerhalb des Kreises hinzugefügt.
 
 # Anwendung in der Digitaltechnik
 Bisher gingen wir von allgemeinen Ein- und Ausgaben aus. In der Digitaltechnik sind dies nun Ein- und Ausgänge, die ausschließlich mit den beiden digitalen Zuständen 0 und 1 arbeiten. Die Kennwerte für einen digitalen Automat sind die Anzahl der Ein- und Ausgänge sowie die Anzahl der Flip-Flops.
 
-Mit `n` Flip-Flops lassen sich `2^n` Zustände darstellen.
+Mit <code>n</code> Flip-Flops lassen sich <code>2^n</code> Zustände darstellen.
 
 ![Digitale Automaten]({filename}moore_mealy_logic.svg)
 

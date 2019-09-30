@@ -3,12 +3,12 @@ next: register.md
 parent: uebersicht.md
 
 # Allgemeines
-Ein `process` hat folgende Eigenschaften:
+Ein <code>process</code> hat folgende Eigenschaften:
 
 * Er besteht aus sequentiellen Anweisungen.
 * Eine *Sensitivity List* definiert die Signale, bei deren Änderung die Anweisungen ausgewertet werden.
-* Die "Ausführung" läuft parallel zu allen anderen `process` Statements
-* Der `process` selbst enthält keine nebenläufige Statements
+* Die "Ausführung" läuft parallel zu allen anderen <code>process</code> Statements
+* Der <code>process</code> selbst enthält keine nebenläufige Statements
 * Es erlaubt eine funktionale Beschreibung ähnlich zu einer Programmiersprache
 
 # Prozess für kombinatorische Schaltungen
@@ -22,8 +22,8 @@ Bei kombinatorischen Schaltungen gibt es keine speichernden Elemente. Die Ausgä
       carry_o <= a_i and b_i;
     end process;
 
-Dieser Prozess wertet den Ausdruck `a_i and b_i` aus und weist das Ergebnis `carry_o` zu. Diese Auswertung geschieht
-sobald sich `a_i` oder `b_i` ändert.
+Dieser Prozess wertet den Ausdruck <code>a_i and b_i</code> aus und weist das Ergebnis <code>carry_o</code> zu. Diese Auswertung geschieht
+sobald sich <code>a_i</code> oder <code>b_i</code> ändert.
 
 Einen kombinatorischen Prozess zeichnet aus, dass bei der Auswertung nur die Pegel der Signale ausgewertet werden.
 
@@ -44,7 +44,7 @@ prinzipiell lässt sich aber auch die fallende Taktflanke wählen.
 
 ## Erkennung einer Takflanke
 Um eine Taktflanke erkennen zu können ist es notwendig, das Taktsignal in der Sensitivitätsliste hinzuzufügen. Damit wird
-der Prozess ausgewertet, wenn sich am Taktsignal etwas ändert. 
+der Prozess ausgewertet, wenn sich am Taktsignal etwas ändert.
 
 !!! panel-info "Name für das Taktsignal"
     Es steht dem Entwickler frei, einen Namen für das Taktsignal zu wählen. In der Praxis wird meist `clk` oder `clock`
@@ -53,7 +53,7 @@ der Prozess ausgewertet, wenn sich am Taktsignal etwas ändert.
 
     In diesem Skriptum wird das Taktsignal mit `clk` bezeichnet.
 
-Im folgenden Beispiel wird die Verwendung der Funktion `rising_edge` gezeigt, um auf eine steigende Flanke an `clk` zu
+Im folgenden Beispiel wird die Verwendung der Funktion <code>rising_edge</code> gezeigt, um auf eine steigende Flanke an <code>clk</code> zu
 reagieren:
 
 ## Beispiel
@@ -76,10 +76,10 @@ reagieren:
           if rising_edge(clk) then
             data_o <= data_i;
           end if;
-        end process;  
+        end process;
     end architecture;
 
-Statt der Funktion `rising_edge` lässt sich auch folgendes Konstrukt verwenden:
+Statt der Funktion <code>rising_edge</code> lässt sich auch folgendes Konstrukt verwenden:
 
     #!vhdl
     process(clk)
@@ -87,15 +87,15 @@ Statt der Funktion `rising_edge` lässt sich auch folgendes Konstrukt verwenden:
       if clk'event and clk='1' then
         data_o <= data_i;
       end if;
-    end process;  
+    end process;
 
 # Anweisung innerhalb eines Prozesses
-## `if`-Anweisung
-Die `if`-Answeisung wertet die Bedingung aus und entsprechend dann den *Wahr* Zweig oder gegebenenfalls den *Falsch*
-Zweig (`else`) oder eine andere Bedingung aus (`elsif`). Die `if` Anweisung wird mit `endif;` beendet.
+## <code>if</code>-Anweisung
+Die <code>if</code>-Answeisung wertet die Bedingung aus und entsprechend dann den *Wahr* Zweig oder gegebenenfalls den *Falsch*
+Zweig (<code>else</code>) oder eine andere Bedingung aus (<code>elsif</code>). Die <code>if</code> Anweisung wird mit <code>endif;</code> beendet.
 
 ### Beispiel
-    
+
     #!vhdl
     process(clear, load, input, counter)
     begin
@@ -106,7 +106,7 @@ Zweig (`else`) oder eine andere Bedingung aus (`elsif`). Die `if` Anweisung wird
       else
         result <= counter + 1;
       end if;
-    end process;  
+    end process;
 
 !!! panel-info "Vergleich mit *nebenläufiger* Anweisung"
     Der Syntax von VHDL ist oft nicht sehr konsistent. Das gleiche Ergebnis lässt sich durch folgende Zuweisung als
@@ -119,15 +119,15 @@ Zweig (`else`) oder eine andere Bedingung aus (`elsif`). Die `if` Anweisung wird
 
     Es gilt die unterschiedliche Anordnung zu beachten. Die Funktionalität ist identisch.
 
-## `case`-Anweisung
-Die `case`-Anweisung überprüft den Zustand eines Signals und führt davon abhängig eine Anweisung aus.
+## <code>case</code>-Anweisung
+Die <code>case</code>-Anweisung überprüft den Zustand eines Signals und führt davon abhängig eine Anweisung aus.
 
 ### Beispiel
     #!vhdl
     process(digit_i)
     begin
       case digit_i is
-        when "0000" => 
+        when "0000" =>
           segments_o <= "0000001"; -- display 0
         when "0001" =>
           segments_o <= "1001111"; -- display 1
@@ -149,11 +149,11 @@ Die `case`-Anweisung überprüft den Zustand eines Signals und führt davon abh�
           "0010010" when "0010", -- display 2
           -- ...
           "1111111" when others;
-    
+
     Auch hier ist die Funktionalität identisch, die Schreibweise unterscheidet sich aber stark.
 
-## `for`-Schleife
-Die `for` Schleife erlaubt den vielfachen Aufbau eines Schaltungsteils.
+## <code>for</code>-Schleife
+Die <code>for</code> Schleife erlaubt den vielfachen Aufbau eines Schaltungsteils.
 
 ### Beispiel
     #!vhdl
@@ -167,4 +167,4 @@ Die `for` Schleife erlaubt den vielfachen Aufbau eines Schaltungsteils.
       end if;
     end process;
 
-Die Laufvariable `i` muss nicht eigens definiert werden. Der Typ für `i` ergibt sich aus den Elementen des Bereichs.
+Die Laufvariable <code>i</code> muss nicht eigens definiert werden. Der Typ für <code>i</code> ergibt sich aus den Elementen des Bereichs.

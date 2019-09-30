@@ -36,7 +36,7 @@ Für die meisten Prozessoren mit *RISC*-Befehlssatz gilt:
 ## Transferbefehle
 Transferbefehle werden verwendet, um Information innerhalb eines Prozessors oder über den Speicher zu transferieren. Da die Daten an ihrem Quellort nicht verändert werden ist der Vorgang eigentlich eine Kopie. Je nach Prozessorarchitektur können dies ein- oder mehrere Bytes auf einmal sein.
 
-Eine Sondergruppe bilden Befehle, die mit dem Stack arbeiten. Es können Daten auf den Stack kopiert (`push`) oder vom Stack geholt (`pop`) werden.
+Eine Sondergruppe bilden Befehle, die mit dem Stack arbeiten. Es können Daten auf den Stack kopiert (<code>push</code>) oder vom Stack geholt (<code>pop</code>) werden.
 
 ## Arithmetische und logische Befehle
 Bei diesem Befehlen wird eine arithmetische Operation (Addition, Subtraktion, Multiplikation, usw.) oder eine logische Operation (UND-, ODER-Verknüpfung, usw.). Auch Schiebe- und Rotationsoperationen gehören hier dazu. Die Operationen selbst werden im Prozessor mittels einer *Arithmetisch-Logischen Einheit* (engl. *arithmetic logic unit* oder kurz *ALU*) durchgeführt.
@@ -45,7 +45,7 @@ Bei diesem Befehlen wird eine arithmetische Operation (Addition, Subtraktion, Mu
 Sprungbefehle dienen zum Ändern des Programmablaufes. Dabei wird zwischen unbedingten und bedingten Sprüngen unterschieden. Unbedingte Sprünge werden immer ausgeführt, bedingte Sprünge sind abhängig von einem Prozessorstatus. Bei Sprüngen wird darüber hinaus zwischen absoluten Sprüngen (referenziert auf die Befehlsspeicheradresse 0) oder relativen Sprüngen (relativ zum aktuellen Befehlszähler) unterschieden. Bei allen Nicht-Sprung Befehlen wird der Programmablauf mit dem nachfolgenden Befehl fortgesetzt.
 
 ## Sonstige Befehle
-Es gibt noch weitere Befehle, die in keine der aufgeführten Kategorien passen. Dazu zählen Befehle zum Umgang mit Interrupts, aktivierung bestimmter Betriebsarten (z.B. Sleep Modes) oder der häufig vorhandene `No Operation` Befehl, der während seiner Ausführung keine Änderung vornimmt und somit nur Zeit "verbraucht".
+Es gibt noch weitere Befehle, die in keine der aufgeführten Kategorien passen. Dazu zählen Befehle zum Umgang mit Interrupts, aktivierung bestimmter Betriebsarten (z.B. Sleep Modes) oder der häufig vorhandene <code>No Operation</code> Befehl, der während seiner Ausführung keine Änderung vornimmt und somit nur Zeit "verbraucht".
 
 # Adressierungsarten
 Die Adressierungsarten beschreiben die Möglichkeiten, wie ein Prozessor auf die Daten für eine Operation zugreift. Dies gilt für die Operanden sowie für das Ergebnis einer Operation.
@@ -106,7 +106,7 @@ Beispiel (picoJava-II Architektur)
 
     iadd ; Hole zwei Integer vom Stack, addiere diese und lege diese wieder ab
 
-Typische Stack Maschinen haben Befehle wie `push` und `pop` um Daten auf den Stack zu legen oder vom Stack zu entfernen. Rechenoperationen wie `add`, `mult`, `sub`, usw. holen zwei Werte vom Stack, führen mit diesen die Rechenoperation aus und legen das Ergebnis wieder am Stack ab.
+Typische Stack Maschinen haben Befehle wie <code>push</code> und <code>pop</code> um Daten auf den Stack zu legen oder vom Stack zu entfernen. Rechenoperationen wie <code>add</code>, <code>mult</code>, <code>sub</code>, usw. holen zwei Werte vom Stack, führen mit diesen die Rechenoperation aus und legen das Ergebnis wieder am Stack ab.
 
 Die Rechenoperation 4+5*(3+6) kann dabei folgenderweise realisiert werden:
 
