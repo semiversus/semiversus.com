@@ -2,8 +2,9 @@ title: Python
 parent: ../../uebersicht.md
 
 # Tutorial
-* [Vorbereitungen]({filename}installation.md)
-* [Erstes Beispiel]({filename}erstes_beispiel.md)
+1. [Vorbereitungen]({filename}installation.md)
+1. [Erste Beispiele]({filename}beispiele.md)
+1. [Datentypen]({filename}datentypen.md)
 
 # Hausübungen
-* [VSCode und erste Übung]({filename}homework1.md)
+1. [VSCode und erste Übung]({filename}homework1.md)

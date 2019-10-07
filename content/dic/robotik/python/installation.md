@@ -1,6 +1,6 @@
 title: Installation
 parent: uebersicht.md
-next: erstes_beispiel.md
+next: beispiele.md
 
 # Vorbereitungen fürs Tutorial
 Für das Tutorial ist es egal, unter welcher Plattform gearbeitet wird (Windows/Linux/MacOS/...). Um eine gemeinsame Basis für die Entwicklungsumgebung zu bieten, möchte ich euch **Visual Studio Code** (nicht zu verwechseln mit *Visual Studio*!) empfehlen.
