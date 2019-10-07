@@ -4,3 +4,6 @@ parent: ../../uebersicht.md
 # Tutorial
 * [Vorbereitungen]({filename}installation.md)
 * [Erstes Beispiel]({filename}erstes_beispiel.md)
+
+# Hausübungen
+* [VSCode und erste Übung]({filename}homework1.md)

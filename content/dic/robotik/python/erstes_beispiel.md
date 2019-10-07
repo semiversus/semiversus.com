@@ -1,6 +1,7 @@
 title: Erstes Beispiel
+parent: uebersicht.md
 
-Zum ausprobieren gibt es das Beispiel auch hier: https://onlinegdb.com/B19ue-gOH
+Zum Ausprobieren gibt es das Beispiel auch hier: [Online Python Beispiel](https://onlinegdb.com/B19ue-gOH)
 
     #!python
     from random import randint
@@ -25,5 +26,5 @@ Zum ausprobieren gibt es das Beispiel auch hier: https://onlinegdb.com/B19ue-gOH
     print('You guess was correct!')
 
 # Aufgaben
-* Füge eine Anzeige hinzu, wieviele Versuche notwendig waren. Dies sollte dann in etwa so aussehen: `You guess was correct! It took 3 attempts.`
-* Füge eine Abfrage des oberen Limits ein. Dazu sollte folgende Abfrage am Anfang erscheinen: `What should be the upper limit? number: ')
+* Füge eine Anzeige hinzu, wieviele Versuche notwendig waren. Dies sollte dann in etwa so aussehen: <code>You guess was correct! It took 3 attempts.</code>
+* Füge eine Abfrage des oberen Limits ein. Dazu sollte folgende Abfrage am Anfang erscheinen: <code>What should be the upper limit? number: </code>
