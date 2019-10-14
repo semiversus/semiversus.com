@@ -45,7 +45,7 @@ Weitere Spezifikationspunkte:
 
 ## Zusatzpunkt (1 Punkt)
 
-Schreibe eine Funktion `build_hashtag_dict`, die eine Liste mit Strings als Argument nimmt und eine Liste der Hashtags zusammenstellt.
+Schreibe eine Funktion <code>build_hashtag_dict</code>, die eine Liste mit Strings als Argument nimmt und eine Liste der Hashtags zusammenstellt.
 
 Hier ein Beispiel:
 
