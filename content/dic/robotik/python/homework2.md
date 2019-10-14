@@ -1,7 +1,7 @@
 title: Python Hausübung 2
 parent: uebersicht.md
 
-# TODO App
+# TODO App (3 Punkte)
 
 Verwende folgendes Template um mit der Übung zu starten: [Download]({filename}todo.zip)
 
@@ -42,3 +42,14 @@ Weitere Spezifikationspunkte:
 * Wenn <code>remove</code> mit einem ungültigen Wert aufgerufen wird, soll die Liste nicht verändert werden (aber auch sonst keine Ausgabe gemacht werden)
 * <code>list</code>, <code>help</code> und <code>exit</code> sollen zusätzliche Argumente ignorieren
 * Wenn ein ungültiger Befehl eingegeben wird (z.B. <code>att</code> statt <code>add</code>) soll der Ausgabetext von <code>help</code> ausgegeben werden
+
+## Zusatzpunkt (1 Punkt)
+
+Schreibe eine Funktion `build_hashtag_dict`, die eine Liste mit Strings als Argument nimmt und eine Liste der Hashtags zusammenstellt.
+
+Hier ein Beispiel:
+
+    #!python
+    >>> items = ['#Hausübung WDIC', 'Matheübung #korrigieren', '#Hausübung Deutsch #korrigieren', 'Ausschlafen']
+    >>> build_hashtag_dict(items)
+    {'Hausübung': ['#Hausübung WDIC', '#Hausübung Deutsch #korrigieren'], 'korrigieren': ['Matheübung korrigieren', '#Hausübung Deutsch #korrigieren']}
