@@ -28,7 +28,7 @@ sobald sich <code>a_i</code> oder <code>b_i</code> ändert.
 Einen kombinatorischen Prozess zeichnet aus, dass bei der Auswertung nur die Pegel der Signale ausgewertet werden.
 
 !!! panel-warning "Unvollständige Sensitivity Liste"
-    Für kombinatorische Prozesse ist eine vollständige Sensitivity Liste wichtig. Wird im obigen Beispiel etwa `a_i`
+    Für kombinatorische Prozesse ist eine vollständige Sensitivity Liste wichtig. Wird im obigen Beispiel etwa <code>a_i</code>
     vergessen baut die Synthese ein speicherndes Element ein (Latch)!
 
 Das obige Beispiel entspricht genau der folgenden nebenläufigen Anweisung:
@@ -47,11 +47,11 @@ Um eine Taktflanke erkennen zu können ist es notwendig, das Taktsignal in der S
 der Prozess ausgewertet, wenn sich am Taktsignal etwas ändert.
 
 !!! panel-info "Name für das Taktsignal"
-    Es steht dem Entwickler frei, einen Namen für das Taktsignal zu wählen. In der Praxis wird meist `clk` oder `clock`
-    gewählt, sofern es nur einen Takt im Design gibt. Gibt es mehrere Takte bieter sich ein *Postfix* wie `clk_master`
+    Es steht dem Entwickler frei, einen Namen für das Taktsignal zu wählen. In der Praxis wird meist <code>clk</code> oder <code>clock</code>
+    gewählt, sofern es nur einen Takt im Design gibt. Gibt es mehrere Takte bieter sich ein *Postfix* wie <code>clk_master</code>
     an.
 
-    In diesem Skriptum wird das Taktsignal mit `clk` bezeichnet.
+    In diesem Skriptum wird das Taktsignal mit <code>clk</code> bezeichnet.
 
 Im folgenden Beispiel wird die Verwendung der Funktion <code>rising_edge</code> gezeigt, um auf eine steigende Flanke an <code>clk</code> zu
 reagieren:
@@ -140,7 +140,7 @@ Die <code>case</code>-Anweisung überprüft den Zustand eines Signals und führt
     end process;
 
 !!! panel-info "Vergleich mit *nebenläufiger* Anweisung"
-    Hier der Vergleich mit der entsprechenden `with`/`select` Anweisung als *nebenläufige* Anweisung:
+    Hier der Vergleich mit der entsprechenden <code>with</code>/<code>select</code> Anweisung als *nebenläufige* Anweisung:
 
         #!vhdl
         with digit_i select segments_o <=

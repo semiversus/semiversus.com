@@ -27,11 +27,11 @@ mittels LED angezeigt. Die Baudrate wird auf 1 Baud gestellt.
 
 * Die erforderliche Zustandsmaschine hat die Zustände <code>IDLE</code>, <code>START</code>, <code>DATA</code> und <code>STOP</code>
 * Eingänge:
-    * `send_i` - startet die Übertragung
+    * <code>send_i</code> - startet die Übertragung
     * Überlauf den Baudraten Generators - wechselt bei einer laufenden Übertragung zum nächsten Symbol
 * Ausgänge:
-    * `tx_o` - das zu sendende Bit (bzw. Symbol)
-    * `busy_o` - zeigt eine laufende Übertragung an (`'1'` wenn eine Übertragung läuft)
+    * <code>tx_o</code> - das zu sendende Bit (bzw. Symbol)
+    * <code>busy_o</code> - zeigt eine laufende Übertragung an (<code>'1'</code> wenn eine Übertragung läuft)
 * Wenn die Zustandsmaschine im Zustand <code>IDLE</code> ist und <code>send_i</code> gleich <code>'1'</code> ist, dann wird in den Zustand <code>START</code> gewechselt.
 * Vom Zustand <code>START</code> wird in den Zustand <code>DATA</code> gewechselt, sobald der Zähler für die Baudrate übergelaufen ist
 * Im Zustand <code>DATA</code> läuft ein Bit Zähler und zählt die Bits von 0 bis 7 (LSB zuerst)
@@ -39,9 +39,9 @@ mittels LED angezeigt. Die Baudrate wird auf 1 Baud gestellt.
 * Nach dem 8. Datenbit wird in den Zustand <code>STOP</code> gewechselt
 * Vom Zustand <code>STOP</code> wird in den Zustand <code>IDLE</code> gewechselt, sobald der Zähler für die Baudrate übergelaufen ist
 * Ausgabe von <code>tx_o</code>
-    * Ist in `IDLE` und `STOP` auf `'1'`
-    * Ist in `START` auf `'0'`
-    * Entspricht während `DATA` dem zu übertragenden Datenbit
+    * Ist in <code>IDLE</code> und <code>STOP</code> auf <code>'1'</code>
+    * Ist in <code>START</code> auf <code>'0'</code>
+    * Entspricht während <code>DATA</code> dem zu übertragenden Datenbit
 
 ### Baudratengenerierung
 <span class="badge">2 Punkte</span>

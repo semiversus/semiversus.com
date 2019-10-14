@@ -11,10 +11,10 @@ realisiert werden (siehe [sequentielle Logik]({filename}../grundlagen_der_digita
 
 !!! panel-info "Name für das Reset Signal"
     Wie beim Taktsignal steht es dem Entwickler frei, einen Namen für das Resetsignal zu wählen. In der Praxis wird
-    meist `rst` oder `reset` verwendet. Je nach Anwendung kann es *high*- oder *low*-aktiv sein. Bei *low*-aktiven Resets
-    wird meist ein Postfix verwendet, der darauf hindeutet (z.B. `rst_n` für *NOT*).
+    meist `rst` oder <code>reset</code> verwendet. Je nach Anwendung kann es *high*- oder *low*-aktiv sein. Bei *low*-aktiven Resets
+    wird meist ein Postfix verwendet, der darauf hindeutet (z.B. <code>rst_n</code> für *NOT*).
 
-    In diesem Skriptum wird das Resetsignal mit `rst` bezeichnet und ist bei *High* aktiv.
+    In diesem Skriptum wird das Resetsignal mit <code>rst</code> bezeichnet und ist bei *High* aktiv.
 
 ## Mit asynchronem Reset
     #!vhdl

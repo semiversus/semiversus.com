@@ -41,16 +41,16 @@ Zur Verfügung stehen die Komponenten <samp>button_dectect</samp> und <samp>led_
 Komponenten werden genutzt, um im Top Level <samp>led_toggle.vhd</samp> die gewünschte Funktionalität zu realisieren.
 
 * Die Instanz der Komponente <samp>button_detect</samp> mit dem Namen <code>toggle_detect_component</code> ist bereits erstellt
-    * `button_i` ist mit dem Eingang `button_toggle_i` verbunden
-    * `detect_o` ist mit dem (bereits definiertem) Signal `toggle_detect` verbunden
+    * <code>button_i</code> ist mit dem Eingang <code>button_toggle_i</code> verbunden
+    * <code>detect_o</code> ist mit dem (bereits definiertem) Signal <code>toggle_detect</code> verbunden
 * Erstelle eine Instanz der Komponente <samp>button_detect</samp> mit dem Namen <code>off_detect_component</code> analog zu <code>toggle_detect_component</code>
-    * `button_i` ist mit dem Eingang `button_off_i` verbunden
-    * `detect_o` ist mit dem (bereits definiertem) Signal `off_detect` verbunden
+    * <code>button_i</code> ist mit dem Eingang <code>button_off_i</code> verbunden
+    * <code>detect_o</code> ist mit dem (bereits definiertem) Signal <code>off_detect</code> verbunden
 * Erstelle eine Instanz der Komponente <samp>led_toggle_fsm</samp> mit dem Namen <code>led_toggle_fsm_component</code>
-    * `toggle_i` ist mit dem Signal `toggle_detect` verbunden
-    * `off_i` ist mit dem Signal `off_detect` verbunden
-    * `led1_o` ist mit dem Ausgang `led1_o` verbunden
-    * `led2_o` ist mit dem Ausgang `led2_o` verbunden
+    * <code>toggle_i</code> ist mit dem Signal <code>toggle_detect</code> verbunden
+    * <code>off_i</code> ist mit dem Signal <code>off_detect</code> verbunden
+    * <code>led1_o</code> ist mit dem Ausgang <code>led1_o</code> verbunden
+    * <code>led2_o</code> ist mit dem Ausgang <code>led2_o</code> verbunden
 * Jede Komponente hat einen Takteingang <code>clk</code>, welcher mit dem globalen <code>clk</code> verbunden wird
 
 !!! panel-info "Testbench"

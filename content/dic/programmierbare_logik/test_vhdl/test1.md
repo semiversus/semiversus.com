@@ -45,25 +45,25 @@ Zur Verfügung stehen die Komponenten <samp>counter</samp>, <samp>button_dectect
 Komponenten werden genutzt, um im Top Level <samp>led_control.vhd</samp> die gewünschte Funktionalität zu realisieren.
 
 * Die Instanz der Komponente <samp>button_detect</samp> mit dem Namen <code>toggle_detect_component</code> ist bereits erstellt
-    * `button_i` ist mit dem Eingang `button_toggle_i` verbunden
-    * `detect_o` ist mit dem (bereits definiertem) Signal `toggle_detect` verbunden
+    * <code>button_i</code> ist mit dem Eingang <code>button_toggle_i</code> verbunden
+    * <code>detect_o</code> ist mit dem (bereits definiertem) Signal <code>toggle_detect</code> verbunden
 * Erstelle eine Instanz der Komponente <samp>button_detect</samp> mit dem Namen <code>off_detect_component</code> analog zu <code>toggle_detect_component</code>
-    * `button_i` ist mit dem Eingang `button_off_i` verbunden
-    * `detect_o` ist mit dem (bereits definiertem) Signal `off_detect` verbunden
+    * <code>button_i</code> ist mit dem Eingang <code>button_off_i</code> verbunden
+    * <code>detect_o</code> ist mit dem (bereits definiertem) Signal <code>off_detect</code> verbunden
 * Erstelle eine Instanz der Komponente <samp>led_control_fsm</samp> mit dem Namen <code>led_control_fsm_component</code>
-    * `toggle_i` ist mit dem Signal `toggle_detect` verbunden
-    * `off_i` ist mit dem Signal `off_detect` verbunden
-    * `timeout_i` ist mit dem (bereits definiertem) Signal `timeout` verbunden
-    * `led_o` ist mit dem Ausgang `led_o` verbunden
-    * `timer_enable_o` ist mit dem (bereits definiertem) Signal `timer_enable` verbunden
-    * `timer_clear_o` ist mit dem (bereits definiertem) Signal `timer_clear` verbunden
+    * <code>toggle_i</code> ist mit dem Signal <code>toggle_detect</code> verbunden
+    * <code>off_i</code> ist mit dem Signal <code>off_detect</code> verbunden
+    * <code>timeout_i</code> ist mit dem (bereits definiertem) Signal <code>timeout</code> verbunden
+    * <code>led_o</code> ist mit dem Ausgang <code>led_o</code> verbunden
+    * <code>timer_enable_o</code> ist mit dem (bereits definiertem) Signal <code>timer_enable</code> verbunden
+    * <code>timer_clear_o</code> ist mit dem (bereits definiertem) Signal <code>timer_clear</code> verbunden
 * Erstelle eine Instanz der Komponente <samp>counter</samp> mit dem Namen <code>timeout_component</code>
-    * `WIDTH` in der *generic map* wird auf 28 gestellt (28 Bit)
-    * `MAXIMUM` wird auf `CLK_TIMEOUT_DIVIDER` gestellt (ist im *generic* Teil des Top Levels bereits definiert)
-    * `enable_i` ist mit dem Signal `timer_enable` verbunden
-    * `reset_i` ist mit dem Signal `timer_clear` verbunden
-    * `value_o` ist nicht verbunden (`open`)
-    * `overflow_o` ist mit dem Signal `timeout` verbunden
+    * <code>WIDTH</code> in der *generic map* wird auf 28 gestellt (28 Bit)
+    * <code>MAXIMUM</code> wird auf <code>CLK_TIMEOUT_DIVIDER</code> gestellt (ist im *generic* Teil des Top Levels bereits definiert)
+    * <code>enable_i</code> ist mit dem Signal <code>timer_enable</code> verbunden
+    * <code>reset_i</code> ist mit dem Signal <code>timer_clear</code> verbunden
+    * <code>value_o</code> ist nicht verbunden (<code>open</code>)
+    * <code>overflow_o</code> ist mit dem Signal <code>timeout</code> verbunden
 * Jede Komponente hat einen Takteingang <code>clk</code>, welcher mit dem globalen <code>clk</code> verbunden wird
 
 !!! panel-info "Testbench"

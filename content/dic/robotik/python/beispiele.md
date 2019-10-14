@@ -4,7 +4,7 @@ next: datentypen.md
 
 ## Beispiel 1
 
-Starten wir direkt mit einem Beispiel, welches über `Hello, World!` hinausgeht. Was macht das folgende Programm?
+Starten wir direkt mit einem Beispiel, welches über <code>Hello, World!</code> hinausgeht. Was macht das folgende Programm?
 Was fällt auf im Vergleich zu anderen Programmiersprachen?
 
     #!python

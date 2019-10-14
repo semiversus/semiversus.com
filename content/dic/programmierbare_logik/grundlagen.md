@@ -21,8 +21,8 @@ In einer VHDL Datei können mehrere Komponenten beschrieben werden, es ist aller
 nutzen.
 
 !!! panel-info "Groß- und Kleinschreibung"
-    Bei VHDL spielt die Groß- und Kleinschreibung keine Rolle. Dies gilt für Schlüsselwörter wie `entity` (kann auch
-    `Entity`, `ENTITY` oder auch `eNTity` heißen), sowie für Signalnamen.
+    Bei VHDL spielt die Groß- und Kleinschreibung keine Rolle. Dies gilt für Schlüsselwörter wie <code>entity</code> (kann auch
+    <code>Entity</code>, <code>ENTITY</code> oder auch <code>eNTity</code> heißen), sowie für Signalnamen.
 
     In diesem Skriptum werden sämtliche Schlüsselwörter und Signale kleingeschreiben. Generics werden großgeschrieben.
 

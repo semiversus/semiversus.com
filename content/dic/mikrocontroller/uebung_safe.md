@@ -18,20 +18,20 @@ um den Code einzutippen ( *S0* entspricht Ziffer '1', *S1* entspricht '2', usw.)
 * Der Code hat vier Stellen (mit den Ziffern 1 bis 4)
 * Nach dem Reset ist der Code "1234"
 * Zustand <code>CLOSED</code>:
-    * Nach dem Reset befindet sich die Applikation im Zustand `CLOSED`
+    * Nach dem Reset befindet sich die Applikation im Zustand <code>CLOSED</code>
     * Das Display zeigt den Text "CLOSED" in der ersten Zeile, die zweite Zeile ist leer
 * Wird einer der Taster *S0* bis *S3* gedrückt wird der entsprechende Tastendruck *gespeichert* und pro Ziffer ein <code>*</code> in der zweiten Zeile angezeigt
 * Nach dem vierten Tastendruck wird der eingegebene Code ausgewertet
 * Bei falscher Codeeingabe:
     * In der ersten Zeile wird "WRONG" und der zweiten Zeile "CODE" ausgegeben
-    * Nach zwei Sekunden oder einem Tastendruck wird in den Zustand `CLOSED` gewechselt
+    * Nach zwei Sekunden oder einem Tastendruck wird in den Zustand <code>CLOSED</code> gewechselt
 * Bei richtiger Codeeingabe
     * In der ersten Zeile wird "OPENED" ausgegeben, die zweiten Zeile ist leer
-    * Nach drei Sekunden wird in den Zustand `CLOSED` gewechselt
+    * Nach drei Sekunden wird in den Zustand <code>CLOSED</code> gewechselt
     * Wird innerhalb der drei Sekunden ein Taster gedrückt wird dies als erste Ziffer für den neuen Code verwendet und ein neuer Code kann eingegeben werden
 * Eingabe eines neuen Codes:
     * In der ersten Zeile steht "NEW CODE", die zweite Zeile zeigt den bisher eingegebenen Code (z.B. "41")
-    * Sind alle vier Ziffern eingegeben wechselt die Applikation nach zwei Sekunden in den Zustand `CLOSED`
+    * Sind alle vier Ziffern eingegeben wechselt die Applikation nach zwei Sekunden in den Zustand <code>CLOSED</code>
 
 # Hinweise zur Implementierung
 ## Speicherung des Codes
@@ -65,8 +65,8 @@ Um den Code anschließend zu vergleichen:
     }
 
 !!! panel-warning "Beim Array Vergleich muss jeder Wert einzeln geprüft werden"
-    Es funktioniert **nicht** einen Vergleich von `code_actual==code_stored` zu machen. Da `code_actual` und
-    `code_stored` jeweils Arrays und damit Zeiger auf eine Speicherstelle sind werden auch nur diese Zeiger verglichen.
+    Es funktioniert **nicht** einen Vergleich von <code>code_actual==code_stored</code> zu machen. Da <code>code_actual</code> und
+    <code>code_stored</code> jeweils Arrays und damit Zeiger auf eine Speicherstelle sind werden auch nur diese Zeiger verglichen.
     Und diese werden immer auf unterschiedliche Positionen im Speicher zeigen!
 
 ### Speicherung als Integer

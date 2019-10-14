@@ -29,7 +29,7 @@ Diese Typen haben 9 Werte (d.h. werden sie auch *9-wertige Logik* genannt)
 
 * <code>U</code>: *undefiniert* - wird für nichtinitalisierte Signale in der Simulation verwendet
 * <code>X</code>: *unbekannt* (starker Treiber) - wenn zwei Ausgänge miteinander verbunden werden, die gegeneinander treiben
-  (`0` und `1`)
+  (<code>0</code> und <code>1</code>)
 * <code>0</code>: *logische Null* (starker Treiber)
 * <code>1</code>: *logische Eins* (starker Treiber)
 * <code>Z</code>: *hochohmig*
@@ -68,7 +68,7 @@ Was spricht für <code>std_ulogic</code>?
 Eine Umwandlung von <code>std_logic</code> zu <code>std_ulogic</code> und umgekehrt ist jederzeit möglich.
 
 !!! panel-info "In diesem Skriptum wird <code>std_ulogic</code> verwendet"
-    Alle gezeigten Beispiele mit `std_ulogic` lassen sich auch mittels `std_logic` realisieren.
+    Alle gezeigten Beispiele mit <code>std_ulogic</code> lassen sich auch mittels <code>std_logic</code> realisieren.
 
 ## Definition eines Signals mit <code>std_ulogic</code>
 
@@ -99,7 +99,7 @@ würden wir bei <code>data_reg(0)</code> den Wert <code>'0'</code> zurückbekomm
 
 !!! panel-info "Verwende <code>downto</code>"
     Da bei den meisten Darstellungen das höchstwertigste Bit links und das niederwertigste Bit rechts steht bietet sich
-    `downto` an. Prinzipiell spricht nichts gegen eine Verwendung von `to` solange man weiß, was man tut!
+    <code>downto</code> an. Prinzipiell spricht nichts gegen eine Verwendung von <code>to</code> solange man weiß, was man tut!
 
 ## Literale
 Wir haben im obigen Beispiel die Initialisierung mit dem Bitstring <code>"00000001"</code> gesehen. Solche Werte werden *Literale* (
