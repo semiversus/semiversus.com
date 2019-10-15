@@ -32,6 +32,7 @@ Im Beispiel enthalten sind auch Unittests, die die vorhandene Spezifikation test
 ## Spezifikation
 
 Die Applikation soll folgende Befehle unterstützen:
+
 * <code>add *Text*</code> - fügt ein Element zur Todo Liste hinzu
 * <code>remove *Index*</code> - Index (als Zahl) entfernt den entsprechenden Eintrag aus der Todo Liste
 * <code>list</code> - Listet alle Elemente der Todo Liste auf
@@ -39,9 +40,14 @@ Die Applikation soll folgende Befehle unterstützen:
 * <code>exit</code> - Beendet die Applikation (verläßt die <code>input_loop</code> Funktion und liefert die Liste als Rückgabewert)
 
 Weitere Spezifikationspunkte:
+
 * Wenn <code>remove</code> mit einem ungültigen Wert aufgerufen wird, soll die Liste nicht verändert werden (aber auch sonst keine Ausgabe gemacht werden)
 * <code>list</code>, <code>help</code> und <code>exit</code> sollen zusätzliche Argumente ignorieren
 * Wenn ein ungültiger Befehl eingegeben wird (z.B. <code>att</code> statt <code>add</code>) soll der Ausgabetext von <code>help</code> ausgegeben werden
+
+## Test mittels pytest
+
+Ihr könnt eure Applikation mittels `pytest` testen. Richtet dafür einfach die virtuelle Umgebung ein und startet im Terminal von Visual Studio Code `pytest`.
 
 ## Zusatzpunkt (1 Punkt)
 
