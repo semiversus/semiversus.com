@@ -9,3 +9,4 @@
 - fail fast -> opposite is fail slow
 - `.` is a operator in python so `self . do()` is valid
 - `a ^= b ^= a ^= b;`
+- Anagram finding with hash (sum of ascii values) and rainbow table
