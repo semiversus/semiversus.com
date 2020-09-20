@@ -2,7 +2,7 @@ local:
 	@echo "Building local website"
 	@PYTHONPATH='.' pelican content -s pelicanconf_local.py --cache-path=cache/local/ -o output_local
 
-public: 
+public:
 	@echo "Building public website"
 	@pelican content
 
@@ -20,7 +20,7 @@ view: local
 upload:
 	git push
 	cd output; git add --all; git commit -m "automated push"; git push git@github.com:semiversus/semiversus.github.io.git
-	ssh guenther@semiversus.com './update_semiversus.sh'
+	ssh root@semiversus.com './update_semiversus.sh'
 
 clean:
 	rm cache dic_script output_local __pycache__ *.pyc -rf
@@ -34,6 +34,6 @@ build-docker:
 
 run-docker:
 	docker run -t -v `pwd`:/site guenther.jena/pelican
-	
+
 
 .PHONY: public local view upload clean

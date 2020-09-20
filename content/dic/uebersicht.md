@@ -13,6 +13,7 @@ toc: False
 * [Komplexe digitale Systeme]({filename}komplexe_digitale_systeme/uebersicht.md)
 
 # Robotik und Embedded Systems
+* [Projektmanagment]({filename}robotik/projektmanagment/uebersicht.md)
 * [Python]({filename}robotik/python/uebersicht.md)
 * [RaspberryPi]({filename}robotik/raspberry.md)
 * [Suchalgorithmen]({filename}robotik/suche.md)
