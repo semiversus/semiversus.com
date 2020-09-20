@@ -1,4 +1,4 @@
-# semiversus.github.io-source
+# semiversus.com
 
 Nutzt folgende Tools um https://www.semiversus.com als statische Website zu generieren:
 

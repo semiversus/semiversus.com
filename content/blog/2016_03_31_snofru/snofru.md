@@ -9,8 +9,10 @@ eigentlich, dass das Spiel verschollen ist, doch Internet sei Dank hab ich es wi
 
 ![Gameplay]({filename}snofru.gif)
 
+<!-- PELICAN_BEGIN_SUMMARY -->
 Das Spiel ist ziemlich einfach gestrickt. Man steuert eine Spielfigur mittels Pfeiltasten durch ein Labyrinth mit Hindernissen
 in Form von verschiebbaren Steinen und herumlaufenden Soldaten.
+<!-- PELICAN_END_SUMMARY -->
 
 ## Archive.org
 <figure class="pull-right"><img src="{filename}gamestar.jpg"><figcaption>GameStar 7/1998 (Bild: <a href="http://de.videospielzeitschriften.wikia.com/wiki/Datei:GameStar_1998-07.jpg">Maniacfan</a>, Urheberrechtlich geschützt durch <a href="http://www.gamestar.de/impressum/">GameStar</a>)</figcaption></figure>

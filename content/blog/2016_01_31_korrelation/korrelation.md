@@ -30,10 +30,12 @@ an Arbeiten steigt die Anzahl der Vergleiche um (etwas mehr als) das Vierfache.
 Bei einer Hausaufgabe habe ich nun das konkrete "*Problem*" 25 Arbeiten miteinander zu vergleichen. Es handelt sich
 um eine Programmieraufgabe in C.
 
+<!-- PELICAN_BEGIN_SUMMARY -->
 Der Vergleich von zwei Textdateien lässt sich mittels <code>diff</code> bewerkstelligen. Was ich aber brauche ist eine Statistik,
 die mir angibt, wie groß die *Korrelation* zwischen zwei Dateien ist, sprich wie groß der Anteil an Gemeinsamkeiten ist.
 Bei dem Vergleich sollten Zeilenumbrüche, Leerzeichen, usw. keine Rolle spielen. Das Tool der Wahl ist <code>wdiff</code>. Die Option
 <code>-s</code> liefert eine entsprechende Statistik.
+<!-- PELICAN_END_SUMMARY -->
 
     #!bash
     $> wdiff -s arbeit1.c arbeit2.c

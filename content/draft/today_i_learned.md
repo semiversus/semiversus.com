@@ -1,0 +1,11 @@
+- unary plus in python
+- no dead keys on keyboard (e.g. double press for ^)
+- middle click for copy/paste
+- ctrl-l for addressbar
+- sudo usermod -a -G dialout guenther
+- |& in bash
+- bash history
+- mute after standby
+- fail fast -> opposite is fail slow
+- `.` is a operator in python so `self . do()` is valid
+- `a ^= b ^= a ^= b;`
