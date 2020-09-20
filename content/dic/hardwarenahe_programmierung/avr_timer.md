@@ -51,27 +51,27 @@ Das Blockschaltbild des Timer 0 zeigt den prinzipiellen Aufbau des Timers welche
 ## Interrupts
 Der Timer 0 nutzt zwei Interruptquellen:
 
-* `TIMER0_OVF_vect` (im Blockschaltbild TOV0) - Löst aus, sobald es zu einem Überlauf des Timer Registers `TCNT0` kommt
-* `TIMER0_COMP_vect` (im Blockschaltbild OC0) - Löst aus, sobald das Timer Register `TCNT0` gleich `OCR0` ist
+* <code>TIMER0_OVF_vect</code> (im Blockschaltbild TOV0) - Löst aus, sobald es zu einem Überlauf des Timer Registers <code>TCNT0</code> kommt
+* <code>TIMER0_COMP_vect</code> (im Blockschaltbild OC0) - Löst aus, sobald das Timer Register <code>TCNT0</code> gleich <code>OCR0</code> ist
 
-## `TCNT0` - Timer Counter Register 
+## <code>TCNT0</code> - Timer Counter Register
 Dieses Register ist der Kern des Timers. Beim Timer 0 ist dieses Register 8 Bit groß, d.h. es kann von 0 bis 255 zählen.
 
-`TCNT0` kann direkt gelesen und geschrieben werden. Die Steuerung (Control Logic) hat die Möglichkeit, dieses
+<code>TCNT0</code> kann direkt gelesen und geschrieben werden. Die Steuerung (Control Logic) hat die Möglichkeit, dieses
 Register auf 0 zu setzen oder das Register um eins zu erhöhen oder zu erniedrigen.
 
-Die Steuerung ist abhängig von der Konfiguration über `TCCR0` und dem Status der Vergleiche mit 0, mit 0xFF und dem
-Vergleich mit `OCR0`.
+Die Steuerung ist abhängig von der Konfiguration über <code>TCCR0</code> und dem Status der Vergleiche mit 0, mit 0xFF und dem
+Vergleich mit <code>OCR0</code>.
 
-## `OCR0` - Vergleichsregister 
-Das Register `OCR0` ist ein 8 Bit Register das für den Vergleich mit `TCNT0` genutzt wird. Der Vergleich kann für drei 
+## <code>OCR0</code> - Vergleichsregister
+Das Register <code>OCR0</code> ist ein 8 Bit Register das für den Vergleich mit <code>TCNT0</code> genutzt wird. Der Vergleich kann für drei
 Funktionen benutzt werden:
 
 * Die Generierung eines PWM Signals mittels *Waveform Generetion* am Pin *OC0*
-* Das Auslösen des Interrupts `TIMER0_COMP_vect` bei Äquvivalenz mit `TCNT0`
+* Das Auslösen des Interrupts <code>TIMER0_COMP_vect</code> bei Äquvivalenz mit <code>TCNT0</code>
 * Die Auswertung mittels der Steuerung des Timer 0
 
-## `TCCR0` - Timer Counter Control Register 
+## <code>TCCR0</code> - Timer Counter Control Register
 
 Bit|7|6|5|4|3|2|1|0
 :-:!|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:
@@ -96,7 +96,7 @@ Modus|WGM01|WGM00|Bezeichnung
 Die verschiedenen Modi sind unter "<a href="#betriebsmodi_1">Betriebsmodi</a>" ausführlich beschrieben.
 
 ### COM01 und COM00 - Funktion des *OC0* Pins
-Beschreibt die Funktionsweise des Pins *OC0*. Sind beide Bits auf `0` wird der Pin als normaler Portpin verwendet
+Beschreibt die Funktionsweise des Pins *OC0*. Sind beide Bits auf <code>0</code> wird der Pin als normaler Portpin verwendet
 (Port B Bit 3). Bei anderen Kombinationen ist der *Compare Match Output Mode* aktiv und die normale Portfunktion wird
 überschrieben. Weitere Informationen finden sich unter [PWM Erzeugung]({filename}avr_pwm.md).
 
@@ -113,11 +113,11 @@ CS02|CS01|CS00|Bezeichnung
 1|1|0|Fallende Flanke an Pin T0
 1|1|1|Steigende Flanke an Pin T1
 
-## `TIMSK` - Timer Interrupt Mask Register
+## <code>TIMSK</code> - Timer Interrupt Mask Register
 
 Über das *Timer Interrupt Mask Register* werden die Interruptfreigaben für alle drei Timer gesetzt. Für den Timer0 gibt
-es wie bereits beschrieben die beiden Interrupts `TOIE0` (Timer Overflow) und `OCIE0` (Output Compare Match). Um den
-jeweiligen Interrupt zu aktivieren muss eine logische `1` an die entsprechende Stelle geschrieben werden.
+es wie bereits beschrieben die beiden Interrupts <code>TOIE0</code> (Timer Overflow) und <code>OCIE0</code> (Output Compare Match). Um den
+jeweiligen Interrupt zu aktivieren muss eine logische <code>1</code> an die entsprechende Stelle geschrieben werden.
 
 Bit|7|6|5|4|3|2|**1**|**0**
 :-:!|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:
@@ -128,30 +128,30 @@ Init|0|0|0|0|0|0|**0**|**0**
 # Betriebsmodi
 ## Normaler Modus
 Bei diesem Modus zählt der Timer bis zum Maximum seines Zählbereiches (255 bzw. 65535). Der Timer kann so konfiguriert
-werden, dass beim Erreichen dieses Maximums der `TIMERn_OVF_vect` ausgelöst wird.
+werden, dass beim Erreichen dieses Maximums der <code>TIMERn_OVF_vect</code> ausgelöst wird.
 
 Die Frequenz, mit der ein Overflow bei Verwendung des Prozessortakts als Taktquelle auftritt ergibt sich mit:
 
 %%f_{TOVF}=\frac{f_{CLK}}{Prescaler\cdot N_{max}}%%
 
-Als Prescaler stehen dabei 1, 8, 64, 256 und 1024 zur Verfügung. %%N_{max}%% ist dabei 256 für 8 Bit Timer und 65536 für 
+Als Prescaler stehen dabei 1, 8, 64, 256 und 1024 zur Verfügung. %%N_{max}%% ist dabei 256 für 8 Bit Timer und 65536 für
 16 Bit Timer.
 
-Der Interrupt TIMERn_COMPx_vect kann aktiviert werden und wird ausgelöst, sobald das Timerregister `TCNTn` den
-Vergleichswert `OCRn` erreicht.
+Der Interrupt TIMERn_COMPx_vect kann aktiviert werden und wird ausgelöst, sobald das Timerregister <code>TCNTn</code> den
+Vergleichswert <code>OCRn</code> erreicht.
 
 ## CTC - Clear Timer on Compare
-Hier zählt der Timer nach oben bis zum Erreichen des `OCRn` Registers. Das Register `TCNTn` wird beim Erreichen
-zurückgesetzt. Der Timer kann so konfiguriert werden, dass beim Erreichen des `OCRn` Wertes der `TIMERn_COMPx_vect`
+Hier zählt der Timer nach oben bis zum Erreichen des <code>OCRn</code> Registers. Das Register <code>TCNTn</code> wird beim Erreichen
+zurückgesetzt. Der Timer kann so konfiguriert werden, dass beim Erreichen des <code>OCRn</code> Wertes der <code>TIMERn_COMPx_vect</code>
 ausgelöst wird.
 
 Die Frequenz, mit der ein *Compare Match* bei Verwendung des Prozessortakts als Taktquelle auftritt ergibt sich mit:
 
 %%f_{COMP}=\frac{f_{CLK}}{Prescaler\cdot (OCRn + 1)}%%
 
-## Fast PWM 
-Beim Fast PWM zählt der Timer bis zum Maximum seines Zählberreichs. Das Register `OCRn` dient als Vergleich und abhängig
-davon, ob `TCNTn` kleiner oder größer `OCRn` ist, kann der OCn Pin auf logisch `0` oder `1` gesetzt werden. Mehr dazu im Kapitel [PWM Erzeugung]({filename}avr_pwm.md).
+## Fast PWM
+Beim Fast PWM zählt der Timer bis zum Maximum seines Zählberreichs. Das Register <code>OCRn</code> dient als Vergleich und abhängig
+davon, ob <code>TCNTn</code> kleiner oder größer <code>OCRn</code> ist, kann der OCn Pin auf logisch <code>0</code> oder <code>1</code> gesetzt werden. Mehr dazu im Kapitel [PWM Erzeugung]({filename}avr_pwm.md).
 
 ## PWM, Phasenkorrekt
 Siehe auch hier im Kapitel [PWM Erzeugung]({filename}avr_pwm.md).

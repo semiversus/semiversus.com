@@ -8,30 +8,30 @@ parent: uebersicht.md
 In diesem Beispiel soll ein Tresor (engl. *Safe*) implementiert werden. Dazu werden die vier Tasten *S0*-*S3* genutzt,
 um den Code einzutippen ( *S0* entspricht Ziffer '1', *S1* entspricht '2', usw.).
 
-# Vorbereitung 
+# Vorbereitung
 
 * [Projektordner]({filename}embedded_uebung_safe.compress){: class="download" } herunterladen und entpacken
-* Projekt `safe.avrgccproj` öffnen
+* Projekt <code>safe.avrgccproj</code> öffnen
 
 # Spezifikation
 
 * Der Code hat vier Stellen (mit den Ziffern 1 bis 4)
 * Nach dem Reset ist der Code "1234"
-* Zustand `CLOSED`:
-    * Nach dem Reset befindet sich die Applikation im Zustand `CLOSED`
+* Zustand <code>CLOSED</code>:
+    * Nach dem Reset befindet sich die Applikation im Zustand <code>CLOSED</code>
     * Das Display zeigt den Text "CLOSED" in der ersten Zeile, die zweite Zeile ist leer
-* Wird einer der Taster *S0* bis *S3* gedrückt wird der entsprechende Tastendruck *gespeichert* und pro Ziffer ein `*` in der zweiten Zeile angezeigt
+* Wird einer der Taster *S0* bis *S3* gedrückt wird der entsprechende Tastendruck *gespeichert* und pro Ziffer ein <code>*</code> in der zweiten Zeile angezeigt
 * Nach dem vierten Tastendruck wird der eingegebene Code ausgewertet
 * Bei falscher Codeeingabe:
     * In der ersten Zeile wird "WRONG" und der zweiten Zeile "CODE" ausgegeben
-    * Nach zwei Sekunden oder einem Tastendruck wird in den Zustand `CLOSED` gewechselt
+    * Nach zwei Sekunden oder einem Tastendruck wird in den Zustand <code>CLOSED</code> gewechselt
 * Bei richtiger Codeeingabe
     * In der ersten Zeile wird "OPENED" ausgegeben, die zweiten Zeile ist leer
-    * Nach drei Sekunden wird in den Zustand `CLOSED` gewechselt
+    * Nach drei Sekunden wird in den Zustand <code>CLOSED</code> gewechselt
     * Wird innerhalb der drei Sekunden ein Taster gedrückt wird dies als erste Ziffer für den neuen Code verwendet und ein neuer Code kann eingegeben werden
 * Eingabe eines neuen Codes:
     * In der ersten Zeile steht "NEW CODE", die zweite Zeile zeigt den bisher eingegebenen Code (z.B. "41")
-    * Sind alle vier Ziffern eingegeben wechselt die Applikation nach zwei Sekunden in den Zustand `CLOSED`
+    * Sind alle vier Ziffern eingegeben wechselt die Applikation nach zwei Sekunden in den Zustand <code>CLOSED</code>
 
 # Hinweise zur Implementierung
 ## Speicherung des Codes
@@ -65,8 +65,8 @@ Um den Code anschließend zu vergleichen:
     }
 
 !!! panel-warning "Beim Array Vergleich muss jeder Wert einzeln geprüft werden"
-    Es funktioniert **nicht** einen Vergleich von `code_actual==code_stored` zu machen. Da `code_actual` und
-    `code_stored` jeweils Arrays und damit Zeiger auf eine Speicherstelle sind werden auch nur diese Zeiger verglichen.
+    Es funktioniert **nicht** einen Vergleich von <code>code_actual==code_stored</code> zu machen. Da <code>code_actual</code> und
+    <code>code_stored</code> jeweils Arrays und damit Zeiger auf eine Speicherstelle sind werden auch nur diese Zeiger verglichen.
     Und diese werden immer auf unterschiedliche Positionen im Speicher zeigen!
 
 ### Speicherung als Integer
@@ -97,14 +97,14 @@ Die Überprüfung des Codes wird nun wesentlich einfacher:
     }
 
 ## Ausgaben am LC Display
-Eine LCD Ausgabe entweder je nach Zustand bei jedem `safe_process` gemacht werden oder bei einem Zustandswechsel.
+Eine LCD Ausgabe entweder je nach Zustand bei jedem <code>safe_process</code> gemacht werden oder bei einem Zustandswechsel.
 
-Im folgenden Beispiel sieht man die Ausgabe des Zustands `WRONG_CODE`. Bei jedem `safe_process` wird über
-`hal_lcd_printf` die Ausgabe "WRONG CODE" gemacht. Das Leerzeichen hinter "WRONG" ist beabsichtigt, da zuvor in dieser
+Im folgenden Beispiel sieht man die Ausgabe des Zustands <code>WRONG_CODE</code>. Bei jedem <code>safe_process</code> wird über
+<code>hal_lcd_printf</code> die Ausgabe "WRONG CODE" gemacht. Das Leerzeichen hinter "WRONG" ist beabsichtigt, da zuvor in dieser
 Zeile "CLOSED" steht und dies um einen Buchstaben länger ist als "WRONG". Das Leerzeichen überschreibt somit den letzten
 Buchstaben von "CLOSED".
 
-Wenn eine Taste gedrückt wurde oder der Timer abgelaufen ist wird das Display mittels `hal_lcd_clear` gelöscht.
+Wenn eine Taste gedrückt wurde oder der Timer abgelaufen ist wird das Display mittels <code>hal_lcd_clear</code> gelöscht.
 
     #!c
     void safe_process(void) {

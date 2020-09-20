@@ -10,10 +10,10 @@ parent: uebersicht.md
 In dieser Übung wollen wir den Zustand einer LED mittels Tastendruck wechseln. Beim Start ist die LED aus, nach einem
 Tastendruck soll die LED ein sein, nach einem weiteren Tastendruck soll die LED wieder aus sein.
 
-# Vorbereitung 
+# Vorbereitung
 
 * [Projektordner]({filename}vhdl_uebung_3.compress){: class="download" } herunterladen und entpacken
-* Projekt `toggle.xise` öffnen
+* Projekt <code>toggle.xise</code> öffnen
 
 # Aufgabe 1 - Erste Implementierung
 

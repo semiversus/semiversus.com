@@ -19,7 +19,7 @@ Einfache programmierbare Logikbausteine realisieren meist eine Grundstruktur, di
 
 ![Realisierung mittels disjunktiver Minimalform]({filename}pla_extended.svg)
 
-Mit dieser Struktur können alle kombinatorischen Schaltungen realisiert werden, die keine kombinatorische Rückkopplung oder Schleife enthält. Man  unterscheidet bei den verschiedenen Bauformen, ob das UND- oder das ODER-Array programmierbar ist. Wird eine vom Anwender programmierbare Verbindung nicht genutzt, wird sichergestellt, dass dieses Signal einen Pegel hat, der die Funktionsweise nicht beeinträchtigt. So wird im UND-Array eine nicht verwendete Leitung auf einem `1`-Pegel gehalten und im ODER-Array auf einem `0`-Pegel.
+Mit dieser Struktur können alle kombinatorischen Schaltungen realisiert werden, die keine kombinatorische Rückkopplung oder Schleife enthält. Man  unterscheidet bei den verschiedenen Bauformen, ob das UND- oder das ODER-Array programmierbar ist. Wird eine vom Anwender programmierbare Verbindung nicht genutzt, wird sichergestellt, dass dieses Signal einen Pegel hat, der die Funktionsweise nicht beeinträchtigt. So wird im UND-Array eine nicht verwendete Leitung auf einem <code>1</code>-Pegel gehalten und im ODER-Array auf einem <code>0</code>-Pegel.
 
 Um die Darstellung zu vereinfachen werden die parallelen Eingänge der UND und ODER Gatter meist zusammengefasst:
 
@@ -39,10 +39,10 @@ An | A2 | A1 | A0 | Dm | D3 | D2 | D1 | D0
  ... | ... | ... | ... | ... | ... | ... | ... | ...
 1 | 1 | 1 | 1 | *0* | *0* | *1* | *0* | *1*
 
-Ein ROM Baustein entspricht der vorgestellten kombinatorischen Grundstruktur, wobei der Teil im UND-Array fest verdrahtet ist und nur der Teil des ODER-Arrays vom Benutzer programmierbar ist. Ein Speicher mit `n` Adressbits und `m` Datenbits kann eine Kombinatorik mit `n` Eingängen und `m` Ausgängen realisieren.
+Ein ROM Baustein entspricht der vorgestellten kombinatorischen Grundstruktur, wobei der Teil im UND-Array fest verdrahtet ist und nur der Teil des ODER-Arrays vom Benutzer programmierbar ist. Ein Speicher mit <code>n</code> Adressbits und <code>m</code> Datenbits kann eine Kombinatorik mit <code>n</code> Eingängen und <code>m</code> Ausgängen realisieren.
 
 ## PLA
-Bei einem PLA (Programmable Logic Array) sind sowohl UND- als auch das ODER-Array vom Anwender programmierbar. 
+Bei einem PLA (Programmable Logic Array) sind sowohl UND- als auch das ODER-Array vom Anwender programmierbar.
 
 ## PAL
 PALs (Programmable Array Logic) werden heute nicht mehr eingesetzt. Sie sind aber die Vorstufe zu vielen Entwicklungen, die heute noch in Verwendung sind. Bei PALs ist das UND-Array frei programmierbar, das ODER-Array ist festverdrahtet. PAL Bausteine sind nur einmal programmierbar.

@@ -22,32 +22,32 @@ Die Übungen mit der Megacard werden mittels AVR Studio 5 durchgeführt. Das Ins
       return 0;
     }
 
-Jedes Programm benötigt eine Funktion mit dem Namen `main`. Diese Funktion gibt einen Wert zurück, der den Erfolg der Ausführung anzeigt. Der Wert 0 wird meist als erfolgreiche Ausführung interpretiert, andere Werte können Fehler oder vorzeitige Abbrüche darstellen.
+Jedes Programm benötigt eine Funktion mit dem Namen <code>main</code>. Diese Funktion gibt einen Wert zurück, der den Erfolg der Ausführung anzeigt. Der Wert 0 wird meist als erfolgreiche Ausführung interpretiert, andere Werte können Fehler oder vorzeitige Abbrüche darstellen.
 
-Der Funktion `main` können vom Betriebssystem auch Parameter mitgegeben werden . Bei Microcontroller-Anwendungen ist dies üblicherweise nicht der Fall.
+Der Funktion <code>main</code> können vom Betriebssystem auch Parameter mitgegeben werden . Bei Microcontroller-Anwendungen ist dies üblicherweise nicht der Fall.
 
-Die Funktion `printf` wird verwendet um Ausgaben auf die `Standardausgabe` zu machen. Die Standardausgabe ist abhängig von der Art des Programmes. Bei Kommandozeilenprogrammen wird die Ausgabe direkt auf der Kommandozeile angezeigt. Bei Microcontrollern ist dies Implementierungsabhängig. Hier kann die serielle Schnittstelle oder ein Display genutzt werden.
+Die Funktion <code>printf</code> wird verwendet um Ausgaben auf die <code>Standardausgabe</code> zu machen. Die Standardausgabe ist abhängig von der Art des Programmes. Bei Kommandozeilenprogrammen wird die Ausgabe direkt auf der Kommandozeile angezeigt. Bei Microcontrollern ist dies Implementierungsabhängig. Hier kann die serielle Schnittstelle oder ein Display genutzt werden.
 
 Um dieses Quellcode nun auszuführen bedarf es mehrerer Schritte, welche grob so zusammengefasst werden können:
 
-1. **Präprozessor**: Anweisungen an den Präprozessor werden *Direktiven* genannt und haben ein '#' vorangstellt. Im obigen Beispiel wird mittels `#include <stdio.h>` die Datei stdio.h in diese Datei hineinkopiert.
+1. **Präprozessor**: Anweisungen an den Präprozessor werden *Direktiven* genannt und haben ein '#' vorangstellt. Im obigen Beispiel wird mittels <code>#include <stdio.h></code> die Datei stdio.h in diese Datei hineinkopiert.
 2. **Kompilierung**: Die Ausgabe des Präprozessors wird nun kompiliert, d.h. der C Quellcode wird in Maschinensprache übersetzt. Das Ergebnis wird Objektcode genannt.
 3. **Linken**: Da jede C Quellcode-Datei einzeln in eine Objektcode-Datei umgewandelt wurde, wird nun durch das Linken eine ausführbare Datei erstellt, die die einzelnen Funktionen und Verweise der Objektcode-Dateien zu einer gemeinsamen Datei zusammenführt.
-4. **Ausführen**: Beim Ausführen ruft das Betriebssystem oder der Startup-Code des Microcontrollers die Funktion `main` auf.
+4. **Ausführen**: Beim Ausführen ruft das Betriebssystem oder der Startup-Code des Microcontrollers die Funktion <code>main</code> auf.
 
 In der Literatur sieht man oft als Ergebnis der Kompilierung eine Assemblerdatei. Der Assembler setzt diese Assemblerdatei dann in Maschinencode um. Die meisten aktuellen Compiler machen diesen Zwischenschritt nur mehr indirekt.
 
 # Präprozessor Direktiven
-## `#include` Direktive
-Mittels `#include` werden Dateien an der Stelle der `#include` Anweisung eingefügt. Die `#include` Anweisung ermöglicht das unter C übliche Modulkonzept, um Teile eines Programmes gekapselt in einem Modul zu verwalten. Ein Modul besteht dabei aus einer "`.c`" Datei (*Source*), die die Implementierung enthält und einer dazugehörigen "`.h`" Datei (*Header*), die die Funktionen und Variablen definiert, die das Modul exportiert, d.h. an andere Programmteile zur Verfügung stellt.
+## <code>#include</code> Direktive
+Mittels <code>#include</code> werden Dateien an der Stelle der <code>#include</code> Anweisung eingefügt. Die <code>#include</code> Anweisung ermöglicht das unter C übliche Modulkonzept, um Teile eines Programmes gekapselt in einem Modul zu verwalten. Ein Modul besteht dabei aus einer "<code>.c</code>" Datei (*Source*), die die Implementierung enthält und einer dazugehörigen "<code>.h</code>" Datei (*Header*), die die Funktionen und Variablen definiert, die das Modul exportiert, d.h. an andere Programmteile zur Verfügung stellt.
 
-## `#define` Direktive
-`#define` hat verschiedene Anwendungen. Es wird verwendet um *Symbole*, *Konstanten* und *Makros* zu definieren.
+## <code>#define</code> Direktive
+<code>#define</code> hat verschiedene Anwendungen. Es wird verwendet um *Symbole*, *Konstanten* und *Makros* zu definieren.
 
-Die Unterscheidung, ob man auf eine Lösung mittels `#define` Direktive zurückgreift oder es mittels C Konstrukten außerhalb des Präprozessors löst, ist nicht einfach zu beantworten und erst mit der Erfahrung sieht man sinnvolle Einsatzmöglichkeiten.
+Die Unterscheidung, ob man auf eine Lösung mittels <code>#define</code> Direktive zurückgreift oder es mittels C Konstrukten außerhalb des Präprozessors löst, ist nicht einfach zu beantworten und erst mit der Erfahrung sieht man sinnvolle Einsatzmöglichkeiten.
 
 ### Symbol
-Ein Symbol kann definiert werden um es für eine bedingte Kompilierung zu nutzen. Dazu werden die Direktiven `#ifdef`, `#ifndef`, `#else` und `#endif` verwendet.
+Ein Symbol kann definiert werden um es für eine bedingte Kompilierung zu nutzen. Dazu werden die Direktiven <code>#ifdef</code>, <code>#ifndef</code>, <code>#else</code> und <code>#endif</code> verwendet.
 
     #!c
     #define DEBUG
@@ -68,7 +68,7 @@ Durch die Definition einer Konstante wird einem *Bezeichner* eine *Konstante* zu
     float angle=PI;
     printf(MESSAGE);
 
-Konstanten können auch ohne Präprozessor mittels `const` erzeugt werden.
+Konstanten können auch ohne Präprozessor mittels <code>const</code> erzeugt werden.
 
 ### Makro
 Ein Makro ist eine Ersetzung mittels einer Funktion und deren Argumente.
@@ -77,9 +77,9 @@ Ein Makro ist eine Ersetzung mittels einer Funktion und deren Argumente.
     #define MEAN (a,b) ( (a+b)/2 )
     printf("Der Durchschnitt von 5 und 11 ist %d.", MEAN(5,11) );
 
-Das Makro `MEAN` ist unabhängig vom Datentyp, da es sich um eine reine Textersetzung handelt. Dieses Makro kann auch mit einer C Funktion implementiert werden. Der Unterschied ist das Laufzeitverhalten, da ein Funktionsaufruf zusätzlich Zeit benötigt. Trotzdem ist die Verwendung von Makros nur für Programmierer mit Praxiserfahrung empfehlenswert.
+Das Makro <code>MEAN</code> ist unabhängig vom Datentyp, da es sich um eine reine Textersetzung handelt. Dieses Makro kann auch mit einer C Funktion implementiert werden. Der Unterschied ist das Laufzeitverhalten, da ein Funktionsaufruf zusätzlich Zeit benötigt. Trotzdem ist die Verwendung von Makros nur für Programmierer mit Praxiserfahrung empfehlenswert.
 
-Ersetzung mittels C Funktion (mittels `int` Datentypen):
+Ersetzung mittels C Funktion (mittels <code>int</code> Datentypen):
 
     #!c
     int mean(int a, int b) {
@@ -92,14 +92,14 @@ Um innerhalb eines Programmes mit Variablen arbeiten zu können, müssen diese *
 ## Ganzzahlen
 Um Ganzzahlen (Zahlen ohne Nachkomma) zu definieren, gibt es in C folgende Datentypen:
 
-* `char`: üblicherweise 1 Byte
-* `short int` bzw. `short`: kleinerer Zahlenbereich als `int`
-* `int`: meist 16 oder 32 Bit
-* `long int` bzw. `long`: größerer Zahlenbereich als `int`
+* <code>char</code>: üblicherweise 1 Byte
+* <code>short int</code> bzw. <code>short</code>: kleinerer Zahlenbereich als <code>int</code>
+* <code>int</code>: meist 16 oder 32 Bit
+* <code>long int</code> bzw. <code>long</code>: größerer Zahlenbereich als <code>int</code>
 
-Eine Variable kann vorzeichenbehaftet sein oder vorzeichenlos sein. Um eine vorzeichenlose Variable zu definieren muss `unsigned` vorgestellt werden (z.B. `unsigned int`). Durch `signed` kann eine Variable explizit vorzeichenbehaftet definiert werden. Wenn eine Variable nicht explizit mittels `signed` oder `unsigned` ausgezeichnet wird, ist die Variable vorzeichenbehaftet.
+Eine Variable kann vorzeichenbehaftet sein oder vorzeichenlos sein. Um eine vorzeichenlose Variable zu definieren muss <code>unsigned</code> vorgestellt werden (z.B. <code>unsigned int</code>). Durch <code>signed</code> kann eine Variable explizit vorzeichenbehaftet definiert werden. Wenn eine Variable nicht explizit mittels <code>signed</code> oder <code>unsigned</code> ausgezeichnet wird, ist die Variable vorzeichenbehaftet.
 
-Die Größe des Zahlenbereichs der einzelnen Datentypen ist Plattform- und Compilerabhängig. So kann ein `int` 16 Bit (0-65535) oder 32 Bit (0-4294967295) groß sein. Die tatsächliche Größe eines Typs ist in der Datei `limits.h` abgelegt.
+Die Größe des Zahlenbereichs der einzelnen Datentypen ist Plattform- und Compilerabhängig. So kann ein <code>int</code> 16 Bit (0-65535) oder 32 Bit (0-4294967295) groß sein. Die tatsächliche Größe eines Typs ist in der Datei <code>limits.h</code> abgelegt.
 
 Beispiele:
 
@@ -115,17 +115,17 @@ Beispiele:
     // maximum wird mit 10 initialisiert (minimum ist uninitialisiert).
 
 ### Plattformunabhängigkeit
-Steht ein *C99* kompatibler C-Compiler zur Verfügung (gilt mittlerweile für den Großteil der Compiler) hilft die Verwendung der Datei `stdint.h`. Mittels `#include <stdint.h>` werden neue Datentypen definiert, die eine bestimmte Größe haben.
+Steht ein *C99* kompatibler C-Compiler zur Verfügung (gilt mittlerweile für den Großteil der Compiler) hilft die Verwendung der Datei <code>stdint.h</code>. Mittels <code>#include <stdint.h></code> werden neue Datentypen definiert, die eine bestimmte Größe haben.
 
 Dadurch werden unter anderem folgende Datentypen zur Verfügung gestellt:
 
-* `uint8_t`, `uint16_t`, `uint32_t` und `uint64_t`: Vorzeichenlose Datentypen mit 8, 16, 32 bzw. 64 Bit
-* `int8_t`, `int16_t`, `int32_t` und `int64_t`: Vorzeichenbehaftete Datentypen mit 8, 16, 32 bzw. 64 Bit
+* <code>uint8_t</code>, <code>uint16_t</code>, <code>uint32_t</code> und <code>uint64_t</code>: Vorzeichenlose Datentypen mit 8, 16, 32 bzw. 64 Bit
+* <code>int8_t</code>, <code>int16_t</code>, <code>int32_t</code> und <code>int64_t</code>: Vorzeichenbehaftete Datentypen mit 8, 16, 32 bzw. 64 Bit
 
 ## Fließkommazahlen
 Fließkommazahlen sind Zahlen mit Nachkommastellen bzw. sehr große Zahlen. Intern wird die Mantisse und der Exponent getrennt gespeichert. C stellt dafür folgende zwei Datentypen zur Verfügung:
 
-* `float`: Zahlen mit einfacher Genauigkeit (32Bit)
-* `double`: Zahlen mit doppelter Genauigkeit (64Bit)
+* <code>float</code>: Zahlen mit einfacher Genauigkeit (32Bit)
+* <code>double</code>: Zahlen mit doppelter Genauigkeit (64Bit)
 
 Fließkommazahlen sind immer vorzeichenbehaftet. Fließkommazahlen können auch die Sonderwerte *positiv unendlich*, *negativ unendlich* und *NaN* (*Not a Number*) annehmen.

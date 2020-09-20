@@ -5,7 +5,7 @@ parent: uebersicht.md
     Prinzipiell lässt sich diese Information auch auf andere Mikrocontroller der AVR Serie übertragen, es empfiehlt sich
     aber die Informationen mit dem entsprechenden Datenblatt zu vergleichen!
 
-# Allgemeines 
+# Allgemeines
 *Interrupts* ermöglichen eine Unterbrechung des "normalen" Programmablaufs, um auf Änderungen zu reagieren.
 
 ## Polling
@@ -37,37 +37,37 @@ Konfiguration des Weckers ist gut vergleichbar mit der Konfiguration von Interru
 
 In einem Mikrocontroller gibt es fest vorgegebene *Quellen* für Interrupts. Der ATMega16 unterstützt etwa folgende Interrupts:
 
-* `INT0_vect` - Externer Interrupt 0
-* `INT1_vect` - Externer Interrupt 1
-* `INT2_vect` - Externer Interrupt 2
-* `TIMER2_COMP_vect` - Timer/Counter 2 Compare Match
-* `TIMER2_OVF_vect` - Timer/Counter 2 Overflow
-* `TIMER1_CAPT_vect` - Timer/Counter 1 Capture Event
-* `TIMER1_COMPA_vect` - Timer/Counter 1 Compare Match A
-* `TIMER1_COMPB_vect` - Timer/Counter 1 Compare Match B
-* `TIMER1_OVF_vect` - Timer/Counter 1 Overflow
-* `TIMER0_COMP_vect` - Timer/Counter 0 Compare Match
-* `TIMER0_OVF_vect` - Timer/Counter 0 Overflow
-* `SPI_STC_vect` - Serial Transfer Complete
-* `USART_RXC_vect` - USART Receive Complete
-* `USART_UDRE_vect` - USART Data Register Empty
-* `USART_TXC_vect` - USART Transmit Complete
-* `ADC_vect` - ADC Conversion Complete
-* `EE_RDY_vect` - EEPROM Ready
-* `ANA_COMP_vect` - Analog Comparator
-* `TWI_vect` - Two-Wire Interface (bzw. I²C) 
-* `SPM_RDY_vect` - Store Program Memory Ready
+* <code>INT0_vect</code> - Externer Interrupt 0
+* <code>INT1_vect</code> - Externer Interrupt 1
+* <code>INT2_vect</code> - Externer Interrupt 2
+* <code>TIMER2_COMP_vect</code> - Timer/Counter 2 Compare Match
+* <code>TIMER2_OVF_vect</code> - Timer/Counter 2 Overflow
+* <code>TIMER1_CAPT_vect</code> - Timer/Counter 1 Capture Event
+* <code>TIMER1_COMPA_vect</code> - Timer/Counter 1 Compare Match A
+* <code>TIMER1_COMPB_vect</code> - Timer/Counter 1 Compare Match B
+* <code>TIMER1_OVF_vect</code> - Timer/Counter 1 Overflow
+* <code>TIMER0_COMP_vect</code> - Timer/Counter 0 Compare Match
+* <code>TIMER0_OVF_vect</code> - Timer/Counter 0 Overflow
+* <code>SPI_STC_vect</code> - Serial Transfer Complete
+* <code>USART_RXC_vect</code> - USART Receive Complete
+* <code>USART_UDRE_vect</code> - USART Data Register Empty
+* <code>USART_TXC_vect</code> - USART Transmit Complete
+* <code>ADC_vect</code> - ADC Conversion Complete
+* <code>EE_RDY_vect</code> - EEPROM Ready
+* <code>ANA_COMP_vect</code> - Analog Comparator
+* <code>TWI_vect</code> - Two-Wire Interface (bzw. I²C)
+* <code>SPM_RDY_vect</code> - Store Program Memory Ready
 
 ### Interrupt Service Routinen
 Eine *Interrupt Service Routine* ist der Programmcode der ausgeführt wird, wenn der Interrupt ausgelöst wurde. Diese
-wird im Sourcecode über das `ISR()` Makro definiert. Um auf dieses Makro und andere Interruptfunktionalitäten
-zuzugreifen, muss `avr/interrupt.h` inkludiert werden.
+wird im Sourcecode über das <code>ISR()</code> Makro definiert. Um auf dieses Makro und andere Interruptfunktionalitäten
+zuzugreifen, muss <code>avr/interrupt.h</code> inkludiert werden.
 
 Beispiel:
 
     #!c
     #include <avr/interrupt.h>
-    
+
     ISR(ADC_vect) { // Interrupt Service Routine für den Analog/Digitalwandler
       // Dieser Code wird beim Auslösen des Interrupts ausgeführt
       // ...
@@ -78,7 +78,7 @@ Damit ein Interrupt zur Ausführung kommt, werden folgende Punkte benötigt:
 
 * Implementierung der *Interrupt Service Routine*
 * Konfiguration der entsprechenden Register, um einen Interrupt für die entsprechende Komponente zu ermöglichen
-* Aufruf von `sei()` im Hauptprogramm, um die *globale Interruptfreigabe* zu aktivieren
+* Aufruf von <code>sei()</code> im Hauptprogramm, um die *globale Interruptfreigabe* zu aktivieren
 * Die Komponente kommt in einen Zustand, der den Interrupt auslöst (meist über ein *Interrupt Flag*)
 
 Als Beispiel für einen einfachen Interrupt wird auf [externe Interrupts]({filename}avr_externer_interrupt.md) verwiesen.
@@ -87,10 +87,10 @@ Als Beispiel für einen einfachen Interrupt wird auf [externe Interrupts]({filen
     Wird eine Komponente so konfiguriert, dass sie einen Interrupt auslösen kann, die entsprechende Interruptroutine aber
     nicht vorhanden ist kommt es zu einem unerwarteten Ereignis: Der Mikrocontroller führt einen Neustart (Reset) durch.
 
-Interrupts, die keine eigene Service Routine haben führen die Serviceroutine `BADISR_vect` aus. Diese Routine führt einen
+Interrupts, die keine eigene Service Routine haben führen die Serviceroutine <code>BADISR_vect</code> aus. Diese Routine führt einen
 Reset aus.
 
-Es ist möglich eine eigene Funktion für `BADISR_vect` zu definieren. Für große Projekte empfiehlt sich dies auch, da es
+Es ist möglich eine eigene Funktion für <code>BADISR_vect</code> zu definieren. Für große Projekte empfiehlt sich dies auch, da es
 schnell bei der Fehlersuche passieren kann, dass eine Service Routine gelöscht oder fälschlicherweise ein Interrupt
 freigegeben wird. Die Implementierung ist wie folgt möglich:
 

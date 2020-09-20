@@ -10,12 +10,12 @@ parent: uebersicht.md
 In dieser Übung wollen wir eine LED blinken lassen. Dazu nutzen wir den 50Mhz Takt, den das BASYS2 Board liefert.
 
 
-# Vorbereitung 
+# Vorbereitung
 
 * [Projektordner]({filename}vhdl_uebung_2.compress){: class="download" } herunterladen und entpacken
-* Projekt `blink.xise` öffnen
+* Projekt <code>blink.xise</code> öffnen
 
-# Top Level `blink.vhd`
+# Top Level <code>blink.vhd</code>
 
     #!vhdl
     library ieee;
@@ -31,17 +31,17 @@ In dieser Übung wollen wir eine LED blinken lassen. Dazu nutzen wir den 50Mhz T
 
     architecture behave of blink is
     begin
-      led_o <= '1'; 
+      led_o <= '1';
     end architecture;
 
 # Aufgabe 1 - Erstellen der UCF Datei
-* Der Takt `clk` befindet sich am Pin `B8`.
-* Die LED (`led_o`) ist am Pin `M5` angeschlossen.
-* Erweitere dazu die Datei `blink.ucf` (siehe [Übung 1 - UCF Datei]({filename}uebung1.md#pinout) als Beispiel).
+* Der Takt <code>clk</code> befindet sich am Pin <code>B8</code>.
+* Die LED (<code>led_o</code>) ist am Pin <code>M5</code> angeschlossen.
+* Erweitere dazu die Datei <code>blink.ucf</code> (siehe [Übung 1 - UCF Datei]({filename}uebung1.md#pinout) als Beispiel).
 
 # Aufgabe 2 - Implementierung des Zählers
 Um nun eine LED blinken zu lassen benötigen wir einen Zähler. Wenn 50 Millionen Taktzyklen gezählt sind ist eine Sekunde
-vergangen. Dazu ändern wir die `architecture` wie folgt ab:
+vergangen. Dazu ändern wir die <code>architecture</code> wie folgt ab:
 
     #!vhdl
     architecture behave of blink is
@@ -70,7 +70,7 @@ Synthetisiere das Design und lade es auf das Board. Kontrolliere die korrekte Fu
 Es gibt im Moment keine Vorgaben an die Taktfrequenz. Um eine solche Vorgabe zu machen, müssen wir einen
 *Timing Constraint* setzen.
 
-Wir erweitern dazu die Datei `blink.ucf` um folgende zwei Zeilen, um einen Takt von 50 Mhz zu spezifizieren.
+Wir erweitern dazu die Datei <code>blink.ucf</code> um folgende zwei Zeilen, um einen Takt von 50 Mhz zu spezifizieren.
 
     #!bash
     NET "clk" TNM_NET = CLK;
@@ -82,7 +82,7 @@ Nachdem wir nun das Projekt synthetisieren betrachten wir die *Design Summary*:
 
 # Aufgabe 5 - Auswählbare Blinkfrequenz
 
-* Erweiterung von `blink.ucf` um folgende Zeile: `NET "switch_i" LOC="P11";`
+* Erweiterung von <code>blink.ucf</code> um folgende Zeile: <code>NET "switch_i" LOC="P11";</code>
 
 Hinzufügen eines Eingangs in der Entity
 
@@ -95,4 +95,4 @@ Hinzufügen eines Eingangs in der Entity
       );
     end blink;
 
-Nun soll die Blinkperiode bei `switch_i` gleich `0` eine Sekunde sein, bei `1` eine Zehntelsekunde.
+Nun soll die Blinkperiode bei <code>switch_i</code> gleich <code>0</code> eine Sekunde sein, bei <code>1</code> eine Zehntelsekunde.

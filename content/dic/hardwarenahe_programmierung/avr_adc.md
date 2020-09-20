@@ -41,17 +41,17 @@ Als Referenz stehen drei Quellen zur Verfügung:
 * Eine externe Referenzspannung am Pin AREF
 
 # Register
-## Register `ADMUX`
+## Register <code>ADMUX</code>
 
 ![Register ADMUX]({filename}avr_adc_admux.svg)
 
-Das Register `ADMUX` steuert die Auswahl der Referenzspannung, der Anordnung der Datenbits und die Auswahl des zu messenden Kanals.
+Das Register <code>ADMUX</code> steuert die Auswahl der Referenzspannung, der Anordnung der Datenbits und die Auswahl des zu messenden Kanals.
 
 Wird als Referenzspannung die interne 2.56 Volt Referenz oder die Betriebsspannung AVCC gewählt empfiehlt es sich, an den Pin AREF einen Kondensator zu schalten, um Rauschen zu minimieren und die Referenzspannung möglichst stabil zu halten. In diesen zwei Fällen sollte auf keinen Fall eine externe Spannung am Pin AREF anliegen!
 
 Die Anordnung der Datenbits mittels <samp>ADLAR</samp> kann je nach Anwendung eingestellt werden. Wird der 10 Bit Wert verwendet, kann beim <samp>avr-gcc</samp> Compiler mittels <samp>ADC</samp> auf die Kombination von <samp>ADCH</samp> und <samp>ADCL</samp> zugegriffen werden. Wenn einzeln auf die Register zugegriffen wird muss <samp>ADCL</samp> vor <samp>ADCH</samp> ausgelsen werden.
 
-## Register `ADCSRA`
+## Register <code>ADCSRA</code>
 
 ![Register ADCSRA]({filename}avr_adc_adcsra.svg)
 
@@ -61,7 +61,7 @@ Schaltet den ADC ein.
 
 ### <samp>ADSC</samp> - ADC Start Conversion
 
-Um eine Wandlung zu starten wird dieses Bit mit `1` beschrieben. Beim Lesen liefert dieses Bit eine `1` solange eine Wandlung läuft.
+Um eine Wandlung zu starten wird dieses Bit mit <code>1</code> beschrieben. Beim Lesen liefert dieses Bit eine <code>1</code> solange eine Wandlung läuft.
 
 ### <samp>ADATE</samp> - ADC Auto Trigger Enable
 
@@ -69,7 +69,7 @@ Es gibt zahlreiche Möglichkeiten, eine Wandlung durch Trigger starten zu lassen
 
 ### <samp>ADIF</samp> - ADC Interrupt Flag
 
-Wenn eine Wandlung beendet wurde wird dieses Bit auf `1` gesetzt. Eine eventuell aktivierte Interruptroutine des ADCs setzt dieses Bit wieder auf `0`, sobald die entsprechende Interruptroutine aufgerufen wurde. Wird ohne Interrupts gearbeitet kann mittels schreiben einer `1` auf dieses Bit das Bit zurückgesetzt werden.
+Wenn eine Wandlung beendet wurde wird dieses Bit auf <code>1</code> gesetzt. Eine eventuell aktivierte Interruptroutine des ADCs setzt dieses Bit wieder auf <code>0</code>, sobald die entsprechende Interruptroutine aufgerufen wurde. Wird ohne Interrupts gearbeitet kann mittels schreiben einer <code>1</code> auf dieses Bit das Bit zurückgesetzt werden.
 
 ### <samp>ADIE</samp> -ADC Interrupt Enable
 
@@ -118,7 +118,7 @@ Im folgenden Beispiel wird an Kanal 5 (Port A5) die Spannung gemessen. Als Refer
     }
 
 ## Mit Interrupt
-Bei jedem Aufruf der Interruptservice Routine `ADC_vect` wird das Ergebnis der AD Wandlung ausgewertet (mittels `ADC`) und
+Bei jedem Aufruf der Interruptservice Routine <code>ADC_vect</code> wird das Ergebnis der AD Wandlung ausgewertet (mittels <code>ADC</code>) und
 eine neue Wandlung gestartet.
 
     #!c
@@ -135,7 +135,7 @@ eine neue Wandlung gestartet.
       PORTC = 0x00;   // LEDs loeschen
 
       ADMUX = 0x05;   // Eingang 5 festlegen
-      ADCSRA = (1<<ADEN) | (1<<ADSC) | (1<<ADIE) | (1<<ADPS2) | (1<<ADPS1); // ADC enable, 
+      ADCSRA = (1<<ADEN) | (1<<ADSC) | (1<<ADIE) | (1<<ADPS2) | (1<<ADPS1); // ADC enable,
                                         //Wandlung starten, Interrupt enable, Teiler auf 64
       sei();
 

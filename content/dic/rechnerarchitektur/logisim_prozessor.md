@@ -102,13 +102,13 @@ Das im Befehlsspeicher enthaltene Programm dekodiert sich damit folgenderweise:
 Adresse | Wert | Assembler | Bedeutung
 -|-|-|-
 0x00 | 0x19 | ld IX, 0x05 | Lädt IX mit der Konstante 0x05
-0x01 | 0x05 | ` ` | Konstante gehört zum vorherigen Befehl
+0x01 | 0x05 | <code> </code> | Konstante gehört zum vorherigen Befehl
 0x02 | 0x01 | ld A, (IX) | Lädt den Wert von der Adresse IX
 0x03 | 0x0a | add A, 0x03 | Addiert zum Register A die Konstante 0x03
-0x04 | 0x03 | ` ` | Konstante gehört zum vorherigen Befehl
+0x04 | 0x03 | <code> </code> | Konstante gehört zum vorherigen Befehl
 0x05 | 0x20 | st (IX), A | Speicher Register A an der Adress IX
 0x06 | 0x48 | jmp 0x03 | Springe zur Adresse 0x03
-0x07 | 0x03 | ` ` | Konstante gehört zum vorherigen Befehl
+0x07 | 0x03 | <code> </code> | Konstante gehört zum vorherigen Befehl
 
 # Einschränkungen
-Unser Prozessorbeispiel beinhaltet weit nicht alle Funktionen eines mächtigeren Prozessors. So fehlt etwa ein Stackpointer oder die Möglichkeit, das *PC* Register zu sichern. Dies wäre notwendig, um aus Subroutinen zurückzukehren. 
+Unser Prozessorbeispiel beinhaltet weit nicht alle Funktionen eines mächtigeren Prozessors. So fehlt etwa ein Stackpointer oder die Möglichkeit, das *PC* Register zu sichern. Dies wäre notwendig, um aus Subroutinen zurückzukehren.

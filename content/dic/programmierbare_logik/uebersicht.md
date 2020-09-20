@@ -10,7 +10,7 @@ toc: False
     * [Signaltypen]({filename}signaltypen.md)
     * [Operatoren]({filename}operatoren.md)
     * [Nebenläufigkeit]({filename}nebenlaeufigkeit.md)
-    * [`process` Statment]({filename}process.md)
+    * [<code>process</code> Statment]({filename}process.md)
 * VHDL Beschreibung für Grundkomponenten
     * [Register]({filename}register.md)
     * [Synchronisierung asynchroner Signale]({filename}synchronisierung.md)

@@ -14,23 +14,23 @@ parent: uebersicht.md
 Es ist eine einfache Einschaltverzögerung zu entwerfen. Diese Einschaltverzögerung steuert eine LED an und wird mittels zwei Tasten
 bedient:
 
-* `button_toggle` - Schaltet das Licht ein bzw. aus
-* `button_on` - Schaltet das Licht in 3 Sekunden ein
+* <code>button_toggle</code> - Schaltet das Licht ein bzw. aus
+* <code>button_on</code> - Schaltet das Licht in 3 Sekunden ein
 
-## Entwurf der Zustandsmaschine 
+## Entwurf der Zustandsmaschine
 <span class="badge">5 Punkte</span>
 
 Zur Realisierung wird eine Zustandsmaschine genutzt.
 
 * Bearbeite die Datei <samp>led_delay_fsm.vhd</samp>
-* Definiere die drei Zuständen `OFF`, `LIGHT` und `DELAY`
-* Der Startzustand ist `OFF`
-* Der Eingang `toggle_i` wechselt von `LIGHT` nach `OFF` bzw. von `OFF` oder `DELAY` nach `LIGHT`
-* Der Eingang `on_i` wechselt von `OFF` nach `DELAY`, bei den anderen Zuständen hat er keine Auswirkung
-* Der Eingang `timeout_i` bewirkt ein Wechsel von `DELAY` nach `LIGHT`, bei den anderen Zuständen hat er keine Auswirkung
-* Der Ausgang `led_o` ist auf `'1'`, wenn die Zustandmaschine im Zustand `LIGHT` ist
-* Der Ausgang `timer_enable_o` ist im Zustand `DELAY` auf `'1'`, ansonsten `'0'`
-* Der Ausgang `timer_clear_o` ist im Zustand `OFF` auf `'1'`, ansonsten `'0'`
+* Definiere die drei Zuständen <code>OFF</code>, <code>LIGHT</code> und <code>DELAY</code>
+* Der Startzustand ist <code>OFF</code>
+* Der Eingang <code>toggle_i</code> wechselt von <code>LIGHT</code> nach <code>OFF</code> bzw. von <code>OFF</code> oder <code>DELAY</code> nach <code>LIGHT</code>
+* Der Eingang <code>on_i</code> wechselt von <code>OFF</code> nach <code>DELAY</code>, bei den anderen Zuständen hat er keine Auswirkung
+* Der Eingang <code>timeout_i</code> bewirkt ein Wechsel von <code>DELAY</code> nach <code>LIGHT</code>, bei den anderen Zuständen hat er keine Auswirkung
+* Der Ausgang <code>led_o</code> ist auf <code>'1'</code>, wenn die Zustandmaschine im Zustand <code>LIGHT</code> ist
+* Der Ausgang <code>timer_enable_o</code> ist im Zustand <code>DELAY</code> auf <code>'1'</code>, ansonsten <code>'0'</code>
+* Der Ausgang <code>timer_clear_o</code> ist im Zustand <code>OFF</code> auf <code>'1'</code>, ansonsten <code>'0'</code>
 
 ![FSM für Lichtsteuerung]({filename}test2_led_delay_fsm.svg.tex)
 
@@ -44,27 +44,27 @@ Zur Realisierung wird eine Zustandsmaschine genutzt.
 Zur Verfügung stehen die Komponenten <samp>counter</samp>, <samp>button_dectect</samp> und <samp>led_delay_fsm</samp>. Diese
 Komponenten werden genutzt, um im Top Level <samp>led_delay.vhd</samp> die gewünschte Funktionalität zu realisieren.
 
-* Die Instanz der Komponente <samp>button_detect</samp> mit dem Namen `toggle_detect_component` ist bereits erstellt
-    * `button_i` ist mit dem Eingang `button_toggle_i` verbunden
-    * `detect_o` ist mit dem (bereits definiertem) Signal `toggle_detect` verbunden
-* Erstelle eine Instanz der Komponente <samp>button_detect</samp> mit dem Namen `on_detect_component` analog zu `toggle_detect_component`
-    * `button_i` ist mit dem Eingang `button_on_i` verbunden
-    * `detect_o` ist mit dem (bereits definiertem) Signal `on_detect` verbunden
-* Erstelle eine Instanz der Komponente <samp>led_delay_fsm</samp> mit dem Namen `led_delay_fsm_component`
-    * `toggle_i` ist mit dem Signal `toggle_detect` verbunden
-    * `on_i` ist mit dem Signal `on_detect` verbunden
-    * `timeout_i` ist mit dem (bereits definiertem) Signal `timeout` verbunden
-    * `led_o` ist mit dem Ausgang `led_o` verbunden
-    * `timer_enable_o` ist mit dem (bereits definiertem) Signal `timer_enable` verbunden
-    * `timer_clear_o` ist mit dem (bereits definiertem) Signal `timer_clear` verbunden
-* Erstelle eine Instanz der Komponente <samp>counter</samp> mit dem Namen `timeout_component`
-    * `WIDTH` in der *generic map* wird auf 28 gestellt (28 Bit)
-    * `MAXIMUM` wird auf `CLK_TIMEOUT_DIVIDER` gestellt (ist im *generic* Teil des Top Levels bereits definiert)
-    * `enable_i` ist mit dem Signal `timer_enable` verbunden
-    * `reset_i` ist mit dem Signal `timer_clear` verbunden
-    * `value_o` ist nicht verbunden (`open`)
-    * `overflow_o` ist mit dem Signal `timeout` verbunden
-* Jede Komponente hat einen Takteingang `clk`, welcher mit dem globalen `clk` verbunden wird
+* Die Instanz der Komponente <samp>button_detect</samp> mit dem Namen <code>toggle_detect_component</code> ist bereits erstellt
+    * <code>button_i</code> ist mit dem Eingang <code>button_toggle_i</code> verbunden
+    * <code>detect_o</code> ist mit dem (bereits definiertem) Signal <code>toggle_detect</code> verbunden
+* Erstelle eine Instanz der Komponente <samp>button_detect</samp> mit dem Namen <code>on_detect_component</code> analog zu <code>toggle_detect_component</code>
+    * <code>button_i</code> ist mit dem Eingang <code>button_on_i</code> verbunden
+    * <code>detect_o</code> ist mit dem (bereits definiertem) Signal <code>on_detect</code> verbunden
+* Erstelle eine Instanz der Komponente <samp>led_delay_fsm</samp> mit dem Namen <code>led_delay_fsm_component</code>
+    * <code>toggle_i</code> ist mit dem Signal <code>toggle_detect</code> verbunden
+    * <code>on_i</code> ist mit dem Signal <code>on_detect</code> verbunden
+    * <code>timeout_i</code> ist mit dem (bereits definiertem) Signal <code>timeout</code> verbunden
+    * <code>led_o</code> ist mit dem Ausgang <code>led_o</code> verbunden
+    * <code>timer_enable_o</code> ist mit dem (bereits definiertem) Signal <code>timer_enable</code> verbunden
+    * <code>timer_clear_o</code> ist mit dem (bereits definiertem) Signal <code>timer_clear</code> verbunden
+* Erstelle eine Instanz der Komponente <samp>counter</samp> mit dem Namen <code>timeout_component</code>
+    * <code>WIDTH</code> in der *generic map* wird auf 28 gestellt (28 Bit)
+    * <code>MAXIMUM</code> wird auf <code>CLK_TIMEOUT_DIVIDER</code> gestellt (ist im *generic* Teil des Top Levels bereits definiert)
+    * <code>enable_i</code> ist mit dem Signal <code>timer_enable</code> verbunden
+    * <code>reset_i</code> ist mit dem Signal <code>timer_clear</code> verbunden
+    * <code>value_o</code> ist nicht verbunden (<code>open</code>)
+    * <code>overflow_o</code> ist mit dem Signal <code>timeout</code> verbunden
+* Jede Komponente hat einen Takteingang <code>clk</code>, welcher mit dem globalen <code>clk</code> verbunden wird
 
 !!! panel-info "Testbench"
     Teste die Implementierung mittels der Testbench <samp>led_delay_tb.vhd</samp>.
@@ -72,11 +72,11 @@ Komponenten werden genutzt, um im Top Level <samp>led_delay.vhd</samp> die gewü
 ## Erweiterung der *Constraints* Datei
 <span class="badge">2 Punkte</span>
 
-In der Datei <samp>led_delay.ucf</samp> ist nur das Signal `clk` definiert. Erweitere die Datei um folgende Zuordnungen
+In der Datei <samp>led_delay.ucf</samp> ist nur das Signal <code>clk</code> definiert. Erweitere die Datei um folgende Zuordnungen
 
-* `button_toggle_i` wird durch den Taster <samp>BTN0</samp> angesteuert
-* `button_on_i` wird durch den Taster <samp>BTN1</samp> angesteuert
-* `led_o` ist die LED <samp>LD0</samp>
+* <code>button_toggle_i</code> wird durch den Taster <samp>BTN0</samp> angesteuert
+* <code>button_on_i</code> wird durch den Taster <samp>BTN1</samp> angesteuert
+* <code>led_o</code> ist die LED <samp>LD0</samp>
 
 <figure><img src="{filename}../basys2_pinout.svg"><figcaption>Pinout des BASYS2 Boards(Bild: <a href="http://www.digilentinc.com/Products/Detail.cfm?NavPath=2,400,790&Prod=BASYS2">Digilent Inc. BASYS2 Manual</a>)</figcaption></figure>
 
@@ -97,7 +97,7 @@ durchwechselt.
 ## Decoder testen
 <span class="badge">5 Punkte</span>
 
-Der Decoder wandelt den Eingang `value_i` (3 Bit) in die entsprechende 7 LEDs Darstellung `leds_o` (7 Bit) um. Dabei
+Der Decoder wandelt den Eingang <code>value_i</code> (3 Bit) in die entsprechende 7 LEDs Darstellung <code>leds_o</code> (7 Bit) um. Dabei
 wird folgende kodierung verwendet:
 
 LED6|LED5|LED4|LED3|LED2|LED1|LED0
@@ -109,26 +109,26 @@ Aus|**Ein**|Aus|**Ein**|Aus|**Ein**|Aus
 **Ein**|**Ein**|Aus|**Ein**|Aus|**Ein**|**Ein**
 **Ein**|**Ein**|**Ein**|Aus|**Ein**|**Ein**|**Ein**
 
-* Die erste Zeile entspricht der Darstellung bei `value_i` gleich `"000"`
-* *Ein* wird mittels `'1'` kodiert, *Aus* mittels `'0'`
+* Die erste Zeile entspricht der Darstellung bei <code>value_i</code> gleich <code>"000"</code>
+* *Ein* wird mittels <code>'1'</code> kodiert, *Aus* mittels <code>'0'</code>
 * Bei nicht definierten Zustände sollen alle LEDs aus sein
 
 Die Komponente ist in vier Ausführungen (*Architectures*) bereits in der Datei <samp>decoder.vhd</samp> beschrieben. Die
-*Architectures* lauten `behave1`, `behave2`, `behave3` und `behave4`.
+*Architectures* lauten <code>behave1</code>, <code>behave2</code>, <code>behave3</code> und <code>behave4</code>.
 
 Erstelle in der Datei <samp>decoder_tb.vhd</samp> eine Testbench, die herausfindet, welche der vier Ausführungen
 funktioniert (es ist genau eine).
 
-## Komponente `shuffle`
+## Komponente <code>shuffle</code>
 <span class="badge">5 Punkte</span>
 
-Erstelle die Komponente `shuffle` durch Bearbeitung der Datei <samp>shuffle.vhd</samp> nach folgender Skizze:
+Erstelle die Komponente <code>shuffle</code> durch Bearbeitung der Datei <samp>shuffle.vhd</samp> nach folgender Skizze:
 
 ![Shuffle Komponente]({filename}test2_shuffle.jpg)
 
-* Wenn `enable_i` auf `'1'` ist, soll der interne Zähler `counter_reg` bei einer steigenden Taktflanke hinaufzählen
+* Wenn <code>enable_i</code> auf <code>'1'</code> ist, soll der interne Zähler <code>counter_reg</code> bei einer steigenden Taktflanke hinaufzählen
 * Der interne Zähler soll von 0 bis 5 zählen
-* Das Register `result_reg` übernimmt bei einer steigenden Taktflanke den Wert von `counter_reg`, wenn `enable_i` gleich `'0'` ist
+* Das Register <code>result_reg</code> übernimmt bei einer steigenden Taktflanke den Wert von <code>counter_reg</code>, wenn <code>enable_i</code> gleich <code>'0'</code> ist
 
 !!! panel-info "Testbench"
     Teste die Implementierung mittels der Testbench <samp>shuffle_tb.vhd</samp>.

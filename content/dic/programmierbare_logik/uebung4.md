@@ -9,19 +9,19 @@ parent: uebersicht.md
 
 In dieser Übung wird die Unterteilung in mehrere Komponenten gezeigt.
 
-# Vorbereitung 
+# Vorbereitung
 
 * [Projektordner]({filename}vhdl_uebung_4.compress){: class="download" } herunterladen und entpacken
-* Projekt `structural.xise` öffnen
+* Projekt <code>structural.xise</code> öffnen
 
-# Aufgabe 1 - Zeichne eine Schaltung für `display.vhd`
-In der Datei `display.vhd` werden die vier 7-Segment Anzeigen angesteuert. Dazu wird das Display mittels "Multiplex"
+# Aufgabe 1 - Zeichne eine Schaltung für <code>display.vhd</code>
+In der Datei <code>display.vhd</code> werden die vier 7-Segment Anzeigen angesteuert. Dazu wird das Display mittels "Multiplex"
 angesteuert, sprich jeds einzelme 7-Segment Anzeige ist nur abwechselnd nur kurze Zeit aktiv. Durch den schnellen
 Wechsel bekommt das träge Auge des Menschen eine scheinbar "stehende" Anzeige zu sehen.
 
-# Aufgabe 2 - `CLK_DIVIDER`
-`CLK_DIVIDER` ist ein *Generic* mit dem eine Komponente parametrisiert werden kann. Erweitere die Einbindung vom `display`
-in `structural.vhd` wie folgt:
+# Aufgabe 2 - <code>CLK_DIVIDER</code>
+<code>CLK_DIVIDER</code> ist ein *Generic* mit dem eine Komponente parametrisiert werden kann. Erweitere die Einbindung vom <code>display</code>
+in <code>structural.vhd</code> wie folgt:
 
     #!vhdl
     display_component: entity work.display
@@ -38,15 +38,15 @@ in `structural.vhd` wie folgt:
         an_o => an_o
       );
 
-Damit ist die Geschwindigkeit, in der die Anzeigen *gemultiplext* werden parametrisierbar. Was passiert, wenn `CLK_DIVIDER`
+Damit ist die Geschwindigkeit, in der die Anzeigen *gemultiplext* werden parametrisierbar. Was passiert, wenn <code>CLK_DIVIDER</code>
 die Werte 50 oder 1 zugewiesen wird? Was bei den Werten eine Million oder 50 Millionen?
 
 # Aufgabe 3 - Implementierung eines 16 Bit Zählers
-In der Datei `structural.vhd` soll ein 16 Bit Zähler implementiert werden, der mit 100 Hertz zählt.
+In der Datei <code>structural.vhd</code> soll ein 16 Bit Zähler implementiert werden, der mit 100 Hertz zählt.
 
-Nutze dazu die signals `pre_counter_reg` als Vorteiler und `counter_reg` als 16 Bit Zähler. Die beiden Zähler können
-mittels zwei `process` Anweisungen implementiert werden oder auch beide gemeinsam in einer `process` Anweisung. Im
-folgenden Beispiel wird auch die Aufteilung des 16 Bit Zählregisters auf die jeweils 4 Bit Eingänge `digit0_i` bis `digit3_i`
+Nutze dazu die signals <code>pre_counter_reg</code> als Vorteiler und <code>counter_reg</code> als 16 Bit Zähler. Die beiden Zähler können
+mittels zwei <code>process</code> Anweisungen implementiert werden oder auch beide gemeinsam in einer <code>process</code> Anweisung. Im
+folgenden Beispiel wird auch die Aufteilung des 16 Bit Zählregisters auf die jeweils 4 Bit Eingänge <code>digit0_i</code> bis <code>digit3_i</code>
 gezeigt.
 
     #!vhdl
@@ -57,7 +57,7 @@ gezeigt.
       --
       -- < Hier > Implementierung der Zähler
       ---
-      
+
       display_component: entity work.display
         port map (
           digit0_i => std_ulogic_vector(counter_reg(3 downto 0)),
@@ -70,7 +70,7 @@ gezeigt.
         );
     end architecture;
 
-# Aufgabe 4 - Rücksetzen des Zählers mittels `button_i`
+# Aufgabe 4 - Rücksetzen des Zählers mittels <code>button_i</code>
 
-In der Toplevel-Entity ist ein Eingang `button_i` vorgesehen, der noch nicht verwendet wurde. Beim Drücken des Buttons
+In der Toplevel-Entity ist ein Eingang <code>button_i</code> vorgesehen, der noch nicht verwendet wurde. Beim Drücken des Buttons
 soll der 16 Bit Zähler zurückgesetzt werden.

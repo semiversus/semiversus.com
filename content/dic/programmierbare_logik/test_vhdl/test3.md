@@ -11,24 +11,24 @@ parent: uebersicht.md
 * Projekt <samp>led_toggle/led_toggle.xise</samp> öffnen
 
 ## Aufgabenstellung
-Zwei LEDs sollen mittels zwei Taster angesteuert werden. 
+Zwei LEDs sollen mittels zwei Taster angesteuert werden.
 
-* `button_toggle` - Wechselt zwischen LED1 und LED2, bzw. schaltet LED1 ein, falls die LEDs ausgeschaltet waren.
-* `button_off` - Schaltet die LEDs aus
+* <code>button_toggle</code> - Wechselt zwischen LED1 und LED2, bzw. schaltet LED1 ein, falls die LEDs ausgeschaltet waren.
+* <code>button_off</code> - Schaltet die LEDs aus
 
-## Entwurf der Zustandsmaschine 
+## Entwurf der Zustandsmaschine
 <span class="badge">5 Punkte</span>
 
 Zur Realisierung wird eine Zustandsmaschine genutzt.
 
 * Bearbeite die Datei <samp>led_toggle_fsm.vhd</samp>
-* Definiere die drei Zuständen `OFF`, `LED1` und `LED2`
-* Der Startzustand ist `OFF`
-* Der Eingang `toggle_i` wechselt von `OFF` nach `LED1` bzw. wechselt von `LED1` nach `LED2` und umgekehrt
-* Der Eingang `off_i` wechselt immer in den Zustand `OFF`
-* Der Eingang `off_i` hat die höhere Priorität als der Eingang `toggle_i`
-* Der Ausgang `led1_o` ist auf `'1'`, wenn die Zustandmaschine im Zustand `LED1` ist
-* Der Ausgang `led2_o` ist auf `'1'`, wenn die Zustandmaschine im Zustand `LED2` ist
+* Definiere die drei Zuständen <code>OFF</code>, <code>LED1</code> und <code>LED2</code>
+* Der Startzustand ist <code>OFF</code>
+* Der Eingang <code>toggle_i</code> wechselt von <code>OFF</code> nach <code>LED1</code> bzw. wechselt von <code>LED1</code> nach <code>LED2</code> und umgekehrt
+* Der Eingang <code>off_i</code> wechselt immer in den Zustand <code>OFF</code>
+* Der Eingang <code>off_i</code> hat die höhere Priorität als der Eingang <code>toggle_i</code>
+* Der Ausgang <code>led1_o</code> ist auf <code>'1'</code>, wenn die Zustandmaschine im Zustand <code>LED1</code> ist
+* Der Ausgang <code>led2_o</code> ist auf <code>'1'</code>, wenn die Zustandmaschine im Zustand <code>LED2</code> ist
 
 !!! panel-info "Testbench"
     Teste die Implementierung mittels der Testbench <samp>led_toggle_fsm_tb.vhd</samp>. Mittels <kbd>F6</kbd> lässt sich
@@ -40,18 +40,18 @@ Zur Realisierung wird eine Zustandsmaschine genutzt.
 Zur Verfügung stehen die Komponenten <samp>button_dectect</samp> und <samp>led_toggle_fsm</samp>. Diese
 Komponenten werden genutzt, um im Top Level <samp>led_toggle.vhd</samp> die gewünschte Funktionalität zu realisieren.
 
-* Die Instanz der Komponente <samp>button_detect</samp> mit dem Namen `toggle_detect_component` ist bereits erstellt
-    * `button_i` ist mit dem Eingang `button_toggle_i` verbunden
-    * `detect_o` ist mit dem (bereits definiertem) Signal `toggle_detect` verbunden
-* Erstelle eine Instanz der Komponente <samp>button_detect</samp> mit dem Namen `off_detect_component` analog zu `toggle_detect_component`
-    * `button_i` ist mit dem Eingang `button_off_i` verbunden
-    * `detect_o` ist mit dem (bereits definiertem) Signal `off_detect` verbunden
-* Erstelle eine Instanz der Komponente <samp>led_toggle_fsm</samp> mit dem Namen `led_toggle_fsm_component`
-    * `toggle_i` ist mit dem Signal `toggle_detect` verbunden
-    * `off_i` ist mit dem Signal `off_detect` verbunden
-    * `led1_o` ist mit dem Ausgang `led1_o` verbunden
-    * `led2_o` ist mit dem Ausgang `led2_o` verbunden
-* Jede Komponente hat einen Takteingang `clk`, welcher mit dem globalen `clk` verbunden wird
+* Die Instanz der Komponente <samp>button_detect</samp> mit dem Namen <code>toggle_detect_component</code> ist bereits erstellt
+    * <code>button_i</code> ist mit dem Eingang <code>button_toggle_i</code> verbunden
+    * <code>detect_o</code> ist mit dem (bereits definiertem) Signal <code>toggle_detect</code> verbunden
+* Erstelle eine Instanz der Komponente <samp>button_detect</samp> mit dem Namen <code>off_detect_component</code> analog zu <code>toggle_detect_component</code>
+    * <code>button_i</code> ist mit dem Eingang <code>button_off_i</code> verbunden
+    * <code>detect_o</code> ist mit dem (bereits definiertem) Signal <code>off_detect</code> verbunden
+* Erstelle eine Instanz der Komponente <samp>led_toggle_fsm</samp> mit dem Namen <code>led_toggle_fsm_component</code>
+    * <code>toggle_i</code> ist mit dem Signal <code>toggle_detect</code> verbunden
+    * <code>off_i</code> ist mit dem Signal <code>off_detect</code> verbunden
+    * <code>led1_o</code> ist mit dem Ausgang <code>led1_o</code> verbunden
+    * <code>led2_o</code> ist mit dem Ausgang <code>led2_o</code> verbunden
+* Jede Komponente hat einen Takteingang <code>clk</code>, welcher mit dem globalen <code>clk</code> verbunden wird
 
 !!! panel-info "Testbench"
     Teste die Implementierung mittels der Testbench <samp>led_toggle_tb.vhd</samp>.
@@ -59,12 +59,12 @@ Komponenten werden genutzt, um im Top Level <samp>led_toggle.vhd</samp> die gew�
 ## Erweiterung der *Constraints* Datei
 <span class="badge">2 Punkte</span>
 
-In der Datei <samp>led_toggle.ucf</samp> ist nur das Signal `clk` definiert. Erweitere die Datei um folgende Zuordnungen
+In der Datei <samp>led_toggle.ucf</samp> ist nur das Signal <code>clk</code> definiert. Erweitere die Datei um folgende Zuordnungen
 
-* `button_toggle_i` wird durch den Taster <samp>BTN0</samp> angesteuert
-* `button_off_i` wird durch den Taster <samp>BTN1</samp> angesteuert
-* `led1_o` ist die LED <samp>LD0</samp>
-* `led2_o` ist die LED <samp>LD1</samp>
+* <code>button_toggle_i</code> wird durch den Taster <samp>BTN0</samp> angesteuert
+* <code>button_off_i</code> wird durch den Taster <samp>BTN1</samp> angesteuert
+* <code>led1_o</code> ist die LED <samp>LD0</samp>
+* <code>led2_o</code> ist die LED <samp>LD1</samp>
 
 <figure><img src="{filename}../basys2_pinout.svg"><figcaption>Pinout des BASYS2 Boards(Bild: <a href="http://www.digilentinc.com/Products/Detail.cfm?NavPath=2,400,790&Prod=BASYS2">Digilent Inc. BASYS2 Manual</a>)</figcaption></figure>
 
@@ -78,7 +78,7 @@ Synthetisiere das Projekt und teste das Ergebnis am Board
 * Projekt <samp>lights/lights.xise</samp> öffnen
 
 ## Aufgabenstellung
-Es soll eine Ampel mit zwei Modis realisiert werden: 
+Es soll eine Ampel mit zwei Modis realisiert werden:
 
 * Orange-Blinken (Orange Leuchte geht ein und aus)
 * Wechsel zwischen Grün, Orange, Rot, Rot-Orange und wieder Grün
@@ -89,7 +89,7 @@ Die Ausgänge für die drei Farben der Ampel werden mittels drei Bit Vektor darg
 * Bit1 entspricht der orangen Leuchte
 * Bit2 (ganz links) entspricht der roten Leuchte.
 
-So steht z.B. `"110"` für eine Ampel, bei der Rot und Orange leuchtet. Bei `OFF` soll nichts leuchten.
+So steht z.B. <code>"110"</code> für eine Ampel, bei der Rot und Orange leuchtet. Bei <code>OFF</code> soll nichts leuchten.
 
 Zusätzlich soll eine *Überwachung* vorhanden sein, die feststellt, ob es zu ungültigen Kombinationen gekommen ist (z.B.
 wenn Rot und Grün gleichzeitig leuchten). Die Überwachung würde in diesem Fall die Ampel Rot leuchten lassen.
@@ -97,30 +97,30 @@ wenn Rot und Grün gleichzeitig leuchten). Die Überwachung würde in diesem Fal
 ## Überwachung
 <span class="badge">5 Punkte</span>
 
-Die Komponente `supervisor` (deutsch *Überwacher*) soll die Zustände der drei Lampen überprüfen. Dazu hat die Komponente
-den Eingang `monitor_i` und den Ausgang `result_o`.
+Die Komponente <code>supervisor</code> (deutsch *Überwacher*) soll die Zustände der drei Lampen überprüfen. Dazu hat die Komponente
+den Eingang <code>monitor_i</code> und den Ausgang <code>result_o</code>.
 
-* Liegt an `monitor_i` eine gültige Kombination an (z.B. `"001"` für Grün) soll diese Kombination am Ausgang `result_o` erscheinen
-* Liegt eine ungültige Kombination an (z.B. `"101"`) soll stattdessen die Kombination für Rot ausgegeben werden (`"100"`)
-* Gültige Kombinationen sind alle Ausgaben der Zustände `GREEN`, `ORANGE`, `RED`, `RED_ORANGE` und `OFF`
+* Liegt an <code>monitor_i</code> eine gültige Kombination an (z.B. <code>"001"</code> für Grün) soll diese Kombination am Ausgang <code>result_o</code> erscheinen
+* Liegt eine ungültige Kombination an (z.B. <code>"101"</code>) soll stattdessen die Kombination für Rot ausgegeben werden (<code>"100"</code>)
+* Gültige Kombinationen sind alle Ausgaben der Zustände <code>GREEN</code>, <code>ORANGE</code>, <code>RED</code>, <code>RED_ORANGE</code> und <code>OFF</code>
 
 Die Komponente ist in vier Ausführungen (*Architectures*) bereits in der Datei <samp>supervisor.vhd</samp> beschrieben. Die
-*Architectures* lauten `behave1`, `behave2`, `behave3` und `behave4`.
+*Architectures* lauten <code>behave1</code>, <code>behave2</code>, <code>behave3</code> und <code>behave4</code>.
 
 Erstelle in der Datei <samp>supervisor_tb.vhd</samp> eine Testbench, die herausfindet, welche der vier Ausführungen
 funktioniert (es ist genau eine).
 
-## Komponente `lights_fsm`
+## Komponente <code>lights_fsm</code>
 <span class="badge">5 Punkte</span>
 
-Erstelle die Komponente `lights_fsm` durch Bearbeitung der Datei <samp>lights_fsm.vhd</samp>.
+Erstelle die Komponente <code>lights_fsm</code> durch Bearbeitung der Datei <samp>lights_fsm.vhd</samp>.
 
-* Die Ampel wechselt nur den Zustand, wenn `next_i` gleich `'1'` ist
-* Ist der Eingang `mode_i` gleich `'0'` soll die Ampel zwischen den Zuständen `ORANGE` und `OFF` wechseln
-* Bei `mode_i` gleich `'1'` soll die Ampel zyklisch zwischen `GREEN`, `ORANGE`, `RED`, `RED_ORANGE` wechseln und anschließend bei `GREEN` wieder starten
-* Ist die Ampel im Zustand `GREEN`, `RED` oder `RED_ORANGE` und `mode_i` ist `'0'` soll der nächste Zustand `ORANGE` sein
-* Ist die Ampel im Zustand `OFF` und `mode_i` ist `'1'` soll der nächste Zustand `ORANGE` sein
-* Der Startzustand ist `ORANGE`
+* Die Ampel wechselt nur den Zustand, wenn <code>next_i</code> gleich <code>'1'</code> ist
+* Ist der Eingang <code>mode_i</code> gleich <code>'0'</code> soll die Ampel zwischen den Zuständen <code>ORANGE</code> und <code>OFF</code> wechseln
+* Bei <code>mode_i</code> gleich <code>'1'</code> soll die Ampel zyklisch zwischen <code>GREEN</code>, <code>ORANGE</code>, <code>RED</code>, <code>RED_ORANGE</code> wechseln und anschließend bei <code>GREEN</code> wieder starten
+* Ist die Ampel im Zustand <code>GREEN</code>, <code>RED</code> oder <code>RED_ORANGE</code> und <code>mode_i</code> ist <code>'0'</code> soll der nächste Zustand <code>ORANGE</code> sein
+* Ist die Ampel im Zustand <code>OFF</code> und <code>mode_i</code> ist <code>'1'</code> soll der nächste Zustand <code>ORANGE</code> sein
+* Der Startzustand ist <code>ORANGE</code>
 
 !!! panel-info "Testbench"
     Teste die Implementierung mittels der Testbench <samp>lights_fsm_tb.vhd</samp>.
@@ -133,7 +133,7 @@ Komponenten werden genutzt, um im Top Level <samp>lights.vhd</samp> die gewünsc
 
 Mit dem <samp>counter</samp> soll ein 700 Millisekunden Takt generiert werden. Wieviel Takte des 50 Mhz Taktes sind dazu
 notwendig und wieviel Bits werden benötigt, um diesen Wert darstellen zu können? Trage diese Werte in der Default-Einstellung
-von `COUNTER_WIDTH` und `COUNTER_MAXIMUM` ein:
+von <code>COUNTER_WIDTH</code> und <code>COUNTER_MAXIMUM</code> ein:
 
     #!vhdl
     entity lights is

@@ -25,18 +25,18 @@ Hinweise zum Bild:
 
 ## Beispiel
 
-Beschreiben des Registers `OFSX` (0x1E) mit dem Wert 0x02:
+Beschreiben des Registers <code>OFSX</code> (0x1E) mit dem Wert 0x02:
 
 ![Schreibe 0x02 auf das Register 0x1E]({filename}i2c_write_0x1E_0x02.svg)
 
-Lesen der Register `THRES_ACT` und `THRES_INACT` (0x24 und 0x25)
+Lesen der Register <code>THRES_ACT</code> und <code>THRES_INACT</code> (0x24 und 0x25)
 
 ![Lesen der Register 0x24 und 0x25]({filename}i2c_read_0x24.svg)
 
 ## Aufgabenstellung
 Skizziere folgende Übertragungen am I&sup2;C Bus:
 
-* Beschreiben des Registers `DUR` mit dem Wert <samp>0x05</samp>
-* Bechreiben der Registers `OFSX`, `OFSY`, `OFSZ` mit den  Werten <samp>[0x17, 0x2A, 0x04]</samp> (mit nur einem Zugriff)
-* Lesen des Registers `ACT_TAP_STATUS` (angenommener Inhalt ist <samp>0x10</samp>)
-* Lesen der Register `DATAX0` bis `DATAY1` (angenommener Inhalt ist <samp>[0x08, 0xE3, 0x01, 0xA7]</samp>, mit nur einem Zugriff)
+* Beschreiben des Registers <code>DUR</code> mit dem Wert <samp>0x05</samp>
+* Bechreiben der Registers <code>OFSX</code>, <code>OFSY</code>, <code>OFSZ</code> mit den  Werten <samp>[0x17, 0x2A, 0x04]</samp> (mit nur einem Zugriff)
+* Lesen des Registers <code>ACT_TAP_STATUS</code> (angenommener Inhalt ist <samp>0x10</samp>)
+* Lesen der Register <code>DATAX0</code> bis <code>DATAY1</code> (angenommener Inhalt ist <samp>[0x08, 0xE3, 0x01, 0xA7]</samp>, mit nur einem Zugriff)

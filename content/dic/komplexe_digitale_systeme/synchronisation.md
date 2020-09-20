@@ -19,7 +19,7 @@ Meist wird die Ganzzahl (Zähler) beim Start des Semaphors mit dem Zahlenwert de
 ## Kritischer Abschnitt
 Mit Hilfe von Semaphoren lassen sich auch kritische Abschnitte realisieren. Darunter wird ein Abschnitt eines Programms bezeichnet, in dem Ressourcen (z.B. Datenstrukturen, Verbindungen, Geräte usw.) verändert werden und der nicht parallel oder zeitlich verzahnt zu Programmabschnitten anderer Prozesse/Threads ausgeführt werden darf, in denen die gleichen Ressourcen ebenfalls verändert werden. Andernfalls kommt es zu inkonsistenten Zuständen der Betriebsmittel.
 
-Das folgende Beispiel zeigt die Inkrementierung einer Variable `s` durch zwei Prozesse. Dazu wird eine Kopie von `s` in ein Register geladen, um eins erhöht und wieder zurückgeschrieben. Im linken Teil wird der erste Prozess unterbrochen und der zweite Prozess kommt zur Ausführung. Die Variable ist nun nicht auf 2 sondern auf 1. Im rechten Teil sind die kritischen Abschnitte atomar ausgeführt (sprich nicht unterbrechbar).
+Das folgende Beispiel zeigt die Inkrementierung einer Variable <code>s</code> durch zwei Prozesse. Dazu wird eine Kopie von <code>s</code> in ein Register geladen, um eins erhöht und wieder zurückgeschrieben. Im linken Teil wird der erste Prozess unterbrochen und der zweite Prozess kommt zur Ausführung. Die Variable ist nun nicht auf 2 sondern auf 1. Im rechten Teil sind die kritischen Abschnitte atomar ausgeführt (sprich nicht unterbrechbar).
 
 <figure><img src="{filename}kritischer_abschnitt.svg"><figcaption>Kritischer Abschnitt (Bild: <a href="https://commons.wikimedia.org/wiki/File:Kritischer_abschnitt.svg">miracula_de</a> CC0 1.0)</figcaption></figure>
 

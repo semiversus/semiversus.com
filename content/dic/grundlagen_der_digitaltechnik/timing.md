@@ -10,13 +10,13 @@ Die Ausbreitungsgeschwindigkeit von Licht im Vakuum ist 299 792 458 Meter pro Se
 ## Gatterlaufzeit
 Die Verzögerung durch ein einzelnes logisches Gatter wird *Gatterlaufzeit* (oder Englisch "*propagation delay*") genannt und bewegt sich je nach verwendeter Technologie des Bausteins zwischen etwa 100ps bis 100ns.
 
-Logikfamilie | Leistung pro Gatter | Gatterlaufzeit
-:-!|:-|:-
-Low-Power-Schottky-TTL (LS-TTL) | 2mW | 10ns
-Advanced-Low-Power-Schottky-TTL (ALS-TTL) | 1mW | 4ns
-Emittergekoppelte Logik (ECL) | 35mW | 2ns
-High-Speed-ECL | 50mW | 0.4ns
-High-Speed CMOS (HC) | 0.5mW/MHz | 10ns (spannungsabhängig)
+| Logikfamilie | Leistung pro Gatter | Gatterlaufzeit |
+| :--- | :---: | :---: |
+|Low-Power-Schottky-TTL (LS-TTL) | 2mW | 10ns |
+|Advanced-Low-Power-Schottky-TTL (ALS-TTL) | 1mW | 4ns |
+|Emittergekoppelte Logik (ECL) | 35mW | 2ns |
+|High-Speed-ECL | 50mW | 0.4ns |
+|High-Speed CMOS (HC) | 0.5mW/MHz | 10ns (spannungsabhängig) |
 
 ## Kritischer Pfad
 
@@ -42,13 +42,13 @@ Bei einem *Hazard* handelt es sich um einen Störimpuls, der durch Verzögerunge
 ## Logik Hazards
 > **Definition:**
 >
-> Falls bei einer kombinatorischen Schaltung die Änderung eines einzigen Einganges zu einem Störimpuls am Ausgang führt, spricht man von einem *logischem Hazard*.
+> Falls bei einer kombinatorischen Schaltung die Änderung eines einzigen Einganges zu einem Störimpuls am Ausgang führt, spricht man von einem *logischen Hazard*.
 
 ### Beispiel Multiplexer
 
 ![Hazard bei einem Multiplexer]({filename}hazard_mux.svg)
 
-Am Beispiel eines Multiplexers sieht man das Auftreten eines *Static-1* Hazards. Ein *Static-1* Hazard ist ein Störimpuls bei einem Signal, welches rein kombinatorisch bei einer bestimmten Änderung eines Einganges vor und nach der Änderung logisch 1 ist. Der Hazard tritt nur auf, wenn `A` und `B` logisch 1 sind und `S` von logisch 1 auf 0 wechselt.
+Am Beispiel eines Multiplexers sieht man das Auftreten eines *Static-1* Hazards. Ein *Static-1* Hazard ist ein Störimpuls bei einem Signal, welches rein kombinatorisch bei einer bestimmten Änderung eines Einganges vor und nach der Änderung logisch 1 ist. Der Hazard tritt nur auf, wenn <code>A</code> und <code>B</code> logisch 1 sind und <code>S</code> von logisch 1 auf 0 wechselt.
 
 Die Schaltung ist mittels Disjunktiver Normalform aufgebaut. Zuerst werden die einzelnen Minterme mittels *AND*-Verknüpfung gebildet und diese werden dann mittels *OR*-Verknüpfung zusammengefasst.
 
@@ -59,11 +59,12 @@ Zeichnet man das KV-Diagramm auf, ergibt sich folgendes Bild:
 Man sieht die zwei unabhängige Minterme %%A\overline{S}%% und %%BS%%. Wird das Signal S gewechselt, wechseln auch die zuständigen Minterme. Dies ist ein Zeichen dafür, dass ein Hazard auftreten **kann**.
 
 Damit ein logischer Hazard überhaupt auftreten kann, müssen folgende drei Bedingungen erfüllt sein:
-+ Das Eingangssignal muss sich in mindestens zwei Pfade auftrennen.
-+ Die verschiedenen Pfade müssen unterschiedliche Laufzeiten aufweisen.
-+ Die Pfade müssen über logische Verknüpfungen wieder an einem Ausgang zusammengefasst werden.
 
-Durch zusätzliche Gatter können logische Hazards abgefangen werden. Wir haben gesehen, dass der Hazard beim Wechsel zwischen den beiden Mintermen auftritt (bei A und B gleich logisch 1). Um nun diesen Fall abzufangen fügen wir einen weiteren Minterm `AB` hinzu:
+- Das Eingangssignal muss sich in mindestens zwei Pfade auftrennen.
+- Die verschiedenen Pfade müssen unterschiedliche Laufzeiten aufweisen.
+- Die Pfade müssen über logische Verknüpfungen wieder an einem Ausgang zusammengefasst werden.
+
+Durch zusätzliche Gatter können logische Hazards abgefangen werden. Wir haben gesehen, dass der Hazard beim Wechsel zwischen den beiden Mintermen auftritt (bei A und B gleich logisch 1). Um nun diesen Fall abzufangen fügen wir einen weiteren Minterm <code>AB</code> hinzu:
 
 ![KV-Diagramm des Hazard-freien Multiplexers]({filename}hazard_free_mux_kv.svg)
 
@@ -78,4 +79,4 @@ Wenn wir in unserem Beispiel den Eingang A auf logisch 1 setzen und dann die Ein
 
 ![Zustandsänderung bei einem funktionalen Hazard]({filename}funktionaler_hazard.png)
 
-Funktionale Hazards kann man in den meiste Fällen nicht durch Hinzufügen von redundanten Schaltelementen vermeiden. 
+Funktionale Hazards kann man in den meiste Fällen nicht durch Hinzufügen von redundanten Schaltelementen vermeiden.

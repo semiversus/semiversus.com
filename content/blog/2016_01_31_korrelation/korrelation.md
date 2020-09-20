@@ -1,5 +1,5 @@
 title: Interessante Korrelation entdecken mittels <samp>wdiff</samp>
-date: 2016-01-31 
+date: 2016-01-31
 tags: Tools
 image: meld_tb.png
 
@@ -31,10 +31,10 @@ Bei einer Hausaufgabe habe ich nun das konkrete "*Problem*" 25 Arbeiten miteinan
 um eine Programmieraufgabe in C.
 
 <!-- PELICAN_BEGIN_SUMMARY -->
-Der Vergleich von zwei Textdateien lässt sich mittels `diff` bewerkstelligen. Was ich aber brauche ist eine Statistik,
+Der Vergleich von zwei Textdateien lässt sich mittels <code>diff</code> bewerkstelligen. Was ich aber brauche ist eine Statistik,
 die mir angibt, wie groß die *Korrelation* zwischen zwei Dateien ist, sprich wie groß der Anteil an Gemeinsamkeiten ist.
-Bei dem Vergleich sollten Zeilenumbrüche, Leerzeichen, usw. keine Rolle spielen. Das Tool der Wahl ist `wdiff`. Die Option
-`-s` liefert eine entsprechende Statistik.
+Bei dem Vergleich sollten Zeilenumbrüche, Leerzeichen, usw. keine Rolle spielen. Das Tool der Wahl ist <code>wdiff</code>. Die Option
+<code>-s</code> liefert eine entsprechende Statistik.
 <!-- PELICAN_END_SUMMARY -->
 
     #!bash
