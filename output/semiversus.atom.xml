@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Semiversus Blog</title><link href="https://www.semiversus.com/" rel="alternate"></link><link href="https://www.semiversus.com/semiversus.atom.xml" rel="self"></link><id>https://www.semiversus.com/</id><updated>2017-01-10T00:00:00+01:00</updated><entry><title>Künstliche Intelligenz spielt Super Mario</title><link href="https://www.semiversus.com/blog/nesolution.html" rel="alternate"></link><published>2017-01-10T00:00:00+01:00</published><updated>2017-01-10T00:00:00+01:00</updated><author><name>Günther Jena</name></author><id>tag:www.semiversus.com,2017-01-10:blog/nesolution.html</id><summary type="html">&lt;p&gt;Optimierung von Systemen kann sehr schnell zu einer komplexen Aufgabe werden. Schwierig wird es, wenn Variablen nicht mehr getrennt voneinander optimiert werden k&amp;ouml;nnen, sondern einander beeinflussen.&lt;/p&gt;
+&lt;p&gt;Die Standardans&amp;auml;tze der Optimierung reichen oft nicht aus, wenn das zu optimierende System eine oder mehrere der folgenden Eigenschaften hat:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Lokale Minima/Maxima&lt;/li&gt;
+&lt;li&gt;Abh&amp;auml;ngige Variablen&lt;/li&gt;
+&lt;li&gt;Sehr gro&amp;szlig;e Anzahl an Variablen&lt;/li&gt;
+&lt;li&gt;Abbruch zu jedem Zeitpunkt, mit dem bis dorthin besten Ergebnis&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Evolution&amp;auml;re Algorithmen finden f&amp;uuml;r solche Systeme L&amp;ouml;sungen auf eine effiziente Art und Weise. Der Ablauf entspricht dem Namen nach der Evolutionstheorie und wiederholt sich in folgender Reihenfolge:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Reproduktion - bestehende L&amp;ouml;sungen bilden die Basis f&amp;uuml;r neue L&amp;ouml;sungen&lt;/li&gt;
+&lt;li&gt;Mutation - die einzelnen L&amp;ouml;sungen werden zuf&amp;auml;llig ver&amp;auml;ndert&lt;/li&gt;
+&lt;li&gt;Selektion - die einzelnen L&amp;ouml;sungen werden bewertet und die besten ausgew&amp;auml;hlt&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="nesolution"&gt;Nesolution&lt;/h2&gt;
+&lt;p&gt;&lt;iframe allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/D3tzE5VU0bU" width="560"&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;Das Projekt Nesolution (auf Github) nutzt die Emulation einer Spielkonsole um mittels eines evolution&amp;auml;ren Algorithmus Spiele mit einem vorgegebenen Ziel zu spielen. Dazu werden Tastenfolgen als Muster gespeichert und durch den Emulator abgespielt. W&amp;auml;hrend der Emulation wird mit einer Bewertungsfunktion das Ergebnis beurteilt.&lt;/p&gt;
+&lt;p&gt;Beim Start wird mit einem leeren Muster der Tastenfolgen gestartet. Davon werden Kopien gemacht, die jeweils zuf&amp;auml;llig ver&amp;auml;ndert werden. Jede dieser ver&amp;auml;nderten Kopien wird nun emuliert und bewertet. Zum Schluss wird die Kopie mit dem besten Ergebnis als Basis f&amp;uuml;r die n&amp;auml;chste Iteration genutzt.&lt;/p&gt;
+&lt;p&gt;Das Projekt steht als freie Software unter &lt;a href="https://github.com/semiversus/nesolution"&gt;Github&lt;/a&gt; zur Verf&amp;uuml;gung.&lt;/p&gt;</summary><category term="Projekte"></category></entry><entry><title>Elektronik- und Softwareentwicklung bei Spectra-Physics</title><link href="https://www.semiversus.com/blog/spectra_physics.html" rel="alternate"></link><published>2016-12-30T00:00:00+01:00</published><updated>2016-12-30T00:00:00+01:00</updated><author><name>Günther Jena</name></author><id>tag:www.semiversus.com,2016-12-30:blog/spectra_physics.html</id><summary type="html">&lt;p&gt;Spectra-Physics Standort Rankweil/Vorarlberg (&amp;Ouml;sterreich) hat immer wieder Stellen f&amp;uuml;r Elektronik/Softwareentwicklung offen (hier die offenen &lt;a href="http://www.spectra-physics.com/company/rankweil-de/karriere/"&gt;Stellen&lt;/a&gt;). Da die Stellenanzeigen meist sehr allgemein gehalten sind, m&amp;ouml;chte ich die Aufgabengebiete unserer Abteilung beschreiben.&lt;/p&gt;
+&lt;h3 id="unser-team"&gt;Unser Team&lt;/h3&gt;
+&lt;p&gt;Unser Team besteht aus Fachleuten mit Spezialisierung in einem oder mehreren Fachbereichen. Im folgenden werden die einzelnen Fachbereiche beschrieben. Selten wird jemand in allen Fachbereichen Erfahrung gesammelt haben. Die unscharfe Abgrenzung der Fachbereiche mag f&amp;uuml;r manche ungewohnt wirken - ich finde, es ist unsere gr&amp;ouml;&amp;szlig;te St&amp;auml;rke. Die meisten in unserem Team haben dadurch viel Wissen in Fachbereichen aufgebaut, die ihnen anfangs unvertraut waren.&lt;/p&gt;
+&lt;p&gt;Ich bin seit neun Jahren bei Spectra-Physics und bin haupts&amp;auml;chlich mit Firmware bzw. Softwareerstellung f&amp;uuml;r Embedded Systems besch&amp;auml;ftigt. Die Aufgabengebiete sind meist sehr flie&amp;szlig;end zwischen Firmware/Softwareentwicklung, reiner Elektronikentwicklung (Schaltplan/Layout), Entwicklung von Designs f&amp;uuml;r programmierbare Logiken, Inbetriebnahme von Prototypen und Serien&amp;uuml;berf&amp;uuml;hrung.&lt;/p&gt;
+&lt;h3 id="elektronik-in-einem-laser"&gt;Elektronik in einem Laser&lt;/h3&gt;
+&lt;p&gt;Einfachste Lasersysteme bestehen aus einem Mikrocontroller (typischerweise Atmel AVR) und kommunizieren mittels RS485 und einem propriet&amp;auml;ren Protokoll mit dem PC. Das propriet&amp;auml;re Protokoll ist seit mehreren Jahren im Einsatz, und es sind viele Tools rund um das Protokoll entstanden, die das Entwicklerleben vereinfachen. Komplexe Lasersysteme bestehen aus einem Linux System auf ARM Basis und mehreren (bis zu 20) Mikrocontroller f&amp;uuml;r die einzelnen Komponenten. Dazu kommt meist ein FPGA f&amp;uuml;r die Steuerung und Kontrolle schneller Signale.&lt;/p&gt;
+&lt;p&gt;&lt;img class="pull-right" src="https://www.semiversus.com/blog/2016_12_30_spectra_physics/spectra.png"/&gt;
+F&amp;uuml;r die Entwicklung der Mikrocontroller steht ein Grundger&amp;uuml;st mit vielen Softwaremodulen zur Verf&amp;uuml;gung. Programmiersprache ist C, je nach Anwendung auch mal Assembler oder C++. Die Entwicklung ist stark durch Automatisierung des Build Prozesses getrieben. Dazu geh&amp;ouml;ren neben der vollst&amp;auml;ndigen Distributionserstellung in einem Schritt auch Unit Tests. Ein Softwareentwicklungsprozess wurde erarbeitet und hat sich an vielen Stellen etabliert, an anderen Stellen sind noch Anpassungen notwendig. Auf dieser Ebene arbeiten ca. f&amp;uuml;nf Fachleute zusammen. Es hat sich ein einheitlicher Programmierstil gepr&amp;auml;gt, der die Einarbeitung in Projekte und den Wissensaustausch erleichtert.&lt;/p&gt;
+&lt;p&gt;Die Applikationslogik bei komplexeren Systemen l&amp;auml;uft auf dem bereits genannten Linux Embedded System und wird dort in Python programmiert. Verwendet wird Python 3.5 mit aktuellen Sprachmitteln wie etwa asyncio. Die Applikation baut auf einer eigenen Bibliothek auf, die einen Gro&amp;szlig;teil der Funktionalit&amp;auml;t abbildet. Ein gro&amp;szlig;er Vorteil von Python ist hier die Unabh&amp;auml;ngigkeit von Hardware. So ist man unabh&amp;auml;ngig davon, ob die Applikation schlussendlich auf einem Desktopcomputer oder einem Embedded System entwickelt wird beziehungsweise laufen soll. Profilling hilft, zeitkritische Stellen zu erkennen, um diese dann in C oder Cython zu implementieren. So stellen wir sicher, dass auch komplexe Systeme eine niedrige Prozessorlast sowie eine schnelle Reaktionszeit haben.&lt;/p&gt;
+&lt;h3 id="herausforderungen"&gt;Herausforderungen&lt;/h3&gt;
+&lt;p&gt;Neben der genannten Firmware/Softwareentwicklung ist die Elektronikentwicklung selbst ein gro&amp;szlig;er Teil unseres Arbeitsalltags. Dies beginnt mit Schaltplanentw&amp;uuml;rfen und geht bis zur Entwicklung von Testst&amp;auml;nden f&amp;uuml;r serienreife Produkte. Spannend an Lasersystemen finde ich pers&amp;ouml;nlich die Vielfalt an notwendiger Elektronik:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Spannungen von einigen Kilovolt, die in Nanosekunden geschalten werden&lt;/li&gt;
+&lt;li&gt;Str&amp;ouml;me von bis zu 100 Ampere, deren Welligkeit kleiner 50 Milliampere sein muss, um keine Einbussen bei der Strahlqualit&amp;auml;t zu haben&lt;/li&gt;
+&lt;li&gt;Laserpulsfolgen von 60 Megahertz und mehr, die entsprechend verarbeitet werden m&amp;uuml;ssen&lt;/li&gt;
+&lt;li&gt;Messung und Regelung von Temperaturen auf 0,01 Grad Celsius genau&lt;/li&gt;
+&lt;li&gt;Vielf&amp;auml;ltige Sensorik (Photodioden, Umgebungseinfl&amp;uuml;sse, ...) und Aktorik (Gleichspannungs- und Schrittmotoren, motorisierte Spiegel, ...)&lt;/li&gt;
+&lt;li&gt;8- und 32-Bit Mikrocontroller, FPGAs und Software f&amp;uuml;r Desktopcomputer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;S&amp;auml;mtliche Entwicklungen geschehen immer unter Ber&amp;uuml;cksichtigung der Anforderung f&amp;uuml;r medizinische Ger&amp;auml;te oder industrielle Anwendungen. Die gesammelten Erfahrungen in diesen Bereichen haben gro&amp;szlig;en Einfluss auf unsere Entwicklungsprozesse und damit unsere t&amp;auml;gliche Praxis.&lt;/p&gt;
+&lt;p&gt;Ein weiteres Steckenpferd ist die Entwicklung von Designs f&amp;uuml;r FPGAs. Wenn diskrete Elektronik zu komplex und der schnellste Mikrocontroller zu langsam ist, werden FPGAs verwendet, um unsere Anforderungen an zeitkritische Signalverarbeitung zu erf&amp;uuml;llen. Wir programmieren in VHDL und verwenden typischerweise Bausteine von Altera.&lt;/p&gt;
+&lt;p&gt;Insgesamt kann ich f&amp;uuml;r mich sagen, dass ich viele spannende Jahre hier verbracht habe und Tag f&amp;uuml;r Tag Neues lernen kann. Ich bin stolz auf unser Team und auf unsere Produkte.&lt;/p&gt;
+&lt;p&gt;Wer weitere Fragen zur Arbeit bei Spectra Physics hat, kann sich gerne bei mir direkt melden. Sollte die Stelle in K&amp;uuml;rze vergeben sein einfach trotzdem eine Initiativbewerbung starten. Wenn beim Lesen des ein oder anderen Absatzes die Finger voller Tatendrang zu kribbeln anfingen, bist du bei uns richtig ;-)&lt;/p&gt;</summary><category term="Verschiedenes"></category></entry><entry><title>Microchip Tips'n Tricks</title><link href="https://www.semiversus.com/blog/microchip_tipsntricks.html" rel="alternate"></link><published>2016-11-13T00:00:00+01:00</published><updated>2016-11-13T00:00:00+01:00</updated><author><name>Günther Jena</name></author><id>tag:www.semiversus.com,2016-11-13:blog/microchip_tipsntricks.html</id><summary type="html">&lt;p&gt;Es gibt diese einfachen Tricks Pins zu sparen, Prozessorresourcen zu optimieren oder einfach Kosten zu sparen. Eine
+sch&amp;ouml;ne Sammlung dieser Tricks rund um Mikrocontroller hat &lt;em&gt;Microchip&lt;/em&gt; zusammengestellt: &lt;a href="http://ww1.microchip.com/downloads/en/DeviceDoc/01146B.pdf"&gt;Compiled Tips 'N Tricks Guide&lt;/a&gt;&lt;/p&gt;</summary><category term="Programmieren"></category><category term="C"></category><category term="Elektronik"></category></entry><entry><title>Linuxtag in Dornbirn/Vorarlberg</title><link href="https://www.semiversus.com/blog/linuxtag.html" rel="alternate"></link><published>2016-10-22T00:00:00+02:00</published><updated>2016-10-22T00:00:00+02:00</updated><author><name>Günther Jena</name></author><id>tag:www.semiversus.com,2016-10-22:blog/linuxtag.html</id><summary type="html">&lt;p&gt;Am 26. November 2016 ist es wieder soweit: &lt;strong&gt;Linuxtag&lt;/strong&gt; in Vorarlberg!&lt;/p&gt;
+&lt;p&gt;Ich werde dort zwei Vortr&amp;auml;ge halten:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Lightning Talk &amp;uuml;ber &lt;em&gt;Nesolution&lt;/em&gt; - Computeralgorithmen spielen Nintendo&lt;/li&gt;
+&lt;li&gt;Vortrag &amp;uuml;ber &lt;a class="external" href="https://www.linuxday.at/webseiten-erstellen-mit-pelican"&gt;statische Webseitenerstellung&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Folgende Infos stammen von der Infoseite unter &lt;a class="external" href="https://www.linuxday.at/"&gt;https://www.linuxday.at&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;Der LinuxDay in Vorarlberg ist im 4 L&amp;auml;ndereck von Deutschland, Schweiz, Liechtenstein und &amp;Ouml;sterreich mit bis zu 500
+Besuchern die gr&amp;ouml;&amp;szlig;te Veranstaltung zu Linux und Freier Software . Er wird von der Linux User Group Vorarlberg in
+Zusammenarbeit mit der HTL Dornbirn (link is external) organisiert.&lt;/p&gt;
+&lt;p&gt;Der LinuxDay ist bereits eine feste Institution in der Bodensee-Region. Tats&amp;auml;chlich ist es bereits der 18. in Serie und
+damit wohl eine der dienst&amp;auml;ltesten Veranstaltungen zu Freier Software, die immer noch regelm&amp;auml;&amp;szlig;ig stattfindet und gut
+besucht wird.&lt;/p&gt;
+&lt;p&gt;Geboten wird ein reiches Sortiment an voneinander unabh&amp;auml;ngigen Vortr&amp;auml;gen.
+In zwei parallelen Vortragsreihen erfahren Anwender, Linuxprofis bzw. Entscheidungstr&amp;auml;ger aus Wirtschaft und
+&amp;ouml;ffentlicher Verwaltung Wissenswertes &amp;uuml;ber Freie und Open Source Software. Zus&amp;auml;tzlich werden 2016 erstmalig auch 
+Workshops stattfinden.&lt;/p&gt;
+&lt;p&gt;W&amp;auml;hrend der gesamten Veranstaltung k&amp;ouml;nnen Besucher ihren zus&amp;auml;tzlichen Wissensdurst an zahlreichen Informationsst&amp;auml;nden
+international bekannter Projekte und regionaler Dienstleister stillen.
+Ein Restaurant mit g&amp;uuml;nstigen Preisen l&amp;auml;dt zum Fachsimpeln und zum Verweilen ein.&lt;/p&gt;
+&lt;p&gt;Der Eintritt ist frei!&lt;/p&gt;</summary><category term="Verschiedenes"></category></entry><entry><title>Algorithmus zur Belegung der Sitzplätze</title><link href="https://www.semiversus.com/blog/algorithm.html" rel="alternate"></link><published>2016-04-03T00:00:00+02:00</published><updated>2016-04-03T00:00:00+02:00</updated><author><name>Günther Jena</name></author><id>tag:www.semiversus.com,2016-04-03:blog/algorithm.html</id><summary type="html">&lt;p&gt;Bei jeder Konferenz das gleiche Bild: Kurz vor dem Start eines Vortrags wird deutlich darauf hingewiesen, dass niemand
+stehen m&amp;uuml;sste, wenn alle Pl&amp;auml;tze in den Reihen gef&amp;uuml;llt w&amp;uuml;rden. Teilweise gibt es gro&amp;szlig;e L&amp;uuml;cken und man fragt sich wieso.&lt;/p&gt;
+&lt;p&gt;Das Problem ist ein menschliches - viele Teilnehmende sind bereits l&amp;auml;nger hier und fanden einen quasi freien Raum vor und
+da setzt man sich eben irgendwo hin. So langsam f&amp;uuml;llt sich der Raum, da aber das eigene Notebook, Getr&amp;auml;nke und der Snack
+zwischendurch bereits ausgebreitet wurden ist ein Platzwechsel sehr m&amp;uuml;hsam.&lt;/p&gt;
+&lt;p&gt;F&amp;uuml;r Softwarekonferenzen habe ich folgenden Algorithmus zur Platzvergabe entwickelt. Solange alle diesem Algorithmus bei
+der Platzsuche folgen werden die verf&amp;uuml;gbare Sitzpl&amp;auml;tze optimal ausgenutzt.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;PythonesqueHuman&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Human&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;find_seat&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;room&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;row&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;room&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rows&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isSeatFree&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+                &lt;span class="n"&gt;seat_index&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
+            &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isSeatFree&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+                &lt;span class="n"&gt;seat_index&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+            &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="k"&gt;continue&lt;/span&gt;
+
+            &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;takeSeat&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;seat_index&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+            &lt;span class="n"&gt;direction&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;seat_index&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+
+            &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;seat_index&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;direction&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isSeatFree&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;seat_index&lt;/span&gt;&lt;span class="o"&gt;!=&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+                &lt;span class="n"&gt;seat_index&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="n"&gt;direction&lt;/span&gt;
+                &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;takeSeat&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;seat_index&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+            &lt;span class="k"&gt;return&lt;/span&gt;
+
+        &lt;span class="k"&gt;raise&lt;/span&gt; &lt;span class="ne"&gt;EnvironmentError&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"No seat left in this room"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="Programmieren"></category></entry><entry><title>Wem gehört Paradise Island?</title><link href="https://www.semiversus.com/blog/paradise_island.html" rel="alternate"></link><published>2016-04-01T00:00:00+02:00</published><updated>2016-04-01T00:00:00+02:00</updated><author><name>Günther Jena</name></author><id>tag:www.semiversus.com,2016-04-01:blog/paradise_island.html</id><summary type="html">&lt;p&gt;&lt;img alt="Bodensee" class="pull-left" src="https://www.semiversus.com/blog/2016_04_01_paradise_island/bodensee.jpg" style="padding-right:8px;"/&gt;&lt;/p&gt;
+&lt;p&gt;Die L&amp;auml;ngen der Au&amp;szlig;engrenzen von &amp;Ouml;sterreich, Deutschland und der Schweiz sind in einem wesentlichen Teil nicht
+festgelegt. Dieser wesentliche Teil betrifft die Grenzen rund um bzw. durch den Bodensee. Es ist die einzige Gegend in
+Europa in der zwischen den Nachbarstaaten keine Grenzen definiert sind.&lt;/p&gt;
+&lt;p&gt;Zu welchen Ausw&amp;uuml;chse dies f&amp;uuml;hrt zeigt dieser Podcast Beitrag &amp;uuml;ber
+&lt;a class="external" href="http://www.swr.de/swr2/programm/sendungen/wissen/wem-gehoert-paradise-island/-/id=660374/did=10957618/nid=660374/czz43b/index.html"&gt;Paradise Island&lt;/a&gt;
+von SWR2 Wissen. Pr&amp;auml;dikat: H&amp;ouml;hrenswert!&lt;/p&gt;
+&lt;p&gt;Generell kann ich den Podcast von 
+&lt;a class="external" href="http://www.swr.de/swr2/programm/sendungen/wissen/rueckschau-sendungen-nachhoeren-und-nachlesen/-/id=660374/did=13778306/nid=660374/1rwsxor/index.html"&gt;SWR2 Wissen&lt;/a&gt;
+sehr empfehlen. Der Beitrag &lt;em&gt;Paradise Island&lt;/em&gt; ist aber ein besonderer.&lt;/p&gt;</summary><category term="Empfehlung"></category><category term="Webstream"></category></entry><entry><title>Der Tempel des Snofru</title><link href="https://www.semiversus.com/blog/snofru.html" rel="alternate"></link><published>2016-03-31T00:00:00+02:00</published><updated>2016-03-31T00:00:00+02:00</updated><author><name>Günther Jena</name></author><id>tag:www.semiversus.com,2016-03-31:blog/snofru.html</id><summary type="html">&lt;p&gt;Das Spiel (hier zum &lt;a class="download" href="https://www.semiversus.com/blog/2016_03_31_snofru/snofru.zip"&gt;Download&lt;/a&gt;) habe ich im Alter von 14 geschrieben und
+ist eine Sokoban-Variante (siehe &lt;a class="external" href="https://de.wikipedia.org/wiki/Sokoban"&gt;Wikipedia&lt;/a&gt;). Ich dachte
+eigentlich, dass das Spiel verschollen ist, doch Internet sei Dank hab ich es wieder gefunden.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Gameplay" src="https://www.semiversus.com/blog/2016_03_31_snofru/snofru.gif"/&gt;&lt;/p&gt;
+&lt;p&gt;Das Spiel ist ziemlich einfach gestrickt. Man steuert eine Spielfigur mittels Pfeiltasten durch ein Labyrinth mit Hindernissen
+in Form von verschiebbaren Steinen und herumlaufenden Soldaten.&lt;/p&gt;
+&lt;h3 id="archiveorg"&gt;Archive.org&lt;/h3&gt;
+&lt;p&gt;&lt;figure class="pull-right"&gt;&lt;img src="https://www.semiversus.com/blog/2016_03_31_snofru/gamestar.jpg"/&gt;&lt;figcaption&gt;GameStar 7/1998 (Bild: &lt;a href="http://de.videospielzeitschriften.wikia.com/wiki/Datei:GameStar_1998-07.jpg"&gt;Maniacfan&lt;/a&gt;, Urheberrechtlich gesch&amp;uuml;tzt durch &lt;a href="http://www.gamestar.de/impressum/"&gt;GameStar&lt;/a&gt;)&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;Wer &lt;a class="external" href="https://archive.org"&gt;Archive.org&lt;/a&gt; nicht kennt, sollte es sich unbedingt anschauen. Ein Projekt
+  zum Archivieren des Internets - und das nicht nur einmal, sondern in vielen Kopien zu verschiedenen Zeiten: Hier ist
+die fr&amp;uuml;heste Version meiner &lt;a class="external" href="https://web.archive.org/web/20110201022701/http://www.semiversus.com/"&gt;Homepage&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Und weil beim Archivieren des Internets wahrscheinlich nicht genug Daten anfallen archivieren sie auch viele frei zug&amp;auml;ngliche CDs, DVDs usw.&lt;/p&gt;
+&lt;p&gt;Das Spiel wurde damals auf der beiliegenden CD zur GameStar 7/1998 ver&amp;ouml;ffentlicht - und diese CD gibts auch auf
+&lt;a class="external" href="https://archive.org/details/cdgs0798"&gt;Archive.org&lt;/a&gt; zum Download.&lt;/p&gt;
+&lt;h3 id="das-spiel"&gt;Das Spiel&lt;/h3&gt;
+&lt;p&gt;Viele Dinge w&amp;uuml;rde ich heute anders machen:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Das Spiel l&amp;auml;uft auf nur einer Plattform (Windows)&lt;/li&gt;
+&lt;li&gt;Es wurde in VisualBasic programmiert&lt;/li&gt;
+&lt;li&gt;Es ist nicht frei skalierbar&lt;/li&gt;
+&lt;li&gt;Es ist nicht Open Source sondern Shareware...&lt;/li&gt;
+&lt;li&gt;Der Gameplot entspricht der &lt;em&gt;Damsel in Distress&lt;/em&gt; (&lt;a class='"external' href="https://www.youtube.com/watch?v=X6p5AZp7r_Q"&gt;Youtube&lt;/a&gt; - sehenswert).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Die Daten f&amp;uuml;r die einzelnen Levels sind in der Datei &lt;samp&gt;Game.dat&lt;/samp&gt; gespeichert. Jede Zeile entspricht einem Level.&lt;/p&gt;
+&lt;p&gt;Es gab sogar einen Leveleditor, aber nur in der Vollversion f&amp;uuml;r 50 Schilling (inflationsangepasst w&amp;auml;ren das heute 6-7&amp;euro;).
+Das Einkommen durch das Spiel hat f&amp;uuml;r den Lebensunterhalt nicht gereicht und so hab ich dann die Schule fertig gemacht... &lt;/p&gt;</summary><category term="Programmieren"></category></entry><entry><title>Wenn Muttersprache weh tut...</title><link href="https://www.semiversus.com/blog/foreigner.html" rel="alternate"></link><published>2016-03-30T00:00:00+02:00</published><updated>2016-03-30T00:00:00+02:00</updated><author><name>Günther Jena</name></author><id>tag:www.semiversus.com,2016-03-30:blog/foreigner.html</id><summary type="html">&lt;p&gt;&lt;img alt="Kommentar" src="https://www.semiversus.com/blog/2016_03_30_foreigner/pinwall.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;Dieser Ausschnitt h&amp;auml;ngt seit einer Ewigkeit auf meiner Pinnwand. Es hat einen seltsamen Reiz diesen Kommentar
+zu lesen. Ich habe den Namen der schreibenden Person unkenntlich gemacht, das originale Kommentar ist aber nach wie vor
+online abzurufen.&lt;/p&gt;</summary><category term="Verschiedenes"></category></entry><entry><title>Reflection meets tree</title><link href="https://www.semiversus.com/blog/reflection_meets_tree.html" rel="alternate"></link><published>2016-03-29T00:00:00+02:00</published><updated>2016-03-29T00:00:00+02:00</updated><author><name>Günther Jena</name></author><id>tag:www.semiversus.com,2016-03-29:blog/reflection_meets_tree.html</id><summary type="html">&lt;p&gt;&lt;img alt="Baum nah ohne Sonne" src="https://www.semiversus.com/blog/2016_03_29_reflection_meets_tree/tree2.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;Der Baum ist mir fr&amp;uuml;her schonmal aufgefallen und die Verletzung ist recht ungew&amp;ouml;hnlich. Ich bin mir nicht sicher, ob
+nicht eine &lt;em&gt;"mechanische"&lt;/em&gt; Besch&amp;auml;digung vorangegangen ist, aber das was der Baum mitmacht ist sicher nicht fein.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Baum mit Verkehrsspiegel" src="https://www.semiversus.com/blog/2016_03_29_reflection_meets_tree/mirror.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;Die Hinterseite eines Verkehrsspiegels ist in diesem Fall refelektierend ausgef&amp;uuml;hrt (dumme Idee!) und wenn die Sonne
+richtig steht b&amp;uuml;ndeln sich die Sonnenstrahlen auf einem gemeinsamen Punkt - und dort steht dann der Baum.&lt;/p&gt;
+&lt;p&gt;Hier der Baum im Detail:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Baum nah" src="https://www.semiversus.com/blog/2016_03_29_reflection_meets_tree/tree.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;Und hier der &amp;Uuml;berlt&amp;auml;ter:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Spiegel von hinten" src="https://www.semiversus.com/blog/2016_03_29_reflection_meets_tree/mirror2.jpg"/&gt;&lt;/p&gt;</summary><category term="Verschiedenes"></category></entry><entry><title>Wieso gibt es kein logisches XOR in C?</title><link href="https://www.semiversus.com/blog/logisches_xor.html" rel="alternate"></link><published>2016-02-15T00:00:00+01:00</published><updated>2016-02-15T00:00:00+01:00</updated><author><name>Günther Jena</name></author><id>tag:www.semiversus.com,2016-02-15:blog/logisches_xor.html</id><summary type="html">&lt;p&gt;In C gibt es vier bitweise Operatoren (Details dazu im &lt;a href="https://www.semiversus.com/dic/mikrocontroller/bitmanipulation.html"&gt;Skriptum&lt;/a&gt;):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;UND&lt;/em&gt; Operator - &lt;code&gt;&amp;amp;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;ODER&lt;/em&gt; Operator - &lt;code&gt;|&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Exklusiv ODER&lt;/em&gt; Operator - &lt;code&gt;^&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;INVERTIERUNG&lt;/em&gt; - &lt;code&gt;~&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Neben den bitweisen Operatoren gibt es noch die logischen Verkn&amp;uuml;pfungen, die den bitweisen entsprechen:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;UND&lt;/em&gt; Verkn&amp;uuml;pfung - &lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;ODER&lt;/em&gt; Verkn&amp;uuml;pfung - &lt;code&gt;||&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;INVERTIERUNG&lt;/em&gt; - &lt;code&gt;!&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Hier fehlt offensichtlich die Exklusive &lt;em&gt;ODER&lt;/em&gt; Verkn&amp;uuml;pfung - wieso gibt es kein &lt;code&gt;^^&lt;/code&gt;?&lt;/p&gt;
+&lt;p&gt;Eine gute Antwort findet sich auf dieser &lt;a class="external" href="http://benpfaff.org/writings/clc/logical-xor.html"&gt;Seite&lt;/a&gt;
+von Ben Pfaff. Und hier eine kurze Zusammenfassung:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Eine logische &lt;em&gt;Exklusiv ODER&lt;/em&gt; Verkn&amp;uuml;pfung ist sehr selten.&lt;/li&gt;
+&lt;li&gt;Die Kurzschlussauswertung wird nicht erm&amp;ouml;glicht - Ist bei einer &lt;em&gt;UND&lt;/em&gt; Verkn&amp;uuml;pfung der erste Term falsch muss der zweite nicht
+mehr &amp;uuml;berpr&amp;uuml;ft werden. Das gleiche gilt bei &lt;em&gt;ODER&lt;/em&gt; mit dem ersten Term wahr. Bei &lt;em&gt;Exklusiv ODER&lt;/em&gt; geht dies nicht.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="und-wenn-ich-es-doch-mal-benotige"&gt;Und wenn ich es doch mal ben&amp;ouml;tige?&lt;/h3&gt;
+&lt;p&gt;Eine logische &lt;em&gt;Exklusiv ODER&lt;/em&gt; Verkn&amp;uuml;pfung l&amp;auml;sst sich wie folgt realisieren:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Mittels logischer Invertierung &lt;code&gt;!&lt;/code&gt; wird der entsprechende Term auf 0 (falsch) oder 1 (wahr) gebracht. Wenn diese logischen
+Terme unterschiedlich sind ist die Gesamtaussage wahr.&lt;/p&gt;</summary><category term="Programmieren"></category><category term="C"></category></entry><entry><title>Jubiläumsplan</title><link href="https://www.semiversus.com/blog/anniversary.html" rel="alternate"></link><published>2016-02-11T00:00:00+01:00</published><updated>2016-02-11T00:00:00+01:00</updated><author><name>Günther Jena</name></author><id>tag:www.semiversus.com,2016-02-11:blog/anniversary.html</id><summary type="html">&lt;p&gt;Wieso Jubil&amp;auml;en immer nur nach ganzen Jahren feiern? Wieso nicht bei einer Million Sekunden Lebenszeit? Oder bei Tausend Wochen?&lt;/p&gt;
+&lt;p&gt;Dieses &lt;a class="download" href="https://www.semiversus.com/blog/2016_02_11_anniversary/anniversary.ods"&gt;Spreadsheet&lt;/a&gt; (LibreOffice Calc Sheet) macht es m&amp;ouml;glich. Einfach das Datum und die
+Uhrzeit bei "Geburt" eintragen, Namen anpassen und ausdrucken.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Screenshot" src="https://www.semiversus.com/blog/2016_02_11_anniversary/anniversary.png"/&gt;&lt;/p&gt;
+&lt;p&gt;Interessant ist die logarithmische Verteilung: Hat man eine Million Sekunden bereits nach elf einhalb Tagen erlebt,
+braucht man f&amp;uuml;r 10 Millionen Sekunden bereits fast vier Monate. 100 Millionen Sekunden sind nach knapp 3 Jahren erreicht
+und bei einer Milliarde Sekunden ist man fast 32 Jahre alt.&lt;/p&gt;
+&lt;p&gt;Das Spreadsheet enth&amp;auml;lt die Jubil&amp;auml;en f&amp;uuml;r Sekunden, Minuten, Stunden, Tage und Wochen. Es startet bei einer Million Sekunden
+und endet beim letzten relevanten Jubil&amp;auml;um vor Erreichung der hundert Jahre - 5.000 Wochen (95.6 Jahre).&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Screenshot" src="https://www.semiversus.com/blog/2016_02_11_anniversary/anniversary_a4.png"/&gt;&lt;/p&gt;</summary><category term="Tools"></category><category term="Verschiedenes"></category></entry><entry><title>Webstream Radio Paradise</title><link href="https://www.semiversus.com/blog/radioparadise.html" rel="alternate"></link><published>2016-02-08T00:00:00+01:00</published><updated>2016-02-08T00:00:00+01:00</updated><author><name>Günther Jena</name></author><id>tag:www.semiversus.com,2016-02-08:blog/radioparadise.html</id><summary type="html">&lt;p&gt;&lt;img alt="Logo Radio Paradise" class="pull-left" src="https://www.semiversus.com/blog/2016_02_08_radioparadise/logo.svg" style="padding-right:8px;"/&gt;&lt;/p&gt;
+&lt;p&gt;Die meisten Webradios scheitern an mindestens einem der folgenden Punkte: Kostenlos, gute Qualit&amp;auml;t, keine Werbung, ... 
+oder gute Musik.&lt;/p&gt;
+&lt;p&gt;Ein Webradio das ich sehr empfehlen kann ist &lt;a class="external" href="https://www.radioparadise.com"&gt;Radio Paradise&lt;/a&gt;.
+Finanziert wird Radio Paradise mittels Unterst&amp;uuml;tzung durch die H&amp;ouml;rer.&lt;/p&gt;</summary><category term="Webstream"></category><category term="Empfehlung"></category></entry><entry><title>Interessante Korrelation entdecken mittels wdiff</title><link href="https://www.semiversus.com/blog/korrelation.html" rel="alternate"></link><published>2016-01-31T00:00:00+01:00</published><updated>2016-01-31T00:00:00+01:00</updated><author><name>Günther Jena</name></author><id>tag:www.semiversus.com,2016-01-31:blog/korrelation.html</id><summary type="html">&lt;p&gt;Abschreiben als solches zu erkennen ist keine einfache Sache, da der Aufwand massiv mit der Anzahl der zu vergleichenden
+Arbeiten steigt. Bei 5 Arbeiten sind insgesamt 10 Vergleiche zu machen: Die erste Aufgabe wird mit den vier anderen
+verglichen, dann die zweite Arbeit mit den drei verbleibenden, usw.&lt;/p&gt;
+&lt;p&gt;Mit &lt;samp&gt;wdiff&lt;/samp&gt; habe ich ein Tool gefunden, um einfache Textvergleiche machen zu k&amp;ouml;nnen.&lt;/p&gt;
+&lt;p&gt;Die Anzahl der Vergleiche ergibt sich dabei mittels den Binomialkoeffizienten zu:&lt;/p&gt;
+&lt;p&gt;%%N_{Vergleiche}={N_{Arbeiten} \choose 2}=\frac{N_{Arbeiten}!}{(N_{Arbeiten}-2)!\cdot 2!}%%&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align="center"&gt;Anzahl der Arbeiten&lt;/th&gt;
+&lt;th align="center"&gt;Anzahl der Vergleiche&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;5&lt;/td&gt;
+&lt;td align="center"&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;10&lt;/td&gt;
+&lt;td align="center"&gt;45&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;15&lt;/td&gt;
+&lt;td align="center"&gt;105&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;20&lt;/td&gt;
+&lt;td align="center"&gt;190&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;25&lt;/td&gt;
+&lt;td align="center"&gt;300&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;30&lt;/td&gt;
+&lt;td align="center"&gt;435&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;In der Informatik spricht man auch von einer Laufzeitkomplexit&amp;auml;t von %%\mathcal O(n^2)%%, sprich mit doppelter Anzahl
+an Arbeiten steigt die Anzahl der Vergleiche um (etwas mehr als) das Vierfache.&lt;/p&gt;
+&lt;h2 id="nutzen-von-tools"&gt;Nutzen von Tools&lt;/h2&gt;
+&lt;p&gt;Bei einer Hausaufgabe habe ich nun das konkrete "&lt;em&gt;Problem&lt;/em&gt;" 25 Arbeiten miteinander zu vergleichen. Es handelt sich
+um eine Programmieraufgabe in C.&lt;/p&gt;
+&lt;p&gt;Der Vergleich von zwei Textdateien l&amp;auml;sst sich mittels &lt;code&gt;diff&lt;/code&gt; bewerkstelligen. Was ich aber brauche ist eine Statistik,
+die mir angibt, wie gro&amp;szlig; die &lt;em&gt;Korrelation&lt;/em&gt; zwischen zwei Dateien ist, sprich wie gro&amp;szlig; der Anteil an Gemeinsamkeiten ist.
+Bei dem Vergleich sollten Zeilenumbr&amp;uuml;che, Leerzeichen, usw. keine Rolle spielen. Das Tool der Wahl ist &lt;code&gt;wdiff&lt;/code&gt;. Die Option
+&lt;code&gt;-s&lt;/code&gt; liefert eine entsprechende Statistik.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$&amp;gt; wdiff -s arbeit1.c arbeit2.c
+...
+arbeit1.c: &lt;span class="m"&gt;126&lt;/span&gt; W&amp;ouml;rter  &lt;span class="m"&gt;48&lt;/span&gt; &lt;span class="m"&gt;38&lt;/span&gt;% gleich  &lt;span class="m"&gt;13&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;% gel&amp;ouml;scht  &lt;span class="m"&gt;65&lt;/span&gt; &lt;span class="m"&gt;52&lt;/span&gt;% ver&amp;auml;ndert
+arbeit2.c: &lt;span class="m"&gt;140&lt;/span&gt; W&amp;ouml;rter  &lt;span class="m"&gt;48&lt;/span&gt; &lt;span class="m"&gt;34&lt;/span&gt;% gleich  &lt;span class="m"&gt;7&lt;/span&gt; &lt;span class="m"&gt;5&lt;/span&gt;% eingef&amp;uuml;gt  &lt;span class="m"&gt;85&lt;/span&gt; &lt;span class="m"&gt;61&lt;/span&gt;% ver&amp;auml;ndert
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Der Vergleich von &lt;samp&gt;arbeit1.c&lt;/samp&gt; mit &lt;samp&gt;arbeit2.c&lt;/samp&gt; liefert ein anderes Ergebnis als der umgekehrte Vergleich und
+h&amp;auml;ngt vorallem mit der unterschiedlichen Anzahl an Gesamtworten zusammen.&lt;/p&gt;
+&lt;p&gt;Zum Vergleich von 25 Arbeiten m&amp;uuml;ssen nun 300 dieser Aufrufe gemacht werden. Dazu dient folgendes &lt;samp&gt;bash&lt;/samp&gt;-Skript:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;files&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;ls *.c&lt;span class="sb"&gt;`&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; work1 in &lt;span class="nv"&gt;$files&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;do&lt;/span&gt;
+  &lt;span class="k"&gt;for&lt;/span&gt; work2 in &lt;span class="nv"&gt;$files&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="k"&gt;do&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$work1&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="nv"&gt;$work2&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
+      &lt;span class="k"&gt;continue&lt;/span&gt;
+    &lt;span class="k"&gt;fi&lt;/span&gt;
+    &lt;span class="nb"&gt;echo&lt;/span&gt; -n &lt;span class="nv"&gt;$work1&lt;/span&gt; &lt;span class="nv"&gt;$work2&lt;/span&gt;
+    wdiff -s &lt;span class="nv"&gt;$work1&lt;/span&gt; &lt;span class="nv"&gt;$work2&lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;tail -n &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;cut -d: -f2
+  &lt;span class="k"&gt;done&lt;/span&gt;
+&lt;span class="k"&gt;done&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Das Skript nutzt zwei Schleifen, um jede Datei mit jeder zu vergleichen. Bei der Ausgabe von &lt;samp&gt;wdiff&lt;/samp&gt; werden
+nicht ben&amp;ouml;tigte Teile weggeschnitten.&lt;/p&gt;
+&lt;h2 id="auswertung"&gt;Auswertung&lt;/h2&gt;
+&lt;p&gt;Die Ausf&amp;uuml;hrung f&amp;uuml;hrt dann zu folgendem Ergebnis (ein Ausschnitt):&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;...
+arbeit20.c arbeit13.c &lt;span class="m"&gt;209&lt;/span&gt; W&amp;ouml;rter  &lt;span class="m"&gt;47&lt;/span&gt; &lt;span class="m"&gt;22&lt;/span&gt;% gleich  &lt;span class="m"&gt;12&lt;/span&gt; &lt;span class="m"&gt;6&lt;/span&gt;% eingef&amp;uuml;gt  &lt;span class="m"&gt;150&lt;/span&gt; &lt;span class="m"&gt;72&lt;/span&gt;% ver&amp;auml;ndert
+arbeit20.c arbeit14.c &lt;span class="m"&gt;116&lt;/span&gt; W&amp;ouml;rter  &lt;span class="m"&gt;113&lt;/span&gt; &lt;span class="m"&gt;97&lt;/span&gt;% gleich  &lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;% eingef&amp;uuml;gt  &lt;span class="m"&gt;3&lt;/span&gt; &lt;span class="m"&gt;3&lt;/span&gt;% ver&amp;auml;ndert
+arbeit20.c arbeit15.c &lt;span class="m"&gt;315&lt;/span&gt; W&amp;ouml;rter  &lt;span class="m"&gt;54&lt;/span&gt; &lt;span class="m"&gt;17&lt;/span&gt;% gleich  &lt;span class="m"&gt;11&lt;/span&gt; &lt;span class="m"&gt;3&lt;/span&gt;% eingef&amp;uuml;gt  &lt;span class="m"&gt;250&lt;/span&gt; &lt;span class="m"&gt;79&lt;/span&gt;% ver&amp;auml;ndert
+arbeit20.c arbeit16.c &lt;span class="m"&gt;209&lt;/span&gt; W&amp;ouml;rter  &lt;span class="m"&gt;39&lt;/span&gt; &lt;span class="m"&gt;19&lt;/span&gt;% gleich  &lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;% eingef&amp;uuml;gt  &lt;span class="m"&gt;170&lt;/span&gt; &lt;span class="m"&gt;81&lt;/span&gt;% ver&amp;auml;ndert
+arbeit20.c arbeit17.c &lt;span class="m"&gt;290&lt;/span&gt; W&amp;ouml;rter  &lt;span class="m"&gt;54&lt;/span&gt; &lt;span class="m"&gt;19&lt;/span&gt;% gleich  &lt;span class="m"&gt;13&lt;/span&gt; &lt;span class="m"&gt;4&lt;/span&gt;% eingef&amp;uuml;gt  &lt;span class="m"&gt;223&lt;/span&gt; &lt;span class="m"&gt;77&lt;/span&gt;% ver&amp;auml;ndert
+...
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Es f&amp;auml;llt der zweite Eintrag auf: 97% &amp;Uuml;bereinstimmung. Da muss sehr viel Zufall im Spiel sein, oder auch nicht.&lt;/p&gt;
+&lt;p&gt;Ein direkter Vergleich mittels &lt;a class="external" href="http://meldmerge.org/"&gt;Meld&lt;/a&gt; zeigt:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Vergleich von arbeit14.c und arbeit20.c" src="https://www.semiversus.com/blog/2016_01_31_korrelation/meld.png"/&gt;&lt;/p&gt;
+&lt;p&gt;Die Liste nach Korrelation sortiert zeigt folgendes Ergebnis:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Auswertung" src="https://www.semiversus.com/blog/2016_01_31_korrelation/auswertung.png"/&gt;&lt;/p&gt;
+&lt;p&gt;Es zeigen sich zwei "&lt;em&gt;Cluster&lt;/em&gt;": &lt;samp&gt;arbeit14.c&lt;/samp&gt; und &lt;samp&gt;arbeit20.c&lt;/samp&gt; unterscheiden sich durch genau drei "W&amp;ouml;rter",
+&lt;samp&gt;arbeit6.c&lt;/samp&gt;, &lt;samp&gt;arbeit15.c&lt;/samp&gt; und &lt;samp&gt;arbeit17.c&lt;/samp&gt; unterscheiden sich auch nur durch ein paar "W&amp;ouml;rter".&lt;/p&gt;
+&lt;h2 id="zusammenfassung"&gt;Zusammenfassung&lt;/h2&gt;
+&lt;p&gt;&lt;samp&gt;wdiff&lt;/samp&gt; ist ein m&amp;auml;chtiges Tool f&amp;uuml;r Textvergleiche. Man sollte wahrscheinlich nicht zu pedantisch werden, um als Lehrer
+Kopien zu entdecken. Ich w&amp;uuml;nsche und fordere eine Zusammenarbeit und Wissensaustausch bei Sch&amp;uuml;lern - eine reine Kopie kann ich
+aber nicht unterst&amp;uuml;tzen.&lt;/p&gt;</summary><category term="Tools"></category></entry></feed>

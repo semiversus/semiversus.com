@@ -1,0 +1,58 @@
+<!DOCTYPE html><html lang=de> <head><title>Erstes Beispiel</title><link rel=icon href=https://www.semiversus.com/favicon.ico><meta charset=utf-8><meta name=description content="Beispiel 1 Starten wir direkt mit einem Beispiel, welches über Hello, World! hinausgeht. Was macht das folgende Programm? Was fällt auf im Vergleich zu anderen Programmiersprachen? word_list = ['Warthog', 'Hedgehog', 'Badger', 'Drake', 'Eft', 'Fawn', 'Gibbon'] VOWELS = 'aeiou' result_string = '' result_number = 0 for word in word_list: vowels_number = 0 for letter in word ..."><meta name=author content="Günther Jena"><meta name=viewport content="width=device-width, initial-scale=1.0"><meta name=google-site-verification content=O-3LVEziPiVrCYqFCwbLmB3s7lNG__cPMLLAr_RUxbA><meta name=msvalidate.01 content=70DFF0E672B42811AA384CC455C9406C><link rel=stylesheet href=https://www.semiversus.com/theme/css/semiversus.min.css?f7108c59><script async src=https://www.semiversus.com/theme/js/semiversus.min.js?c02fe949></script></head> <body data-spy=scroll data-target=#sidebar data-offset=30> <div id=wrap> <nav class="navbar navbar-inverse"> <div class=container> <div class=navbar-header> <button type=button class="navbar-toggle collapsed" data-toggle=collapse data-target=.navbar-collapse> <span class=icon-bar></span><span class=icon-bar></span><span class=icon-bar></span> </button> <a href=https://www.semiversus.com/index.html class=navbar-brand>SEMIVERSUS</a> </div> <div class="navbar-collapse collapse"> <ul class="nav navbar-nav"> <li><a href=https://www.semiversus.com/index.html>Blog</a></li> <li><a href=https://www.semiversus.com/dic/uebersicht.html>Unterricht</a></li> <li><a href=https://www.semiversus.com/projekte/projekte.html>Projekte</a></li> <li><a href=https://www.semiversus.com/about.html>Über mich</a></li> </ul> <form class="navbar-form navbar-right" role=search action=https://www.semiversus.com/search.html onsubmit="return validateForm(this.elements['q'].value);"> <input type=text class=form-control placeholder=Suche name=q id=tipue_search_input></form> <ul class="nav navbar-nav navbar-right socialicons"> <li><a href=https://www.linkedin.com/in/guenther-jena data-toggle=tooltip data-placement=bottom title=LinkedIn.com/Günther-Jena><span class="linkedin icon hidden-xs"></span><span class="hidden-sm hidden-md hidden-lg">Linkedin</span></a></li> <li><a href=https://www.xing.com/profile/Guenther_Jena2 data-toggle=tooltip data-placement=bottom title=Xing.com/Günther-Jena><span class="xing icon hidden-xs"></span><span class="hidden-sm hidden-md hidden-lg">Xing</span></a></li> <li><a href=https://stackoverflow.com/users/166605/g%C3%BCnther-jena data-toggle=tooltip data-placement=bottom title=Stackoverflow.com/Semiversus><span class="stackoverflow icon hidden-xs"></span><span class="hidden-sm hidden-md hidden-lg">Stack Overflow</span></a></li> <li><a href=https://github.com/semiversus data-toggle=tooltip data-placement=bottom title=Github.com/Semiversus><span class="github icon hidden-xs"></span><span class="hidden-sm hidden-md hidden-lg">Github</span></a></li> <li><a href=https://www.semiversus.com/semiversus.atom.xml class=rss data-toggle=tooltip data-placement=bottom title="RSS Feed"><span class="rss icon hidden-xs"></span><span class="hidden-sm hidden-md hidden-lg">RSS Feed</span></a></li> </ul> </div> </div> </nav> <div class=container> <div class=visible-print-block>Semiversus | Erstes Beispiel</div> <ol class="breadcrumb hidden-print"><li><a href=https://www.semiversus.com/dic/uebersicht.html>Unterrichtsmaterial</a></li><li><a href=https://www.semiversus.com/dic/robotik/python/uebersicht.html>Python</a></li><li><strong>Erstes Beispiel</strong></li></ol><nav class=hidden-print><ul class=pager> <li class=previous><a href=https://www.semiversus.com/dic/robotik/python/installation.html>&larr; Installation</a></li><li class=next><a href=https://www.semiversus.com/dic/robotik/python/datentypen.html>Datentypen &rarr;</a></li></ul></nav> <div class=row> <div class=col-md-8 role=main> <header><h1>Erstes Beispiel<div class="pull-right hidden-print"><a href=https://www.semiversus.com/dic/robotik/python/beispiele.md class="btn btn-default btn-xs" data-toggle=tooltip data-placement=bottom title="Quelltext zu dieser Seite">Quelltext</a></div></h1></header> <h3 id=beispiel-1>Beispiel 1</h3> <p>Starten wir direkt mit einem Beispiel, welches &uuml;ber <code>Hello, World!</code> hinausgeht. Was macht das folgende Programm? Was f&auml;llt auf im Vergleich zu anderen Programmiersprachen?</p> <div class=codehilite><pre><span></span><span class=n>word_list</span> <span class=o>=</span> <span class=p>[</span><span class=s1>'Warthog'</span><span class=p>,</span> <span class=s1>'Hedgehog'</span><span class=p>,</span> <span class=s1>'Badger'</span><span class=p>,</span> <span class=s1>'Drake'</span><span class=p>,</span> <span class=s1>'Eft'</span><span class=p>,</span> <span class=s1>'Fawn'</span><span class=p>,</span> <span class=s1>'Gibbon'</span><span class=p>]</span>
+
+<span class=n>VOWELS</span> <span class=o>=</span> <span class=s1>'aeiou'</span>
+
+<span class=n>result_string</span> <span class=o>=</span> <span class=s1>''</span>
+<span class=n>result_number</span> <span class=o>=</span> <span class=mi>0</span>
+
+<span class=k>for</span> <span class=n>word</span> <span class=ow>in</span> <span class=n>word_list</span><span class=p>:</span>
+    <span class=n>vowels_number</span> <span class=o>=</span> <span class=mi>0</span>
+
+    <span class=k>for</span> <span class=n>letter</span> <span class=ow>in</span> <span class=n>word</span><span class=p>:</span>
+        <span class=k>if</span> <span class=n>letter</span> <span class=ow>in</span> <span class=n>VOWELS</span><span class=p>:</span>
+            <span class=n>vowels_number</span> <span class=o>+=</span> <span class=mi>1</span>
+
+    <span class=k>if</span> <span class=n>vowels_number</span> <span class=o>&gt;</span> <span class=n>result_number</span><span class=p>:</span>
+        <span class=n>result_number</span> <span class=o>=</span> <span class=n>vowels_number</span>
+        <span class=n>result_string</span> <span class=o>=</span> <span class=n>word</span>
+
+<span class=nb>print</span><span class=p>(</span><span class=n>result_string</span><span class=p>)</span>
+</pre></div> <p>Beispiel als <a href=https://www.semiversus.com/dic/robotik/python/example1.py>Download</a></p> <p>Das Programm iteriert &uuml;ber eine Liste mit W&ouml;rtern und findet das Wort mit den meisten Selbstlauten.</p> <p>Was f&auml;llt im Vergleich zu anderen Programmiersprachen auf?</p> <ul> <li>Python nutzt dynamische Typisierung (d.h. beim Einf&uuml;hren von Variablen muss kein Datentyp angegeben werden)</li> <li>Es werden keine Klammern f&uuml;r Bl&ouml;cke ben&ouml;tigt. Sie werden durch Einr&uuml;ckungen definiert</li> </ul> <h3 id=beispiel2>Beispiel2</h3> <p>Zum Ausprobieren gibt es das Beispiel auch hier: <a href=https://onlinegdb.com/B19ue-gOH>Online Python Beispiel</a></p> <div class=codehilite><pre><span></span><span class=kn>from</span> <span class=nn>random</span> <span class=kn>import</span> <span class=n>randint</span>
+
+<span class=n>UPPER_NUMBER_LIMIT</span> <span class=o>=</span> <span class=mi>100</span>
+
+<span class=n>number_to_guess</span> <span class=o>=</span> <span class=n>randint</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=n>UPPER_NUMBER_LIMIT</span><span class=p>)</span>
+<span class=n>guessed_number</span> <span class=o>=</span> <span class=kc>None</span>
+
+<span class=nb>print</span><span class=p>(</span><span class=s1>'I will choose a number between 1 and '</span> <span class=o>+</span> <span class=nb>str</span><span class=p>(</span><span class=n>UPPER_NUMBER_LIMIT</span><span class=p>)</span> <span class=o>+</span> <span class=s1>'.'</span><span class=p>)</span>
+
+<span class=k>while</span> <span class=n>number_to_guess</span> <span class=o>!=</span> <span class=n>guessed_number</span><span class=p>:</span>
+    <span class=n>user_input</span> <span class=o>=</span> <span class=nb>input</span><span class=p>(</span><span class=s1>'What number are you guessing? number: '</span><span class=p>)</span>
+
+    <span class=n>guessed_number</span> <span class=o>=</span> <span class=nb>int</span><span class=p>(</span><span class=n>user_input</span><span class=p>)</span>
+
+    <span class=k>if</span> <span class=n>guessed_number</span> <span class=o>&gt;</span> <span class=n>number_to_guess</span><span class=p>:</span>
+        <span class=nb>print</span><span class=p>(</span><span class=s1>'Your guessed number is too high!'</span><span class=p>)</span>
+    <span class=k>elif</span> <span class=n>guessed_number</span> <span class=o>&lt;</span> <span class=n>number_to_guess</span><span class=p>:</span>
+        <span class=nb>print</span><span class=p>(</span><span class=s1>'Your guessed number is too low!'</span><span class=p>)</span>
+
+<span class=nb>print</span><span class=p>(</span><span class=s1>'You guess was correct!'</span><span class=p>)</span>
+</pre></div> <h2 id=aufgaben_1>Aufgaben</h2> <ul> <li>F&uuml;ge eine Anzeige hinzu, wieviele Versuche notwendig waren. Dies sollte dann in etwa so aussehen: <code>You guess was correct! It took 3 attempts.</code></li> <li>F&uuml;ge eine Abfrage des oberen Limits ein. Dazu sollte folgende Abfrage am Anfang erscheinen: <code>What should be the upper limit? number: </code></li> </ul> </div> <div class=col-md-4 role=complementary> <nav class="well well-sm" data-spy=affix data-offset-top=0 id=sidebar> <ul class=nav><li><a href=#beispiel-1>Beispiel 1</a></li><li><a href=#beispiel2>Beispiel2</a></li><li><a href=#aufgaben_1>Aufgaben</a></li></ul> </nav> </div> </div> </div> </div> <footer class="footer hidden-print"><div class=container><p class="text-muted credit">Günther Jena 2011 - 2020 | Letztes Update am 20.9.2020 (Rev. <a href=https://github.com/semiversus/semiversus.github.io-source/commit/ffdbb85>ffdbb85</a>) <a href=https://plus.google.com/111972313670421914746/about rel=author class=hidden>Google+</a><a href=https://creativecommons.org/licenses/by-sa/3.0/de/ class=pull-right><img src=https://www.semiversus.com/theme/img/cc_by_sa.svg alt="Licence CC-BY-SA"></a></p></div></footer> <script type=text/javascript>
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.src = 'https:' == document.location.protocol ? 'https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'; 
+        s[(window.opera ? "innerHTML" : "text")] =
+            "MathJax.Hub.Config({" + 
+            "    config: ['MMLorHTML.js']," + 
+            "    jax: ['input/TeX','input/MathML','output/HTML-CSS','output/NativeMML']," +
+            "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," + 
+            "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+            "    tex2jax: { " +
+            "        inlineMath: [ ['%%','%%'] ], " +
+            "        processEscapes: false }, " +
+            "    'HTML-CSS': { " +
+            "        styles: { '.MathJax .mo, .MathJax .mi': {color: 'black ! important'}} " +
+            "    } " +
+            "}); ";
+        (document.body || document.getElementsByTagName('head')[0]).appendChild(s);
+    </script> </body> </html>
