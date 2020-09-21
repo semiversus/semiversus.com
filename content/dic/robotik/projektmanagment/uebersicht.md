@@ -1,4 +1,4 @@
 title: Projektmanagment
 
 # Inhalt
-* [GitHub/GitLab](uebung_github.md)
+* [GitHub/GitLab]({filename}uebung_github.md)

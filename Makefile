@@ -18,9 +18,7 @@ view: local
 	@python2 -m webbrowser -t file://`pwd`/output_local/index.html
 
 upload:
-	git push
-	cd output; git add --all; git commit -m "automated push"; git push git@github.com:semiversus/semiversus.github.io.git
-	ssh root@semiversus.com './update_semiversus.sh'
+	rsync -avz output/ root@semiversus.com:/srv/data/nginx/semiversus_static/
 
 clean:
 	rm cache dic_script output_local __pycache__ *.pyc -rf
