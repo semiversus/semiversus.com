@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Semiversus | {{ tag }}{% endblock %}
+{% block content %}
+  <script data-isso="https://comments.semiversus.com" data-isso-lang="de" src="{{ SITEURL }}/theme/js/count.min.js"></script>
+  <h1>Tag: {{ tag }}</h1>
+  {% for article in (articles_page.object_list if articles_page else articles) %}
+    <article>
+      <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
+      <p>{% include 'metadata.html' %}</p>
+      <div class="summary">
+        {% if article.featured_image %}
+          <a href="{{ SITEURL }}/{{ article.url }}"><img src="{{article.featured_image}}" class="featured-img"></a>
+        {% endif %}
+        {% if article._summary %}
+          {{ article._summary }}
+        {% else %}
+          {{ article.summary }}
+        {% endif %}
+        {% if article.summary != article.content %}
+          <a class="btn btn-default btn-xs" href="{{ SITEURL }}/{{ article.url }}">Weiterlesen...</a>
+        {% endif %}
+      </div>
+    </article>
+  {% if not loop.last %}<hr />{% endif %}
+  {% endfor %}
+
+  {% include 'pagination.html' %}
+{% endblock content %}

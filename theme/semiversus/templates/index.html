@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+  {% if articles_previous_page==None %}
+  <h1>Übersicht</h1>
+  <p>Hier findet sich mein privater Blog und <a href="./dic/uebersicht.html">Unterrichtsmaterial</a> für das Fach <em>Digitale Systeme und Computersysteme</em> an der <a href="http://www.htl-rankweil.at" class="external">HTL Rankweil</a>.</p>
+  <p>Alle Inhalte (sofern nicht anders gekennzeichnet) befinden sich unter der <a href="http://creativecommons.org/licenses/by-sa/3.0/de/" class="external">CC BY-SA 3.0 DE</a> Lizenz.</p>
+  <p>Aktuell finden sich folgende Stichwörter:<br />
+{% for tag,articles in tags %}<a href="{{ SITEURL }}/{{ tag.url }}"><span class="label label-primary">{{ tag }}</span></a> {% endfor %}
+</p>
+  <h1>Blog</h1>
+  {% endif %}
+
+  {% for article in (articles_page.object_list if articles_page else articles) %}
+    <article>
+      <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
+      {% include 'metadata.html' %}
+      <div class="summary">
+        {% if article.featured_image %}
+          <a href="{{ SITEURL }}/{{ article.url }}"><img src="{{article.featured_image}}" class="featured-img" alt="{{ article.title }}"></a>
+        {% endif %}
+        {% if article._summary %}
+          {{ article._summary }}
+        {% else %}
+          {{ article.summary }}
+        {% endif %}
+        {% if article.summary != article.content %}
+          <a class="btn btn-default btn-xs" href="{{ SITEURL }}/{{ article.url }}">Weiterlesen...</a>
+        {% endif %}
+      </div>
+    <div class="clearfix"></div>
+    </article>
+  {% if not loop.last %}<hr />{% endif %}
+  {% endfor %}
+
+  {% include 'pagination.html' %}
+{% endblock content %}
+
+{% block javascript %}
+  <script async data-isso="https://comments.semiversus.com" data-isso-lang="de" src="{{ SITEURL }}/theme/js/count.min.js"></script>
+{% endblock %}

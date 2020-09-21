@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}Seite nicht gefunden!{% endblock %}
+
+{% block content %}
+  <header><h1>Seite nicht gefunden oder entfernt!</h1></header>
+  <p>Zurück zum <a href="{{ SITEURL }}">Index</a> oder nutze die Suche:</p>
+  <form role="search" action="{{ SITEURL }}/search.html" onsubmit="return validateForm(this.elements['q'].value);"><label for="search">Suche innerhalb semiversus.com</label><input type="text" class="form-control" placeholder="Suchbegriff" name="q" id="search"></form>
+{% endblock %}

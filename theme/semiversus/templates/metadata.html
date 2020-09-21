@@ -1,0 +1,4 @@
+<p>{{ article.date.strftime("%d.%m.%Y") }} | <a href="{{ SITEURL }}/{{ article.url }}#isso-thread">Lade Kommentare</a> | {% if article.tags|length==1 %}Tag{% else %}Tags{% endif %}:
+{% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}{% endfor %}
+</p>
+<div class="clearfix"></div>

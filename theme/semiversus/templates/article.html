@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block description %}{{ article.summary|striptags }}{% endblock %}
+{% block title %}{{ article.title }}{% endblock %}
+{% block javascript %}{% if article.latex %}{{ article.latex }}{% endif %}{% endblock %}
+
+{% block head %}
+  <div class="visible-print-block">Semiversus | {{ article.title }}</div>
+{% endblock %}
+
+{% block content %}
+  <h2>{{ article.title }}<a href="{{ SITEURL }}/{{ article.url.replace('html','md') }}"  class="btn btn-default btn-xs pull-right hidden-print" data-toggle="tooltip" data-placement="bottom" title="Quelltext zu dieser Seite">Quelltext</a></h2>
+  {% include 'metadata.html' %}
+  {{ article.content }}
+  {% include 'comments.html' %}
+{% endblock %}

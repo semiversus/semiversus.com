@@ -7,7 +7,6 @@ Wieso Jubiläen immer nur nach ganzen Jahren feiern? Wieso nicht bei einer Milli
 
 Dieses [Spreadsheet]({filename}anniversary.ods){: class="download" } (LibreOffice Calc Sheet) macht es möglich. Einfach das Datum und die
 Uhrzeit bei "Geburt" eintragen, Namen anpassen und ausdrucken.
-<!-- PELICAN_END_SUMMARY -->
 
 ![Screenshot]({filename}anniversary.png)
 

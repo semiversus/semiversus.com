@@ -15,8 +15,7 @@ Neben den bitweisen Operatoren gibt es noch die logischen Verknüpfungen, die de
 * *ODER* Verknüpfung - <code>||</code>
 * *INVERTIERUNG* - <code>!</code>
 
-<!-- PELICAN_BEGIN_SUMMARY -->
-In C fehlt offensichtlich die Exklusive *ODER* Verknüpfung - wieso gibt es kein <code>^^</code>?
+Hier fehlt offensichtlich die Exklusive *ODER* Verknüpfung - wieso gibt es kein <code>^^</code>?
 
 Eine gute Antwort findet sich auf dieser [Seite](http://benpfaff.org/writings/clc/logical-xor.html){: class="external" }
 von Ben Pfaff. Und hier eine kurze Zusammenfassung:
@@ -24,7 +23,6 @@ von Ben Pfaff. Und hier eine kurze Zusammenfassung:
 * Eine logische *Exklusiv ODER* Verknüpfung ist sehr selten.
 * Die Kurzschlussauswertung wird nicht ermöglicht - Ist bei einer *UND* Verknüpfung der erste Term falsch muss der zweite nicht
 mehr überprüft werden. Das gleiche gilt bei *ODER* mit dem ersten Term wahr. Bei *Exklusiv ODER* geht dies nicht.
-<!-- PELICAN_END_SUMMARY -->
 
 ## Und wenn ich es doch mal benötige?
 Eine logische *Exklusiv ODER* Verknüpfung lässt sich wie folgt realisieren:

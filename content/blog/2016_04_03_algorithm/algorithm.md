@@ -8,7 +8,6 @@ stehen müsste, wenn alle Plätze in den Reihen gefüllt würden. Teilweise gibt
 Das Problem ist ein menschliches - viele Teilnehmende sind bereits länger hier und fanden einen quasi freien Raum vor und
 da setzt man sich eben irgendwo hin. So langsam füllt sich der Raum, da aber das eigene Notebook, Getränke und der Snack
 zwischendurch bereits ausgebreitet wurden ist ein Platzwechsel sehr mühsam.
-<!-- PELICAN_END_SUMMARY -->
 
 Für Softwarekonferenzen habe ich folgenden Algorithmus zur Platzvergabe entwickelt. Solange alle diesem Algorithmus bei
 der Platzsuche folgen werden die verfügbare Sitzplätze optimal ausgenutzt.

@@ -1,4 +1,4 @@
-vlocal:
+local:
 	@echo "Building local website"
 	@PYTHONPATH='.' pelican content -s pelicanconf_local.py --cache-path=cache/local/ -o output_local
 

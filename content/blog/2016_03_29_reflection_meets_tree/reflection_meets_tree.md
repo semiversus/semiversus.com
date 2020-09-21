@@ -10,10 +10,8 @@ nicht eine *"mechanische"* Beschädigung vorangegangen ist, aber das was der Bau
 
 ![Baum mit Verkehrsspiegel]({filename}mirror.jpg)
 
-<!-- PELICAN_BEGIN_SUMMARY -->
 Die Hinterseite eines Verkehrsspiegels ist in diesem Fall refelektierend ausgeführt (dumme Idee!) und wenn die Sonne
 richtig steht bündeln sich die Sonnenstrahlen auf einem gemeinsamen Punkt - und dort steht dann der Baum.
-<!-- PELICAN_END_SUMMARY -->
 
 Hier der Baum im Detail:
 
