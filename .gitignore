@@ -2,6 +2,7 @@ cache/
 latex.cache
 dic_script/
 output_local/
+output/
 .vscode
 
 # Byte-compiled / optimized / DLL files
