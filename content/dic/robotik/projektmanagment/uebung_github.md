@@ -9,10 +9,16 @@ title: Übung Github
 
 # Proxy Konfiguration
 Für die HTL Rankweil ist eine zusätzliche Proxy Konfiguration notwendig. Bitte folgendes in einem Terminal (`cmd`) ausführen:
-`git config --global http.proxy http://proxy.htl.rankweil:8080/`
+
+```bash
+git config --global http.proxy http://proxy.htl.rankweil:8080/
+```
 
 Um den Proxy wieder zu entfernen:
-`git config --global --unset http.proxy`
+
+```
+git config --global --unset http.proxy
+```
 
 # Inhalt
 1. Anlegen eines Projektes
