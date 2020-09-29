@@ -3,7 +3,7 @@ title: Übung Github
 # Notwendige Vorbereitungen
 1. Anlegen eines Benutzeraccounts auf [GitHub](http://github.com)
 2. Installation von [VS Code](https://code.visualstudio.com/)
-3. Installation von [Git (for Windows)](https://gitforwindows.org/) mit `PATH` Variable!
+3. Installation von [Git (for Windows)](https://gitforwindows.org/) mit `PATH` Variable (Option 2 oder 3)!
 
 ![Git Installation](git_installer.png)
 
