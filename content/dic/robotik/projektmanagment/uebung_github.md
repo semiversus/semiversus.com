@@ -1,11 +1,17 @@
 title: Übung Github
 
-# Inhalt
+# Notwendige Vorbereitungen
 1. Anlegen eines Benutzeraccounts auf [GitHub](http://github.com)
-2. Anlegen eines Projektes
-3. Anlegen von Dateien online
-4. "Clonen" des Projekts mittels `git` ([Link zum Tool](https://gitforwindows.org/))
-5. Lokales Ändern, *commiten* und *pushen*
-6. Anlegen eines Issues
-7. Kommentieren eines Issues im Projekt des Sitznachbars
-8. Forken des Projekts vom Sitznachbar, Ändern und senden eines Pull Requests
+2. Installation von [VS Code](https://code.visualstudio.com/)
+3. Installation von [Git (for Windows)](https://gitforwindows.org/) mit `PATH` Variable!
+
+![Git Installation](git_installer.png)
+
+# Inhalt
+1. Anlegen eines Projektes
+2. Anlegen von Dateien online
+3. "Clonen" des Projekts mit VSCode
+4. Lokales Ändern, *commiten* und *pushen*
+5. Anlegen eines Issues
+6. Kommentieren eines Issues im Projekt des Sitznachbars
+7. Forken des Projekts vom Sitznachbar, Ändern und senden eines Pull Requests
