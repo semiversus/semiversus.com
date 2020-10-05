@@ -14,4 +14,4 @@ Nach der Abfrage soll folgende Ausgabe am Bildschirm erscheinen (Beispiel):
 
 Stichworte: <code>while</code> Schleife, <code>break</code>
 
-Abgabe unter [abgabe@jena.at](mailto://abgabe@jena.at).
+Abgabe unter [turtle.jena.at](https://turtle.jena.at/s/kEreC5sxGKqERXK).
