@@ -47,7 +47,7 @@ Weitere Spezifikationspunkte:
 
 ## Test mittels pytest
 
-Ihr könnt eure Applikation mittels `pytest` testen. Richtet dafür einfach die virtuelle Umgebung ein und startet im Terminal von Visual Studio Code `pytest`.
+Ihr könnt eure Applikation mittels <code>pytest</code> testen. Richtet dafür einfach die virtuelle Umgebung ein und startet im Terminal von Visual Studio Code <code>pytest</code>.
 
 ## Zusatzpunkt (1 Punkt)
 
@@ -59,3 +59,5 @@ Hier ein Beispiel:
     >>> items = ['#Hausübung WDIC', 'Matheübung #korrigieren', '#Hausübung Deutsch #korrigieren', 'Ausschlafen']
     >>> build_hashtag_dict(items)
     {'Hausübung': ['#Hausübung WDIC', '#Hausübung Deutsch #korrigieren'], 'korrigieren': ['Matheübung korrigieren', '#Hausübung Deutsch #korrigieren']}
+
+Abgabe unter [turtle.jena.at](https://turtle.jena.at/s/kEreC5sxGKqERXK).

@@ -61,8 +61,8 @@ Zum Ausprobieren gibt es das Beispiel auch hier: [Online Python Beispiel](https:
         elif guessed_number < number_to_guess:
             print('Your guessed number is too low!')
 
-    print('You guess was correct!')
+    print('Your guess was correct!')
 
 # Aufgaben
-* Füge eine Anzeige hinzu, wieviele Versuche notwendig waren. Dies sollte dann in etwa so aussehen: <code>You guess was correct! It took 3 attempts.</code>
+* Füge eine Anzeige hinzu, wieviele Versuche notwendig waren. Dies sollte dann in etwa so aussehen: <code>Your guess was correct! It took 3 attempts.</code>
 * Füge eine Abfrage des oberen Limits ein. Dazu sollte folgende Abfrage am Anfang erscheinen: <code>What should be the upper limit? number: </code>

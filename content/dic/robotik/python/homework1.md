@@ -12,6 +12,6 @@ Nach der Abfrage soll folgende Ausgabe am Bildschirm erscheinen (Beispiel):
 
 <code>Minimum: 3, Maximum: 17, Average: 6</code>
 
-Stichworte: <code>while</code> Schleife, <code>break</code>
+Stichworte: *while* Schleife, *break*, [*min*](https://docs.python.org/3/library/functions.html#min), [*max*](https://docs.python.org/3/library/functions.html#max), [*sum*](https://docs.python.org/3/library/functions.html#sum), Arbeiten mit [Listen](https://www.python-kurs.eu/python3_listen.php)
 
 Abgabe unter [turtle.jena.at](https://turtle.jena.at/s/kEreC5sxGKqERXK).
