@@ -58,7 +58,7 @@ EXTRA_PATH_METADATA = {
 PATH_METADATA= '(?P<dirname>.*)/(?P<basename>.*)\..*'
 FILENAME_METADATA='(?P<basename>.*)'
 
-PAGE_PATHS=['dic', 'projekte', 'pages']
+PAGE_PATHS=['dic', 'projekte', 'pages', 'hwe']
 PAGE_URL='{dirname}/{basename}.html'
 PAGE_SAVE_AS='{dirname}/{basename}.html'
 

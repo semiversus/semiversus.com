@@ -18,6 +18,8 @@ toc: False
 * [RaspberryPi]({filename}robotik/raspberry.md)
 * [Suchalgorithmen]({filename}robotik/suche.md)
 
+# Hardwareentwicklung
+* [Projekte Teil 1]({filename}/hwe/teil1/uebersicht.md)
 
 # Korrekturen
 Es haben sich mit der Zeit sicher einige Fehler hier eingeschlichen. Egal, ob sachliche Unkorrektheit bzw. Tipp- und
