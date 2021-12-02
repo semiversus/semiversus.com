@@ -1,6 +1,5 @@
 title:micro:bit Rust
 toc: False
-next: rust.md
 parent: uebersicht.md
 
 # Kurzbeschreibung
