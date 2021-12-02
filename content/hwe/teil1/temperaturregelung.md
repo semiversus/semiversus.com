@@ -19,17 +19,21 @@ Anschlüsse:
 
 # Recherche
 Für die Temperaturmessung eignen sich **Heißleiter** (auch NTC Widerstand genannt).
+
 * Wie wird aus der Temperatur eine Spannung abgeleitet?
 * Wie schaut die Kennlinie eines Heißleiters aus?
 
 Die durch die Temperaturmessung generierte Spannung muss mit einer oberen und unteren Schwelle verglichen werden.
+
 * Wie lässt sich das realisieren?
 * Wie hoch ist die jeweilige Vergleichsspannung für die obere und untere Schwelle
 
 Je nach Temperatur werden zwei Relais angesteuert.
+
 * Wie lassen sich Relais steuern?
 * Was ist beim Schalten von induktiven Lasten (Spule des Relais) zu beachten?
 
 # Spezifikation
 * Die obere Temperaturschwelle soll bei 30°C liegen, die untere bei 20°C.
 * Das Relais soll mindestens 230V AC/5A schalten können
+* Die Versorgungsspannung soll bei 5 Volt liegen, welche mittels Linearregler aus der Eingangsspannung "erzeugt" wird

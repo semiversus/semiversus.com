@@ -10,10 +10,12 @@ Mittels des Bausteins Timer [NE555](https://de.wikipedia.org/wiki/NE555) wird ei
 betrieben. Beim Drücken einer Taste soll die LED für mehrere Minuten leuchten.
 
 Anschlüsse:
+
 * Klemme mit 2 Anschlüssen für die Versorgung (9 - 15 Volt)
 
 # Recherche
 Das zentrale Bauteil ist der *NE555*
+
 * Wie ist ein NE555 aufgebaut?
 * Wie lässt sich die Frequenz einstellen?
 * Welche Probleme kommen auf, wenn die Zeitdauer mehrere Minuten umfasst
@@ -21,3 +23,4 @@ Das zentrale Bauteil ist der *NE555*
 # Spezifikation
 * Die Zeitdauer soll bei 10 Minuten liegen
 * Die Genauigkeit soll bei +/-20 Sekunden liegen
+* Die Versorgungsspannung soll bei 5 Volt liegen, welche mittels Linearregler aus der Eingangsspannung "erzeugt" wird
