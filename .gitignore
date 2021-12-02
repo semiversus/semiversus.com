@@ -4,6 +4,7 @@ dic_script/
 output_local/
 output/
 .vscode
+backup
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

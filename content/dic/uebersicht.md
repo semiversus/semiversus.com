@@ -20,6 +20,8 @@ toc: False
 
 # Hardwareentwicklung
 * [Projekte Teil 1]({filename}/hwe/teil1/uebersicht.md)
+* [Projekte Teil 2]({filename}/hwe/teil2/uebersicht.md)
+
 
 # Korrekturen
 Es haben sich mit der Zeit sicher einige Fehler hier eingeschlichen. Egal, ob sachliche Unkorrektheit bzw. Tipp- und
