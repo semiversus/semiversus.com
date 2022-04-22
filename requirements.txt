@@ -5,7 +5,7 @@ cssmin==0.2.0
 docutils==0.16
 feedgenerator==1.9.1
 htmlmin==0.1.12
-Jinja2==2.11.2
+Jinja2==2.11.3
 joblib==0.14.1
 jsmin==2.2.2
 Markdown==2.6.8
