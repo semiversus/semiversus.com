@@ -8,6 +8,10 @@ toc: False
 * [Pomodoro Timer]({filename}pomodoro.md)
 * [Würfel]({filename}wuerfel.md)
 * [Sirene]({filename}sirene.md)
+
+Weitere Ideen:
+* Ampel
+* Klasse AB Verstärker
 	
 # Benotungsbasis
 Insgesamt gibt es 130 Punkte.
