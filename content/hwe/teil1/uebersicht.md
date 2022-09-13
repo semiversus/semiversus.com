@@ -11,6 +11,7 @@ toc: False
 * [Ampel]({filename}ampel.md)
 * [Verstärker]({filename}verstaerker.md)
 * [Schrittmotortreiber]({filename}schrittmotor.md)
+* [Servotester]({filename}servotester.md)
 
 # Benotungsbasis
 Insgesamt gibt es 130 Punkte.
