@@ -8,16 +8,15 @@ toc: False
 * [Pomodoro Timer]({filename}pomodoro.md)
 * [Würfel]({filename}wuerfel.md)
 * [Sirene]({filename}sirene.md)
+* [Ampel]({filename}ampel.md)
+* [Verstärker]({filename}verstaerker.md)
+* [Schrittmotortreiber]({filename}schrittmotor.md)
 
-Weitere Ideen:
-* Ampel
-* Klasse AB Verstärker
-	
 # Benotungsbasis
 Insgesamt gibt es 130 Punkte.
 
 Abzugeben sind (in digitaler Form):
- 
+
  * Projektdokumentation (als PDF)
  * Eagle Dateien (.sch und .brd Dateien)
  * Simulationsdateien

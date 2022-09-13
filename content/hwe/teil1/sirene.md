@@ -1,5 +1,6 @@
 title: Sirene
 toc: False
+next: ampel.md
 parent: uebersicht.md
 
 # Kurzbeschreibung
