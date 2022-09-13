@@ -6,6 +6,7 @@ parent: uebersicht.md
 # Kurzbeschreibung
 Es soll eine sogenannte [2-Punkt Regelung](https://de.wikipedia.org/wiki/Zweipunktregler) realisiert werden,
 die je nach Temperatur zwei Relais ansteuert:
+
 * Ist die Temperatur über der oberen Schwelle, so wird Relais 1 aktiviert
 * Ist die Temperatur unter der unteren Schwelle, so wird Releais 2 aktiviert
 
@@ -13,6 +14,7 @@ An die beiden Relais können Lüfter oder Heizelemente angeschlossen werden, um 
 vermindern bzw. zu erhöhen.
 
 Anschlüsse:
+
 * Klemme mit 2 Anschlüssen für die Versorgung (9 - 15 Volt)
 * Klemme mit 2 Anschlüssen für Relais 1 (Schaltkontakt)
 * Klemme mit 2 Anschlüssen für Relais 2 (Schaltkontakt)

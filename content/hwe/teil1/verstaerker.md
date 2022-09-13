@@ -8,6 +8,7 @@ Ein Klasse D Verstärker arbeitet im Gegensatz zu den A, B bzw. AB Verstärkern 
 am Ausgang. Stattdessen wird ein PWM Signal genutzt, dessen Pulsweite durch das Audioeingangssignal moduliert ist.
 
 Anschlüsse:
+
 * Klemme mit 2 Anschlüssen für die Versorgung (9 - 15 Volt)
 * Klemme mit 2 Anschlüssen Lautsprecher
 * Klemme mit 2 Anschlüssen für Audio Eingangssignal
