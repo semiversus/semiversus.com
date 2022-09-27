@@ -1,6 +1,6 @@
 title: Schrittmotor Ansteuerung
 toc: False
-next: servo.md
+next: servotester.md
 parent: uebersicht.md
 
 # Kurzbeschreibung
