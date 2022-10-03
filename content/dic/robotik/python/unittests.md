@@ -122,7 +122,7 @@ Hinweise:
 
 * Um einen String zufällig zu sortieren seht ihr hier in der ersten Antwort ein Beispiel: [Stackoverflow](https://stackoverflow.com/a/2668366/166605)
 * Beim Testen wird es auch etwas schwieriger, weil ihr überprüfen müsst, ob das Resultat gültig ist. [sorted()](https://docs.python.org/3/library/functions.html#sorted) kann hier hilfreich sein!
-* Im String kommen keine Satzzeichen vor (`.`, `,`, ...)
+* Im String kommen keine Satzzeichen vor (<code>.</code>, <code>,</code>, ...)
 
 ## Übung Niedrigster Preis
 * Dateiname: <code>lowest_price.py</code> bzw. <code>test_lowest_price.py</code>

@@ -12,20 +12,20 @@ parent: ../../uebersicht.md
 * Variablen
 * Strings (Unicode)
 * Listen
-* [`dict` (Wörterbücher)]({filename}dict.md)
+* [<code>dict</code> (Wörterbücher)]({filename}dict.md)
 * [Erste Beispiele]({filename}beispiele.md)
-* `print` Funktion
-* `input` Funktion
-* `for` Schleife
-* `if` Anweisung
-* `while` Schleife
-* `break` und `continue` Anweisung
+* <code>print</code> Funktion
+* <code>input</code> Funktion
+* <code>for</code> Schleife
+* <code>if</code> Anweisung
+* <code>while</code> Schleife
+* <code>break</code> und <code>continue</code> Anweisung
 * Funktionen
 * Coding Style
 * Kommentare
 
 ## Erweitert
-* [Module und `import`]({filename}import.md)
+* [Module und <code>import</code>]({filename}import.md)
 * [Virtuelle Umgebung]({filename}venv.md)
 * Variable Argumentenliste
 * lambda Funktionen

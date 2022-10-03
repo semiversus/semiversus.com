@@ -47,7 +47,7 @@ hängt vorallem mit der unterschiedlichen Anzahl an Gesamtworten zusammen.
 Zum Vergleich von 25 Arbeiten müssen nun 300 dieser Aufrufe gemacht werden. Dazu dient folgendes <samp>bash</samp>-Skript:
 
     #!bash
-    files=`ls *.c`
+    files=<code>ls *.c</code>
 
     for work1 in $files;
     do
