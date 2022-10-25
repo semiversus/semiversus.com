@@ -7,6 +7,7 @@ Verwende folgendes Template um mit der Übung zu starten: [Download]({filename}t
 
 Erstellt wird eine TODO App. Die Verwendung sieht hier als Beispiel so aus:
 
+    #!bash
     > add WDIC Hausübung
     > add Äpfel einkaufen
     > list
