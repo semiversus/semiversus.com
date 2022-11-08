@@ -18,10 +18,10 @@ Vorbereitungen:
 Der Funktion wird ein *Dictionary* übergeben. Die *Keys* sind Personennamen (*Strings*) und die *Values* sind das Alter.
 
 Beispiel:
-```python
->>> get_average_age({'Klaus': 17, 'Hubert': 19, 'Otto': 20})
-18.666666666666668
-```
+
+    #!python
+    >>> get_average_age({'Klaus': 17, 'Hubert': 19, 'Otto': 20})
+    18.666666666666668
 
 ### Unittest
 * Dateiname: <code>test_average_age.py</code>
@@ -36,10 +36,10 @@ Beispiel:
 Der Funktion wird eine Liste an Zahlen übergeben. Zurückgegeben wird der sogenannte [Median](https://de.wikipedia.org/wiki/Median) -> die Zahl, die in der Mitte steht, wenn die Liste sortiert ist.
 
 Beispiel:
-```python
->>> calc_median([3, 1, 6, 10 ,2])
-3
-```
+
+    #!python
+    >>> calc_median([3, 1, 6, 10 ,2])
+    3
 
 Auch in dieser Übung ist der entsprechende Unittest zu entwerfen
 
@@ -51,12 +51,11 @@ Implementiere eine Funktion die die progressiven Steuern laut [Österreichischer
 
 Beispiel:
 
-```python
->>> calc_tax(700)
-0
->>> calc_tax(2000)
-252.734
-```
+    #!python
+    >>> calc_tax(700)
+    0
+    >>> calc_tax(2000)
+    252.734
 
 ## Übung Zinseszins
 * Dateiname: <code>compound_interest.py</code> bzw. <code>test_compound_interest.py</code>
@@ -66,12 +65,11 @@ Wir berechnen den [Zinseszins](https://de.wikipedia.org/wiki/Zinseszins). Dazu s
 
 Beispiel:
 
-```python
->>> calc_compound_interest(1000, 1, 1)
-1010
->>> calc_compount_interest(1, 2000, 0.5)
-21484.41
-```
+    #!python
+    >>> calc_compound_interest(1000, 1, 1)
+    1010
+    >>> calc_compount_interest(1, 2000, 0.5)
+    21484.41
 
 ## Übung Elemente zählen
 * Dateiname: <code>enumerate_list.py</code> bzw. <code>test_enumerate_list.py</code>
@@ -81,12 +79,11 @@ Aus einer Liste an Elemente soll ein Dictionary erstellt werden, welches die Anz
 
 Beispiel:
 
-```python
->>> enumerate_list(['A', 'B', 'B', 'C', 'A', 'A'])
-{'A': 3, 'B': 2, 'C': 1}
->>> enumerate_list([1, 0, 2, 2, 0, 0, 1, 2])
-{1: 2, 0: 3, 2: 3}
-```
+    #!python
+    >>> enumerate_list(['A', 'B', 'B', 'C', 'A', 'A'])
+    {'A': 3, 'B': 2, 'C': 1}
+    >>> enumerate_list([1, 0, 2, 2, 0, 0, 1, 2])
+    {1: 2, 0: 3, 2: 3}
 
 ## Übung Gemeinsamkeiten
 * Dateiname: <code>common_list.py</code> bzw. <code>test_common_list.py</code>
@@ -97,12 +94,11 @@ eine Liste, deren Sortierung aber beliebig sein kann.
 
 Beispiel:
 
-```python
->>> get_common_elements([1, 2, 3, 4, 1], [2, 1])
-[1, 2]
->>> get_common_elements(['A', 1, 'A', 0, 'B'], ['C', 'D'])
-[]
-```
+    #!python
+    >>> get_common_elements([1, 2, 3, 4, 1], [2, 1])
+    [1, 2]
+    >>> get_common_elements(['A', 1, 'A', 0, 'B'], ['C', 'D'])
+    []
 
 ## Übung Wörter durcheinander würfeln
 * Dateiname: <code>shuffle.py</code> bzw. <code>shuffle.py</code>
@@ -113,10 +109,9 @@ soll jeweils der erste und letzte Buchstabe eines Wortes unverändert bleiben.
 
 Beispiel:
 
-```python
->>> shuffle_words('Hier wohnt Herr Schuster')
-'Heir wnoht Hrer Steuschr'
-```
+    #!python
+    >>> shuffle_words('Hier wohnt Herr Schuster')
+    'Heir wnoht Hrer Steuschr'
 
 Hinweise:
 
@@ -132,10 +127,9 @@ Der Funktion wird ein Dictionary mit Artikelnamen und deren Preisen gegeben. Zur
 
 Beispiel:
 
-```python
->>> get_cheapest_articles({'Allegro': 17.5, 'Adagio': 3.5, 'Forte': 15, 'Largo': 5, 'Legato': 18})
-['Adagio', 'Largo', 'Forte']
-```
+    #!python
+    >>> get_cheapest_articles({'Allegro': 17.5, 'Adagio': 3.5, 'Forte': 15, 'Largo': 5, 'Legato': 18})
+    ['Adagio', 'Largo', 'Forte']
 
 Hinweis:
 
