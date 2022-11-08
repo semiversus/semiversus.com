@@ -17,6 +17,7 @@ toc: False
 * [Python]({filename}robotik/python/uebersicht.md)
 * [RaspberryPi]({filename}robotik/raspberry.md)
 * [Suchalgorithmen]({filename}robotik/suche.md)
+* [ESP32]({filename}robotik/esp32/installation.md)
 
 # Hardwareentwicklung
 * [Projekte Teil 1]({filename}/hwe/teil1/uebersicht.md)

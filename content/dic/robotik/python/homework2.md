@@ -61,4 +61,4 @@ Hier ein Beispiel:
     >>> build_hashtag_dict(items)
     {'Hausübung': ['#Hausübung WDIC', '#Hausübung Deutsch #korrigieren'], 'korrigieren': ['Matheübung korrigieren', '#Hausübung Deutsch #korrigieren']}
 
-Abgabe unter [turtle.jena.at](https://turtle.jena.at/s/kEreC5sxGKqERXK).
+Abgabe über Teams.
