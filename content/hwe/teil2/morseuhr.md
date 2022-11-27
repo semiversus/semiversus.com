@@ -1,6 +1,5 @@
 title: Morseuhr
 toc: False
-next: keyboard.md
 parent: uebersicht.md
 
 # Kurzbeschreibung
