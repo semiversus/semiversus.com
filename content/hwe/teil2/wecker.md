@@ -1,6 +1,6 @@
 title: Wecker
 toc: False
-next: fuellstandsmessung.md
+next: schrittmotor.md
 parent: uebersicht.md
 
 # Kurzbeschreibung
