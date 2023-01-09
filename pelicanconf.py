@@ -9,6 +9,8 @@ SITENAME = 'Semiversus Blog' # for ATOM Feed
 SITEURL = 'https://www.semiversus.com'
 RELATIVE_URLS = False
 
+READERS = {'html': None}
+
 CACHE_CONTENT=True
 LOAD_CONTENT_CACHE=True
 GZIP_CACHE=False
