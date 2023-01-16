@@ -16,7 +16,7 @@ toc: False
 * [Projektmanagment]({filename}robotik/projektmanagment/uebersicht.md)
 * [Python]({filename}robotik/python/uebersicht.md)
 * [RaspberryPi]({filename}robotik/raspberry.md)
-* [Suchalgorithmen]({filename}robotik/search/search.html)
+* [Suchalgorithmen]({filename}robotik/search/uebersicht.md)
 * [ESP32]({filename}robotik/esp32/installation.md)
 
 # Hardwareentwicklung
