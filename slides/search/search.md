@@ -127,3 +127,9 @@ Notes:![A-Stern Beispiel](a_star_sample.png)
 <iframe width="560" height="315" src="https://www.youtube.com/embed/fI9PGLoRE2E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <small>Für weitere Beispiele siehe [Graph Search Visualizer](https://huakunshen.github.io/GraphSearchVisualizer/)</small>
+
+---
+
+### Huffman Kodierung
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6vgkip3z83s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
