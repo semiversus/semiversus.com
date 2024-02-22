@@ -1,3 +1,5 @@
+** Wurde durch https://github.com/semiversus/aestatic ersetzt **
+
 # semiversus.com
 
 Nutzt folgende Tools um https://www.semiversus.com als statische Website zu generieren:
